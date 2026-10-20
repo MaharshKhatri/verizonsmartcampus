@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circadian Command Center</title>
+<meta name="description" content="Rutgers student concept for the Verizon Smart Campus Innovation Challenge: a context-aware campus network and energy agent, shown on a simulated digital twin of Busch and Livingston campuses.">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --surface-2: #f3f2ee; --raised: #ffffff;
+  --ink: #0b0b0b; --ink-2: #52514e; --muted: #6f6d68; --grid: #e1e0d9; --axis: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s-circ: #2a78d6; --s-base: #eb6834; --s-legacy: #1baf7a; --s-ref: #9a988f;
+  --good: #0ca30c; --good-text: #006300; --warn: #fab219; --serious: #ec835a; --critical: #d03b3b;
+  --m-active: #1baf7a; --m-mute: #86b6ef; --m-off: #3987e5; --m-deep: #1c5cab; --m-dormant: #0d366b;
+  --brand: #cc0033;
+  --zone-fill: rgba(42,120,214,0.10); --campus-fill: rgba(11,11,11,0.035);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --surface-2: #222220; --raised: #20201e;
+    --ink: #f0efec; --ink-2: #c3c2b7; --muted: #9a988f; --grid: #2c2c2a; --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --s-circ: #3987e5; --s-base: #d95926; --s-legacy: #199e70; --s-ref: #75736c;
+    --good-text: #0ca30c;
+    --m-active: #2fd197; --m-mute: #9ec5f4; --m-off: #5598e7; --m-deep: #2a5f9f; --m-dormant: #263a55;
+    --zone-fill: rgba(57,135,229,0.14); --campus-fill: rgba(255,255,255,0.03);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --surface-2: #222220; --raised: #20201e;
+  --ink: #f0efec; --ink-2: #c3c2b7; --muted: #9a988f; --grid: #2c2c2a; --axis: #383835;
+  --border: rgba(255,255,255,0.10);
+  --s-circ: #3987e5; --s-base: #d95926; --s-legacy: #199e70; --s-ref: #75736c;
+  --good-text: #0ca30c;
+  --m-active: #2fd197; --m-mute: #9ec5f4; --m-off: #5598e7; --m-deep: #2a5f9f; --m-dormant: #263a55;
+  --zone-fill: rgba(57,135,229,0.14); --campus-fill: rgba(255,255,255,0.03);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--page); color: var(--ink);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+button, select, input, textarea { font: inherit; color: inherit; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 12px 16px 40px; }
+header.top {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+  padding: 10px 0 14px; border-bottom: 1px solid var(--border); margin-bottom: 12px;
+}
+.brand { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+.brand h1 { font-size: 20px; letter-spacing: .08em; margin: 0; font-weight: 700; }
+.brand h1 span { color: var(--brand); }
+.brand p { margin: 0; color: var(--ink-2); font-size: 13px; }
+.spacer { flex: 1; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px;
+  border: 1px solid var(--border); font-size: 12px; color: var(--ink-2); background: var(--surface); white-space: nowrap; }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: var(--muted); }
+.badge.live .dot { background: var(--good); }
+.btn { border: 1px solid var(--border); background: var(--surface); border-radius: 8px; padding: 6px 10px;
+  cursor: pointer; white-space: nowrap; }
+.btn:hover { background: var(--surface-2); }
+.btn.primary { background: var(--s-circ); border-color: transparent; color: #fff; }
+.btn:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible, .chip:focus-visible {
+  outline: 2px solid var(--s-circ); outline-offset: 2px; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; }
+.controls label { color: var(--ink-2); font-size: 12px; }
+select, input[type=text], textarea { background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 6px 8px; }
+.clock { font-size: 22px; font-weight: 600; min-width: 70px; }
+#scrub { flex: 1 1 220px; min-width: 160px; accent-color: var(--s-circ); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--border); border-radius: 999px; padding: 4px 10px; background: var(--surface);
+  cursor: pointer; font-size: 12px; color: var(--ink-2); }
+.chip[aria-pressed="true"] { border-color: var(--s-circ); color: var(--ink); background: var(--zone-fill); }
+.scenario-title { color: var(--ink-2); font-size: 13px; margin: -4px 0 12px; }
+
+.kpis { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; min-width: 0; }
+.tile .label { color: var(--ink-2); font-size: 12px; }
+.tile .value { font-size: 22px; font-weight: 650; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tile .sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.delta-good { color: var(--good-text); }
+
+.grid2 { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 12px; margin-bottom: 12px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px; min-width: 0; }
+.card h2 { font-size: 14px; margin: 0 0 2px; }
+.card .hint { color: var(--muted); font-size: 12px; margin: 0 0 8px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--ink-2); margin: 4px 0 6px; }
+.legend i { display: inline-block; vertical-align: middle; margin-right: 5px; }
+.legend i.line { width: 14px; height: 2px; border-radius: 2px; }
+.legend i.sq { width: 9px; height: 9px; border-radius: 2px; }
+.legend i.ring { width: 10px; height: 10px; border-radius: 50%; border: 2px solid; }
+
+#map { width: 100%; height: auto; display: block; touch-action: manipulation; }
+#map .route { fill: none; stroke: var(--axis); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+#map .campus { fill: var(--campus-fill); }
+#map .campus-label { fill: var(--muted); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+#map .zlabel { fill: var(--ink); font-size: 12px; font-weight: 600; pointer-events: none; }
+#map .zsub { fill: var(--muted); font-size: 10.5px; pointer-events: none; }
+#map .zone { fill: var(--zone-fill); stroke: var(--axis); stroke-width: 1; cursor: pointer; }
+#map .zone.sel { stroke: var(--ink); stroke-width: 2; }
+#map .gauge-track { fill: none; stroke: var(--grid); stroke-width: 4; }
+#map .gauge { fill: none; stroke: var(--s-circ); stroke-width: 4; stroke-linecap: round; }
+#map .gauge.hot { stroke: var(--critical); }
+#map .asset { stroke: var(--surface); stroke-width: 1.5; }
+#map .bus { fill: var(--ink-2); stroke: var(--surface); stroke-width: 2; }
+#map .slice-ring { fill: none; stroke: var(--s-circ); stroke-width: 1.5; stroke-dasharray: 5 4; }
+#map .gw { fill: var(--muted); font-size: 11px; }
+
+.feed { list-style: none; margin: 0; padding: 0; max-height: 470px; overflow: auto; }
+.feed li { padding: 7px 4px 7px 0; border-bottom: 1px solid var(--grid); display: grid;
+  grid-template-columns: 44px minmax(0, 1fr); gap: 8px; animation: fadein .4s ease; }
+.feed time { color: var(--muted); font-size: 12px; padding-top: 1px; }
+.feed .what { font-size: 13px; }
+.feed .what b { font-weight: 600; }
+.feed .why { color: var(--ink-2); font-size: 12px; }
+.kind { display: inline-block; font-size: 10.5px; padding: 0 6px; border-radius: 4px; margin-right: 6px;
+  border: 1px solid var(--border); color: var(--ink-2); letter-spacing: .02em; }
+.kind.contrast { border-color: var(--critical); color: var(--critical); }
+@keyframes fadein { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
+
+svg.chart { width: 100%; height: 190px; display: block; overflow: visible; }
+svg.chart .gridline { stroke: var(--grid); stroke-width: 1; }
+svg.chart .axis { stroke: var(--axis); stroke-width: 1; }
+svg.chart text { fill: var(--muted); font-size: 11px; }
+svg.chart .series { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+svg.chart .now { stroke: var(--ink-2); stroke-width: 1; }
+svg.chart .cross { stroke: var(--ink-2); stroke-width: 1; opacity: .6; }
+svg.chart .window { fill: var(--warn); opacity: .10; }
+
+.tooltip { position: fixed; z-index: 20; pointer-events: none; background: var(--raised); color: var(--ink);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.18); max-width: 300px; display: none; }
+.tooltip .t-title { color: var(--ink-2); margin-bottom: 4px; }
+.tooltip .row { display: flex; align-items: center; gap: 8px; }
+.tooltip .row b { min-width: 64px; }
+.tooltip .key { width: 12px; height: 2px; border-radius: 2px; display: inline-block; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+.tab { border: 0; background: none; padding: 8px 12px; cursor: pointer; color: var(--ink-2); border-bottom: 2px solid transparent; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--s-circ); font-weight: 600; }
+.panel[hidden] { display: none; }
+
+.phone { width: 300px; max-width: 100%; border: 1px solid var(--border); border-radius: 28px; padding: 14px;
+  background: var(--page); margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+.phone .bar { display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-2); padding: 0 6px 8px; }
+.pcard { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 10px 12px; margin-bottom: 10px; }
+.pcard h3 { margin: 0 0 6px; font-size: 13px; }
+.meter { height: 6px; border-radius: 3px; background: var(--grid); overflow: hidden; margin: 3px 0 2px; }
+.meter > div { height: 100%; background: var(--s-circ); border-radius: 3px; }
+.prow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; font-size: 12px; margin-bottom: 6px; }
+.prow .nm { color: var(--ink); }
+.prow .pc { color: var(--ink-2); }
+
+table.data { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.data th, table.data td { padding: 6px 8px; border-bottom: 1px solid var(--grid); text-align: right; vertical-align: top; }
+table.data th:first-child, table.data td:first-child { text-align: left; }
+table.data th { color: var(--ink-2); font-weight: 600; font-size: 12px; }
+.status { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.status.ok::before { content: "✓"; color: var(--good-text); }
+.status.warn::before { content: "↺"; color: var(--serious); }
+.status.bad::before { content: "✕"; color: var(--critical); }
+.status.info::before { content: "?"; color: var(--s-circ); }
+.hero { font-size: 48px; font-weight: 650; line-height: 1.05; }
+.note { color: var(--muted); font-size: 12px; }
+.flex { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; }
+.flex > * { flex: 1 1 300px; min-width: 0; }
+.mode-key { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--ink-2); }
+footer { color: var(--muted); font-size: 12px; margin-top: 18px; border-top: 1px solid var(--border); padding-top: 10px; }
+
+@media (max-width: 1100px) {
+  .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid2, .grid3 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .brand p { display: none; }
+  .tile .value { font-size: 18px; }
+  .hero { font-size: 36px; }
+}
+@media (prefers-reduced-motion: reduce) { .feed li { animation: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>CIRC<span>A</span>DIAN</h1>
+      <p>Context-aware campus network &amp; energy agent · Rutgers Busch + Livingston digital twin</p>
+    </div>
+    <div class="spacer"></div>
+    <span class="badge" id="modeBadge"><span class="dot"></span><span id="modeText">Offline replay</span></span>
+    <button class="btn" id="themeBtn" type="button" aria-label="Toggle light or dark theme">Theme</button>
+  </header>
+
+  <div class="controls" role="group" aria-label="Scenario and playback">
+    <label for="scenario">Scenario</label>
+    <select id="scenario"></select>
+    <button class="btn primary" id="playBtn" type="button">Pause</button>
+    <label for="speed">Speed</label>
+    <select id="speed">
+      <option value="1">1 step/s</option>
+      <option value="3" selected>3 steps/s</option>
+      <option value="9">9 steps/s</option>
+      <option value="24">24 steps/s</option>
+    </select>
+    <span class="clock" id="clock" aria-live="off">07:00</span>
+    <input id="scrub" type="range" min="0" max="287" value="84" aria-label="Time of day">
+  </div>
+  <div class="controls" role="group" aria-label="Chaos simulator">
+    <label>Chaos simulator</label>
+    <div class="chips" id="chaos"></div>
+  </div>
+  <p class="scenario-title" id="scenarioTitle"></p>
+
+  <section class="kpis" id="kpis" aria-label="Key results so far today"></section>
+
+  <section class="grid2">
+    <div class="card">
+      <div class="flex" style="align-items:center">
+        <div><h2>Campus digital twin</h2>
+          <p class="hint">Circle size = people present · arc = radio load · squares = radios. Click a building.</p></div>
+        <div class="chips" style="flex:0 0 auto" role="group" aria-label="Network shown">
+          <button class="chip" type="button" data-net="c" aria-pressed="true">Circadian</button>
+          <button class="chip" type="button" data-net="b" aria-pressed="false">Today's AI</button>
+        </div>
+      </div>
+      <svg id="map" viewBox="0 0 1000 600" role="img" aria-label="Map of Busch and Livingston campuses"></svg>
+      <div class="mode-key" id="modeKey"></div>
+    </div>
+    <div class="card">
+      <h2>Agent decision feed</h2>
+      <p class="hint">Every autonomous action, with its reason. Newest first.</p>
+      <div class="chips" id="feedFilter" role="group" aria-label="Filter decisions" style="margin-bottom:6px"></div>
+      <ul class="feed" id="feed"></ul>
+    </div>
+  </section>
+
+  <section class="grid3">
+    <div class="card"><h2>Radio-site power, whole campus</h2><p class="hint">kW · same radios, three ways to run them</p>
+      <div class="legend" id="lg-power"></div><svg class="chart" id="ch-power"></svg></div>
+    <div class="card"><h2 id="fcTitle">Occupancy forecast</h2><p class="hint">people · forecast made 30 min earlier vs what happened</p>
+      <div class="legend" id="lg-fc"></div><svg class="chart" id="ch-fc"></svg></div>
+    <div class="card"><h2>Campus HVAC power</h2><p class="hint">kW · fixed timetable vs forecast-driven</p>
+      <div class="legend" id="lg-hvac"></div><svg class="chart" id="ch-hvac"></svg></div>
+  </section>
+
+  <nav class="tabs" role="tablist" aria-label="Detail views">
+    <button class="tab" role="tab" aria-selected="true" data-tab="student">Student app</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="intent">Intent console</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="ledger">10-K ledger</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="evidence">Evidence</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="faults">Self-healing</button>
+  </nav>
+
+  <section class="panel" id="tab-student" role="tabpanel">
+    <div class="flex">
+      <div style="flex:0 1 330px"><div class="phone" id="phone" aria-label="Student app preview"></div></div>
+      <div class="card">
+        <h2>Pillar 3: what students and campus staff get</h2>
+        <p class="hint">The same forecast that sleeps radios and sets back HVAC powers these features. Aggregate counts only, k-anonymised; no individual is ever tracked.</p>
+        <table class="data" id="zoneTable"></table>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="tab-intent" role="tabpanel" hidden>
+    <div class="flex">
+      <div class="card">
+        <h2>Zero-touch network slicing</h2>
+        <p class="hint" id="intentHint">Campus IT types a request in plain English. It is parsed to a 3GPP slice (SST + 5QI), checked against the crowd forecast, and provisioned or counter-offered in about a second.</p>
+        <textarea id="intentText" rows="3" style="width:100%" aria-label="Slice request"></textarea>
+        <div style="display:flex;gap:8px;margin:8px 0;flex-wrap:wrap">
+          <button class="btn primary" id="intentGo" type="button">Request slice</button>
+        </div>
+        <div class="chips" id="intentPresets"></div>
+      </div>
+      <div class="card" id="intentResult"><h2>Result</h2><p class="hint">Pick a request on the left.</p></div>
+    </div>
+  </section>
+
+  <section class="panel" id="tab-ledger" role="tabpanel" hidden>
+    <div class="flex">
+      <div class="card" id="ledgerHero"></div>
+      <div class="card"><h2>Where the money lands on Verizon's income statement</h2>
+        <p class="hint">National base case from CFO_10K_MODEL.py; positive = good for EBITDA. FY2025 context: cost of services $27.8B, SG&amp;A $33.8B, adj. EBITDA $50.0B (10-K).</p>
+        <table class="data" id="ledgerTable"></table></div>
+    </div>
+  </section>
+
+  <section class="panel" id="tab-evidence" role="tabpanel" hidden>
+    <div class="flex">
+      <div class="card">
+        <h2>Energy saved vs. congestion caused</h2>
+        <p class="hint">Each dot is one policy setting run on the same simulated day. Down and to the right is better.</p>
+        <div class="chips" id="frontierPick" role="group" aria-label="Day for frontier" style="margin-bottom:6px"></div>
+        <div class="legend" id="lg-frontier"></div>
+        <svg class="chart" id="ch-frontier" style="height:260px"></svg>
+        <p class="note">Today's AI and Circadian share one planner, one set of radios, one SLA guard and one margin learner; only the forecast differs. On ordinary days they tie (Circadian blends in traffic history when the calendar says the day is normal). On event days today's practice must choose between congestion (no event mode) and wasted energy (event mode); Circadian avoids both.</p>
+      </div>
+      <div class="card">
+        <h2>Event days: today's practice vs Circadian</h2>
+        <p class="hint">Today's practice = traffic-history AI plus a manual "event mode" that switches energy saving off on venue cells from 2 h before to 4 h after a ticketed event.</p>
+        <table class="data" id="eventTable"></table>
+        <h2 style="margin-top:14px">30-minute demand forecast error</h2>
+        <p class="hint">Mean absolute error, % of each zone's peak cellular demand.</p>
+        <table class="data" id="demandSkillTable"></table>
+      </div>
+    </div>
+    <div class="flex" style="margin-top:12px">
+      <div class="card">
+        <h2>HVAC: what the forecast is for</h2>
+        <p class="hint">Energy saved vs a facilities timetable (weekend, closure and finals schedules included), and people-steps spent in a room that is set back or still recovering.</p>
+        <table class="data" id="hvacTable"></table>
+        <p class="note" id="hvacNote"></p>
+      </div>
+      <div class="card">
+        <h2>Which sensor? (retrained per source)</h2>
+        <p class="hint">30-min occupancy error vs ground truth. Campus Wi-Fi sees buildings; Verizon carrier/DAS counts see the stadium and arena.</p>
+        <table class="data" id="sensingTable"></table>
+        <h2 style="margin-top:14px">Occupancy forecast error vs simple rules</h2>
+        <table class="data" id="skillTable"></table>
+        <p class="note" id="triageNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="tab-faults" role="tabpanel" hidden>
+    <div class="card"><h2>Faults in this scenario</h2>
+      <p class="hint">The twin knows which radios are asleep on purpose, so it only flags real faults. It diagnoses each fault from its symptoms, runs a remote fix, and sends a truck with the right part only for hardware failures.</p>
+      <table class="data" id="faultTable"></table></div>
+  </section>
+
+  <footer>
+    Student concept prototype for the 2026–27 Verizon Smart Campus Innovation Challenge (Rutgers School of Engineering). Not a Verizon product.
+    All campus activity is <b>simulated</b>; radio counts are a representative deployment, not Verizon's network inventory.
+    Financial figures cite Verizon's FY2025 10-K and 2026 10-Qs. Estimates are labeled as estimates in FINANCIAL_PROJECTION.md.
+    <span id="genStamp"></span>
+  </footer>
+</div>
+<div class="tooltip" id="tip" role="tooltip"></div>
+
+<script src="data.js"></script>
+<script>
+"use strict";
+const D = window.CIRCADIAN_DATA;
+const STEPS = 288, STEP_MIN = 5;
+const MODE = { A: "Active", M: "MIMO-muted", C: "Carrier off", D: "Deep sleep", Z: "Dormant", W: "Waking", F: "Fault" };
+const MODE_VAR = { A: "--m-active", M: "--m-mute", C: "--m-off", D: "--m-deep", Z: "--m-dormant", W: "--warn", F: "--critical" };
+const KIND = { ran: "RAN", hvac: "HVAC", triage: "Self-heal", slice: "Slice", grid: "Grid", contrast: "Baseline miss" };
+const ZONES = D.campus.zones;
+const ZBY = Object.fromEntries(ZONES.map(z => [z.key, z]));
+const state = { scenario: "weekday", t: 84, tf: 84, playing: true, speed: 3, sel: "BSC", net: "c",
+                live: false, trace: null, feedKinds: new Set(["ran", "hvac", "triage", "slice", "grid", "contrast"]),
+                frontier: "gameday", injected: [] };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const $ = id => document.getElementById(id);
+const el = (tag, attrs = {}, text) => {
+  const svgTags = new Set(["svg","g","path","circle","rect","line","text","polyline","polygon","title"]);
+  const e = svgTags.has(tag) ? document.createElementNS("http://www.w3.org/2000/svg", tag) : document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+  if (text !== undefined) e.textContent = text;
+  return e;
+};
+const clock = t => { const m = Math.min(t * STEP_MIN, 1440); return `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`; };
+const fmt = (v, d = 0) => v.toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
+const compact = v => Math.abs(v) >= 1e9 ? `${fmt(v / 1e9, 1)}B` : Math.abs(v) >= 1e6 ? `${fmt(v / 1e6, 1)}M` : Math.abs(v) >= 1e4 ? `${fmt(v / 1e3, 0)}K` : fmt(v, 0);
+const usd = v => (v < 0 ? "−$" : "$") + compact(Math.abs(v));
+
+/* ---------------- tooltip ---------------- */
+const tip = $("tip");
+function showTip(evt, title, rows) {
+  tip.replaceChildren();
+  tip.append(el("div", { class: "t-title" }, title));
+  for (const r of rows) {
+    const row = el("div", { class: "row" });
+    if (r.color) { const k = el("span", { class: "key" }); k.style.background = r.color; row.append(k); }
+    row.append(el("b", {}, r.value));
+    row.append(el("span", {}, r.label));
+    tip.append(row);
+  }
+  tip.style.display = "block";
+  const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if (x + w > innerWidth - 8) x = evt.clientX - w - pad;
+  if (y + h > innerHeight - 8) y = evt.clientY - h - pad;
+  tip.style.left = `${Math.max(8, x)}px`; tip.style.top = `${Math.max(8, y)}px`;
+}
+const hideTip = () => { tip.style.display = "none"; };
+
+/* ---------------- map projection ---------------- */
+const lats = ZONES.map(z => z.lat), lons = ZONES.map(z => z.lon);
+const LAT0 = Math.min(...lats) - 0.0028, LAT1 = Math.max(...lats) + 0.0022;
+const LON0 = Math.min(...lons) - 0.0040, LON1 = Math.max(...lons) + 0.0035;
+const KX = Math.cos(40.52 * Math.PI / 180);
+const MW = 1000, MH = 600;
+const SCALE = Math.min(MW / ((LON1 - LON0) * KX), MH / (LAT1 - LAT0));
+const OX = (MW - (LON1 - LON0) * KX * SCALE) / 2, OY = (MH - (LAT1 - LAT0) * SCALE) / 2;
+const geo = (lat, lon) => [OX + (lon - LON0) * KX * SCALE, OY + (LAT1 - lat) * SCALE];
+const clampPt = ([x, y]) => [Math.max(16, Math.min(MW - 16, x)), Math.max(16, Math.min(MH - 16, y))];
+// Busch buildings sit a few hundred metres apart, so true geography overlaps at
+// this scale. Relax positions apart (schematic, still roughly geographic).
+const POS = (() => {
+  const pts = Object.fromEntries(ZONES.map(z => [z.key, geo(z.lat, z.lon)]));
+  const home = Object.fromEntries(Object.entries(pts).map(([k, p]) => [k, p.slice()]));
+  const MIN = 86;
+  for (let it = 0; it < 300; it++) {
+    const keys = Object.keys(pts);
+    for (let i = 0; i < keys.length; i++) for (let j = i + 1; j < keys.length; j++) {
+      const a = pts[keys[i]], b = pts[keys[j]];
+      let dx = b[0] - a[0], dy = b[1] - a[1], d = Math.hypot(dx, dy) || 0.01;
+      if (d < MIN) { const push = (MIN - d) / 2; dx /= d; dy /= d; a[0] -= dx * push; a[1] -= dy * push; b[0] += dx * push; b[1] += dy * push; }
+    }
+    for (const k of keys) { pts[k][0] += (home[k][0] - pts[k][0]) * 0.04; pts[k][1] += (home[k][1] - pts[k][1]) * 0.04; }
+    for (const k of keys) pts[k] = [Math.max(70, Math.min(MW - 70, pts[k][0])), Math.max(60, Math.min(MH - 90, pts[k][1]))];
+  }
+  return pts;
+})();
+const proj = (lat, lon) => {
+  const z = ZONES.find(z => z.lat === lat && z.lon === lon);
+  return z ? POS[z.key] : geo(lat, lon);
+};
+
+function stopPoint(key) {
+  if (ZBY[key]) return POS[key];
+  const g = D.campus.gateways[key];
+  return clampPt(geo(g.lat, g.lon));
+}
+const ROUTES = Object.entries(D.campus.routes).map(([name, stops]) => {
+  const pts = stops.map(stopPoint);
+  const segs = []; let len = 0;
+  for (let i = 1; i < pts.length; i++) { const d = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); segs.push(d); len += d; }
+  return { name, pts, segs, len };
+});
+function along(route, s) {
+  s = ((s % route.len) + route.len) % route.len;
+  for (let i = 0; i < route.segs.length; i++) {
+    if (s <= route.segs[i]) { const f = s / route.segs[i], a = route.pts[i], b = route.pts[i + 1]; return [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f]; }
+    s -= route.segs[i];
+  }
+  return route.pts[route.pts.length - 1];
+}
+
+const map = $("map");
+const mapLayers = {};
+function buildMap() {
+  map.replaceChildren();
+  for (const name of ["campus", "routes", "slices", "gauges", "zones", "assets", "buses", "labels"]) {
+    mapLayers[name] = el("g"); map.append(mapLayers[name]);
+  }
+  for (const c of ["busch", "livingston"]) {
+    const zs = ZONES.filter(z => z.campus === c).map(z => proj(z.lat, z.lon));
+    const xs = zs.map(p => p[0]), ys = zs.map(p => p[1]);
+    const x0 = Math.min(...xs) - 60, x1 = Math.max(...xs) + 60, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 70;
+    mapLayers.campus.append(el("rect", { class: "campus", x: x0, y: y0, width: x1 - x0, height: y1 - y0, rx: 40 }));
+    mapLayers.campus.append(el("text", { class: "campus-label", x: x0 + 18, y: y1 - 14 }, c === "busch" ? "Busch campus" : "Livingston campus"));
+  }
+  for (const r of ROUTES) {
+    const gw = D.campus.routes[r.name].some(k => !ZBY[k]);
+    const pl = el("polyline", { class: "route", points: r.pts.map(p => p.join(",")).join(" ") });
+    if (gw) pl.style.opacity = 0.45;
+    mapLayers.routes.append(pl);
+  }
+  for (const [k, g] of Object.entries(D.campus.gateways)) {
+    const [x, y] = clampPt(geo(g.lat, g.lon));
+    mapLayers.labels.append(el("text", { class: "gw", x: x + (x > MW / 2 ? -110 : 8), y: y - 6 }, `→ ${g.name}`));
+  }
+  for (const z of ZONES) {
+    const [x, y] = proj(z.lat, z.lon);
+    const g = el("g", { tabindex: "0", role: "button", "aria-label": z.name });
+    const c = el("circle", { class: "zone", cx: x, cy: y, r: 10, "data-zone": z.key });
+    g.append(c);
+    g.addEventListener("click", () => { state.sel = z.key; renderAll(); });
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); state.sel = z.key; renderAll(); } });
+    g.addEventListener("pointermove", e => zoneTip(e, z.key));
+    g.addEventListener("pointerleave", hideTip);
+    g.addEventListener("focus", e => { const r = c.getBoundingClientRect(); zoneTip({ clientX: r.right, clientY: r.top }, z.key); });
+    g.addEventListener("blur", hideTip);
+    mapLayers.zones.append(g);
+    const lab = el("text", { class: "zlabel", x: x, y: y + 4, "text-anchor": "middle", "data-label": z.key }, z.key);
+    mapLayers.labels.append(lab);
+  }
+}
+
+function arcPath(cx, cy, r, frac) {
+  frac = Math.max(0, Math.min(0.999, frac));
+  const a0 = -Math.PI / 2, a1 = a0 + frac * 2 * Math.PI;
+  const x0 = cx + r * Math.cos(a0), y0 = cy + r * Math.sin(a0), x1 = cx + r * Math.cos(a1), y1 = cy + r * Math.sin(a1);
+  return `M${x0},${y0} A${r},${r} 0 ${frac > 0.5 ? 1 : 0} 1 ${x1},${y1}`;
+}
+const zr = people => 7 + 0.22 * Math.sqrt(Math.max(0, people));
+
+function renderMap() {
+  const tr = state.trace, t = state.t, net = state.net;
+  const modes = (net === "c" ? tr.modes_c : tr.modes_b)[t] || "";
+  mapLayers.gauges.replaceChildren(); mapLayers.assets.replaceChildren(); mapLayers.slices.replaceChildren();
+  const byZoneAssets = {};
+  tr.assets.forEach((a, i) => { (byZoneAssets[a.zone] ||= []).push([a, modes[i] || "A"]); });
+  for (const z of ZONES) {
+    const zt = tr.zones[z.key];
+    const [x, y] = proj(z.lat, z.lon);
+    const people = zt.occ[t];
+    const r = zr(people);
+    const circle = mapLayers.zones.querySelector(`circle[data-zone="${z.key}"]`);
+    circle.setAttribute("r", r.toFixed(1));
+    circle.classList.toggle("sel", z.key === state.sel);
+    const util = Math.min(1, net === "c" ? zt.util_c[t] : zt.util_b[t]);
+    const cong = (net === "c" ? zt.cong_c[t] : zt.cong_b[t]) > 0;
+    mapLayers.gauges.append(el("circle", { class: "gauge-track", cx: x, cy: y, r: r + 5 }));
+    if (util > 0.005) mapLayers.gauges.append(el("path", { class: "gauge" + (cong ? " hot" : ""), d: arcPath(x, y, r + 5, util) }));
+    const lab = mapLayers.labels.querySelector(`text[data-label="${z.key}"]`);
+    lab.setAttribute("y", (y + r + 22).toFixed(1));
+    lab.textContent = cong ? `${z.key} ⚠` : z.key;
+    // radios: small squares on a ring outside the gauge
+    const list = byZoneAssets[z.key] || [];
+    const ringR = r + 13, n = list.length;
+    list.forEach(([a, m], i) => {
+      const ang = -Math.PI / 2 + (i + 0.5) * (2 * Math.PI / Math.max(n, 1));
+      const ax = x + ringR * Math.cos(ang), ay = y + ringR * Math.sin(ang);
+      const size = a.type === "das" || a.type === "cband" ? 8 : a.type === "lowband" ? 7 : 6;
+      const sq = el("rect", { class: "asset", x: ax - size / 2, y: ay - size / 2, width: size, height: size, rx: 1.5 });
+      sq.style.fill = `var(${MODE_VAR[m]})`;
+      sq.addEventListener("pointermove", e => showTip(e, a.id, [
+        { value: MODE[m], label: "state" },
+        { value: D.campus.asset_types[a.type].label.split(" (")[0], label: "" },
+        { value: `${fmt(D.campus.asset_types[a.type].capacity_mbps)} Mbps`, label: "effective capacity" }]));
+      sq.addEventListener("pointerleave", hideTip);
+      mapLayers.assets.append(sq);
+    });
+  }
+  // slices active now
+  for (const s of (tr.slices || [])) {
+    if (!["ADMITTED", "COUNTER_OFFER"].includes(s.status)) continue;
+    const sp = s.spec; const start = Math.round(timeToStep(sp.window.split("-")[0])), end = Math.round(timeToStep(sp.window.split("-")[1]));
+    if (t < start || t >= end) continue;
+    for (const zk of sp.zones.slice(0, 8)) {
+      const z = ZBY[zk]; if (!z) continue;
+      const [x, y] = proj(z.lat, z.lon);
+      const r = zr(tr.zones[zk].occ[t]) + 24;
+      mapLayers.slices.append(el("circle", { class: "slice-ring", cx: x, cy: y, r }));
+    }
+  }
+}
+const timeToStep = hhmm => { const [h, m] = hhmm.split(":").map(Number); return (h * 60 + m) / STEP_MIN; };
+
+function busHeadway(route, minute) {
+  if (minute < 6 * 60 || minute > 26 * 60) return 0;
+  const busy = state.trace.meta.day_type === "weekday" || state.trace.meta.day_type === "finals";
+  if (!busy) return route === "B" || route === "H" || route === "LX" ? 2 : 1;
+  const peak = minute > 7.5 * 60 && minute < 21 * 60;
+  return { B: peak ? 4 : 2, H: peak ? 3 : 2, A: peak ? 3 : 1, LX: peak ? 4 : 2, REXB: 2, REXL: 2 }[route] || 1;
+}
+function renderBuses() {
+  mapLayers.buses.replaceChildren();
+  const minute = state.tf * STEP_MIN;
+  for (const r of ROUTES) {
+    const n = busHeadway(r.name, minute);
+    for (let i = 0; i < n; i++) {
+      const [x, y] = along(r, minute * 9 + i * r.len / n + r.name.length * 37);
+      mapLayers.buses.append(el("circle", { class: "bus", cx: x, cy: y, r: 4.5 }));
+    }
+  }
+}
+
+function zoneTip(evt, zk) {
+  const tr = state.trace, t = state.t, zt = tr.zones[zk], z = ZBY[zk];
+  const modesC = tr.modes_c[t], modesB = tr.modes_b[t];
+  const count = (modes) => { const c = {}; tr.assets.forEach((a, i) => { if (a.zone === zk) c[modes[i]] = (c[modes[i]] || 0) + 1; }); return Object.entries(c).map(([k, v]) => `${v} ${MODE[k].toLowerCase()}`).join(", "); };
+  showTip(evt, z.name, [
+    { value: fmt(zt.occ[t]), label: `people (telemetry ${fmt(zt.obs[t])})` },
+    { value: `${fmt(zt.fc30[Math.min(t + 6, STEPS - 1)])}–${fmt(zt.fc30hi[Math.min(t + 6, STEPS - 1)])}`, label: "forecast in 30 min (P50–P90)" },
+    { value: `${fmt(zt.dem[t])} Mbps`, label: "cellular demand now" },
+    { value: `${fmt(zt.cap_c[t])} Mbps`, label: "Circadian capacity awake", color: css("--s-circ") },
+    { value: `${fmt(zt.cap_b[t])} Mbps`, label: "today's AI capacity awake", color: css("--s-base") },
+    { value: count(modesC), label: "" },
+    { value: `${fmt(zt.hvac_c[t])} kW`, label: `HVAC (timetable: ${fmt(zt.hvac_b[t])} kW)` },
+    { value: `+${Math.round(zt.margin[t] * 100)}%`, label: "learned safety margin" }]);
+}
+
+/* ---------------- line charts ---------------- */
+function niceMax(v) { if (v <= 0) return 1; const p = Math.pow(10, Math.floor(Math.log10(v))); const n = v / p; return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * p; }
+function legend(id, items) {
+  const box = $(id); box.replaceChildren();
+  for (const it of items) {
+    const s = el("span"); const i = el("i", { class: it.kind || "line" });
+    if (it.kind === "sq") i.style.background = it.color; else if (it.kind === "ring") i.style.borderColor = it.color; else i.style.background = it.color;
+    s.append(i, document.createTextNode(it.name)); box.append(s);
+  }
+}
+function lineChart(svg, { series, upto, unit, bands = [], windows = [], fmtV = v => fmt(v) }) {
+  svg.replaceChildren();
+  const W = svg.clientWidth || 400, H = svg.clientHeight || 190;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const L = 46, R = 10, T = 8, B = 22;
+  let ymax = 0;
+  for (const s of series) for (let i = 0; i <= Math.min(s.upto ?? upto, STEPS - 1); i++) ymax = Math.max(ymax, s.values[i] || 0);
+  for (const b of bands) for (let i = 0; i <= Math.min(b.upto ?? upto, STEPS - 1); i++) ymax = Math.max(ymax, b.hi[i] || 0);
+  ymax = niceMax(ymax * 1.05);
+  const X = i => L + (W - L - R) * i / (STEPS - 1), Y = v => T + (H - T - B) * (1 - v / ymax);
+  for (let k = 0; k <= 4; k++) {
+    const v = ymax * k / 4, y = Y(v);
+    svg.append(el("line", { class: k === 0 ? "axis" : "gridline", x1: L, x2: W - R, y1: y, y2: y }));
+    svg.append(el("text", { x: L - 6, y: y + 4, "text-anchor": "end" }, compact(v)));
+  }
+  for (let h = 0; h <= 24; h += 6) svg.append(el("text", { x: X(h * 12), y: H - 6, "text-anchor": h === 0 ? "start" : h === 24 ? "end" : "middle" }, `${String(h).padStart(2, "0")}:00`));
+  for (const w of windows) svg.append(el("rect", { class: "window", x: X(w[0]), y: T, width: X(w[1]) - X(w[0]), height: H - T - B }));
+  for (const b of bands) {
+    const end = Math.min(b.upto ?? upto, STEPS - 1), start = b.from || 0;
+    if (end <= start) continue;
+    let d = `M${X(start)},${Y(b.hi[start])}`;
+    for (let i = start + 1; i <= end; i++) d += `L${X(i)},${Y(b.hi[i])}`;
+    for (let i = end; i >= start; i--) d += `L${X(i)},${Y(b.lo[i])}`;
+    const p = el("path", { d: d + "Z" }); p.style.fill = b.color; p.style.opacity = 0.12; svg.append(p);
+  }
+  for (const s of series) {
+    const end = Math.min(s.upto ?? upto, STEPS - 1), start = s.from || 0;
+    if (end <= start) continue;
+    let d = `M${X(start)},${Y(s.values[start])}`;
+    for (let i = start + 1; i <= end; i++) d += `L${X(i)},${Y(s.values[i])}`;
+    const p = el("path", { class: "series", d }); p.style.stroke = s.color; svg.append(p);
+    const dot = el("circle", { cx: X(end), cy: Y(s.values[end]), r: 4 }); dot.style.fill = s.color; dot.style.stroke = css("--surface"); dot.style.strokeWidth = 2; svg.append(dot);
+  }
+  svg.append(el("line", { class: "now", x1: X(upto), x2: X(upto), y1: T, y2: H - B }));
+  const cross = el("line", { class: "cross", x1: 0, x2: 0, y1: T, y2: H - B, visibility: "hidden" }); svg.append(cross);
+  const hit = el("rect", { x: L, y: T, width: W - L - R, height: H - T - B, fill: "transparent" }); svg.append(hit);
+  hit.addEventListener("pointermove", e => {
+    const r = svg.getBoundingClientRect();
+    const i = Math.max(0, Math.min(STEPS - 1, Math.round((e.clientX - r.left - L) / (r.width - L - R) * (STEPS - 1))));
+    cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("visibility", "visible");
+    const rows = series.filter(s => i <= Math.min(s.upto ?? upto, STEPS - 1) && i >= (s.from || 0))
+      .map(s => ({ value: `${fmtV(s.values[i])} ${unit}`, label: s.name, color: s.color }));
+    showTip(e, clock(i), rows.length ? rows : [{ value: "—", label: "not yet played" }]);
+  });
+  hit.addEventListener("pointerleave", () => { cross.setAttribute("visibility", "hidden"); hideTip(); });
+}
+
+function sumZones(field, scale = 1) {
+  const out = new Array(STEPS).fill(0);
+  for (const z of ZONES) { const a = state.trace.zones[z.key][field]; for (let i = 0; i < STEPS; i++) out[i] += a[i] * scale; }
+  return out;
+}
+function renderCharts() {
+  const tr = state.trace, t = state.t;
+  const dr = tr.meta.dr_window ? [tr.meta.dr_window] : [];
+  const pw = { a: sumZones("w_a", 1e-3), b: sumZones("w_b", 1e-3), c: sumZones("w_c", 1e-3) };
+  legend("lg-power", [{ name: "Always on", color: css("--s-ref") }, { name: "Today's AI (traffic history)", color: css("--s-base") }, { name: "Circadian", color: css("--s-circ") }]);
+  lineChart($("ch-power"), { upto: t, unit: "kW", fmtV: v => fmt(v, 1), windows: dr, series: [
+    { name: "Always on", color: css("--s-ref"), values: pw.a },
+    { name: "Today's AI", color: css("--s-base"), values: pw.b },
+    { name: "Circadian", color: css("--s-circ"), values: pw.c }] });
+  const zt = tr.zones[state.sel];
+  $("fcTitle").textContent = `Occupancy forecast · ${ZBY[state.sel].name}`;
+  legend("lg-fc", [{ name: "Actual", color: css("--ink-2") }, { name: "Forecast 30 min ahead (P50)", color: css("--s-circ") }, { name: "P90 band", color: css("--s-circ"), kind: "sq" }]);
+  lineChart($("ch-fc"), { upto: t, unit: "people", series: [
+    { name: "Actual", color: css("--ink-2"), values: zt.occ },
+    { name: "Forecast (P50)", color: css("--s-circ"), values: zt.fc30, from: 6, upto: Math.min(t + 6, STEPS - 1) }],
+    bands: [{ lo: zt.fc30, hi: zt.fc30hi, color: css("--s-circ"), from: 6, upto: Math.min(t + 6, STEPS - 1) }] });
+  legend("lg-hvac", [{ name: "Fixed timetable", color: css("--s-base") }, { name: "Circadian", color: css("--s-circ") }]);
+  lineChart($("ch-hvac"), { upto: t, unit: "kW", windows: dr, series: [
+    { name: "Fixed timetable", color: css("--s-base"), values: sumZones("hvac_b") },
+    { name: "Circadian", color: css("--s-circ"), values: sumZones("hvac_c") }] });
+}
+
+/* ---------------- KPIs ---------------- */
+function tile(label, value, sub, good) {
+  const d = el("div", { class: "tile" });
+  d.append(el("div", { class: "label" }, label), el("div", { class: "value" }, value));
+  const s = el("div", { class: "sub" + (good ? " delta-good" : "") }, sub); d.append(s);
+  return d;
+}
+function renderKPIs() {
+  const c = state.trace.cum, t = state.t, K = D.constants;
+  const ka = c.kwh_a[t], kb = c.kwh_b[t], kc = c.kwh_c[t];
+  const vsA = ka ? (ka - kc) / ka * 100 : 0, vsB = kb ? (kb - kc) / kb * 100 : 0;
+  const congB = c.cong_b[t] * STEP_MIN, congC = c.cong_c[t] * STEP_MIN;
+  const hvacSaved = c.hvac_b[t] - c.hvac_c[t];
+  const box = $("kpis"); box.replaceChildren();
+  box.append(
+    tile("Radio energy saved vs always-on", `${fmt(vsA, 1)}%`, `${fmt(ka - kc)} kWh · ${vsB >= 0 ? "+" : ""}${fmt(vsB, 1)}% vs today's AI`, vsA > 0),
+    tile("Congested user-minutes", `${compact(congC)}`, `today's AI: ${compact(congB)}`, congC <= congB),
+    tile("Campus HVAC energy saved", `${compact(hvacSaved)} kWh`, `${usd(hvacSaved * K.campus_price)} for Rutgers today`, hvacSaved > 0),
+    tile("Truck rolls", `${fmt(c.trucks_ci[t])}`, `status quo: ${fmt(c.trucks_sq[t])}`, c.trucks_ci[t] <= c.trucks_sq[t]),
+    tile("CO₂e avoided", `${fmt(c.tco2e[t], 2)} t`, `${fmt(K.tco2e_per_mwh, 3)} t/MWh location-based`),
+    tile("10-K impact, pilot scale", `${usd(c.usd_cos[t] + c.usd_sga[t])}`, `cost of services ${usd(c.usd_cos[t])} · SG&A ${usd(c.usd_sga[t])}`),
+  );
+}
+
+/* ---------------- feed ---------------- */
+function renderFeedFilter() {
+  const box = $("feedFilter"); box.replaceChildren();
+  for (const [k, name] of Object.entries(KIND)) {
+    const b = el("button", { class: "chip", type: "button", "aria-pressed": String(state.feedKinds.has(k)) }, name);
+    b.addEventListener("click", () => { state.feedKinds.has(k) ? state.feedKinds.delete(k) : state.feedKinds.add(k); renderFeedFilter(); renderFeed(true); });
+    box.append(b);
+  }
+}
+let lastFeedKey = "";
+function renderFeed(force) {
+  const t = state.t;
+  const items = state.trace.feed.filter(e => e.t <= t && state.feedKinds.has(e.kind));
+  const key = `${state.scenario}|${items.length}|${[...state.feedKinds].join()}`;
+  if (!force && key === lastFeedKey) return;
+  lastFeedKey = key;
+  const ul = $("feed"); ul.replaceChildren();
+  for (const e of items.slice(-60).reverse()) {
+    const li = el("li");
+    li.append(el("time", {}, e.clock));
+    const w = el("div");
+    const what = el("div", { class: "what" });
+    what.append(el("span", { class: `kind ${e.kind}` }, KIND[e.kind] || e.kind));
+    what.append(el("b", {}, ZBY[e.zone] ? ZBY[e.zone].name : e.zone));
+    what.append(document.createTextNode(` · ${e.asset ? e.asset.replace(/^[A-Z]+-/, "") + " → " : ""}${e.action.replace("_", " ").toLowerCase()}`));
+    w.append(what, el("div", { class: "why" }, e.reason));
+    li.append(w); ul.append(li);
+  }
+  if (!items.length) { const li = el("li"); li.append(el("time", {}, ""), el("div", { class: "why" }, "No decisions yet - press play.")); ul.append(li); }
+}
+
+/* ---------------- student app ---------------- */
+function renderPhone() {
+  const tr = state.trace, t = state.t, ph = $("phone");
+  ph.replaceChildren();
+  const bar = el("div", { class: "bar" }); bar.append(el("span", {}, clock(t)), el("span", {}, "5G UW · RU Circadian")); ph.append(bar);
+  const t30 = Math.min(t + 6, STEPS - 1);
+  const study = ZONES.filter(z => z.study).map(z => {
+    const zt = tr.zones[z.key]; const cap = Math.max(z.peak, 1);
+    return { z, now: zt.occ[t] / cap, soon: zt.fc30[t30] / cap };
+  }).sort((a, b) => a.now - b.now);
+  const c1 = el("div", { class: "pcard" }); c1.append(el("h3", {}, "Quiet study spots right now"));
+  for (const s of study.slice(0, 3)) {
+    const row = el("div", { class: "prow" });
+    row.append(el("span", { class: "nm" }, s.z.name), el("span", { class: "pc" }, `${Math.round(s.now * 100)}% full`));
+    const m = el("div", { class: "meter" }); const f = el("div"); f.style.width = `${Math.min(100, s.now * 100)}%`; m.append(f);
+    const trend = s.soon > s.now + 0.08 ? "filling up in 30 min" : s.soon < s.now - 0.08 ? "emptying in 30 min" : "steady for 30 min";
+    const wrapRow = el("div"); wrapRow.append(row, m, el("div", { class: "note" }, trend)); c1.append(wrapRow);
+  }
+  ph.append(c1);
+  let best = null;
+  for (const z of ZONES) { const zt = tr.zones[z.key]; const inc = zt.fc30hi[t30] - zt.occ[t]; if (!best || inc > best.inc) best = { z, inc }; }
+  const c2 = el("div", { class: "pcard" }); c2.append(el("h3", {}, "Heads-up"));
+  c2.append(el("div", { class: "note" }, best && best.inc > 150 ? `${best.z.name} is forecast to gain ~${compact(best.inc)} people in the next 30 min.` : "No crowds forecast in the next 30 minutes."));
+  ph.append(c2);
+  const zt = tr.zones[state.sel]; const subs = Math.max(1, zt.occ[t] * D.constants.verizon_share * 0.15);
+  const perUser = zt.cap_c[t] / subs;
+  const c3 = el("div", { class: "pcard" }); c3.append(el("h3", {}, `Your connection · ${ZBY[state.sel].name}`));
+  const q = zt.cong_c[t] > 0 ? ["bad", "Congested"] : perUser > 25 ? ["ok", "Excellent"] : perUser > 5 ? ["ok", "Good"] : ["warn", "Busy"];
+  c3.append(el("span", { class: `status ${q[0]}` }, q[1]), el("div", { class: "note" }, `~${compact(Math.min(perUser, 999))} Mbps available per active user`));
+  ph.append(c3);
+  const active = (tr.slices || []).filter(s => ["ADMITTED", "COUNTER_OFFER"].includes(s.status) && t >= timeToStep(s.spec.window.split("-")[0]) && t < timeToStep(s.spec.window.split("-")[1]));
+  if (active.length) {
+    const c4 = el("div", { class: "pcard" }); c4.append(el("h3", {}, "Guaranteed service on campus now"));
+    for (const s of active) c4.append(el("div", { class: "note" }, `${s.spec.slice_type} · ${s.spec.zones.length > 3 ? "campus-wide" : s.spec.zones.join(", ")} · ${s.spec.window}`));
+    ph.append(c4);
+  }
+  if (tr.meta.dr_window && t >= tr.meta.dr_window[0] && t < tr.meta.dr_window[1]) {
+    const kw = ZONES.reduce((a, z) => a + tr.zones[z.key].dr_kw[t], 0);
+    const c5 = el("div", { class: "pcard" }); c5.append(el("h3", {}, "Grid alert: campus is helping"));
+    c5.append(el("div", { class: "note" }, `Rutgers + Verizon are shedding ${compact(kw)} kW during a PJM peak event.`)); ph.append(c5);
+  }
+  // zone table (table view for the map)
+  const tb = $("zoneTable"); tb.replaceChildren();
+  const head = el("tr"); for (const h of ["Building", "People", "In 30 min (P90)", "Demand Mbps", "Capacity awake", "HVAC kW"]) head.append(el("th", {}, h));
+  tb.append(head);
+  for (const z of ZONES) {
+    const r = tr.zones[z.key]; const row = el("tr");
+    row.append(el("td", {}, z.name), el("td", {}, fmt(r.occ[t])), el("td", {}, fmt(r.fc30hi[t30])), el("td", {}, fmt(r.dem[t])),
+      el("td", {}, fmt(state.net === "c" ? r.cap_c[t] : r.cap_b[t])), el("td", {}, `${fmt(r.hvac_c[t])} (${fmt(r.hvac_b[t])})`));
+    tb.append(row);
+  }
+}
+
+/* ---------------- intents ---------------- */
+function renderIntentResult(res) {
+  const box = $("intentResult"); box.replaceChildren(); box.append(el("h2", {}, "Result"));
+  const st = { ADMITTED: ["ok", "Admitted"], COUNTER_OFFER: ["warn", "Counter-offer"], REJECTED: ["bad", "Rejected"], NEEDS_INFO: ["info", "Needs one more detail"] }[res.status] || ["info", res.status];
+  box.append(el("p", {}, res.text || ""));
+  box.append(el("span", { class: `status ${st[0]}` }, st[1]));
+  if (res.explanation) box.append(el("p", { class: "hint", style: "margin-top:6px" }, res.explanation));
+  if (res.questions) for (const q of res.questions) box.append(el("p", { class: "hint" }, q));
+  const sp = res.spec || {};
+  const tb = el("table", { class: "data" });
+  const rows = [["Buildings", (sp.zones || []).join(", ") || "—"], ["Window", sp.window || "—"], ["Bandwidth", sp.mbps ? `${fmt(sp.mbps)} Mbps ${sp.direction}` : "—"],
+    ["Latency target", sp.latency_ms ? `${sp.latency_ms} ms` : "best effort"], ["Slice type", sp.slice_type || "—"],
+    ["S-NSSAI SST / 5QI", sp.sst ? `${sp.sst} / ${sp.five_qi}` : "—"], ["Profile", res.profile || "—"],
+    ["Illustrative price", res.quote_usd !== undefined ? `$${fmt(res.quote_usd, 0)}` : "—"]];
+  if (res.offer_mbps) rows.splice(3, 0, ["Offered", `${fmt(res.offer_mbps)} Mbps`]);
+  for (const [k, v] of rows) { const r = el("tr"); r.append(el("td", {}, k), el("td", {}, v)); tb.append(r); }
+  box.append(tb);
+}
+function renderIntents() {
+  const box = $("intentPresets"); box.replaceChildren();
+  for (const it of D.intents) {
+    const b = el("button", { class: "chip", type: "button" }, it.text.length > 60 ? it.text.slice(0, 58) + "…" : it.text);
+    b.addEventListener("click", () => { $("intentText").value = it.text; renderIntentResult(it); });
+    box.append(b);
+  }
+  $("intentText").value = D.intents[0].text; renderIntentResult(D.intents[0]);
+}
+async function submitIntent() {
+  const text = $("intentText").value.trim();
+  if (!text) return;
+  if (!state.live) {
+    const hit = D.intents.find(i => i.text === text);
+    if (hit) return renderIntentResult(hit);
+    return renderIntentResult({ status: "NEEDS_INFO", text, questions: ["Free-text requests need the live engine: run  python3 prototype/server.py  and open http://localhost:8765. Offline, pick one of the example requests."] });
+  }
+  const r = await fetch("/api/intent", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text, scenario: state.scenario }) });
+  renderIntentResult(await r.json());
+}
+
+/* ---------------- ledger ---------------- */
+function renderLedger() {
+  const f = D.finance, hero = $("ledgerHero"); hero.replaceChildren();
+  const tb = $("ledgerTable"); tb.replaceChildren();
+  if (!f) { hero.append(el("h2", {}, "National model"), el("p", { class: "hint" }, "Run python3 scripts/build_all.py to attach CFO_10K_MODEL.py results.")); return; }
+  hero.append(el("h2", {}, "National run-rate, year 5 (base case)"));
+  hero.append(el("div", { class: "hero" }, usd(f.year5_ebitda_usd)));
+  hero.append(el("p", { class: "hint" }, `EBITDA impact per year · ${fmt(f.year5_ebitda_bps, 1)} bps of FY2025 revenue · 5-yr NPV ${usd(f.npv_usd)} at ${fmt(f.wacc * 100, 1)}% (${usd(f.npv_terminal_usd)} with terminal value) · payback ${f.payback_months ? fmt(f.payback_months) + " months" : "beyond 5 years"}`));
+  hero.append(el("p", { class: "note" }, `Software alone (no network pull-through): 5-yr NPV ${usd(f.npv_core_usd)}. Pull-through pricing is the first thing to validate with Verizon Business.`));
+  hero.append(el("p", { class: "note" }, `Range across scenarios: ${usd(f.year5_ebitda_low_usd)} (bear) to ${usd(f.year5_ebitda_high_usd)} (bull). ${f.co2e_note || ""}`));
+  if (f.pilot) {
+    hero.append(el("h2", { style: "margin-top:14px" }, "Rutgers lighthouse (per year)"));
+    const pt = el("table", { class: "data" });
+    const hdr = el("tr"); for (const h of ["", "5% HVAC saving", "10%"]) hdr.append(el("th", {}, h)); pt.append(hdr);
+    for (const [k, label] of [["hvac_savings", "Rutgers HVAC savings"], ["verizon_revenue", "Verizon revenue"], ["rutgers_net", "Rutgers net benefit"]]) {
+      const r = el("tr"); r.append(el("td", {}, label), el("td", {}, usd(f.pilot.low[k])), el("td", {}, usd(f.pilot.high[k]))); pt.append(r);
+    }
+    hero.append(pt, el("p", { class: "note" }, "$60M/yr Rutgers energy × 60.8% HVAC share × 5–10%; Verizon earns $0.02/sq ft + 20% of verified savings (estimates)."));
+  }
+  const head = el("tr"); for (const h of ["10-K line", "Driver", "Year-5 national (base)"]) head.append(el("th", {}, h)); tb.append(head);
+  for (const r of f.lines) { const row = el("tr"); row.append(el("td", {}, r.line), el("td", { style: "text-align:left" }, r.driver), el("td", {}, usd(r.usd))); tb.append(row); }
+}
+
+/* ---------------- evidence ---------------- */
+function renderEvidence() {
+  const pick = $("frontierPick"); pick.replaceChildren();
+  for (const k of Object.keys(D.evidence.frontier)) {
+    const b = el("button", { class: "chip", type: "button", "aria-pressed": String(state.frontier === k) }, k === "gameday" ? "Game day (all zones)" : "Ordinary weekday");
+    b.addEventListener("click", () => { state.frontier = k; renderEvidence(); }); pick.append(b);
+  }
+  const pts = D.evidence.frontier[state.frontier];
+  const fam = f => f.startsWith("Circadian") ? "c" : f.startsWith("traffic") ? "b" : "l";
+  const col = { c: css("--s-circ"), b: css("--s-base"), l: css("--s-legacy") };
+  legend("lg-frontier", [{ name: "Circadian (context-aware)", color: col.c, kind: "sq" }, { name: "Today's AI + event mode (filled) / no event mode (hollow)", color: col.b, kind: "sq" }, { name: "Legacy thresholds", color: col.l, kind: "ring" }]);
+  const svg = $("ch-frontier"); svg.replaceChildren();
+  const W = svg.clientWidth || 500, H = svg.clientHeight || 260; svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const L = 56, R = 14, T = 24, B = 34;
+  const xmax = niceMax(Math.max(...pts.map(p => p.saving_pct)) * 1.08), ymax = niceMax(Math.max(10, ...pts.map(p => p.congested_user_min)) * 1.1);
+  const X = v => L + (W - L - R) * v / xmax, Y = v => T + (H - T - B) * (1 - v / ymax);
+  for (let k = 0; k <= 4; k++) { const v = ymax * k / 4; svg.append(el("line", { class: k ? "gridline" : "axis", x1: L, x2: W - R, y1: Y(v), y2: Y(v) })); svg.append(el("text", { x: L - 6, y: Y(v) + 4, "text-anchor": "end" }, compact(v))); }
+  for (let k = 0; k <= 5; k++) { const v = xmax * k / 5; svg.append(el("text", { x: X(v), y: H - 16, "text-anchor": "middle" }, `${fmt(v)}%`)); }
+  svg.append(el("text", { x: (L + W - R) / 2, y: H - 2, "text-anchor": "middle" }, "radio energy saved vs always-on"));
+  svg.append(el("text", { x: L, y: 10 }, "congested user-minutes ↑"));
+  for (const p of pts) {
+    const f = fam(p.family), learned = p.label === "learned margins";
+    const g = el("g", { tabindex: "0" });
+    const c = el("circle", { cx: X(p.saving_pct), cy: Y(p.congested_user_min), r: learned ? 7 : 5 });
+    const hollow = f === "l" || p.family.includes("no event mode");
+    c.style.fill = hollow ? css("--surface") : col[f]; c.style.stroke = col[f]; c.style.strokeWidth = learned ? 3 : 2;
+    const hit = el("circle", { cx: X(p.saving_pct), cy: Y(p.congested_user_min), r: 12, fill: "transparent" });
+    g.append(c, hit);
+    const show = e => showTip(e, p.family, [{ value: `${fmt(p.saving_pct, 1)}%`, label: "energy saved", color: col[f] }, { value: fmt(p.congested_user_min), label: "congested user-minutes" }, { value: p.label, label: "" }]);
+    g.addEventListener("pointermove", show); g.addEventListener("pointerleave", hideTip);
+    g.addEventListener("focus", () => { const r = c.getBoundingClientRect(); show({ clientX: r.right, clientY: r.top }); }); g.addEventListener("blur", hideTip);
+    svg.append(g);
+  }
+  const table = (id, headers, rows) => {
+    const tb = $(id); tb.replaceChildren();
+    const h = el("tr"); for (const x of headers) h.append(el("th", {}, x)); tb.append(h);
+    for (const r of rows) {
+      const tr = el("tr");
+      for (const c of r) { const td = el("td", {}, c); if (!/^[-−$\d]/.test(String(c))) td.style.textAlign = "left"; tr.append(td); }
+      tb.append(tr);
+    }
+  };
+  const title = k => ({ weekday: "Ordinary weekday", gameday: "Game day (SHI)", arena: "One-off arena event", finals: "Finals", surprise: "Unannounced rally", snowday: "Snow day", heatwave: "Heat wave", faultstorm: "Fault storm" })[k] || k;
+  const ev = D.evidence;
+  table("eventTable", ["Day", "Policy", "Congested user-min", "Venue energy saved", "Campus energy saved"],
+    (ev.event_mode || []).map(r => [title(r.scenario), r.policy, fmt(r.congested_user_min), `${fmt(r.venue_energy_saved_pct, 1)}%`, `${fmt(r.campus_energy_saved_pct, 1)}%`]));
+  table("demandSkillTable", ["Day", "Circadian", "Today's AI (traffic history)"],
+    (ev.demand_skill || []).map(r => [title(r.scenario), `${fmt(r.circadian_mae_pct, 2)}%`, `${fmt(r.history_ai_mae_pct, 2)}%`]));
+  table("hvacTable", ["Day", "Reactive occupancy (no forecast)", "Circadian (forecast)", "People left uncomfortable: timetable · reactive · Circadian"],
+    (ev.hvac_policies || []).map(r => [title(r.scenario), `${fmt(r.reactive_saving_pct, 1)}%`, `${fmt(r.circadian_saving_pct, 1)}%`, `${compact(r.miss_timetable)} · ${compact(r.miss_reactive)} · ${compact(r.miss_circadian)}`]));
+  if (ev.hvac_ventilation) $("hvacNote").textContent = `Without ventilation-by-headcount, Circadian's weekday HVAC saving is ${fmt(ev.hvac_ventilation.saving_without_ventilation_control_pct, 1)}%: the kWh come from ventilation; the forecast's job is to set rooms back without leaving people uncomfortable.`;
+  table("sensingTable", ["Sensor", "Weekday", "Unannounced rally", "Game day"],
+    ["fused", "wifi", "carrier"].map(mode => {
+      const label = { fused: "Wi-Fi indoors + carrier at venues", wifi: "Campus Wi-Fi only", carrier: "Verizon carrier only" }[mode];
+      const get = sc => { const r = (ev.sensing || []).find(x => x.sensing === mode && x.scenario === sc); return r ? `${fmt(r.mae30_vs_truth_pct, 2)}%` : "—"; };
+      return [label, get("weekday"), get("surprise"), get("gameday")];
+    }));
+  const st = $("skillTable"); st.replaceChildren();
+  const head = el("tr"); for (const h of ["Day · horizon", "Learned model", "Timetable × today's ratio", "Timetable only", "Persistence"]) head.append(el("th", {}, h)); st.append(head);
+  for (const r of ev.forecast_skill.filter(r => r.horizon_min === 30)) {
+    const row = el("tr"); row.append(el("td", {}, `${title(r.scenario)} · ${r.horizon_min} min`), el("td", {}, `${fmt(r.model, 2)}%`), el("td", {}, `${fmt(r.ratio_rule, 2)}%`), el("td", {}, `${fmt(r.timetable, 2)}%`), el("td", {}, `${fmt(r.persistence, 2)}%`)); st.append(row);
+  }
+  const ts = D.triage_storm || {};
+  const bus = (ev.bus || []).map(b => `${title(b.scenario)} ${fmt(b.mae30_with_bus_pct, 2)}% with vs ${fmt(b.mae30_without_bus_pct, 2)}% without`).join("; ");
+  $("triageNote").textContent = `A simple rule (timetable × today's ratio) is nearly as good as the learned model: the value is the campus data, not model complexity. Bus feed ablation: ${bus || "n/a"} (it earns nothing in the twin). Fault triage over ${fmt(ts.draws || 0)} fault storms: ${ts.trucks_status_quo} → ${ts.trucks_circadian} dispatches per ${ts.faults} faults (${fmt((ts.dispatch_avoided_share || 0) * 100)}% avoided; no gain in ${fmt((ts.p_no_gain || 0) * 100)}% of storms), restore time ${fmt(ts.outage_min_status_quo || 0)} → ${fmt(ts.outage_min_circadian || 0)} min. Diagnosis accuracy ${fmt(D.triage_accuracy * 100, 1)}% (${fmt((D.triage_accuracy_robust || 0) * 100, 1)}% when real symptom rates differ from the model by ±0.15). Dispatch probabilities are assumptions.`;
+}
+
+/* ---------------- faults ---------------- */
+function renderFaults() {
+  const tb = $("faultTable"); tb.replaceChildren();
+  const faults = state.trace.faults || [];
+  const head = el("tr"); for (const h of ["Time", "Radio", "Fault", "Status quo", "Circadian"]) head.append(el("th", {}, h)); tb.append(head);
+  if (!faults.length) { const r = el("tr"); r.append(el("td", { colspan: "5" }, "No faults in this scenario - try Fault storm.")); tb.append(r); return; }
+  for (const f of faults) {
+    const row = el("tr");
+    row.append(el("td", {}, clock(f.start)), el("td", {}, f.asset), el("td", {}, f.label),
+      el("td", {}, `${f.sq.trucks} truck roll(s) · back in ${(f.sq.end - f.start) * STEP_MIN} min`),
+      el("td", {}, `${f.ci.trucks} truck roll(s) · back in ${(f.ci.end - f.start) * STEP_MIN} min · ${f.ci.action}`));
+    tb.append(row);
+  }
+}
+
+/* ---------------- scenario & chaos ---------------- */
+const CHAOS = [
+  { label: "Game day: 52k fans", scenario: "gameday", t: 9 * 12 },
+  { label: "One-off arena event", scenario: "arena", t: 17 * 12 + 6 },
+  { label: "Unannounced rally", scenario: "surprise", t: 13 * 12 + 6 },
+  { label: "Snow day", scenario: "snowday", t: 7 * 12 },
+  { label: "Heat wave + grid event", scenario: "heatwave", t: 12 * 12 },
+  { label: "Fault storm", scenario: "faultstorm", t: 9 * 12 + 6 },
+  { label: "Finals all-nighter", scenario: "finals", t: 20 * 12 },
+];
+function renderChaos() {
+  const box = $("chaos"); box.replaceChildren();
+  for (const c of CHAOS) {
+    const b = el("button", { class: "chip", type: "button", "aria-pressed": String(state.scenario === c.scenario) }, c.label);
+    b.addEventListener("click", () => loadScenario(c.scenario, c.t)); box.append(b);
+  }
+  if (state.live) {
+    const b1 = el("button", { class: "chip", type: "button" }, `+ Surprise crowd at ${state.sel}`);
+    b1.addEventListener("click", () => liveInject({ type: "crowd", zone: state.sel, t: state.t + 2, crowd: 2500, duration: 12, label: "Judge-injected crowd" }));
+    const b2 = el("button", { class: "chip", type: "button" }, `+ Break a radio at ${state.sel}`);
+    b2.addEventListener("click", () => {
+      const a = state.trace.assets.find(a => a.zone === state.sel && a.type !== "lowband");
+      if (a) liveInject({ type: "fault", asset: a.id, t: state.t + 1, fault: "pa_failure" });
+    });
+    box.append(b1, b2);
+  }
+}
+async function liveInject(inj) {
+  state.injected.push(inj);
+  const r = await fetch("/api/run", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ scenario: state.scenario, injections: state.injected }) });
+  if (r.ok) { state.trace = await r.json(); lastFeedKey = ""; renderAll(); }
+}
+function loadScenario(name, t) {
+  state.scenario = name; state.injected = [];
+  state.trace = D.traces[name];
+  $("scenario").value = name;
+  $("scenarioTitle").textContent = state.trace.meta.title;
+  if (t !== undefined) { state.t = t; state.tf = t; }
+  lastFeedKey = "";
+  if (!ZBY[state.sel]) state.sel = "BSC";
+  if (name === "gameday" && t !== undefined) state.sel = "SHI";
+  if (name === "arena" && t !== undefined) state.sel = "ARENA";
+  renderChaos(); renderAll(); renderFaults();
+}
+
+function renderAll() {
+  $("clock").textContent = clock(state.t);
+  $("scrub").value = state.t;
+  renderKPIs(); renderMap(); renderBuses(); renderFeed(); renderCharts(); renderPhone();
+}
+
+/* ---------------- playback ---------------- */
+let lastTs = null;
+function frame(ts) {
+  if (lastTs === null) lastTs = ts;
+  const dt = (ts - lastTs) / 1000; lastTs = ts;
+  if (state.playing) {
+    state.tf += dt * state.speed;
+    if (state.tf >= STEPS) state.tf = 0;
+    const nt = Math.floor(state.tf);
+    if (nt !== state.t) { state.t = nt; renderAll(); } else renderBuses();
+  }
+  requestAnimationFrame(frame);
+}
+
+function init() {
+  for (const [k, v] of Object.entries(D.scenarios)) $("scenario").append(el("option", { value: k }, v.title));
+  $("scenario").addEventListener("change", e => loadScenario(e.target.value));
+  $("playBtn").addEventListener("click", () => { state.playing = !state.playing; $("playBtn").textContent = state.playing ? "Pause" : "Play"; });
+  $("speed").addEventListener("change", e => { state.speed = Number(e.target.value); });
+  $("scrub").addEventListener("input", e => { state.t = Number(e.target.value); state.tf = state.t; renderAll(); });
+  $("themeBtn").addEventListener("click", () => {
+    const root = document.documentElement;
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("circadian-theme", root.dataset.theme); } catch (e) { /* storage unavailable */ }
+    renderAll(); renderEvidence();
+  });
+  try { const th = localStorage.getItem("circadian-theme"); if (th) document.documentElement.dataset.theme = th; } catch (e) { /* storage unavailable */ }
+  for (const b of document.querySelectorAll("[data-net]")) b.addEventListener("click", () => {
+    state.net = b.dataset.net;
+    for (const o of document.querySelectorAll("[data-net]")) o.setAttribute("aria-pressed", String(o === b));
+    renderAll();
+  });
+  for (const tab of document.querySelectorAll(".tab")) tab.addEventListener("click", () => {
+    for (const o of document.querySelectorAll(".tab")) o.setAttribute("aria-selected", String(o === tab));
+    for (const p of document.querySelectorAll(".panel")) p.hidden = p.id !== `tab-${tab.dataset.tab}`;
+    if (tab.dataset.tab === "evidence") renderEvidence();
+  });
+  $("intentGo").addEventListener("click", submitIntent);
+  const key = $("modeKey");
+  for (const [k, name] of Object.entries(MODE)) { const s = el("span"); const i = el("i", { class: "sq" }); i.style.cssText = `display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle;background:var(${MODE_VAR[k]})`; s.append(i, document.createTextNode(name + (k === "F" ? " ✕" : k === "W" ? " ↺" : ""))); key.append(s); }
+  $("genStamp").textContent = ` Data generated ${D.generated}.`;
+  buildMap(); renderFeedFilter(); renderIntents(); renderLedger();
+  loadScenario("weekday", 7 * 12);
+  renderEvidence();
+  addEventListener("resize", () => { renderCharts(); renderEvidence(); });
+  requestAnimationFrame(frame);
+  if (location.protocol.startsWith("http")) {
+    fetch("/api/health").then(r => r.ok ? r.json() : null).then(j => {
+      if (j && j.ok) {
+        state.live = true; $("modeBadge").classList.add("live"); $("modeText").textContent = "Live engine";
+        $("intentHint").textContent += " Live engine connected: type any request.";
+        renderChaos();
+      }
+    }).catch(() => {});
+  }
+}
+init();
+</script>
+</body>
+</html>

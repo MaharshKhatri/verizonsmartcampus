@@ -1,0 +1,21 @@
+parameter,description,line_item,bear_value,base_value,bull_value,npv_bear,npv_base,npv_bull,swing,source
+univ_2031,universities live by 2031,Revenue,40,90,160,-5288208.47,3368555.41,15323073.44,20611281.91,est; NCES: 488 institutions >=10k students
+deploy_per_customer,integration per customer,CapEx,400000.0,150000.0,70000.0,-8295359.78,3368555.41,7094834.88,15390194.66,est; BMS + Wi-Fi API integration via the campus's BMS integrator
+pull_through_arr,slices + Frontline + private 5G ARR per customer,Revenue,100000.0,250000.0,600000.0,-1117480.78,3368555.41,13757694.74,14875175.52,est; needs Verizon Business pricing validation
+pull_through_margin,contribution margin on pulled-through services,Cost of services,0.25,0.35,0.45,-369808.08,3368555.41,7106918.89,7476726.97,est
+hvac_saving,share of HVAC energy saved,Revenue,0.05,0.07,0.1,420786.19,3368555.41,7790209.23,7369423.05,"research/04 s3 (Sentinel 17.8%, MARTINI 8-11%, UBC ~5%); sim 8-19%"
+sales_pct,sales & support as % of B2B revenue,SG&A,0.2,0.15,0.1,-20608.84,3368555.41,6757719.65,6778328.48,est
+implementation_fee_share,share of integration billed to the customer,Revenue,0.25,0.5,0.8,632338.67,3368555.41,6652015.49,6019676.82,"est; PSE&G pays up to $1.00/kWh saved, capped at 60% of project cost"
+mv_per_customer,annual M&V + support per customer,Cost of services,60000.0,35000.0,20000.0,-369808.08,3368555.41,5611573.5,5981381.58,est; IPMVP M&V + support
+platform_usd_gsf,Layer 1 occupancy intelligence,Revenue,0.02,0.03,0.03,585408.24,3368555.41,6151702.57,5566294.32,research/04 s9 (LBNL median $0.02; Occuspace $0.105-0.15)
+platform_run,fixed annual platform run cost,Cost of services,2500000.0,1500000.0,1000000.0,-204440.8,3368555.41,5155053.51,5359494.31,est: core team + cloud at pilot scale
+perf_fee,Verizon share of verified savings,Revenue,0.15,0.2,0.25,789257.34,3368555.41,5947853.47,5158596.13,research/04 s9 (customer keeps 80%)
+dr_mw_univ,curtailable MW per university,Revenue,0.5,1.0,2.0,2565168.2,3368555.41,4975329.81,2410161.61,est
+platform_run_per_customer,variable platform cost per customer,Cost of services,25000.0,15000.0,10000.0,1873210.01,3368555.41,4116228.1,2243018.09,est: cloud/MEC + SRE share per campus
+churn,annual customer churn,Revenue,0.08,0.05,0.03,2160448.38,3368555.41,4214065.96,2053617.58,est
+wacc,discount rate,-,0.08,0.07,0.07,2969455.04,3368555.41,3577133.03,607677.98,est for Verizon
+sites_per_campus,Verizon radio sites per customer,Cost of services,10,20,35,3136769.91,3368555.41,3716233.64,579463.73,est (macro sectors + small cells serving a campus)
+truck_avoid_share,dispatches avoided per fault,Cost of services,0.19,0.37,0.56,3159393.97,3368555.41,3577716.84,418322.87,"sim: 2,000 fault-storm draws (dispatch probabilities are assumptions)"
+corp_2031,corporate campuses live by 2031,Revenue,10,25,50,3306732.29,3368555.41,3471593.94,164861.65,"est; CBECS: 11,000 offices >200k sq ft"
+hosp_2031,hospital campuses live by 2031,Revenue,10,30,60,3331005.57,3368555.41,3424880.16,93874.6,"est; AHA: 6,100 hospitals"
+ran_incremental,extra radio energy saved,Cost of services,0.0,0.0,0.0,3323307.3,3368555.41,3391179.46,67872.16,"sim: context vs traffic-history AI + event mode, weighted campus day mix"

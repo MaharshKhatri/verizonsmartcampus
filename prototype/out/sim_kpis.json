@@ -1,0 +1,722 @@
+{
+ "weekday": {
+  "summary": {
+   "scenario": "weekday",
+   "ran_kwh": {
+    "always_on": 674.2,
+    "baseline": 294.8,
+    "circadian": 295.1
+   },
+   "ran_saving_vs_always_on_pct": 56.2,
+   "baseline_saving_vs_always_on_pct": 56.3,
+   "ran_saving_vs_baseline_pct": -0.1,
+   "congested_user_steps": {
+    "baseline": 0.0,
+    "circadian": 0.0,
+    "always_on": 0.0
+   },
+   "congested_zone_steps": {
+    "ALWAYS_ON": 0,
+    "BASELINE": 0,
+    "CIRCADIAN": 0
+   },
+   "care_contacts": {
+    "baseline": 0.0,
+    "circadian": 0.0
+   },
+   "sla_guard_events": 0,
+   "hvac_kwh": {
+    "baseline": 42138.1,
+    "circadian": 37241.8,
+    "reactive": 36873.0
+   },
+   "hvac_saving_pct": 11.6,
+   "hvac_reactive_saving_pct": 12.5,
+   "comfort_miss_people_steps": {
+    "baseline": 9691,
+    "circadian": 0,
+    "reactive": 6950
+   },
+   "faults": 1,
+   "truck_rolls": {
+    "sq": 0,
+    "ci": 0
+   },
+   "tickets": {
+    "sq": 1,
+    "ci": 0
+   },
+   "outage_minutes": {
+    "sq": 45,
+    "ci": 15
+   },
+   "dr_kwh": 0.0,
+   "dr_peak_kw": 0.0,
+   "dr_payment_usd": 0.0,
+   "slices": [
+    {
+     "type": "URLLC",
+     "mbps": 60.0,
+     "hours": 1.33,
+     "quote_usd": 160.0
+    }
+   ],
+   "slice_revenue_usd": 160.0,
+   "usd": {
+    "cost_of_services": -0.05,
+    "sga": 725.0,
+    "campus_hvac_savings": 685.48,
+    "verizon_share_of_hvac_savings": 171.37,
+    "energy_usd_vs_always_on": 63.05
+   },
+   "tco2e_avoided": 1.591
+  },
+  "everyday": {
+   "always_on_kwh": 373.78,
+   "baseline_kwh": 246.53,
+   "circadian_kwh": 247.13,
+   "baseline_saving_pct": 34.04,
+   "circadian_saving_pct": 33.88,
+   "incremental_vs_baseline_pct": -0.24,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  },
+  "venues": {
+   "always_on_kwh": 300.46,
+   "baseline_kwh": 48.31,
+   "circadian_kwh": 47.99,
+   "baseline_saving_pct": 83.92,
+   "circadian_saving_pct": 84.03,
+   "incremental_vs_baseline_pct": 0.67,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  }
+ },
+ "gameday": {
+  "summary": {
+   "scenario": "gameday",
+   "ran_kwh": {
+    "always_on": 691.9,
+    "baseline": 353.7,
+    "circadian": 329.0
+   },
+   "ran_saving_vs_always_on_pct": 52.4,
+   "baseline_saving_vs_always_on_pct": 48.9,
+   "ran_saving_vs_baseline_pct": 7.0,
+   "congested_user_steps": {
+    "baseline": 0.0,
+    "circadian": 0.0,
+    "always_on": 0.0
+   },
+   "congested_zone_steps": {
+    "ALWAYS_ON": 0,
+    "BASELINE": 0,
+    "CIRCADIAN": 0
+   },
+   "care_contacts": {
+    "baseline": 0.0,
+    "circadian": 0.0
+   },
+   "sla_guard_events": 0,
+   "hvac_kwh": {
+    "baseline": 36246.2,
+    "circadian": 33172.1,
+    "reactive": 33043.7
+   },
+   "hvac_saving_pct": 8.5,
+   "hvac_reactive_saving_pct": 8.8,
+   "comfort_miss_people_steps": {
+    "baseline": 16561,
+    "circadian": 0,
+    "reactive": 92989
+   },
+   "faults": 1,
+   "truck_rolls": {
+    "sq": 0,
+    "ci": 0
+   },
+   "tickets": {
+    "sq": 1,
+    "ci": 0
+   },
+   "outage_minutes": {
+    "sq": 75,
+    "ci": 15
+   },
+   "dr_kwh": 0.0,
+   "dr_peak_kw": 0.0,
+   "dr_payment_usd": 0.0,
+   "slices": [
+    {
+     "type": "eMBB-UL",
+     "mbps": 400.0,
+     "hours": 6.5,
+     "quote_usd": 1170.0
+    },
+    {
+     "type": "MC-PRIORITY",
+     "mbps": 50.0,
+     "hours": 7.5,
+     "quote_usd": 0.0
+    }
+   ],
+   "slice_revenue_usd": 1170.0,
+   "usd": {
+    "cost_of_services": 4.1,
+    "sga": 1385.0,
+    "campus_hvac_savings": 430.37,
+    "verizon_share_of_hvac_savings": 107.59,
+    "energy_usd_vs_always_on": 60.35
+   },
+   "tco2e_avoided": 1.007
+  },
+  "everyday": {
+   "always_on_kwh": 358.54,
+   "baseline_kwh": 213.88,
+   "circadian_kwh": 213.3,
+   "baseline_saving_pct": 40.35,
+   "circadian_saving_pct": 40.51,
+   "incremental_vs_baseline_pct": 0.27,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  },
+  "venues": {
+   "always_on_kwh": 333.38,
+   "baseline_kwh": 139.79,
+   "circadian_kwh": 115.73,
+   "baseline_saving_pct": 58.07,
+   "circadian_saving_pct": 65.28,
+   "incremental_vs_baseline_pct": 17.21,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  }
+ },
+ "finals": {
+  "summary": {
+   "scenario": "finals",
+   "ran_kwh": {
+    "always_on": 678.7,
+    "baseline": 297.4,
+    "circadian": 298.7
+   },
+   "ran_saving_vs_always_on_pct": 56.0,
+   "baseline_saving_vs_always_on_pct": 56.2,
+   "ran_saving_vs_baseline_pct": -0.4,
+   "congested_user_steps": {
+    "baseline": 0.0,
+    "circadian": 0.0,
+    "always_on": 0.0
+   },
+   "congested_zone_steps": {
+    "ALWAYS_ON": 0,
+    "BASELINE": 0,
+    "CIRCADIAN": 0
+   },
+   "care_contacts": {
+    "baseline": 0.0,
+    "circadian": 0.0
+   },
+   "sla_guard_events": 0,
+   "hvac_kwh": {
+    "baseline": 42942.8,
+    "circadian": 37442.4,
+    "reactive": 37238.8
+   },
+   "hvac_saving_pct": 12.8,
+   "hvac_reactive_saving_pct": 13.3,
+   "comfort_miss_people_steps": {
+    "baseline": 70,
+    "circadian": 0,
+    "reactive": 4777
+   },
+   "faults": 1,
+   "truck_rolls": {
+    "sq": 0,
+    "ci": 0
+   },
+   "tickets": {
+    "sq": 1,
+    "ci": 0
+   },
+   "outage_minutes": {
+    "sq": 90,
+    "ci": 15
+   },
+   "dr_kwh": 0.0,
+   "dr_peak_kw": 0.0,
+   "dr_payment_usd": 0.0,
+   "slices": [],
+   "slice_revenue_usd": 0,
+   "usd": {
+    "cost_of_services": -0.22,
+    "sga": 65.0,
+    "campus_hvac_savings": 770.05,
+    "verizon_share_of_hvac_savings": 192.51,
+    "energy_usd_vs_always_on": 63.19
+   },
+   "tco2e_avoided": 1.787
+  },
+  "everyday": {
+   "always_on_kwh": 378.2,
+   "baseline_kwh": 250.0,
+   "circadian_kwh": 251.32,
+   "baseline_saving_pct": 33.9,
+   "circadian_saving_pct": 33.55,
+   "incremental_vs_baseline_pct": -0.53,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  },
+  "venues": {
+   "always_on_kwh": 300.46,
+   "baseline_kwh": 47.38,
+   "circadian_kwh": 47.38,
+   "baseline_saving_pct": 84.23,
+   "circadian_saving_pct": 84.23,
+   "incremental_vs_baseline_pct": 0.0,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  }
+ },
+ "heatwave": {
+  "summary": {
+   "scenario": "heatwave",
+   "ran_kwh": {
+    "always_on": 675.0,
+    "baseline": 294.2,
+    "circadian": 293.7
+   },
+   "ran_saving_vs_always_on_pct": 56.5,
+   "baseline_saving_vs_always_on_pct": 56.4,
+   "ran_saving_vs_baseline_pct": 0.2,
+   "congested_user_steps": {
+    "baseline": 0.0,
+    "circadian": 0.0,
+    "always_on": 0.0
+   },
+   "congested_zone_steps": {
+    "ALWAYS_ON": 0,
+    "BASELINE": 0,
+    "CIRCADIAN": 0
+   },
+   "care_contacts": {
+    "baseline": 0.0,
+    "circadian": 0.0
+   },
+   "sla_guard_events": 0,
+   "hvac_kwh": {
+    "baseline": 103429.9,
+    "circadian": 89845.5,
+    "reactive": 90751.0
+   },
+   "hvac_saving_pct": 13.1,
+   "hvac_reactive_saving_pct": 12.3,
+   "comfort_miss_people_steps": {
+    "baseline": 10818,
+    "circadian": 0,
+    "reactive": 7584
+   },
+   "faults": 0,
+   "truck_rolls": {
+    "sq": 0,
+    "ci": 0
+   },
+   "tickets": {
+    "sq": 0,
+    "ci": 0
+   },
+   "outage_minutes": {
+    "sq": 0,
+    "ci": 0
+   },
+   "dr_kwh": 4981.8,
+   "dr_peak_kw": 238.2,
+   "dr_payment_usd": 1245.45,
+   "slices": [],
+   "slice_revenue_usd": 0,
+   "usd": {
+    "cost_of_services": 0.09,
+    "sga": 0.0,
+    "campus_hvac_savings": 1901.82,
+    "verizon_share_of_hvac_savings": 475.46,
+    "energy_usd_vs_always_on": 63.42
+   },
+   "tco2e_avoided": 4.415
+  },
+  "everyday": {
+   "always_on_kwh": 374.57,
+   "baseline_kwh": 245.88,
+   "circadian_kwh": 245.68,
+   "baseline_saving_pct": 34.36,
+   "circadian_saving_pct": 34.41,
+   "incremental_vs_baseline_pct": 0.08,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  },
+  "venues": {
+   "always_on_kwh": 300.46,
+   "baseline_kwh": 48.3,
+   "circadian_kwh": 47.98,
+   "baseline_saving_pct": 83.92,
+   "circadian_saving_pct": 84.03,
+   "incremental_vs_baseline_pct": 0.67,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  }
+ },
+ "surprise": {
+  "summary": {
+   "scenario": "surprise",
+   "ran_kwh": {
+    "always_on": 675.6,
+    "baseline": 296.5,
+    "circadian": 296.4
+   },
+   "ran_saving_vs_always_on_pct": 56.1,
+   "baseline_saving_vs_always_on_pct": 56.1,
+   "ran_saving_vs_baseline_pct": 0.0,
+   "congested_user_steps": {
+    "baseline": 0.0,
+    "circadian": 0.0,
+    "always_on": 0.0
+   },
+   "congested_zone_steps": {
+    "ALWAYS_ON": 0,
+    "BASELINE": 0,
+    "CIRCADIAN": 0
+   },
+   "care_contacts": {
+    "baseline": 0.0,
+    "circadian": 0.0
+   },
+   "sla_guard_events": 0,
+   "hvac_kwh": {
+    "baseline": 42138.1,
+    "circadian": 37441.1,
+    "reactive": 37066.2
+   },
+   "hvac_saving_pct": 11.1,
+   "hvac_reactive_saving_pct": 12.0,
+   "comfort_miss_people_steps": {
+    "baseline": 10767,
+    "circadian": 90,
+    "reactive": 9242
+   },
+   "faults": 0,
+   "truck_rolls": {
+    "sq": 0,
+    "ci": 0
+   },
+   "tickets": {
+    "sq": 0,
+    "ci": 0
+   },
+   "outage_minutes": {
+    "sq": 0,
+    "ci": 0
+   },
+   "dr_kwh": 0.0,
+   "dr_peak_kw": 0.0,
+   "dr_payment_usd": 0.0,
+   "slices": [],
+   "slice_revenue_usd": 0,
+   "usd": {
+    "cost_of_services": 0.01,
+    "sga": 0.0,
+    "campus_hvac_savings": 657.58,
+    "verizon_share_of_hvac_savings": 164.4,
+    "energy_usd_vs_always_on": 63.05
+   },
+   "tco2e_avoided": 1.527
+  },
+  "everyday": {
+   "always_on_kwh": 375.11,
+   "baseline_kwh": 248.17,
+   "circadian_kwh": 248.42,
+   "baseline_saving_pct": 33.84,
+   "circadian_saving_pct": 33.77,
+   "incremental_vs_baseline_pct": -0.1,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  },
+  "venues": {
+   "always_on_kwh": 300.46,
+   "baseline_kwh": 48.31,
+   "circadian_kwh": 47.99,
+   "baseline_saving_pct": 83.92,
+   "circadian_saving_pct": 84.03,
+   "incremental_vs_baseline_pct": 0.67,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  }
+ },
+ "arena": {
+  "summary": {
+   "scenario": "arena",
+   "ran_kwh": {
+    "always_on": 679.6,
+    "baseline": 317.0,
+    "circadian": 305.0
+   },
+   "ran_saving_vs_always_on_pct": 55.1,
+   "baseline_saving_vs_always_on_pct": 53.4,
+   "ran_saving_vs_baseline_pct": 3.8,
+   "congested_user_steps": {
+    "baseline": 14.4,
+    "circadian": 0.0,
+    "always_on": 0.0
+   },
+   "congested_zone_steps": {
+    "ALWAYS_ON": 0,
+    "BASELINE": 1,
+    "CIRCADIAN": 0
+   },
+   "care_contacts": {
+    "baseline": 0.02,
+    "circadian": 0.0
+   },
+   "sla_guard_events": 1,
+   "hvac_kwh": {
+    "baseline": 42764.3,
+    "circadian": 37850.3,
+    "reactive": 37434.5
+   },
+   "hvac_saving_pct": 11.5,
+   "hvac_reactive_saving_pct": 12.5,
+   "comfort_miss_people_steps": {
+    "baseline": 12605,
+    "circadian": 182,
+    "reactive": 28478
+   },
+   "faults": 0,
+   "truck_rolls": {
+    "sq": 0,
+    "ci": 0
+   },
+   "tickets": {
+    "sq": 0,
+    "ci": 0
+   },
+   "outage_minutes": {
+    "sq": 0,
+    "ci": 0
+   },
+   "dr_kwh": 0.0,
+   "dr_peak_kw": 0.0,
+   "dr_payment_usd": 0.0,
+   "slices": [],
+   "slice_revenue_usd": 0,
+   "usd": {
+    "cost_of_services": 2.0,
+    "sga": 0.17,
+    "campus_hvac_savings": 687.97,
+    "verizon_share_of_hvac_savings": 171.99,
+    "energy_usd_vs_always_on": 62.3
+   },
+   "tco2e_avoided": 1.601
+  },
+  "everyday": {
+   "always_on_kwh": 375.79,
+   "baseline_kwh": 249.24,
+   "circadian_kwh": 250.24,
+   "baseline_saving_pct": 33.68,
+   "circadian_saving_pct": 33.41,
+   "incremental_vs_baseline_pct": -0.4,
+   "congested_user_min_baseline": 72,
+   "congested_user_min_circadian": 0
+  },
+  "venues": {
+   "always_on_kwh": 303.83,
+   "baseline_kwh": 67.79,
+   "circadian_kwh": 54.78,
+   "baseline_saving_pct": 77.69,
+   "circadian_saving_pct": 81.97,
+   "incremental_vs_baseline_pct": 19.2,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  }
+ },
+ "snowday": {
+  "summary": {
+   "scenario": "snowday",
+   "ran_kwh": {
+    "always_on": 663.8,
+    "baseline": 276.4,
+    "circadian": 269.5
+   },
+   "ran_saving_vs_always_on_pct": 59.4,
+   "baseline_saving_vs_always_on_pct": 58.4,
+   "ran_saving_vs_baseline_pct": 2.5,
+   "congested_user_steps": {
+    "baseline": 327.6,
+    "circadian": 327.6,
+    "always_on": 0.0
+   },
+   "congested_zone_steps": {
+    "ALWAYS_ON": 0,
+    "BASELINE": 4,
+    "CIRCADIAN": 4
+   },
+   "care_contacts": {
+    "baseline": 0.49,
+    "circadian": 0.49
+   },
+   "sla_guard_events": 3,
+   "hvac_kwh": {
+    "baseline": 35998.9,
+    "circadian": 33657.7,
+    "reactive": 33545.2
+   },
+   "hvac_saving_pct": 6.5,
+   "hvac_reactive_saving_pct": 6.8,
+   "comfort_miss_people_steps": {
+    "baseline": 19858,
+    "circadian": 0,
+    "reactive": 2462
+   },
+   "faults": 0,
+   "truck_rolls": {
+    "sq": 0,
+    "ci": 0
+   },
+   "tickets": {
+    "sq": 0,
+    "ci": 0
+   },
+   "outage_minutes": {
+    "sq": 0,
+    "ci": 0
+   },
+   "dr_kwh": 0.0,
+   "dr_peak_kw": 0.0,
+   "dr_payment_usd": 0.0,
+   "slices": [],
+   "slice_revenue_usd": 0,
+   "usd": {
+    "cost_of_services": 1.14,
+    "sga": 0.0,
+    "campus_hvac_savings": 327.76,
+    "verizon_share_of_hvac_savings": 81.94,
+    "energy_usd_vs_always_on": 65.56
+   },
+   "tco2e_avoided": 0.763
+  },
+  "everyday": {
+   "always_on_kwh": 363.3,
+   "baseline_kwh": 228.07,
+   "circadian_kwh": 222.15,
+   "baseline_saving_pct": 37.22,
+   "circadian_saving_pct": 38.85,
+   "incremental_vs_baseline_pct": 2.59,
+   "congested_user_min_baseline": 1639,
+   "congested_user_min_circadian": 1639
+  },
+  "venues": {
+   "always_on_kwh": 300.45,
+   "baseline_kwh": 48.3,
+   "circadian_kwh": 47.37,
+   "baseline_saving_pct": 83.92,
+   "circadian_saving_pct": 84.23,
+   "incremental_vs_baseline_pct": 1.93,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  }
+ },
+ "faultstorm": {
+  "summary": {
+   "scenario": "faultstorm",
+   "ran_kwh": {
+    "always_on": 677.4,
+    "baseline": 300.4,
+    "circadian": 302.2
+   },
+   "ran_saving_vs_always_on_pct": 55.4,
+   "baseline_saving_vs_always_on_pct": 55.7,
+   "ran_saving_vs_baseline_pct": -0.6,
+   "congested_user_steps": {
+    "baseline": 1217.5,
+    "circadian": 781.3,
+    "always_on": 456.5
+   },
+   "congested_zone_steps": {
+    "ALWAYS_ON": 3,
+    "BASELINE": 7,
+    "CIRCADIAN": 6
+   },
+   "care_contacts": {
+    "baseline": 1.83,
+    "circadian": 1.17
+   },
+   "sla_guard_events": 2,
+   "hvac_kwh": {
+    "baseline": 42138.1,
+    "circadian": 37575.3,
+    "reactive": 37188.2
+   },
+   "hvac_saving_pct": 10.8,
+   "hvac_reactive_saving_pct": 11.7,
+   "comfort_miss_people_steps": {
+    "baseline": 10524,
+    "circadian": 0,
+    "reactive": 9659
+   },
+   "faults": 7,
+   "truck_rolls": {
+    "sq": 6,
+    "ci": 4
+   },
+   "tickets": {
+    "sq": 7,
+    "ci": 4
+   },
+   "outage_minutes": {
+    "sq": 1250,
+    "ci": 685
+   },
+   "dr_kwh": 0.0,
+   "dr_peak_kw": 0.0,
+   "dr_payment_usd": 0.0,
+   "slices": [],
+   "slice_revenue_usd": 0,
+   "usd": {
+    "cost_of_services": 749.71,
+    "sga": 200.24,
+    "campus_hvac_savings": 638.79,
+    "verizon_share_of_hvac_savings": 159.7,
+    "energy_usd_vs_always_on": 62.4
+   },
+   "tco2e_avoided": 1.482
+  },
+  "everyday": {
+   "always_on_kwh": 376.95,
+   "baseline_kwh": 252.12,
+   "circadian_kwh": 254.2,
+   "baseline_saving_pct": 33.12,
+   "circadian_saving_pct": 32.56,
+   "incremental_vs_baseline_pct": -0.83,
+   "congested_user_min_baseline": 6092,
+   "congested_user_min_circadian": 3910
+  },
+  "venues": {
+   "always_on_kwh": 300.46,
+   "baseline_kwh": 48.3,
+   "circadian_kwh": 47.98,
+   "baseline_saving_pct": 83.92,
+   "circadian_saving_pct": 84.03,
+   "incremental_vs_baseline_pct": 0.67,
+   "congested_user_min_baseline": 0,
+   "congested_user_min_circadian": 0
+  }
+ },
+ "triage_accuracy": 0.838,
+ "triage_accuracy_robust": 0.816,
+ "triage_storm": {
+  "draws": 2000,
+  "faults": 7,
+  "trucks_status_quo": 5.73,
+  "trucks_circadian": 3.59,
+  "dispatch_avoided_share": 0.373,
+  "p_no_gain": 0.193,
+  "outage_min_status_quo": 1241,
+  "outage_min_circadian": 620
+ }
+}
