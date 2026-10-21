@@ -167,5 +167,18 @@ class TestCapacity(unittest.TestCase):
         self.assertEqual(capacity.plan()["vs_installed_base_x"], 6.5)
 
 
+class TestMigrationReceipt(unittest.TestCase):
+    def test_before_after_verdicts(self):
+        from prototype.prove import migration
+        r = migration.scenarios()
+        self.assertEqual(r["elevator_same"]["verdict"], "SAME ANSWER")
+        self.assertEqual(r["alarm_same"]["verdict"], "SAME ANSWER")
+        for k in ("elevator_new_caller_id", "elevator_voicemail", "alarm_unregistered", "alarm_basement_trees"):
+            self.assertTrue(r[k]["verdict"].startswith("CHANGED"), k)
+        loc = next(x for x in r["elevator_new_caller_id"]["lines"] if x["check"] == "location_shown")
+        self.assertEqual(loc["after"], "UNKNOWN CALLER")
+        self.assertIn("Verizon", loc["owner"])
+
+
 if __name__ == "__main__":
     unittest.main()
