@@ -41,7 +41,7 @@
 | Item | Status |
 |---|---|
 | Copper notices, FCC filings, Verizon device guides, FCC 26-19 text | Primary sources read and saved in `research/sources/` |
-| Working prototype (`prototype/prove`) | Contact ID encoder/decoder with handshake and kiss-off detectors; install receipt (signal, voice, alarm, battery, worst-season signal); before/after cutover receipt (SAME ANSWER); two-direction acoustic test for elevator phones; challenge-response "who answers" test; hash-chained evidence ledger verified in the browser; live console; 60 automated tests |
+| Working prototype (`prototype/prove`) | Contact ID encoder/decoder with handshake and kiss-off detectors; install receipt (signal, voice, alarm, battery, worst-season signal); before/after cutover receipt (SAME ANSWER); two-direction acoustic test for elevator phones; challenge-response "who answers" test; hash-chained evidence ledger verified in the browser; live console; 55 automated tests |
 | Rutgers PROVE Lab bench (Oct 22-31) | Real panel, real Verizon box, three control paths (straight wire, other carrier, Verizon), CIs reported. Results go to Verizon first |
 | Modelled, labelled as such | Alarm delivery falls before voice quality does as frame loss rises (5% loss: 60% delivered within 4 tries) |
 

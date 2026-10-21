@@ -86,7 +86,7 @@ Question: is Circadian the idea that wins, or only the idea we built first? A mu
 - **Value:** lower self-install fallout, tested in a 30-day trial against a control.
 - **Rutgers:** the PROVE Lab bench plus a finals elevator pilot using challenge-response.
 
-**Built in Gen 4** (`prototype/prove`, 60 tests):
+**Built in Gen 4** (`prototype/prove`, 55 tests):
 - **Elevator phone test:** two-direction acoustic test with a threshold set above the noise maximum, plus a model showing the naive loopback fails healthy voice-switched phones.
 - **Routing and evidence:** fault triage with owner routing (92%/87%); a hash-chained ledger verified in the browser.
 - **Fleet model:** mean days a broken elevator phone stays broken, 107 under annual inspection, 45 with line monitoring, 2.8 with PROVE. The gap holds from 0.1x to 3x silent-fault rates.

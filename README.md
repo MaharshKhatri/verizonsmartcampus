@@ -17,7 +17,7 @@ When Verizon retires a copper line, the home or business gets a replacement box 
 python3 -m prototype.prove.export          # build console data (~1 min)
 open prototype/prove/console/index.html    # offline console (any browser)
 python3 -m prototype.prove.server          # live rig mode at http://localhost:8766
-python3 -m unittest discover -s tests      # 60 tests
+python3 -m unittest discover -s tests      # 55 tests
 python3 scripts/analyze_prove_lab.py field_data/prove_lab.csv   # bench results with Wilson CIs (after the bench runs)
 ```
 
