@@ -83,3 +83,24 @@ class TestFleet(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSupervisor(unittest.TestCase):
+    def test_every_rig_button_routes_to_the_right_owner(self):
+        from prototype.prove import export
+        expected = {"healthy": (None, "PASS"), "copper_cut": ("copper", "FAIL"), "antenna": ("rf", "FAIL"),
+                    "mains": ("power", "WARN"), "speaker": ("speaker", "FAIL"), "mic_taped": ("mic", "FAIL"),
+                    "wrong_label": ("label", "FAIL"), "no_answer": ("answer_point", "FAIL")}
+        got = export.scenario_results()
+        for name, (fault, result) in expected.items():
+            self.assertEqual(got[name]["result"]["diagnosis"], fault, name)
+            self.assertEqual(got[name]["result"]["result"], result, name)
+
+    def test_fading_speaker_warned_before_failure_and_no_false_alarms(self):
+        from prototype.prove import supervisor
+        hist, ledger = supervisor.demo_history()
+        first_warn = next(r["night"] for r in hist if r["result"] == "WARN")
+        first_fail = next(r["night"] for r in hist if r["diagnosis"] == "speaker")
+        self.assertGreaterEqual(first_fail - first_warn, 3)
+        self.assertTrue(ledger.verify()[0])
+        self.assertEqual(supervisor.false_alarm_rate(nights=200, seed=3), 0)

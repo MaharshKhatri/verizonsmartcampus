@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROVE Console</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --surface-2: #f3f2ee; --raised: #ffffff;
+  --ink: #0b0b0b; --ink-2: #52514e; --muted: #6f6d68; --grid: #e1e0d9; --axis: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --down: #2a78d6; --up: #8a5cd0; --ref: #9a988f;
+  --good: #0ca30c; --good-text: #006300; --warn: #fab219; --warn-text: #8a5a00; --critical: #d03b3b;
+  --brand: #cc0033;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --surface-2: #222220; --raised: #20201e;
+    --ink: #f0efec; --ink-2: #c3c2b7; --muted: #9a988f; --grid: #2c2c2a; --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --down: #3987e5; --up: #a47ee6; --ref: #75736c; --good-text: #2fd197; --warn-text: #fab219;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --surface-2: #222220; --raised: #20201e;
+  --ink: #f0efec; --ink-2: #c3c2b7; --muted: #9a988f; --grid: #2c2c2a; --axis: #383835;
+  --border: rgba(255,255,255,0.10);
+  --down: #3987e5; --up: #a47ee6; --ref: #75736c; --good-text: #2fd197; --warn-text: #fab219;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--border); background: var(--surface); }
+header h1 { font-size: 17px; margin: 0; font-weight: 650; letter-spacing: -0.01em; }
+header .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); flex: none; }
+header .sub { color: var(--muted); font-size: 13px; }
+header .sp { flex: 1; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+button { font: inherit; cursor: pointer; }
+.btn { border: 1px solid var(--border); background: var(--raised); color: var(--ink); padding: 7px 12px; border-radius: 8px; font-size: 13px; }
+.btn:hover { background: var(--surface-2); }
+.btn.primary { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.btn.on { outline: 2px solid var(--critical); outline-offset: -2px; }
+main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 48px; }
+.strip { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: baseline; padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); margin-bottom: 16px; }
+.strip .big { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
+.strip a { color: var(--ink-2); }
+.grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px; }
+@media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+.card { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 16px; min-width: 0; }
+.card h2 { font-size: 14px; margin: 0 0 4px; font-weight: 650; }
+.card .note { color: var(--muted); font-size: 12.5px; margin: 0 0 12px; }
+.station { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.help { width: 112px; height: 112px; border-radius: 50%; border: 6px solid var(--surface-2); background: var(--brand); color: #fff; font-weight: 800; font-size: 22px; letter-spacing: 0.06em; box-shadow: 0 2px 0 rgba(0,0,0,0.15); flex: none; }
+.help:active { transform: translateY(1px); }
+.display { flex: 1; min-width: 180px; min-height: 112px; border-radius: 10px; background: #0f1a12; color: #b9f5c6; font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 12px; }
+.display .row { display: flex; gap: 8px; margin-top: 10px; }
+.display button { background: #1f3a26; color: #d8ffe1; border: 1px solid #2f5a3a; border-radius: 6px; padding: 6px 14px; font-weight: 700; }
+.rig { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 10px; }
+.result { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+.verdict { font-size: 30px; font-weight: 800; letter-spacing: 0.02em; }
+.verdict.PASS { color: var(--good-text); } .verdict.WARN { color: var(--warn-text); } .verdict.FAIL { color: var(--critical); }
+.meter { margin: 8px 0; }
+.meter .lbl { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--ink-2); }
+.meter svg { width: 100%; height: 22px; display: block; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.ticket { border-left: 3px solid var(--critical); padding: 8px 12px; background: var(--surface-2); border-radius: 0 8px 8px 0; font-size: 13.5px; }
+.ticket.WARN { border-color: var(--warn); } .ticket.PASS { border-color: var(--good); }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+.full { grid-column: 1 / -1; }
+svg text { fill: var(--muted); font-size: 11px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--grid); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child, td.l, th.l { text-align: left; }
+th { color: var(--muted); font-weight: 600; font-size: 12px; }
+.tablewrap { overflow-x: auto; }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--ink-2); flex-wrap: wrap; margin-bottom: 4px; }
+.sw { display: inline-block; width: 12px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 5px; }
+.wc { display: flex; flex-wrap: wrap; gap: 5px; }
+.wc span { font-size: 11.5px; padding: 2px 7px; border-radius: 6px; background: var(--surface-2); color: var(--ink-2); }
+.wc span.hl { background: var(--brand); color: #fff; font-weight: 700; }
+.bars .bar { display: grid; grid-template-columns: 140px 1fr 70px; gap: 10px; align-items: center; margin: 8px 0; font-size: 13px; }
+.bars .track { height: 18px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+.bars .fill { height: 100%; border-radius: 4px; }
+@media (max-width: 520px) { .bars .bar { grid-template-columns: 96px 1fr 56px; } }
+footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header>
+  <span class="dot"></span>
+  <div><h1>Last Copper · PROVE</h1><div class="sub">Every HELP button, proven every night</div></div>
+  <span class="sp"></span>
+  <span class="chip" id="mode">Offline demo</span>
+  <button class="btn" id="theme" title="Toggle theme">◐</button>
+</header>
+<main>
+  <section class="strip">
+    <div><div class="sub">Verizon NJ copper retirement notice <b id="nid"></b></div>
+      <div class="big"><span id="days"></span> days</div></div>
+    <div style="flex:1;min-width:220px">Piscataway (<span class="mono">PSWYNJPI</span>, home of Busch, Livingston and SHI Stadium) is retired <b>on or after Dec 10, 2026</b>, along with <b id="nwc"></b> NJ wire centers.
+      <div class="sub" id="quote"></div></div>
+    <a id="nlink" target="_blank" rel="noopener">Read the notice ↗</a>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Car station</h2>
+      <p class="note" id="carlabel"></p>
+      <div class="station">
+        <button class="help" id="help">HELP</button>
+        <div class="display" id="disp">READY<br><span style="opacity:.7">Press HELP to talk. Text shown here for Deaf and hard-of-hearing riders.</span></div>
+      </div>
+      <h2 style="margin-top:16px">Break something</h2>
+      <p class="note">Each button flips one thing on the demo car. Then run tonight's test.</p>
+      <div class="rig" id="rig"></div>
+      <button class="btn primary" id="run">Run tonight's test</button>
+      <button class="btn" id="reset">Reset</button>
+    </section>
+
+    <section class="card">
+      <h2>Tonight's test</h2>
+      <p class="note">Downlink: console tone → car speaker → PROVE sensor mic. Uplink: PROVE piezo → car mic → console. Pass needs <span id="passdb"></span> dB. Pure noise never exceeds <span id="noisedb"></span> dB.</p>
+      <div class="result"><div class="verdict" id="verdict">-</div><div class="sub" id="vsub">Run a test to see the result.</div></div>
+      <div class="meter"><div class="lbl"><span>Downlink (speaker)</span><span id="dval"></span></div><svg id="dbar" viewBox="0 0 400 22" preserveAspectRatio="none"></svg></div>
+      <div class="meter"><div class="lbl"><span>Uplink (car mic)</span><span id="uval"></span></div><svg id="ubar" viewBox="0 0 400 22" preserveAspectRatio="none"></svg></div>
+      <div class="chips" id="syms"></div>
+      <div class="ticket" id="ticket">No ticket.</div>
+      <p class="note mono" id="hash" style="margin-top:8px"></p>
+    </section>
+
+    <section class="card full">
+      <h2>One car, 60 nights</h2>
+      <p class="note">The nightly margin is the earliest sign of trouble. A speaker that fades gets a warning before it fails. An antenna fault goes straight to Verizon. (Demo car; synthetic.)</p>
+      <div class="legend"><span><i class="sw" style="background:var(--down)"></i>Downlink dB</span><span><i class="sw" style="background:var(--up)"></i>Uplink dB</span><span><i class="sw" style="background:var(--ref)"></i>Pass threshold</span><span>▲ warning</span><span style="color:var(--critical)">✕ failure + ticket</span></div>
+      <svg id="hist" viewBox="0 0 1100 260" style="width:100%;height:auto"></svg>
+    </section>
+
+    <section class="card">
+      <h2>How long does a broken HELP phone stay broken?</h2>
+      <p class="note">120 cars for a year. Mean days from failure to repair, by how failures get found. Rates are assumptions (below); the pilot replaces them.</p>
+      <div class="bars" id="bars"></div>
+      <p class="note" id="trapnote"></p>
+      <div class="tablewrap"><table id="sens"></table></div>
+      <p class="note">Silent faults (speaker, mic, unanswered calls) are the only failures a line monitor misses. Scaling them from 0.1× to 3× keeps PROVE's reduction between <span id="sensmin"></span> and <span id="sensmax"></span>, because nothing else finds them for months.</p>
+    </section>
+
+    <section class="card">
+      <h2>Why two tones, not one loopback?</h2>
+      <p class="note">Hands-free phones cancel their own echo or mute the mic while the far end talks, so a single tone played out and listened for back can fail on a healthy phone. Results are from a model; the bench test on a real elevator phone (Gate B) decides.</p>
+      <div class="tablewrap"><table id="design"></table></div>
+    </section>
+
+    <section class="card">
+      <h2>Evidence ledger</h2>
+      <p class="note">Every test is appended to a SHA-256 chain. Editing any past result breaks every hash after it. Your browser checks the chain itself. (Voluntary record, not a compliance certificate.)</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px"><button class="btn" id="verify">Verify chain</button><button class="btn" id="tamper">Tamper with an entry</button><span class="chip" id="chainst">not checked</span></div>
+      <div class="tablewrap"><table id="ledger"></table></div>
+    </section>
+
+    <section class="card">
+      <h2>Who fixes it</h2>
+      <p class="note">Symptoms → cause → owner. Simulated routing accuracy <b id="acc"></b>, and <b id="acc2"></b> when real symptom rates differ from our assumptions by ±15 points.</p>
+      <div class="tablewrap"><table id="owners"></table></div>
+    </section>
+
+    <section class="card full">
+      <h2>The 62 wire centers in notice 2026-03-A-NJ</h2>
+      <p class="note">From Verizon's public notice. New Brunswick is not on the list. Lifeline locations are never shown here.</p>
+      <div class="wc" id="wc"></div>
+    </section>
+  </div>
+  <footer>The demo car and fleet are synthetic. Acoustic results come from a signal model (prototype/prove/acoustic.py). Failure rates are labeled assumptions. FIND runs inside Verizon on Verizon's own records; this team never receives customer data. We do not dial 911.</footer>
+</main>
+<script src="data.js"></script>
+<script>
+(() => {
+const D = window.PROVE;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let live = false;
+
+// theme
+try { const t = localStorage.getItem("prove-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+$("theme").onclick = () => {
+  const cur = document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const nxt = cur === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = nxt;
+  try { localStorage.setItem("prove-theme", nxt); } catch (e) {}
+};
+
+// notice strip
+const N = D.notice;
+$("nid").textContent = N.id + " (" + N.dated + ")";
+$("nwc").textContent = N.wire_centers.length - 1 + " other";
+$("quote").textContent = "“" + N.quote + "”";
+$("nlink").href = N.url;
+const days = Math.max(0, Math.ceil((new Date(N.implementation + "T00:00:00-05:00") - new Date()) / 86400000));
+$("days").textContent = days;
+$("passdb").textContent = D.pass_db; $("noisedb").textContent = D.noise_only_max_db;
+$("wc").innerHTML = N.wire_centers.map(w => `<span class="${w.clli === "PSWYNJPI" ? "hl" : ""}" title="${esc(w.address)} · ${w.clli}">${esc(w.name)}</span>`).join("");
+
+// rig buttons
+const RIG = [
+  ["copper_cut", "Line still on copper", {on_copper: true}],
+  ["antenna", "Unplug antenna", {antenna: false}],
+  ["mains", "Kill mains power", {mains: false}],
+  ["speaker", "Disconnect speaker", {speaker_gain: 0}],
+  ["mic_taped", "Tape the car mic", {mic_taped: true}],
+  ["wrong_label", "Wrong location label", {reported_label: "1 Main St (gateway default address)"}],
+  ["no_answer", "Dispatcher doesn't answer", {answer_point_ok: false}],
+];
+let active = "healthy";
+$("rig").innerHTML = RIG.map(([k, l]) => `<button class="btn" data-k="${k}">${l}</button>`).join("");
+const label = D.scenarios.healthy.help.label_sent;
+$("carlabel").textContent = label + " · Verizon LTE line via certified POTS gateway";
+async function api(path, body) {
+  const r = await fetch(path, {method: body === undefined ? "GET" : "POST", headers: {"Content-Type": "application/json"}, body: body === undefined ? undefined : JSON.stringify(body)});
+  return r.json();
+}
+document.querySelectorAll("#rig button").forEach(b => b.onclick = async () => {
+  const k = b.dataset.k;
+  active = active === k ? "healthy" : k;
+  document.querySelectorAll("#rig button").forEach(x => x.classList.toggle("on", x.dataset.k === active));
+  if (live) {
+    await api("/api/reset", {});
+    for (let n = 0; n < 6; n++) await api("/api/test", {});
+    if (active !== "healthy") await api("/api/rig", RIG.find(r => r[0] === active)[2]);
+  }
+});
+$("reset").onclick = async () => { active = "healthy"; document.querySelectorAll("#rig button").forEach(x => x.classList.remove("on")); if (live) await api("/api/reset", {}); showResult(D.scenarios.healthy.result); $("disp").innerHTML = "READY"; };
+
+function meter(svg, v) {
+  const max = 80, w = x => Math.max(0, Math.min(400, (x + 0) / max * 400));
+  const ok = v >= D.pass_db;
+  svg.innerHTML = `<rect x="0" y="4" width="400" height="14" rx="3" fill="var(--surface-2)"/>` +
+    `<rect x="0" y="4" width="${w(Math.max(v, 0))}" height="14" rx="3" fill="${ok ? "var(--good)" : "var(--critical)"}"/>` +
+    `<rect x="${w(D.pass_db) - 1}" y="0" width="2" height="22" fill="var(--ink)"/>`;
+}
+function showResult(r) {
+  const v = $("verdict"); v.textContent = r.result; v.className = "verdict " + r.result;
+  $("vsub").textContent = r.result === "PASS" ? "Both directions heard, label right, call answered." : (r.warning || (r.symptoms || []).join(", "));
+  meter($("dbar"), r.down_db); meter($("ubar"), r.up_db);
+  $("dval").textContent = r.down_db <= -59 ? "no call" : r.down_db.toFixed(1) + " dB";
+  $("uval").textContent = r.up_db <= -59 ? "no call" : r.up_db.toFixed(1) + " dB";
+  $("syms").innerHTML = (r.symptoms || []).map(s => `<span class="chip">${esc(s.replace(/_/g, " "))}</span>`).join("");
+  const t = $("ticket"); t.className = "ticket " + r.result;
+  t.innerHTML = r.diagnosis ? `<b>Ticket ${esc(r.ticket)}</b> → <b>${esc(r.owner)}</b><br>Cause: ${esc(D.triage_labels?.[r.diagnosis] || r.diagnosis)} (confidence ${(r.confidence * 100).toFixed(0)}%)` : (r.warning ? "Warning logged for the elevator contractor's next visit." : "No ticket. Logged to the evidence ledger.");
+  $("hash").textContent = r.hash ? "ledger entry " + r.hash.slice(0, 24) + "…" : "";
+}
+$("run").onclick = async () => {
+  if (live) { showResult(await api("/api/test", {})); refreshLedger(); }
+  else showResult(D.scenarios[active].result);
+};
+$("help").onclick = async () => {
+  const h = live ? await api("/api/help", {}) : D.scenarios[active].help;
+  const d = $("disp");
+  if (!h.voice_call) { d.innerHTML = `NO VOICE PATH<br><span style="opacity:.8">${esc(h.fallback)}</span>`; return; }
+  d.innerHTML = `CONNECTING… location sent: <b>${esc(h.label_sent)}</b><br>${esc(h.text_mode.to_car)}<div class="row">${h.text_mode.choices.map(c => `<button data-c="${c}">${c}</button>`).join("")}</div>`;
+  d.querySelectorAll("button").forEach(b => b.onclick = () => { d.innerHTML += `<br>&gt; Rider tapped <b>${b.dataset.c}</b>. Dispatcher sees it with the location.`; });
+};
+
+// 60-night history chart
+(function hist() {
+  const H = D.demo_car, svg = $("hist"), W = 1100, Ht = 260, L = 40, R = 10, T = 14, B = 30;
+  const x = n => L + n / (H.length - 1) * (W - L - R), y = v => T + (1 - (Math.max(v, 0)) / 80) * (Ht - T - B);
+  let s = "";
+  for (const g of [0, 20, 40, 60, 80]) s += `<line x1="${L}" x2="${W - R}" y1="${y(g)}" y2="${y(g)}" stroke="var(--grid)"/><text x="${L - 6}" y="${y(g) + 4}" text-anchor="end">${g}</text>`;
+  for (let n = 0; n < H.length; n += 10) s += `<text x="${x(n)}" y="${Ht - 10}" text-anchor="middle">night ${n}</text>`;
+  s += `<line x1="${L}" x2="${W - R}" y1="${y(D.pass_db)}" y2="${y(D.pass_db)}" stroke="var(--ref)" stroke-dasharray="5 4"/>`;
+  const path = k => H.map((r, i) => (i ? "L" : "M") + x(r.night) + " " + y(r[k])).join(" ");
+  s += `<path d="${path("down_db")}" fill="none" stroke="var(--down)" stroke-width="2"/>`;
+  s += `<path d="${path("up_db")}" fill="none" stroke="var(--up)" stroke-width="2"/>`;
+  let firstWarn = null, firstFail = null;
+  H.forEach(r => {
+    if (r.result === "WARN") { firstWarn ??= r.night; s += `<text x="${x(r.night)}" y="${T + 10}" text-anchor="middle" style="fill:var(--warn-text);font-size:12px">▲</text>`; }
+    if (r.result === "FAIL") { if (r.diagnosis === "speaker") firstFail ??= r.night; s += `<text x="${x(r.night)}" y="${T + 10}" text-anchor="middle" style="fill:var(--critical);font-size:12px">✕</text>`; }
+  });
+  if (firstWarn !== null && firstFail !== null) s += `<text x="${x(firstWarn)}" y="${T + 26}" style="fill:var(--ink-2)">speaker fading: warned ${firstFail - firstWarn} nights before it failed</text>`;
+  const rf = H.find(r => r.diagnosis === "rf");
+  if (rf) s += `<text x="${x(rf.night) - 4}" y="${T + 26}" text-anchor="end" style="fill:var(--ink-2)">antenna → Verizon ticket</text>`;
+  svg.innerHTML = s;
+})();
+
+// fleet bars + sensitivity
+(function fleet() {
+  const F = D.fleet, rows = [["Annual inspection", "annual", "var(--critical)"], ["Line monitoring", "line_monitor", "var(--warn)"], ["PROVE nightly", "prove", "var(--good)"]];
+  const max = Math.max(...rows.map(r => F[r[1]].mean_days_broken));
+  $("bars").innerHTML = rows.map(([l, k, c]) => `<div class="bar"><span>${l}</span><div class="track"><div class="fill" style="width:${F[k].mean_days_broken / max * 100}%;background:${c}"></div></div><b>${F[k].mean_days_broken} d</b></div>`).join("");
+  $("trapnote").textContent = `Real entrapments that met a dead phone, per 120 cars per year: ${F.annual.entrapments_meeting_dead_phone} (annual), ${F.line_monitor.entrapments_meeting_dead_phone} (line monitoring), ${F.prove.entrapments_meeting_dead_phone} (PROVE).`;
+  const S = D.sensitivity;
+  $("sens").innerHTML = `<tr><th>Silent-fault rate</th><th>Annual</th><th>Line monitor</th><th>PROVE</th><th>PROVE vs monitor</th></tr>` + S.map(r => `<tr><td>${r.silent_fault_rate_scale}×</td><td>${r.annual}</td><td>${r.line_monitor}</td><td>${r.prove}</td><td>−${(r.prove_vs_line_monitor_reduction * 100).toFixed(0)}%</td></tr>`).join("") + `<tr><td colspan="5" class="l" style="color:var(--muted);font-size:11.5px;white-space:normal">Broken car-days per year across 120 cars.</td></tr>`;
+  const red = S.map(r => r.prove_vs_line_monitor_reduction * 100);
+  $("sensmin").textContent = Math.min(...red).toFixed(0) + "%"; $("sensmax").textContent = Math.max(...red).toFixed(0) + "%";
+})();
+
+// design table
+(function design() {
+  const A = D.acoustic, names = {healthy: "Healthy (voice-switched)", healthy_full_duplex: "Healthy (full duplex)", healthy_no_echo_control: "Healthy (no echo control)", speaker_dead: "Speaker dead", speaker_weak: "Speaker weak", mic_dead: "Mic dead", mic_taped: "Mic taped", noisy_machine_room: "Noisy", marginal_rf: "Marginal RF (25% loss)", no_call: "No call"};
+  $("design").innerHTML = `<tr><th>Condition</th><th>Path works?</th><th>Two tones right</th><th>One loopback right</th></tr>` + Object.entries(A).map(([k, r]) => `<tr><td>${names[k] || k}</td><td>${r.path_ok ? "yes" : "no"}</td><td>${(r.two_direction_correct * 100).toFixed(0)}%</td><td style="color:${r.loopback_correct < 0.9 ? "var(--critical)" : "inherit"}">${(r.loopback_correct * 100).toFixed(0)}%</td></tr>`).join("");
+})();
+
+// owners
+$("acc").textContent = (D.triage.nominal.owner_accuracy * 100).toFixed(0) + "%";
+$("acc2").textContent = (D.triage.perturbed_15pct.owner_accuracy * 100).toFixed(0) + "%";
+const FL = {rf: "No signal / attach", power: "Mains lost (on battery)", gateway: "Gateway hung", speaker: "Speaker dead", mic: "Mic dead or covered", answer_point: "Nobody answered", label: "Wrong location label", copper: "Still on retiring copper"};
+D.triage_labels = FL;
+$("owners").innerHTML = `<tr><th>Cause</th><th class="l">Ticket goes to</th></tr>` + Object.entries(D.triage.owners).map(([k, o]) => `<tr><td>${FL[k] || k}</td><td class="l">${esc(o)}</td></tr>`).join("");
+
+// ledger + browser-side SHA-256 verification
+let ENTRIES = D.ledger.entries.map(e => JSON.parse(JSON.stringify(e)));
+function canon(v) {
+  if (Array.isArray(v)) return "[" + v.map(canon).join(",") + "]";
+  if (v && typeof v === "object") return "{" + Object.keys(v).sort().map(k => JSON.stringify(k) + ":" + canon(v[k])).join(",") + "}";
+  return JSON.stringify(v);
+}
+function sha256(str) {  // compact SHA-256 so file:// pages work without crypto.subtle
+  const K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  const b = new TextEncoder().encode(str), l = b.length, n = ((l + 9 + 63) >> 6) << 6, m = new Uint8Array(n);
+  m.set(b); m[l] = 0x80; const dv = new DataView(m.buffer); dv.setUint32(n - 4, l * 8); dv.setUint32(n - 8, Math.floor(l / 2 ** 29));
+  let h = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19]; const w = new Uint32Array(64), r = (x, k) => (x >>> k) | (x << (32 - k));
+  for (let o = 0; o < n; o += 64) {
+    for (let i = 0; i < 16; i++) w[i] = dv.getUint32(o + i * 4);
+    for (let i = 16; i < 64; i++) { const s0 = r(w[i-15],7) ^ r(w[i-15],18) ^ (w[i-15] >>> 3), s1 = r(w[i-2],17) ^ r(w[i-2],19) ^ (w[i-2] >>> 10); w[i] = (w[i-16] + s0 + w[i-7] + s1) | 0; }
+    let [a, bb, c, d, e, f, g, hh] = h;
+    for (let i = 0; i < 64; i++) { const t1 = (hh + (r(e,6) ^ r(e,11) ^ r(e,25)) + ((e & f) ^ (~e & g)) + K[i] + w[i]) | 0, t2 = ((r(a,2) ^ r(a,13) ^ r(a,22)) + ((a & bb) ^ (a & c) ^ (bb & c))) | 0; hh = g; g = f; f = e; e = (d + t1) | 0; d = c; c = bb; bb = a; a = (t1 + t2) | 0; }
+    h = h.map((v, i) => (v + [a, bb, c, d, e, f, g, hh][i]) | 0);
+  }
+  return h.map(v => (v >>> 0).toString(16).padStart(8, "0")).join("");
+}
+function renderLedger() {
+  $("ledger").innerHTML = `<tr><th>#</th><th>Night</th><th class="l">Result</th><th class="l">Owner</th><th class="l">Hash</th></tr>` + ENTRIES.map(e => `<tr><td>${e.seq}</td><td>${e.record.night}</td><td class="l">${esc(e.record.result)}</td><td class="l">${esc(e.record.owner || "")}</td><td class="l mono">${e.hash.slice(0, 12)}</td></tr>`).join("");
+}
+function verify() {
+  for (let i = 0; i < ENTRIES.length; i++) {
+    const e = ENTRIES[i];
+    if (i > 0 && e.prev !== ENTRIES[i - 1].hash) return [false, e.seq];
+    if (sha256(canon({prev: e.prev, record: e.record, seq: e.seq})) !== e.hash) return [false, e.seq];
+  }
+  return [true, null];
+}
+async function refreshLedger() { if (live) { const L = await api("/api/ledger"); ENTRIES = L.entries; } renderLedger(); }
+$("verify").onclick = () => { const [ok, bad] = verify(); const c = $("chainst"); c.textContent = ok ? `✓ ${ENTRIES.length} entries verified in your browser` : `✕ chain broken at entry ${bad}`; c.style.color = ok ? "var(--good-text)" : "var(--critical)"; };
+$("tamper").onclick = () => { const e = ENTRIES[Math.floor(ENTRIES.length / 2)]; e.record.result = e.record.result === "PASS" ? "FAIL" : "PASS"; renderLedger(); $("chainst").textContent = `entry ${e.seq} edited (result flipped). Verify again.`; $("chainst").style.color = "var(--warn-text)"; };
+renderLedger();
+showResult(D.scenarios.healthy.result);
+
+// live mode if the server is running
+if (location.protocol.startsWith("http")) fetch("/api/health").then(r => r.json()).then(j => { if (j.ok) { live = true; $("mode").textContent = "Live rig (model)"; api("/api/reset", {}); } }).catch(() => {});
+})();
+</script>
+</body>
+</html>

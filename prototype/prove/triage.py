@@ -17,20 +17,23 @@ FAULTS = {
     "mic":            ("Elevator contractor",                  "Car microphone dead or obstructed"),
     "answer_point":   ("RUPD dispatch / answering point",      "Call connected but nobody answered"),
     "label":          ("Provisioning (Verizon + OIT)",         "Location label wrong after migration"),
+    "copper":         ("Verizon Network Transformation (FIND)", "Line still on retired copper: move it first"),
 }
-PRIOR = {"rf": 0.20, "power": 0.12, "gateway": 0.12, "speaker": 0.15, "mic": 0.20, "answer_point": 0.11, "label": 0.10}
+PRIOR = {"rf": 0.19, "power": 0.11, "gateway": 0.11, "speaker": 0.14, "mic": 0.19, "answer_point": 0.10, "label": 0.09,
+         "copper": 0.07}
 
 SYMPTOMS = ["heartbeat_lost", "rsrp_low", "attach_fail", "mains_lost", "battery_low", "call_setup_fail",
-            "down_fail", "up_fail", "up_hf_loss", "no_answer", "label_mismatch"]
+            "down_fail", "up_fail", "up_hf_loss", "no_answer", "label_mismatch", "still_on_copper"]
 # P(symptom observed | fault). Assumptions; see module docstring.
 LIKELIHOOD = {
-    "rf":           [0.60, 0.85, 0.70, 0.02, 0.02, 0.90, 0.90, 0.90, 0.05, 0.05, 0.02],
-    "power":        [0.30, 0.05, 0.10, 0.95, 0.60, 0.40, 0.40, 0.40, 0.02, 0.02, 0.02],
-    "gateway":      [0.80, 0.05, 0.30, 0.02, 0.02, 0.95, 0.95, 0.95, 0.02, 0.02, 0.02],
-    "speaker":      [0.02, 0.05, 0.02, 0.02, 0.02, 0.02, 0.97, 0.03, 0.02, 0.02, 0.02],
-    "mic":          [0.02, 0.05, 0.02, 0.02, 0.02, 0.02, 0.03, 0.97, 0.40, 0.02, 0.02],
-    "answer_point": [0.02, 0.05, 0.02, 0.02, 0.02, 0.05, 0.03, 0.03, 0.02, 0.95, 0.05],
-    "label":        [0.02, 0.05, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.05, 0.97],
+    "rf":           [0.60, 0.85, 0.70, 0.02, 0.02, 0.90, 0.90, 0.90, 0.05, 0.05, 0.02, 0.02],
+    "power":        [0.30, 0.05, 0.10, 0.95, 0.60, 0.40, 0.40, 0.40, 0.02, 0.02, 0.02, 0.02],
+    "gateway":      [0.80, 0.05, 0.30, 0.02, 0.02, 0.95, 0.95, 0.95, 0.02, 0.02, 0.02, 0.02],
+    "speaker":      [0.02, 0.05, 0.02, 0.02, 0.02, 0.02, 0.97, 0.03, 0.02, 0.02, 0.02, 0.02],
+    "mic":          [0.02, 0.05, 0.02, 0.02, 0.02, 0.02, 0.03, 0.97, 0.40, 0.02, 0.02, 0.02],
+    "answer_point": [0.02, 0.05, 0.02, 0.02, 0.02, 0.05, 0.03, 0.03, 0.02, 0.95, 0.05, 0.02],
+    "label":        [0.02, 0.05, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.05, 0.97, 0.02],
+    "copper":       [0.30, 0.02, 0.02, 0.02, 0.02, 0.97, 0.97, 0.97, 0.02, 0.02, 0.02, 0.97],
 }
 
 

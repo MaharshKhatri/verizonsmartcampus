@@ -11,8 +11,23 @@ import json
 GENESIS = "0" * 64
 
 
+def _canon(v):
+    """Integral floats as ints, so the browser's JSON (which writes -60, not -60.0) hashes identically."""
+    if isinstance(v, float) and v.is_integer():
+        return int(v)
+    if isinstance(v, dict):
+        return {k: _canon(x) for k, x in v.items()}
+    if isinstance(v, (list, tuple)):
+        return [_canon(x) for x in v]
+    return v
+
+
+def canonical_json(body):
+    return json.dumps(_canon(body), sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
 def _digest(body):
-    return hashlib.sha256(json.dumps(body, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    return hashlib.sha256(canonical_json(body).encode("utf-8")).hexdigest()
 
 
 class EvidenceLedger:
