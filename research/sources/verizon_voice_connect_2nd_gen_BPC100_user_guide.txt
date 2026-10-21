@@ -1,0 +1,599 @@
+Voice Connect
+user guide
+Reliable calling.
+Flexible features.
+Easy to use.
+Table of contents
+10-digit dialing............................................................................................................................ 4
+Voice Connect LED indicator............................................................................................4
+LED indicator states................................................................................................................4
+
+    Voice mail................................................................................................................................ 5
+
+    Calling features ............................................................................................................ 6-8
+         3-Way Calling......................................................................................................................6
+         Call Return........................................................................................................................... 6
+         Call Forwarding .................................................................................................................6
+         Call Forward No Answer/Busy Transfer ............................................................7
+         Caller ID .................................................................................................................................7
+         Caller ID Block — per call ............................................................................................7
+         Caller ID Block — permanent....................................................................................7
+         Call Waiting...........................................................................................................................8
+         International Calling........................................................................................................8
+
+    Additional information............................................................................................ 9-14
+         Reaching 911 during a power outage....................................................................9
+         Testing and replacing the battery............................................................................9
+         Monitored home alarm system...............................................................................10
+         Adding alarm company central monitoring telephone numbers....... 10
+         Adding alarm telephone numbers.........................................................................11
+         Clearing monitoring alarm central station numbers...................................12
+
+2
+    Faxing....................................................................................................................................13
+    Fax machine settings....................................................................................................13
+    Personal medical devices..........................................................................................14
+
+Troubleshooting ........................................................................................................ 15-17
+    No dial tone.........................................................................................................................15
+    Not receiving voice mail............................................................................................. 15
+    No lights on the base device ....................................................................................15
+    No name displayed on Caller ID ............................................................................16
+    How to know when operating on battery power ..........................................16
+    Voice quality.......................................................................................................................16
+    Moving the device.......................................................................................................... 17
+    Call connection................................................................................................................ 17
+    Fax troubleshooting...................................................................................................... 17
+
+Regulatory information ....................................................................................... 18-19
+
+
+
+
+                                                                                                                                             3
+Voice Connect™
+An easy, reliable phone service.
+This guide will help you get the most out of your new phone
+service, whether you use every feature, or simply prefer
+basic calling. Availability of features is determined by your
+calling plan. For technical support, call 1.800.Verizon
+(1.800.837.4966).
+10-digit dialing
+Voice Connect requires the use of 10-digit dialing for local
+and long-distance calls. It’s the area code and a 7-digit
+telephone number. All 0+, 500, 10-10, 700, 900, 950 and
+976 calls are blocked. Also, you cannot receive collect or
+third-party-billed calls.
+Voice Connect LED indicator
+Your device provides a variety of information depending on
+what you’re doing. Call Waiting, voice mail, missed call, low
+battery, and much more. A complete guide on what you can
+expect can be found at verizon.com/voiceconnect.
+LED indicator states
+The power button on the front of the unit includes an LED
+that indicates the current state of the BPC100.
+
+    LED color   State        Meaning
+    Green Solid              • 4G service is available
+    		                       • BPC100 running on backup batteries with
+                                4G service available
+    Blue Solid               • Incoming/outgoing call (including 911)*
+    		                       • Call waiting
+    		                       • Conference call
+    		                       • Call forwarding enabled
+    		                       • Software update in progress
+    		                       *LED turns green once call is established and LTE is available again.
+
+    Blue Blinking            • Voicemail available
+    		                       • Missed call
+    		                       • Software update complete
+    Red Blinking             • No service               • SIM locked
+    		                       • SIM error                • Low battery
+    		
+    		
+4
+                                  Voice mail
+
+
+Setting up your home voice mail.
+
+How to set it up
+1. Dial *86 from your home phone.
+2. Follow the voice prompts to:
+  • Select your preferred language
+  • Create a password
+  • Record your greetings
+  • Select the greeting callers will hear
+
+How to retrieve it
+1.	When you have a new message, the Power button
+    on your Voice Connect device will blink blue. You
+    will also hear a “stutter” dial tone.
+2.	Dial *86 from your home phone. If away, dial
+    your phone number and press # during your voice
+    mail greeting.
+3.	Follow the system prompts to hear and manage
+    your voice mails.
+
+
+
+
+                                                        5
+Calling features
+
+Calling features
+
+3-Way Calling
+3-Way Calling adds a third person to your phone conversation at
+any time. Making a 3-way call is easy:
+1. While on the first call, press flash.
+2. Dial the 10-digit number of the second party.
+3.	When the second party answers, press flash to initiate the
+    3-way call.
+4.	If the second party does not answer, press the flash key
+    twice to end the connection and return to the first party.
+5.	To end both conversations, press the end key.
+
+
+Call Return
+Dial *69 and your phone will automatically call the last number
+received. Note: Call Return requires a subscription to Caller ID.
+For technical support, call 1.800.Verizon (1.800.837.4966).
+
+
+Call Forwarding
+Forward calls so they ring and can be answered at another
+phone number, including your mobile phone or office number.
+To activate:
+Dial *72 and then the number you wish to forward calls to.
+To deactivate:
+Dial *73. Your home phone will not ring until you deactivate
+the service.
+
+
+
+
+6
+                                Calling features
+
+Call Forward No Answer/
+Busy Transfer
+Use this feature to send calls to another phone when
+your phone is busy or when you don’t answer after
+three or four rings.
+To activate:
+Dial *71 and then the number you want calls
+forwarded to.
+Once activated your phone will ring several times, giving
+you the option to answer. If you’re on the phone or
+choose not to answer, the call will be forwarded to
+the destination phone number.
+To deactivate:
+Dial *73.
+
+
+Caller ID
+Caller ID allows you to see on your phone the caller’s
+name and/or phone number before you take the call.
+
+
+Caller ID Block — per call
+You may block your Caller ID information on a per-call
+basis. To activate for one call: dial *67 plus the number
+of the person you are calling.
+
+
+Caller ID Block — permanent
+To activate the permanent Caller ID Block feature,
+call 1.800.Verizon (1.800.837.4966). To deactivate for a
+single call: dial *82 plus the number you wish to reach.
+
+
+
+                                                            7
+    Calling features
+
+Call Waiting
+Call Waiting allows you to place a call on hold and switch
+to answer a second call.
+How Call Waiting works:
+1.	When you’re on a call and a second call comes in,
+    you’ll hear a beeping tone. Put the first call on hold by
+    pressing the flash key on your phone. That connects
+    you to the second call.
+2. To return to the first call, press flash again.
+3. To end each call, simply hang up.
+How to cancel Call Waiting:
+You can stop Call Waiting for a single call by dialing *70.
+
+
+International Calling
+To make international calls that require the ‘011’ prefix,
+you must subscribe to a Voice Connect International
+Calling plan. To order an International Calling plan, call
+1.800.Verizon (1.800.837.4966).
+You can dial directly to international countries that
+support the North American 10-digit dialing pattern,
+such as Canada, Puerto Rico and U.S. Territories,
+without an International Calling plan. International
+rates will apply to those calls.
+To view international rates, countries that support
+10-digit dialing and information on country codes:
+1. Log in to myverizon.com.
+2.	From the Home Page, click the Support tab in
+    the header.
+3.	On the left side of the Support page, select the
+    appropriate category.
+
+
+8
+                                 Additional information
+
+Reaching 911 during a power outage
+In the case of a power outage, your Voice Connect
+service will operate on battery power for up to 3 talk
+hours, or up to 23 standby hours. You will need to use
+a phone that does not have an electrical base station
+to make calls. When the battery runs out it will not be
+possible to make or receive calls, including calls to 911.
+Changing your batteries allows for continued service.
+
+
+Testing and replacing the battery
+Voice Connect uses 3 AA batteries. Remove the
+battery cover to access the battery compartment.
+To test, remove device from AC power. If the LED
+button is blinking blue you are running on backup
+power. If the LED is blinking red your batteries are low.
+If the device powers off after you remove AC power,
+then the batteries are either dead or not installed.
+Batteries should also be replaced every six months
+or after a power outage.
+To replace, purchase 3 standard alkaline AA
+batteries. Remove battery compartment cover
+and place in battery tray.
+For technical support call 1.800.Verizon
+(1.800.837.4966).
+
+
+
+
+                                                             9
+Additional information
+
+Monitored home alarm system
+Voice Connect can support most monitored home alarm
+systems. A monitored alarm system is one that would call
+you if your alarm was triggered.
+Monitored home alarms may or may not connect to your
+Verizon home phone service. You would only use Voice
+Connect with your alarm if your home phone is used to
+contact the alarm company.
+Consult with your alarm company to identify if and how
+your alarm is connected. Alarms supported by radio cell
+or a mobile service do not require connection to
+Voice Connect.
+Follow these steps only when using your home phone
+number to communicate with your monitored home alarm.
+Your Voice Connect device is equipped with an RJ31
+port to support alarms. Your alarm company can connect
+directly into the yellow port on the Voice Connect device.
+When your alarm is tripped, it calls a specific phone number
+to reach your alarm company. This number must be entered
+into your Voice Connect device. There may be two numbers,
+a primary and a secondary. Consult with you alarm company
+to identify the number(s).
+
+Adding alarm company central
+monitoring telephone numbers
+When using your line for a fire or home alarm, it is your
+responsibility to have and replace backup batteries to
+ensure your ability to make and receive calls. The batteries
+in your Voice Connect device do not power your alarm panel
+or any phones connected to your Voice Connect device.
+Verizon is not responsible for unsuccessful alarm
+responses. All alarm functionality is the responsibility
+of your alarm company.
+10
+                                Additional information
+
+Adding alarm telephone numbers
+Alarm companies use different protocols to
+communicate with alarm panels. In order to maximize the
+likelihood that the alarm panel can successfully connect
+to the alarm company, it is necessary to enter several
+codes into the Voice Connect device.
+Using a phone connected to your Voice Connect
+device, dial ##21*MDN# where the MDN is the 10-digit
+telephone number provided by your alarm company. This
+is the number your alarm panel will call when an alarm
+is tripped. Example ##21*1234567890# (MDN is (123)
+456-7890).
+After pressing # you will hear a tone in your receiver
+indicating that the telephone number has been
+successfully added.
+You can add up to 5 telephone numbers using the same
+dialing sequence before powering off and on.
+Turn off the Voice Connect device and turn it back on.
+To ensure you programmed the alarm number correctly
+you should test your alarm. If the alarm company
+responds with a phone call, then your connection is
+complete. Failure to verify may result in your alarm
+not working.
+If you feel that you have entered a number incorrectly,
+follow the steps below to clear out the stored numbers
+and begin the process again.
+
+
+
+
+                                                           11
+Additional information
+
+Clearing monitoring alarm central
+station numbers
+Using a phone serviced from your Voice Connect device, dial
+##22*# followed by ##268# to clear out all numbers stored.
+Once telephone numbers are cleared they are
+gone. You can add and program them again if needed.
+
+
+
+
+12
+                               Additional information
+
+Faxing
+Voice Connect, when connected to a compatible
+fax machine, allows you to send and receive faxes.
+The fax machine can be connected directly to your
+device or plugged into a wall jack serviced by your
+Voice Connect device.
+Warning: Do NOT plug your phone or fax machine
+into the yellow port labeled Alarm. Doing so could
+stop the device from working.
+
+Fax machine settings
+Setting         Recommended Value        Notes
+                                         Your fax machine
+                Slow                     may have a
+                9600bps if your          “Compatibility”
+Speed
+                machine has speed        setting (see
+                settings in bps          below) rather
+                                         than “Speed”.
+                                         Your fax
+                                         machine may
+                                         have a “Speed”
+Compatibility   Basic
+                                         setting (see above)
+                                         rather than
+                                         “Compatibility”.
+Resolution      Standard/Normal
+                                         When ECM is off,
+Error                                    minor errors will
+Correction      Off                      not prevent
+(ECM)                                    sending or
+                                         receiving a fax.
+
+
+                                                               13
+Additional information
+
+Personal medical devices
+Voice Connect supports most medical devices that
+communicate with professional monitoring centers.
+This includes personal emergency response devices
+that would have been connected to your landline. To
+connect your device: plug an RJ11 phone cord (not
+supplied) directly into the black RJ11 port on the back
+of your Voice Connect device (not the yellow or blue
+port). This connection method supports personal
+medical devices that rely on your phone line to call
+the monitoring center. Devices that communicate
+with a monitoring center by other means, like
+wireless services, should not require connection.
+Verizon is not responsible for unsuccessful alarm
+responses or medical device relays. All alarm and
+medical device functionality is the responsibility of
+you and your alarm and/or medical device company.
+Compatibility is determined by your testing of your
+alarm and/or medical device at time of install.
+Voice Connect supports most Text Telephone or
+TTY devices.
+
+
+
+
+14
+                                     Troubleshooting
+
+Troubleshooting your device
+Most problems can be cleared by powering the device off
+then back on.
+If restarting your device does not resolve your issue, follow
+the steps shown here.
+
+
+No dial tone
+1.	Make sure the power adapter is properly connected and the
+     Power button LED is lit.
+2. Make sure the telephone cable is securely plugged in.
+3.	Plug phone directly into the Voice Connect device to isolate
+    home wiring issues.
+4.	Using a cell phone, make sure you have at least 2 steady
+    bars of signal coverage.
+5.	Try moving the device near a window to obtain a
+    better signal.
+
+
+Not receiving voice mail
+1. Verify that you’ve completed the initial voice mail setup.
+2. Check to see if your voice mailbox is full.
+3.	Check to see that Call Forwarding is not sending calls to
+    another number.
+
+
+No lights on the base device
+1. Check that your power supply is plugged into an outlet.
+2.	If the outlet is controlled by a light switch, make sure it’s on.
+3.	Ensure the connection between the device and the power
+    supply is secure.
+
+                                                                        15
+     Troubleshooting
+
+
+No name displayed on Caller ID
+If you subscribe to Caller ID with Name, your telephone
+will have the ability to display both the telephone number
+and the name of the person calling. If you’re not seeing
+the caller’s name on your telephone:
+1.	Call 1.800.Verizon (1.800.837.4966) to verify you
+    subscribe to Caller ID with Name
+2. Try using Voice Connect with a different brand
+    of telephone handset as not all telephone sets
+    are compatible with Caller ID with Name. Some
+    manufacturer’s devices will only show a caller’s
+    number and not a name.
+
+How to know when operating on
+battery power
+When on battery, the LED light will be green until the
+batteries become low. A blinking red LED indicates low
+battery. No light indicates batteries are dead and power
+is not connected. Your device performs best when
+plugged into a power outlet. Battery power is intended for
+short-term power outages only. Changing batteries during
+an outage will ensure continued service during an outage.
+
+
+Voice quality
+1. Try a different home phone.
+2.	Check that nothing is interfering with the signal
+    (e.g., microwave). Move your Voice Connect
+    device at least eight inches away from other
+    electronic equipment.
+3.	If using a cordless phone, ensure phone is
+    fully charged.
+
+16
+                                   Troubleshooting
+
+Moving the device
+Moving the device could impact 911 capabilities and
+signal strength. Please call Verizon for technical
+assistance if you need the device relocated.
+Remember, the device is the property of Verizon
+and must stay within your home.
+
+
+Call connection
+You may hear up to seven seconds of silence before
+your call is connected.
+For technical support, call 1.800.Verizon
+(1.800.837.4966).
+
+
+Fax troubleshooting
+If you are having difficulty sending or receiving faxes on
+your Voice Connect device, try these steps.
+1. Check the cable
+Check that the RJ11 cable is properly connected. If
+possible, try using a different RJ11 cable. High-quality
+cables give noticeably better results.
+2. Check the settings on your fax machine
+Changing the settings on your fax machine may provide
+better results. The recommended settings are shown on
+page 13. Consult the User Guide for your fax machine
+for the procedure to change its setting.
+
+
+
+
+                                                             17
+Regulatory information
+
+Federal Communications Commission
+(FCC) Notice
+FCC ID: PKRISGBPC100
+Electronic devices, including computers and wireless
+modems, generate RF energy incidental to their intended
+function and are therefore subject to FCC rules and
+regulations.
+This equipment has been tested to and found to be within the
+acceptable limits for a Class B digital device, pursuant to part
+15 of the FCC Rules. These limits are designed to provide
+reasonable protection against harmful interference when the
+equipment is operated in a residential environment.
+This equipment generates radio frequency energy and is
+designed for use in accordance with the manufacturer’s user
+manual. However, there is no guarantee that interference
+will not occur in any particular installation. If this equipment
+causes harmful interference to radio or television reception,
+which can be determined by turning the equipment off and
+on, you are encouraged to try to correct the interference by
+one or more of the following measures.
+• Reorient or relocate the receiving antenna.
+•	Increase the separation between the equipment and
+   the receiver.
+• C
+   onnect the equipment into an outlet on a circuit different
+  from that to which the receiver is connected.
+•	Consult the dealer or an experienced radio/television
+   technician for help.
+
+
+
+
+18
+                             Regulatory information
+
+This device complies with Part 15 of the Federal
+Communications Commission (FCC) Rules. Operation is
+subject to the following two conditions.
+• This device may not cause harmful interference.
+•	This device must accept any interference received,
+   including interference that may cause undesired
+   operation.
+WARNING: DO NOT ATTEMPT TO SERVICE THE
+WIRELESS COMMUNICATION DEVICE YOURSELF.
+SUCH ACTION MAY VOID THE WARRANTY. THE BPC100
+IS FACTORY TUNED. NO CUSTOMER CALIBRATION
+OR TUNING IS REQUIRED. CONTACT INSEEGO CORP
+TECHNICAL SUPPORT FOR INFORMATION ABOUT
+SERVICING YOUR WIRELESS COMMUNICATION DEVICE.
+FCC CAUTION: Any changes or modification not expressly
+approved by the party responsible for compliance could void
+the user’s authority to operate this equipment.
+MODIFICATIONS: The FCC requires that you be notified
+that any changes or modifications made to this device that
+are not expressly approved by Inseego Corp. may void your
+authority to operate the equipment.
+NOTE: The Radio Frequency (RF) emitter installed in your
+modem must not be located or operated in conjunction
+with any other antenna or transmitter, unless specifically
+authorized by INSEEGO CORP.
+FCC RF Exposure Guidance Statement
+In order to comply with FCC/ISED RF Exposure
+requirements, this device must be installed to provide at least
+30 cm (11.8 in) separation from the human body at all times.
+32 Wireless Communication
+
+                                                                  19
+Need help?
+Your satisfaction
+is important to us.
+
+           Call 1.800.Verizon (1.800.837.4966)
+
+           Visit verizon.com/support
+
+
+
+
+                                       FPO clear space
+                                        for FSC logo      11353603
+                                                         BPC100 User Guide
+© 2022 Verizon. All Rights Reserved.                          06-22
+
