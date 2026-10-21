@@ -44,7 +44,20 @@ Gen 4 checked Last Copper's kill gates with 22 research agents (`research/06_gen
 - One Rutgers number.
 - Everything else goes to the poster and the final.
 
-Two finalists (install hero vs elevator hero) then went through deep dossiers, red teams and a judge panel; see EVOLUTION_LOG.md.
+**Finals (five judges, official rubric, as written):**
+
+| Judge | F1 install hero (Plug-and-PROVE) | F2 elevator hero (WHO ANSWERS) |
+|---|---:|---:|
+| Verizon SVP Strategy & Transformation | **62** | 57 |
+| Verizon AVP Network Planning | **59** | 55 |
+| Rutgers CIO | **57.5** | 55 |
+| Rutgers Dean + Vice Provost | **55** | 54 |
+| Verizon Business (POTS replacement) | 56 | **59** |
+
+**Champion: PROVE.**
+- The promise: "every lifeline Verizon moves arrives with proof it still reaches someone". The tagline: "Sent isn't received."
+- The Round 1 hero is the alarm on Verizon's copper-replacement box. WHO ANSWERS becomes the elevator pilot for the finals.
+- Every judge put the fixed version at about 74-80. Full record: `research/10_gen4_finalists_and_judges.md`.
 
 ## Generation 3: founder tournament
 

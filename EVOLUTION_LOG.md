@@ -54,3 +54,53 @@ Question: is Circadian the idea that wins, or only the idea we built first? A mu
   - prior art for automated acoustic self-test (Kings III, AVIRE, Talkaphone, etc.);
   - whether NJ IBC 3001.2 applies to existing cars;
   - echo cancellation in hands-free phones (bench Gate B).
+
+## Generation 4: verify, re-ideate, pivot to PROVE (2026-10-21)
+**Verify.** 22 research agents ran in parallel workflows; the founder read the decisive primary sources directly (`research/06`, `research/sources/`).
+- **What killed Last Copper's Rutgers countdown:**
+  - Rutgers fire communicators (2020) and blue lights (2023) are already off copper.
+  - Rutgers' main numbers ride a CLEC.
+  - Livingston and SHI may not even be served from Piscataway.
+- **What narrowed its novelty:**
+  - IP emergency phones already self-test their audio.
+  - Deaf text mode already ships.
+  - UK SENTINEL already sells managed lift-line migration.
+- **What opened a bigger door (all verified):**
+  - FCC 26-19 removed the adequate-replacement showing on Oct 15, 2026. ¶31 declined the alarm industry's condition and only "encourage[s] carriers ... to prevent alarm signaling failures".
+  - WC 26-227 was paused, while WC 26-228 (B1, PBX trunk and key-system lines) drew no pause; its authority starts Oct 23.
+  - 1,763 wire centers in 2026 notices.
+  - Verizon has about 46k installed fixed-wireless replacements.
+  - Verizon's own Voice Connect guide: "Compatibility is determined by your testing ... at time of install", the ##21 step, 3 AA batteries, and a swap guide that never mentions alarms.
+
+**Re-ideate.** 12 lenses produced 60 ideas. Eight independently converged on "the copper replacement must prove itself", which the founder merged into **PROVE IT**. A four-persona screen ranked it #1 of 61 (avg 73), but every persona said it was two pitches stapled together.
+
+**Finalists.** Two finalists went through a deep dossier, two red teams each and a five-judge panel:
+- F1, install hero: **wins 4-1** (62/59/57.5/55 vs 57/55/55/54).
+- F2, elevator hero: won only with the Verizon Business judge (59 vs 56).
+- No finalist wins as written; fixed versions land at about 74-80. F1's fixes are edits, while F2 needs a redesign.
+
+**Founder decision: PROVE.**
+- **Promise:** "every lifeline Verizon moves arrives with proof it still reaches someone".
+- **Round 1 hero:** the alarm on Verizon's copper-replacement box.
+- **Tagline:** "Sent isn't received."
+- **Value:** lower self-install fallout, tested in a 30-day trial against a control.
+- **Rutgers:** the PROVE Lab bench plus a finals elevator pilot using challenge-response.
+
+**Built in Gen 4** (`prototype/prove`, 60 tests):
+- **Elevator phone test:** two-direction acoustic test with a threshold set above the noise maximum, plus a model showing the naive loopback fails healthy voice-switched phones.
+- **Routing and evidence:** fault triage with owner routing (92%/87%); a hash-chained ledger verified in the browser.
+- **Fleet model:** mean days a broken elevator phone stays broken, 107 under annual inspection, 45 with line monitoring, 2.8 with PROVE. The gap holds from 0.1x to 3x silent-fault rates.
+- **Alarm checks:** Contact ID encode/decode with handshake and kiss-off detectors. The model shows alarm data failing before voice as frame loss rises.
+- **Install-time receipt:** signal judged on its worst season (leaf-on margin), voice, alarm, battery, fax and medical lines.
+- **SAME ANSWER:** a before/after cutover receipt that includes the caller-ID lookup failure.
+- **WHO ANSWERS:** route, 45 s and location checks, with the honest result that passive detection fails on 2-wire lines, so the pilot uses challenge-response.
+- **Capacity and signal models:** a capacity model (kept for the poster); a learned SIGNAL threshold with bootstrap CIs.
+- **Console and analysis:** a live/offline console with a national map of 1,763 wire centers; a bench analysis script with Wilson CIs.
+
+**Process lessons.**
+- The judges repeatedly caught numbers we had overstated:
+  - Chicago's "24%" is of inspections, not violations;
+  - FDNY's "98.5% via phone" was a dispatch field;
+  - "~1M lines" leaned on a vendor blog.
+- An agent once put the user's email into an SEC User-Agent header. All later agents carried an explicit rule against sending personal data.
+- The machine allows only 2 concurrent agents per workflow, so research ran as parallel shards.

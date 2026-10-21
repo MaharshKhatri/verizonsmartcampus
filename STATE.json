@@ -1,146 +1,75 @@
 {
-  "project": "Last Copper - Verizon Smart Campus Innovation Challenge 2026-27 (Rutgers)",
-  "generation": 3,
+  "project": "PROVE - Verizon Smart Campus Innovation Challenge 2026-27 (Rutgers)",
+  "generation": 4,
   "updated": "2026-10-21",
   "champion_thesis": {
-    "name": "Last Copper: Who Answers? (PROVE-first)",
-    "one_liner": "Verizon retires its Piscataway copper (notice 2026-03-A-NJ, on or after Dec 10 2026). Last Copper finds the elevator, refuge and fire-alarm lines still on that copper, moves each to a Verizon LTE line with certified partner hardware, then proves every path every night: tone out through the car speaker, tone back through the car mic, the location label checked, and a text mode for Deaf riders.",
-    "lead_pillar": "AI-Driven Automation & Efficiency",
-    "judge_panel_avg_official_95": 94,
-    "verbs": {
-      "FIND": "lifeline classifier that runs inside Verizon on its own CPNI (team never sees CPNI)",
-      "MOVE": "certified POTS gateways on LTE-M/Cat-1 VoLTE (partner hardware, not our product)",
-      "PROVE": "vendor-neutral supervisor: heartbeat, two-direction acoustic test, location-label check, HELP as data, Deaf text, triage + routing, hash-chained evidence"
+    "name": "PROVE: every lifeline Verizon moves arrives with proof it still reaches someone",
+    "tagline": "Sent isn't received.",
+    "round1_hero": "Plug-and-PROVE on Verizon's copper-replacement box (Voice Gateway if orderable, else Business Phone Connect / Inseego BPC100): the alarm panel's own test call is verified through Verizon's live network (handshake, checksum-valid message, kiss-off), plus signal at the spot (worst season), voice both ways, battery; a spoken/printed test-record receipt: GREEN / FIX AND RE-RUN / VISIT NEEDED",
+    "value": "lower self-install fallout on KPIs Verizon tracks (first-time-right, repeat dispatch <=30 days, care contacts per install, alarm households confirmed); ask = 30-day trial in one migration batch's self-install kits vs control; no invented dollars",
+    "pillar": "Pillar 1 (AI-Driven Automation & Efficiency); secondary Pillar 2",
+    "rutgers": "Rutgers PROVE Lab in ECE (three-arm controlled bench with CIs); older-adult usability session; finals: elevator WHO ANSWERS pilot with Facilities (challenge-response, caller-ID continuity, time to a person vs 45 s)",
+    "judge_panel_gen4": {
+      "F1_install_hero": [
+        62,
+        59,
+        57.5,
+        55,
+        56
+      ],
+      "F2_elevator_hero": [
+        57,
+        55,
+        55,
+        54,
+        59
+      ],
+      "winner": "F1 4-1",
+      "fixed_version_estimate": "74-80"
     },
-    "verified": [
-      "Notice 2026-03-A-NJ dated 2026-09-08, implementation on or after 2026-12-10, 62 NJ wire centers incl. Piscataway PSWYNJPI (4 Skiles Ave); New Brunswick not listed (research/sources/)"
-    ],
-    "kill_gates": {
-      "A_oct31": "Count of Rutgers life-safety lines on Verizon copper in a retiring wire center (>=25 Rutgers-first; 1-24 or unknown national-first with Rutgers PROVE pilot; 0 and no pilot -> HangUp)",
-      "B_bench": "Does a hands-free elevator phone's echo canceller defeat a speaker-to-mic loopback (two-transducer design is default)",
-      "C_voice": "VoLTE through a certified gateway completes calls to the console"
-    }
+    "video_rules": [
+      "open on the stakes (keypad says SENT), not text cards",
+      "no dockets/rule sections/'paused'/'regulator stopped checking' in the video",
+      "only verified numbers (46k installed; 417k lines in two filings)",
+      "green receipt; test record, not a guarantee",
+      "never imply Verizon's network causes failures; failures go to the mentor first"
+    ]
   },
-  "runner_ups": [
-    {
-      "name": "HangUp: the network speaks up during the scam call",
-      "avg": 89
-    },
-    {
-      "name": "Floor Truth",
-      "avg": 87.8
-    },
-    {
-      "name": "Heard: 911 Path Assurance",
-      "avg": 86
-    },
-    {
-      "name": "First Minute: every AED on campus, live to 911",
-      "avg": 81.75
-    }
+  "verified_facts": [
+    "Verizon NJ copper notice 2026-03-A-NJ (2026-09-08): 62 wire centers incl. Piscataway PSWYNJPI, on or after 2026-12-10",
+    "2026 Verizon+Frontier copper notices: 1,763 wire centers, 21 states",
+    "FCC DA 26-890/26-1038: WC 26-227 legacy voice (9 states incl. NJ, ~277k lines) not auto-granted 2026-09-25",
+    "FCC DA 26-891: WC 26-228 business lines (B1, PBX trunk, key system) NJ on or after 2026-10-23; no removal notice found",
+    "FCC 26-19 effective 2026-10-15: 63.602 adequate-replacement test removed; para 31 declines AICC alarm condition, 'encourage carriers ... to prevent alarm signaling failures'",
+    "47 CFR 9.20 backup-power obligations gone in 2026",
+    "Verizon: ~46,000 fixed-wireless POTS-replacement customers nationwide (Jul 2026 filing)",
+    "Voice Connect (BPC100) guide: 'Compatibility is determined by your testing ... at time of install'; ##21 alarm-number registration; 3 AA batteries (3 h talk / 23 h standby); swap guide never mentions alarms",
+    "FCC DA 26-1042: Verizon NG911 MLTS calls routed to national relay center (found in testing, Jan 12 2026)"
   ],
-  "retired_champion": {
-    "name": "Circadian: one campus forecast, three paychecks",
-    "why": "Gen 3 red-team kill: ~$3 venue radio energy per game, ties Verizon AI on ordinary days, Wi-Fi does the sensing, NPV negative without pull-through, most crowded LLM space. Code kept as engineering bench.",
-    "evidence": {
-      "baseline": "traffic-history AI + learned margins + manual event mode; same planner, guard and margin learner as Circadian",
-      "ordinary_days_radio_energy_vs_today_pct": "-0.6 to +0.2 (tie)",
-      "game_day_venue_energy_saved_pct": {
-        "todays_practice": 58.1,
-        "circadian": 65.3,
-        "congestion": "none for either"
-      },
-      "one_off_arena_event": {
-        "venue_energy_saved_pct": {
-          "todays_practice": 77.7,
-          "circadian": 82.0
-        },
-        "congested_user_min": {
-          "no_event_mode": 5650,
-          "event_mode": 72,
-          "circadian": 0
-        }
-      },
-      "snow_day_radio_energy_gain_pct": 2.5,
-      "campus_year_radio_energy_gain_pct": 0.29,
-      "demand_forecast_mae30_pct": {
-        "circadian": "1.9-2.2",
-        "todays_ai": "2.2-3.8",
-        "snow_day": {
-          "circadian": 2.2,
-          "todays_ai": 44.3
-        }
-      },
-      "occupancy_mae30_weekday_pct": {
-        "model": 2.67,
-        "ratio_rule": 2.84,
-        "timetable": 4.97,
-        "persistence": 6.85
-      },
-      "sensing_ablation_mae30_vs_truth_pct": {
-        "wifi_plus_carrier": "1.2-2.2",
-        "wifi_only": "2.35-2.72 (blind at stadium)",
-        "carrier_only": "10.9-12.6"
-      },
-      "hvac": {
-        "circadian_saving_pct": "6.5-13.1",
-        "no_forecast_saving_pct": "6.8-13.3",
-        "people_steps_uncomfortable": {
-          "timetable": "70-19858",
-          "no_forecast": "2462-92989",
-          "circadian": "0-182"
-        },
-        "saving_without_ventilation_control_pct": -1.0
-      },
-      "triage_storm_2000_draws": {
-        "dispatches_per_7_faults": "5.73 -> 3.59",
-        "avoided_share": 0.373,
-        "p_no_gain": 0.193,
-        "restore_min": "1241 -> 620",
-        "diagnosis_accuracy": 0.838,
-        "robust_accuracy": 0.816
-      },
-      "bus_feed": "no measurable effect; not claimed",
-      "retracted": [
-        "Game-day 7,861 congested user-minutes gap (artifact)",
-        "HVAC comfort metric that could not fail",
-        "$1.8B RAN electricity (unsupported)",
-        "'Verizon network alone is the sensor'"
-      ]
-    },
-    "financials_base_case_2031": {
-      "revenue_usd_m": 56.6,
-      "ebitda_usd_m": 20.7,
-      "bear_ebitda_usd_m": -3.0,
-      "bull_ebitda_usd_m": 140.8,
-      "npv5_usd_m": 3.4,
-      "npv_with_terminal_usd_m": 54.0,
-      "npv5_software_only_usd_m": -4.1,
-      "irr": 0.18,
-      "payback_months": 52,
-      "p_npv_positive": 0.58,
-      "source": "FINANCIAL_PROJECTION.md (regenerate with python3 CFO_10K_MODEL.py)"
-    }
+  "honest_negatives": [
+    "Rutgers fire communicators (2020) and blue lights (2023) already off copper; main numbers on a CLEC: Rutgers is the proving ground, not a countdown",
+    "IP emergency phones already self-test audio; Deaf text mode already ships",
+    "Passive 'who answered' detection fails on a 2-wire tap with the car's location message (0% at 8 s): switched to challenge-response",
+    "Asterisk AlarmReceiver cannot decode SIA: no SIA claims",
+    "All alarm-delivery and signal thresholds are modelled until the bench measures them"
+  ],
+  "kill_gates": {
+    "K1_oct29": "a live Verizon box line on the bench (two activation channels)",
+    "bench_oct28": "##21 / swap beat in or out",
+    "mentor": "five questions (install checklist, dispatch cost, MDM visibility, ##21 on business firmware, owner of the migration experience)"
   },
-  "open_questions": [
-    "Which wire center serves Busch/Livingston/SHI/RBHS Piscataway, and how many Rutgers life-safety lines are on Verizon copper?",
-    "Who answers Rutgers elevator HELP calls today, how fast, and do they know building and car?",
-    "Prior art: do Kings III / AVIRE / RATH / Talkaphone / Code Blue already run automated acoustic path tests?",
-    "Does NJ IBC 3001.2 visual communication apply to existing elevators? Is mid-Feb 2027 the mandatory date?",
-    "NFPA 72 single-path cellular acceptance and test intervals for fire-alarm communicators.",
-    "Does Verizon already flag lifelines from line-type codes? Which team owns this inside Verizon?"
-  ],
-  "next_actions": [
-    "Gen 4a workflow: verify kill gates with live research, sweep post-cutoff facts, ideate new theses, screen vs Last Copper.",
-    "Gen 4b: deepen + red-team finalists, judge panel, final founder synthesis.",
-    "Build PROVE prototype (supervisor sim with matched-filter chirp test, triage retarget, hash-chained ledger, console) once the champion is confirmed.",
-    "Outreach Oct 21-22: OIT Telecom + Facilities line counts, OPRA request, RUPD/RUSSECC who-answers, Disability Services."
-  ],
+  "retired": {
+    "Last Copper (Gen 3)": "narrowed into PROVE after Gen 4 verification",
+    "Circadian (Gen 1-2)": null
+  },
   "commands": {
     "build": "python3 scripts/build_all.py",
     "test": "python3 -m unittest discover -s tests",
     "dashboard_offline": "open prototype/dashboard/index.html",
     "dashboard_live": "python3 prototype/server.py",
-    "loop": "scripts/evolve_loop.sh"
+    "loop": "scripts/evolve_loop.sh",
+    "prove_console": "python3 -m prototype.prove.server  (offline: open prototype/prove/console/index.html)",
+    "prove_export": "python3 -m prototype.prove.export",
+    "prove_lab": "python3 scripts/analyze_prove_lab.py field_data/prove_lab.csv"
   }
 }
