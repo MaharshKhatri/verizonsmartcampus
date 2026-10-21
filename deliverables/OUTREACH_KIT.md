@@ -94,3 +94,45 @@ File through Rutgers' OPRA portal. Keep the request narrow so it is not denied a
 - **Per car, record:** building, car, phone type (push-button hands-free or handset), whether a display or text screen is present, whether the ADA signage or tactile marking is present, and the visible maker or model.
 - **Purpose:** gives the baseline for "visual + audible" (IBC 3001.2) and the phone population for PROVE.
 - **Do not:** photograph people, or open any panel.
+
+---
+
+# Gen 4 additions (PROVE IT)
+
+## 10. Verizon mentor: five questions that decide the pitch (ask at the next drop-in; email the same day)
+**Subject:** Smart Campus team: five factual questions on Voice Connect installs (no customer data needed)
+
+> We're building install-time self-testing for Verizon's copper-replacement box (Voice Connect / Business Phone Connect, Inseego BPC100). Before we claim anything, we want to check our assumptions:
+> 1. When a technician installs Voice Connect for a copper customer, what does the visit verify today? (The terms mention phone jacks and coverage at the box.) Does it include the alarm or medical device?
+> 2. Roughly what does an install or repair dispatch cost Verizon? An order of magnitude is enough. Is install capacity a real constraint for the 2026 copper and TDM exits?
+> 3. Does device management (MDM) already see the BPC100's AC-power and battery state, and the ##21 alarm-number table?
+> 4. Do ##21 alarm registrations survive a box swap (T2050 to BPC100, or BPC100 to BPC100)? Is ##21 present on Business Phone Connect firmware, or only on consumer Voice Connect?
+> 5. Who inside Verizon owns the copper-migration install experience: Network Transformation, Consumer, or Business? Would they look at a 1-page bench result?
+>
+> Thank you. Everything we measure on our bench goes to you first.
+
+## 11. OLLI-RU self-install study (older adults; needs an IRB determination before any data is collected)
+- **Who:** volunteers from the Osher Lifelong Learning Institute at Rutgers (OLLI-RU), or staff who still keep a landline. 15-20 people. Contact OLLI-RU's office by email and offer a 30-minute "help us test a phone box" session.
+- **Task:** unbox a BPC100 with only Verizon's printed guide and the PROVE receipt flow, then plug in a phone and (bench) alarm keypad.
+- **Measures:**
+  - completed alone (yes/no);
+  - time to completion;
+  - where they got stuck;
+  - whether they understood the receipt and its "fix by text" step.
+- **No personal data beyond age band.** No recordings of faces.
+- **Output:** "x of N finished alone". This is the one campus-people number the Rutgers judges asked for.
+
+## 12. Elevator sticker census (no permission needed; public elevators only)
+- **What to record**, for each public elevator car on Busch and Livingston (and College Ave as control):
+  - the posted emergency number, if any (sticker or plate);
+  - whether a 24/7 service is named;
+  - the phone type (push-button or handset; display yes/no);
+  - the maker plate.
+- **Do not:** press HELP, open panels, or photograph people.
+- **Output:** the share of cars with a posted 24/7 number, and the distinct answering services named. Share it with Facilities privately first, framed as a joint fix.
+
+## 13. HELP audit (only if Facilities and RUPD agree in writing)
+- Same protocol as section 7. Add three measures:
+  - who answered: a person, voicemail or IVR;
+  - seconds to a person, against A17.1's 45-second redirect;
+  - whether the answerer knew the building and car without asking.
