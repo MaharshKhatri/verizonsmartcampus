@@ -125,5 +125,18 @@ class TestAlarm(unittest.TestCase):
         self.assertEqual(r["receiver down"]["delivered_rate"], 0.0)
 
 
+class TestInstallProof(unittest.TestCase):
+    def test_receipts(self):
+        from prototype.prove import install
+        r = install.scenarios()
+        self.assertEqual(r["all_good"]["verdict"], "TRUCK NOT NEEDED")
+        self.assertEqual(r["sia_panel"]["verdict"], "TRUCK NEEDED")
+        self.assertEqual(r["unregistered"]["verdict"], "FIX BY TEXT, THEN RE-RUN")
+        alarm_line = next(x for x in r["unregistered"]["lines"] if x["check"] == "ALARM")
+        self.assertIn("##21", alarm_line["detail"])
+        self.assertEqual(next(x for x in r["no_batteries"]["lines"] if x["check"] == "BATTERY")["status"], "FAIL")
+        self.assertEqual(next(x for x in r["basement"]["lines"] if x["check"] == "SIGNAL")["status"], "FAIL")
+
+
 if __name__ == "__main__":
     unittest.main()

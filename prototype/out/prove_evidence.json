@@ -469,6 +469,258 @@
   },
   "source": "Verizon network disclosures and Frontier wholesale notices under 47 CFR 51.333, 2026"
  },
+ "install": {
+  "all_good": {
+   "lines": [
+    {
+     "check": "SIGNAL",
+     "status": "OK",
+     "detail": "RSRP -92 dBm, SINR 14 dB at this spot",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "VOICE",
+     "status": "OK",
+     "detail": "Two-way tone test, 0.5% frames lost",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "ALARM",
+     "status": "OK",
+     "detail": "Contact ID handshake and kiss-off received 3/3",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "BATTERY",
+     "status": "OK",
+     "detail": "Runs on battery when AC is pulled",
+     "fix": "",
+     "needs_truck": false
+    }
+   ],
+   "verdict": "TRUCK NOT NEEDED",
+   "place": "window"
+  },
+  "unregistered": {
+   "lines": [
+    {
+     "check": "SIGNAL",
+     "status": "OK",
+     "detail": "RSRP -92 dBm, SINR 14 dB at this spot",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "VOICE",
+     "status": "OK",
+     "detail": "Two-way tone test, 0.5% frames lost",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "ALARM",
+     "status": "FAIL",
+     "detail": "Alarm number not registered (##21): alarm calls ride the ordinary voice path (through on the first try 2/3, delivered 2/3)",
+     "fix": "Dial ##21*<alarm company number>#, power-cycle the box, re-run PROVE (fix sent by text)",
+     "needs_truck": false
+    },
+    {
+     "check": "BATTERY",
+     "status": "OK",
+     "detail": "Runs on battery when AC is pulled",
+     "fix": "",
+     "needs_truck": false
+    }
+   ],
+   "verdict": "FIX BY TEXT, THEN RE-RUN",
+   "place": "window"
+  },
+  "sia_panel": {
+   "lines": [
+    {
+     "check": "SIGNAL",
+     "status": "OK",
+     "detail": "RSRP -92 dBm, SINR 14 dB at this spot",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "VOICE",
+     "status": "OK",
+     "detail": "Two-way tone test, 0.5% frames lost",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "ALARM",
+     "status": "FAIL",
+     "detail": "Alarm format SIA is not supported on this box (Contact ID only)",
+     "fix": "Ask the alarm company for a cellular communicator or switch the panel to Contact ID",
+     "needs_truck": true
+    },
+    {
+     "check": "BATTERY",
+     "status": "OK",
+     "detail": "Runs on battery when AC is pulled",
+     "fix": "",
+     "needs_truck": false
+    }
+   ],
+   "verdict": "TRUCK NEEDED",
+   "place": "window"
+  },
+  "basement": {
+   "lines": [
+    {
+     "check": "SIGNAL",
+     "status": "FAIL",
+     "detail": "RSRP -116 dBm, SINR 0 dB: too weak here",
+     "fix": "Move the box to a window; if it still fails, a technician fits an external antenna",
+     "needs_truck": false
+    },
+    {
+     "check": "VOICE",
+     "status": "WARN",
+     "detail": "Two-way tone test, 6.0% frames lost: choppy",
+     "fix": "Move the box toward a window",
+     "needs_truck": false
+    },
+    {
+     "check": "ALARM",
+     "status": "FAIL",
+     "detail": "Kiss-off received 2/3 at this spot: signal too weak for alarm data",
+     "fix": "Move the box 1 m toward a window and re-run",
+     "needs_truck": false
+    },
+    {
+     "check": "BATTERY",
+     "status": "OK",
+     "detail": "Runs on battery when AC is pulled",
+     "fix": "",
+     "needs_truck": false
+    }
+   ],
+   "verdict": "FIX BY TEXT, THEN RE-RUN",
+   "place": "basement"
+  },
+  "no_batteries": {
+   "lines": [
+    {
+     "check": "SIGNAL",
+     "status": "OK",
+     "detail": "RSRP -92 dBm, SINR 14 dB at this spot",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "VOICE",
+     "status": "OK",
+     "detail": "Two-way tone test, 0.5% frames lost",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "ALARM",
+     "status": "OK",
+     "detail": "Contact ID handshake and kiss-off received 3/3",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "BATTERY",
+     "status": "FAIL",
+     "detail": "Box shut off when AC was pulled: no batteries",
+     "fix": "3 AA batteries mailed today; with them, about 23 h standby / 3 h talk",
+     "needs_truck": false
+    }
+   ],
+   "verdict": "FIX BY TEXT, THEN RE-RUN",
+   "place": "window"
+  },
+  "medical_untested": {
+   "lines": [
+    {
+     "check": "SIGNAL",
+     "status": "OK",
+     "detail": "RSRP -92 dBm, SINR 14 dB at this spot",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "VOICE",
+     "status": "OK",
+     "detail": "Two-way tone test, 0.5% frames lost",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "MEDICAL",
+     "status": "WARN",
+     "detail": "Not tested: no test window with the monitoring company",
+     "fix": "PROVE texts the monitoring company to book a 5-minute test window",
+     "needs_truck": false
+    },
+    {
+     "check": "BATTERY",
+     "status": "OK",
+     "detail": "Runs on battery when AC is pulled",
+     "fix": "",
+     "needs_truck": false
+    }
+   ],
+   "verdict": "TRUCK NOT NEEDED",
+   "place": "window"
+  }
+ },
+ "alarm": {
+  "rates": {
+   "registered (##21 done)": {
+    "delivered_rate": 1.0,
+    "mean_attempts_when_delivered": 1.0,
+    "first_try_rate": 1.0
+   },
+   "unregistered number (voice path)": {
+    "delivered_rate": 0.95,
+    "mean_attempts_when_delivered": 1.66,
+    "first_try_rate": 0.575
+   },
+   "receiver down": {
+    "delivered_rate": 0.0,
+    "mean_attempts_when_delivered": null,
+    "first_try_rate": 0.0
+   }
+  },
+  "loss_curve": [
+   {
+    "frame_loss": 0.0,
+    "first_try": 0.967,
+    "within_4_tries": 1.0
+   },
+   {
+    "frame_loss": 0.01,
+    "first_try": 0.767,
+    "within_4_tries": 1.0
+   },
+   {
+    "frame_loss": 0.02,
+    "first_try": 0.6,
+    "within_4_tries": 1.0
+   },
+   {
+    "frame_loss": 0.05,
+    "first_try": 0.133,
+    "within_4_tries": 0.6
+   },
+   {
+    "frame_loss": 0.1,
+    "first_try": 0.033,
+    "within_4_tries": 0.2
+   }
+  ]
+ },
  "acoustic": {
   "healthy": {
    "path_ok": true,

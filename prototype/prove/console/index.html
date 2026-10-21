@@ -85,6 +85,9 @@ th { color: var(--muted); font-weight: 600; font-size: 12px; }
 .bars .track { height: 18px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
 .bars .fill { height: 100%; border-radius: 4px; }
 @media (max-width: 520px) { .bars .bar { grid-template-columns: 96px 1fr 56px; } }
+.receipt { background: #fffef7; color: #1d1d1b; font: 12.5px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 14px 16px; border-radius: 4px; box-shadow: 0 1px 0 rgba(0,0,0,.08), 0 6px 18px rgba(0,0,0,.08); white-space: pre-wrap; max-width: 520px; border-top: 6px dashed #e7e3d4; }
+.receipt .v { font-weight: 800; font-size: 15px; letter-spacing: .04em; margin-top: 6px; }
+.receipt .FAIL { color: #b3261e; font-weight: 700; } .receipt .WARN { color: #8a5a00; font-weight: 700; } .receipt .OK { color: #1b6e1b; font-weight: 700; }
 footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
 </style>
 </head>
@@ -130,6 +133,20 @@ footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
       <div class="chips" id="syms"></div>
       <div class="ticket" id="ticket">No ticket.</div>
       <p class="note mono" id="hash" style="margin-top:8px"></p>
+    </section>
+
+    <section class="card full">
+      <h2>Plug-and-PROVE: the home box proves itself at install</h2>
+      <p class="note">This is Verizon's copper replacement for homes and small businesses (Voice Connect, the Inseego BPC100). Its own guide says: "Compatibility is determined by your testing of your alarm and/or medical device at time of install". The alarm number must be keyed in by hand (##21), and backup is 3 AA batteries. Today a technician drives out. PROVE runs those checks through the real voice path and prints a receipt. (Model with labeled assumptions. The Rutgers bench measures the real rates.)</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
+        <div style="flex:1;min-width:240px">
+          <div class="rig" id="homerig"></div>
+          <h2 style="margin-top:14px">Alarm data is fragile; voice is not</h2>
+          <p class="note">Contact ID alarm delivery through the ordinary voice path vs frame loss (model). A spot that sounds fine for a phone call can still lose the alarm.</p>
+          <div class="tablewrap"><table id="losscurve"></table></div>
+        </div>
+        <div class="receipt" id="receipt"></div>
+      </div>
     </section>
 
     <section class="card full">
@@ -288,7 +305,7 @@ $("help").onclick = async () => {
   });
   if (firstWarn !== null && firstFail !== null) s += `<text x="${x(firstWarn)}" y="${T + 26}" style="fill:var(--ink-2)">speaker fading: warned ${firstFail - firstWarn} nights before it failed</text>`;
   const rf = H.find(r => r.diagnosis === "rf");
-  if (rf) s += `<text x="${x(rf.night) - 4}" y="${T + 26}" text-anchor="end" style="fill:var(--ink-2)">antenna → Verizon ticket</text>`;
+  if (rf) s += `<text x="${x(rf.night) + 4}" y="${T + 44}" text-anchor="middle" style="fill:var(--ink-2)">antenna → Verizon ticket</text>`;
   svg.innerHTML = s;
 })();
 
@@ -328,6 +345,24 @@ $("help").onclick = async () => {
       (v ? `<text x="${x + S / 2}" y="${y + 42}" text-anchor="middle" style="font-size:12px;fill:${a > 0.5 ? "#fff" : "var(--ink-2)"}">${v.n}</text>` : "") + `</g>`;
   }
   $("usmap").innerHTML = s;
+})();
+
+// Plug-and-PROVE receipts
+(function home() {
+  const I = D.install; if (!I) return;
+  const names = {all_good: "Everything plugged in right", unregistered: "Alarm number not keyed in (##21)", sia_panel: "Older SIA-format alarm panel", basement: "Box in the basement", no_batteries: "No batteries in the box", medical_untested: "Medical alert, no test window"};
+  $("homerig").innerHTML = Object.keys(I).map(k => `<button class="btn" data-h="${k}">${names[k] || k}</button>`).join("");
+  const show = k => {
+    const r = I[k];
+    document.querySelectorAll("#homerig button").forEach(b => b.classList.toggle("on", b.dataset.h === k && k !== "all_good"));
+    $("receipt").innerHTML = "PROVE · Voice Connect install check\n" + "-".repeat(36) + "\n" +
+      r.lines.map(l => `${l.check.padEnd(8)} <span class="${l.status}">${l.status.padEnd(4)}</span> ${esc(l.detail)}` + (l.fix ? `\n${" ".repeat(14)}→ ${esc(l.fix)}` : "")).join("\n") +
+      "\n" + "-".repeat(36) + `\n<div class="v">${esc(r.verdict)}</div>`;
+  };
+  document.querySelectorAll("#homerig button").forEach(b => b.onclick = () => show(b.dataset.h));
+  show("all_good");
+  const L = D.alarm.loss_curve;
+  $("losscurve").innerHTML = `<tr><th>Frames lost</th><th>Through on 1st try</th><th>Within 4 tries</th></tr>` + L.map(r => `<tr><td>${(r.frame_loss * 100).toFixed(0)}%</td><td>${(r.first_try * 100).toFixed(0)}%</td><td style="color:${r.within_4_tries < 0.9 ? "var(--critical)" : "inherit"}">${(r.within_4_tries * 100).toFixed(0)}%</td></tr>`).join("");
 })();
 
 // owners

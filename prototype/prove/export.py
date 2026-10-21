@@ -6,7 +6,7 @@ import json
 import os
 import re
 
-from . import acoustic, fleet, supervisor, triage
+from . import acoustic, alarm, fleet, install, supervisor, triage
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
@@ -91,6 +91,8 @@ def build():
             ],
         },
         "national": national(),
+        "install": install.scenarios(),
+        "alarm": {"rates": alarm.success_rates(trials=40), "loss_curve": alarm.loss_curve(trials=30)},
         "acoustic": acoustic.compare_designs(trials=30),
         "pass_db": acoustic.PASS_DB,
         "noise_only_max_db": round(float(acoustic.noise_only_margins(n=200).max()), 1),
