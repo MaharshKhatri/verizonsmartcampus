@@ -41,9 +41,10 @@ Primary data is the one thing other teams' LLMs cannot produce. Send these on **
 > We are a student team (faculty sponsor: ___) working on elevator emergency-phone reliability for the Verizon Smart Campus Challenge. Three questions:
 > 1. When someone presses HELP in a campus elevator, where does the call go: RUPD dispatch, the elevator contractor's call center, or a monitoring company?
 > 2. How are the phones tested today, and how often? For example: annual inspection, monthly checks, or automatic line monitoring.
-> 3. Would Facilities allow a **pre-announced, supervised** test? A Facilities staff member would press HELP in 10–20 elevators during a window agreed with whoever answers, so we can time the answer and check that the building and car are known. We would share all results with Facilities privately first.
+> 3. Roughly how many elevator cars with a HELP phone does Rutgers have in New Brunswick/Piscataway? A count only, no locations.
+> 4. Would Facilities allow a **pre-announced, supervised** test? A Facilities staff member would press HELP in 10–20 elevators during a window agreed with whoever answers, so we can time the answer and check that the building and car are known. We would share all results with Facilities privately first.
 >
-> We will not touch any equipment. Thank you, ___
+> We will not touch any equipment. Even a one-line reply ("open to discussing a pre-announced test") helps: we would like to say in our Nov 8 video that we are working with Facilities, and we will say only what you approve. Thank you, ___
 
 ## 4. RUPD / Rutgers emergency communications
 **Subject:** Student research: elevator emergency calls and location information
@@ -99,8 +100,8 @@ File through Rutgers' OPRA portal. Keep the request narrow so it is not denied a
 
 # Gen 4 additions (PROVE IT)
 
-## 10. Verizon mentor: five questions that decide the pitch (ask at the next drop-in; email the same day)
-**Subject:** Smart Campus team: five factual questions on Voice Connect installs (no customer data needed)
+## 10. Verizon mentor: six questions that decide the pitch (ask at the next drop-in; email the same day)
+**Subject:** Smart Campus team: six factual questions on Voice Connect installs (no customer data needed)
 
 > We're building install-time self-testing for Verizon's copper-replacement box (Voice Connect / Business Phone Connect, Inseego BPC100). Before we claim anything, we want to check our assumptions:
 > 1. When a technician installs Voice Connect for a copper customer, what does the visit verify today? (The terms mention phone jacks and coverage at the box.) Does it include the alarm or medical device?
@@ -108,19 +109,28 @@ File through Rutgers' OPRA portal. Keep the request narrow so it is not denied a
 > 3. Does device management (MDM) already see the BPC100's AC-power and battery state, and the ##21 alarm-number table?
 > 4. Do ##21 alarm registrations survive a box swap (T2050 to BPC100, or BPC100 to BPC100)? Is ##21 present on Business Phone Connect firmware, or only on consumer Voice Connect?
 > 5. Who inside Verizon owns the copper-migration install experience: Network Transformation, Consumer, or Business? Would they look at a 1-page bench result?
+> 6. Can device management count the boxes that have an alarm number registered via ##21? What is the loaded cost of a repeat dispatch, as an order of magnitude? With those two numbers we can size the benefit without guessing.
+>
+> Also: may we show our bench's weak-signal counters in the video, if another carrier's box shows the same result at the same signal? We will send you the full sweep first and keep any number off screen without your OK.
 >
 > Thank you. Everything we measure on our bench goes to you first.
 
 ## 11. OLLI-RU self-install study (older adults; needs an IRB determination before any data is collected)
 - **Who:** volunteers from the Osher Lifelong Learning Institute at Rutgers (OLLI-RU), or staff who still keep a landline. 15-20 people. Contact OLLI-RU's office by email and offer a 30-minute "help us test a phone box" session.
-- **Task:** unbox a BPC100 with only Verizon's printed guide and the PROVE receipt flow, then plug in a phone and (bench) alarm keypad.
+- **Task:**
+  - **Part 1:** unbox a BPC100 with only Verizon's printed guide, then plug in a phone and the bench alarm keypad.
+  - **Part 2 (the one the video uses):** the box starts at a weak spot (set with the attenuator). The volunteer presses PROVE and the keypad TEST, then follows the spoken fix to a green receipt.
 - **Measures:**
   - completed alone (yes/no);
   - time to completion;
   - where they got stuck;
   - whether they understood the receipt and its "fix by text" step.
 - **No personal data beyond age band.** No recordings of faces.
-- **Output:** "x of N finished alone". This is the one campus-people number the Rutgers judges asked for.
+- **Output:**
+  - "x of N finished alone" (Part 1);
+  - "k of n followed PROVE's spoken fix to a green receipt without help" (Part 2).
+  
+  Report counts, never percentages, at n < 20. This is the one campus-people number the Rutgers judges asked for.
 
 ## 12. Elevator sticker census (no permission needed; public elevators only)
 - **What to record**, for each public elevator car on Busch and Livingston (and College Ave as control):

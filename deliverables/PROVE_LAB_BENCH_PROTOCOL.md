@@ -10,7 +10,7 @@
 
 Only a bench can settle it. Everything below is safe, legal and doable by two students in a week. **Never dial 911. Never send test signals to a real central station or medical-alert company without its written OK.** We run our own receiver.
 
-## 1. Bill of materials (about $700-1,100; order Oct 22)
+## 1. Bill of materials (about $1,000-1,700; order Oct 22)
 | Item | Why | Est. cost |
 |---|---|---|
 | Verizon Business Phone Connect, Inseego BPC100, on a Verizon business voice line (a department or faculty account) | The real box Verizon ships to homes as 2nd-gen Voice Connect | $129.99 + line ($20-35/mo) |
@@ -24,6 +24,11 @@ Only a bench can settle it. Everything below is safe, legal and doable by two st
 | Corded analog phone, butt-set or RJ11 splitter, line tap with isolation transformer | Listening and DTMF | $40 |
 | ThingSpace self-serve LTE-M dev kit (nRF9160 DK or similar) + $1.50/mo plan | PROVE reporting path, independent of the line under test | $150 |
 | Phone with a field-test app (Android: Network Cell Info / NetMonster) | RSRP/RSRQ/SINR at each placement | (own) |
+| **Another carrier's LTE voice line with an RJ11 port**: preferably an unlocked LTE-to-FXS voice gateway with an AT&T or T-Mobile SIM, one prepaid month | The second-network control at matched SINR. It is the only thing that lets the video show the weak-spot counters without implying Verizon's box is worse. AT&T's own wireless home-phone base says it does not support home security systems, so use it only as a last resort and say so on the poster. | $80-200 + $20-30/mo |
+| **Two 0-60 dB SMA step attenuators** (manual rotary or digital, 1-2 dB steps), ganged, plus SMA cables and two small antennas | Repeatable "weak spot" for the sweep (T5). Inseego lists "2 SMA connectors for external antennas" on the BPC100, so attenuate both MIMO ports by the same amount. A box with internal antennas goes in the RF shield box below. | $120-300 |
+| **RF shield box** (tabletop, with SMA pass-through) and a small external antenna | Puts a box with internal antennas under the attenuator's control | $100-300 (used) |
+| Harvard-sentence recording plus open-source ITU-T P.862 (PESQ) scorer | The objective "call sounded clear" rule (PESQ ≥ 3.0), pre-registered | $0 |
+| **Pocket PROVE tap** (Raspberry Pi Zero 2 W or Pi 5, USB sound card, isolated line-recording adapter, RJ11 splitter, USB-C battery, small case) | The Phase 1 ask, built and filmed: our decoder on a real line | $85-170 |
 | Lithium and alkaline AA, a kill-a-watt or USB power meter, a stopwatch | Battery runtime | $25 |
 
 ## 2a. Control arms (required: report differences, not absolutes)
@@ -38,7 +43,7 @@ The call path is long: panel -> box -> Verizon VoLTE/IMS -> interconnect -> our 
 - **Stage reliability:** for the poster and the final, use SMA step attenuators on the box antennas (instant, repeatable "bad signal"), two pre-programmed panels on an A/B switch, a scripted trouble-reset, and Asterisk on a cloud VM.
 
 ## 2. Tests (each produces a row in `field_data/prove_lab.csv`)
-Columns: `test_id, date, box, firmware, placement, rsrp_dbm, rsrq_db, sinr_db, device, format, registered_21, attempt, delivered, kissoff_s, attempts_used, notes`
+Columns: `test_id, date, box, firmware, placement, atten_db, rsrp_dbm, rsrq_db, sinr_db, device, format, registered_21, attempt, call_trial, pesq, listener_keywords, delivered, kissoff_s, attempts_used, notes`. The `delivered` column means "receiver logged a valid event and sent a kiss-off"; on screen it is always "confirmed", never "delivered".
 
 ### T1. Alarm through the box, number registered (baseline)
 - **Setup:** program the panel to dial our receiver number. On the BPC100, dial `##21*<receiver number>#`, then power-cycle.
@@ -62,11 +67,29 @@ Columns: `test_id, date, box, firmware, placement, rsrp_dbm, rsrq_db, sinr_db, d
 - Switch the panel to SIA and then to 4/2, and repeat 20 events each, registered.
 - **Measures:** Inseego's "Contact ID only" footnote.
 
-### T5. Placement and signal
-- Put the box in three spots: window, interior room, basement or ground-floor utility. Run 20 Contact ID events at each.
-- **Record:** RSRP/RSRQ/SINR on the phone at the box.
-- **Expected:** if alarm data is more fragile than voice, delivery falls first in the basement (the model in `prototype/prove/alarm.py` predicts this).
-- Also make 5 one-minute voice calls per spot and rate them 1-5.
+### T5. Signal sweep: voice clear vs alarm confirmed (the bench beat)
+**Pre-registered before any run:**
+- **What "clear" means:** PESQ (ITU-T P.862, open-source scorer) ≥ 3.0 on a recorded Harvard sentence, or, if PESQ is unavailable, a blinded listener gets ≥ 9 of 10 keywords.
+- **What "gap" means:** calls clear in ≥ 90% of trials while alarms are confirmed in < 90%.
+
+**Sweep.** Step the attenuator from 0 dB in 2 dB steps until the box loses service. Do this on **both** boxes: Verizon's, and the other carrier's.
+- **At each step:**
+  - record the box's own RSRP/RSRQ/SINR, or the phone proxy, labelled as such;
+  - run 3 one-minute voice calls (`call_trial=1`, with `pesq` and `listener_keywords`);
+  - run 10 Contact ID events (`call_trial=0`).
+- **Around the transition:** add steps until there are 20 events per step.
+- **Time:** about 6 h per box. Run the two boxes on different days with the same panel and receiver.
+
+**Matched SINR.** The video compares the two boxes at the same box-reported SINR (2 dB bins), not at the same dial setting, because the carriers' bands differ.
+
+**Placements (realism).** Also run 20 events at three real spots: window, interior room, basement. This shows where the sweep's gap shows up in a home.
+
+**Analysis.** `scripts/analyze_prove_lab.py` prints:
+- a per-step table for each box with Wilson CIs;
+- the gap steps, with their SINR range;
+- the matched-SINR comparison ("did the other carrier's box do the same?").
+
+Rehearse it now on `field_data/demo_sweep_SYNTHETIC.csv` (made by `scripts/make_demo_sweep_csv.py`). Never show synthetic numbers as results.
 
 ### T6. Battery
 - **Run 1:** unplug AC with fresh alkaline AAs. Log the minutes until the LED goes red and until the box powers off (standby, nothing connected). Then repeat with a 3-minute call every 30 minutes.
@@ -84,10 +107,14 @@ Columns: `test_id, date, box, firmware, placement, rsrp_dbm, rsrq_db, sinr_db, d
 - **If the unit can only reach its vendor's center:** stop. Write to the vendor for a test window. Never trigger a real dispatch.
 
 ## 3. Analysis
-Run `python3 scripts/analyze_prove_lab.py field_data/prove_lab.csv` (to be written alongside the first data). It reports:
-- delivery rate with a 95% CI per device × path × placement;
-- first-try rate;
-- kiss-off time.
+Run `python3 scripts/analyze_prove_lab.py field_data/prove_lab.csv`. It reports:
+- the confirmed rate with a 95% CI per device × path × placement;
+- the first-try rate;
+- the kiss-off time;
+- the T5 sweep: per-step tables, gap steps and the matched-SINR comparison;
+- the learned signal bar (SINR for 90% first-try confirmation, with a bootstrap CI). This is the "[N] bench alarm tests" number in the video.
+
+Whole-call recordings from the tap can be checked one by one with `python3 -m prototype.prove.tap call.wav`.
 
 The output table becomes the **Rutgers PROVE Lab matrix** on the poster, and the source of the one line on the video receipt.
 
@@ -108,6 +135,7 @@ The output table becomes the **Rutgers PROVE Lab matrix** on the poster, and the
 | Oct 22 | Order (rush shipping); faculty sponsor signs for the business line |
 | Oct 24-25 | Bench assembled; T1 baseline |
 | Oct 26-28 | T2, T3, T4 |
-| Oct 29-31 | T5, T6 (the battery runs overnight), T7 |
+| Oct 27-28 | The other carrier's box activated; attenuator and shield box set up; PESQ scorer checked on arm A |
+| Oct 29-31 | T5 sweep on both boxes, T6 (the battery runs overnight), T7 |
 | Nov 1-3 | Analysis; pick the one receipt line for the video |
 | Nov 4-7 | Film the bench beat; final cut |

@@ -1,68 +1,81 @@
-# Nov 8 video: "Sent isn't received" (PROVE), 2:00 (v2, after the Gen 5 fact-check and judge review)
+# Nov 8 video: "Sent isn't received" (PROVE), 2:00 (v3, after the Gen 5b rescore)
 
-**Two speakers:** A (engineering) and B (business). About 235 spoken words plus a 20-word handset line.
+**Two speakers:** A (engineering) and B (business). **Spoken words**, counted by `scripts/count_script_words.py` from the Audio column:
+- **With the optional usability beat:** 234 spoken plus 19 handset, 253 in total.
+- **Without it:** 215 plus 19, 234 in total.
+
+Every beat runs at 142 wpm or less.
 
 **Rules for the cut**
-- **Opening and pacing.** Open on the stakes, never on text cards. One number on screen per beat.
-- **What stays out of the video.** No docket numbers, rule sections, "paused" or "the regulator stopped checking"; those belong in Q&A and on the poster. Never imply Verizon's network causes failures. Show any result that falls below the lab baseline to the Verizon mentor first and keep it off screen.
+- **Opening and pacing.** Open on the stakes. Use at most one short on-screen line. Put one number on screen per beat. Leave at least 4 s with no talking while the ticks resolve. Jump-cut each test call with an on-screen "~15 s test call" timer, never in real time.
+- **What stays out of the video.**
+  - No docket numbers, rule sections, "paused" or "the regulator stopped checking"; those belong in Q&A and on the poster.
+  - Never imply Verizon's network causes failures.
+  - Show the weak-spot counters on screen only if the other carrier's box did the same at matched signal (decision table row 1), and only with the Verizon mentor's written OK.
 - **Numbers.** [Brackets] are filled only from `field_data/prove_lab.csv` or the usability log. Every spoken number is verified (sources in `research/sources/`).
-- **Receipts.** Say "receipt", never "guarantee". The receipt says the receiver picked up, the panel sent its full code, and confirmation came back. It never says "delivered".
+- **Receipts.** Say "receipt", never "guarantee". The receipt says the receiver picked up, the panel sent its full code, and the confirmation came back. It never says "delivered".
 - **Names.**
   - Name the device actually tested ("Voice Gateway" or "Business Phone Connect").
-  - Say "our PROVE bench in a Rutgers ECE lab" until the sponsor approves the name "Rutgers PROVE Lab".
+  - Say "our bench at Rutgers" or "our PROVE bench in a Rutgers ECE lab" until the sponsor approves the name "Rutgers PROVE Lab".
   - Say "we're proposing ... to Facilities" until Facilities agrees in writing.
-- **On-screen labels.** Every staged shot carries a lower third: "Weak spot simulated with an RF attenuator", "Demo printout", "Lab receiver stands in for the alarm company".
+- **One persistent corner bug, 0:22-1:14:** *Bench demo · PROVE tap at the alarm port · lab receiver = alarm company · weak spot = RF attenuator*. It replaces the rotating lower thirds, and the ending card says the rest.
 
 | Time | Visual | Audio |
 |---|---|---|
-| 0:00-0:10 | Night. An armed alarm keypad glows **READY** in a dark hallway. On screen: *The copper's gone. This alarm hasn't called anyone since.* | **A:** "When a copper phone line goes away, the alarm panel on it doesn't find out until the night it has to call for help. For many homes, that call now goes through a new box." |
-| 0:10-0:25 | The device on the bench, with the alarm panel on its alarm port and a corded phone. Caption: device name. | **B:** "This is [Verizon's Voice Gateway], one of the boxes Verizon uses to replace copper. Its guide already asks customers with an alarm to test it when the box goes in. We turned that test into one guided check, with a receipt." |
-| 0:25-0:58 | Two presses on camera: PROVE, then the keypad's TEST. The console shows **picked up → full code sent → confirmation ✗** and the line *Panel: sent ✓ · Confirmation: none*. Lower third: *Weak spot simulated with an RF attenuator.* The handset speaks. The box goes nearer the window and the test is re-run: three green ticks. The receipt prints last (lower third: *Demo printout · in production, on the box's status screen and by text*). | **A:** "PROVE is built to ship as a firmware update through Verizon's device management. It listens to the alarm's own test call over Verizon's LTE voice network. Did the alarm company's system pick up? Did the panel send its full code? Did the 'got it' come back? It also checks the signal right here, voice both ways, and the batteries." **Handset:** "Signal here is too weak for alarm data. Try the box nearer a window, as Verizon's guide suggests, then run the alarm test again." |
-| 0:58-1:16 | Bench: two counters side by side on one box: **TEST CALL: clear [k/k]** and **ALARM: confirmed [m/20]**. Then the window spot: **ALARM [20/20]**. Caption: *Same box, same minute · lab-baseline and second-network controls on the poster.* | **B:** "On our bench in a Rutgers ECE lab we measured why the alarm test matters. At a weak spot, the test call sounded clear [k of k] times. The alarm got through [m of 20]. Near the window, [20 of 20]. A clear call isn't proof." |
-| 1:16-1:24 | Optional, only with a usability determination and signed release: a volunteer's hands set up the box; their voice. | **B:** "In our usability session, [k of n] older-adult volunteers set it up alone." *(Omit the beat if not cleared; the music carries.)* |
-| 1:24-1:42 | Card 1: **46,000** *homes and businesses on these boxes today (Verizon, summer 2026 FCC filings)*. Card 2: **417,000** *more lines still on copper in two of Verizon's 2026 filings · replacements include fiber, mobile and boxes like this*. Four icons captioned *what the trial measures*. | **A:** "Verizon told the FCC this summer it has about forty-six thousand homes and businesses on these boxes. Two of its 2026 filings cover four hundred seventeen thousand more lines still on copper. Every green receipt is a chance to skip a repeat visit and a help-desk call, and to keep an alarm household with Verizon. The trial measures how often." |
-| 1:42-1:54 | The PROVE icon on the box, then over elevator HELP B-roll (public car, no people). Caption: *illustration: no Rutgers line tested*. | **B:** "Our ask: put PROVE in one migration batch's self-install kits for thirty days, against a control group. Next, we're proposing the same proof to Rutgers Facilities for elevator HELP phones." |
-| 1:54-2:00 | The receipt is torn off and handed to camera. End card: **PROVE · built at Rutgers ECE · student concept, not a Verizon product.** | **Both:** "Sent isn't received. PROVE." |
+| 0:00-0:10 | Night. An alarm keypad in a dark hallway reads **ARMED AWAY**, its green light steady. One line fades in and out: *The copper's gone. Will this alarm still get through?* | **A:** "When the copper line goes, the alarm panel on it won't find out until the night it calls for help." |
+| 0:10-0:22 | The box on the bench, with the alarm panel on its alarm port and a corded phone. Caption: the device name. | **B:** "This is Verizon's Voice Gateway, one of the boxes replacing copper. Its guide asks alarm customers to test. We made that test one guided check, with a receipt." |
+| 0:22-0:56 | Two presses on camera: PROVE, then the keypad's TEST. Jump cut with the "~15 s test call" timer. The console shows **picked up ✓ → full code sent ✓ → confirmation ✗**, then *Signal here: below the learned alarm bar*. Lower third over the handset prompt: *Signal bar learned from [N] bench alarm tests*. The handset speaks. The box goes nearer the window and the test is re-run (timer). **4 s with no talking** while three green ticks resolve. The receipt prints last. | **A:** "PROVE listens to the alarm's test call through Verizon's network. Did the alarm company pick up? Did the panel send its full code? Did the 'got it' come back? A model learned from our bench tests checks the signal carries alarm data, not just voice." **Handset:** "Signal here is too weak for alarm data. Move the box nearer a window, then test the alarm again." |
+| 0:56-1:14 | Bench: two counters side by side on one box: **TEST CALL: clear [k/k]** and **ALARM: confirmed [m/20]**, then the window spot: **ALARM [20/20]**. Caption: *Weak spot: SINR [x] dB, set with an attenuator · "clear" = PESQ ≥ 3.0 · step [i] of [N] · full sweep on poster*. Then a third counter slides in: **Another carrier's box, same signal: ALARM [m'/20]**. | **B:** "On our bench at Rutgers, at a weak spot the test call sounded clear [k of k] times. The alarm got through [m of 20]. Near the window, [20 of 20]. Another carrier's line did the same. A clear call isn't proof." |
+| 1:14-1:22 | Optional, only with a usability determination and signed release: a volunteer's hands follow the spoken fix; the receipt turns green. If not cleared, give these 8 s to the next two beats (no music filler). | **B:** "In our usability session, [k of n] older volunteers followed PROVE's spoken fix to a green receipt without help." |
+| 1:22-1:37 | One card: **46,000** *homes and businesses on these boxes (Verizon, summer 2026 FCC filings)*. Small caption under it: *+417,000 more lines in two 2026 filings · replacements include fiber, mobile and boxes like this*. Second line on the same card: **1 point = 10 truck rolls per 1,000 installs**. | **A:** "Verizon told the FCC about forty-six thousand homes and businesses use these boxes, and its 2026 filings cover hundreds of thousands more. Per thousand installs, each point off repeat visits is ten truck rolls saved." |
+| 1:37-1:55 | **Both speakers on camera** at the bench. B holds up the pocket PROVE tap (Pi, line tap, battery). Then the PROVE icon on the box's status screen. Then elevator HELP B-roll (public car, no people; caption *proposal: no Rutgers line tested*). | **B:** "Our ask: thirty days on one migration batch, technicians carrying a pocket PROVE tap on alarm installs, versus a control group. Then the same checks as box firmware. And we're proposing the same proof to Rutgers Facilities for elevator HELP phones." |
+| 1:55-2:00 | The receipt is torn off and handed to camera. End card: **PROVE · built at Rutgers ECE · student concept, not a Verizon product.** | **Both:** "Sent isn't received. PROVE." |
+
+**If Facilities agrees in writing before Nov 4,** B's last sentence becomes "And Rutgers Facilities has agreed to walk through [N] elevator HELP phones with us." That adds no words.
+
+**If the mentor confirms that device management can count boxes with a registered alarm number** (`OUTREACH_KIT.md` §10, question 6), A's second sentence becomes "Verizon can already count these homes: every box with an alarm number registered." (−5 words)
 
 ## The receipt (what prints on camera)
 ```
 PROVE · test record                Oct [30] 2026 14:02
 ------------------------------------------------------
-SIGNAL here   GOOD (clear enough for alarm data)
+SIGNAL here   GOOD · above the learned alarm bar
 VOICE         CLEAR BOTH WAYS
 ALARM         Receiver picked up · full code sent ·
               confirmed in [x.x] s
 BATTERY       Installed · keeps working when unplugged
 ------------------------------------------------------
-GREEN: no visit needed
+GREEN: all checks passed · no visit requested
 Test record, not a guarantee. Confirm the test
 with your alarm company, as you do today.
 ```
-Print "box modem" signal values only if they come from the box itself. Otherwise label them "phone at the box (proxy)", and only on the poster.
+- Print "box modem" signal values only if they come from the box itself. Otherwise label them "phone at the box (proxy)", and only on the poster.
+- "No visit requested" is deliberate. Whether to skip a visit is Verizon's policy call (Q&A 4); the receipt only reports that nothing failed.
 
 ## Decision table for the bench beat (lock on Nov 3)
 | Bench result | What the video says |
 |---|---|
-| Weak-spot contrast measured (call clear, alarm short), and the second-network control shows the same | Script as written. On the poster: "the other network did the same". |
-| Weak spot not measured by Nov 3 | Replace 0:58-1:16 with: "On our bench, Verizon's box confirmed [n of 50] alarm tests, in line with our lab baseline. Every result went to Verizon before this video." Use this only if the CIs overlap. |
-| Verizon arm below the lab baseline | No number on screen. Say: "We measured where it falls short, and those results went to Verizon first." Show it on the poster only with the mentor's OK. |
-| Swap test (T3) shows lost alarm registrations | Only with the mentor's written OK, say: "After a box swap, PROVE flagged a step the swap guide could add. It's already with Verizon." |
+| A weak-spot gap was measured (call clear, alarm short), the other carrier's box shows the same gap at matched SINR (overlapping CIs in `analyze_prove_lab.py`'s matched-SINR table), **and** the mentor has given a written OK | Use the script as written. |
+| A gap was measured, but the other carrier's box did **not** do the same | Keep the numbers off screen. B says: "On our bench at Rutgers, PROVE found the signal level where alarm data fails before voice does. Those results went to Verizon first." The counters go to the poster only with the mentor's OK. |
+| No gap was measured by Nov 3 (alarm as robust as voice at every step) | B says: "On our bench at Rutgers, Verizon's box confirmed [n of 50] alarm tests, and PROVE now knows the signal floor below which neither works." The value claim shifts to install triage (signal, registration, battery). |
+| The swap test (T3) shows lost alarm registrations | Only with the mentor's written OK, say: "After a box swap, PROVE flagged a step the swap guide could add. It's already with Verizon." |
 | **K1 fails (no live Verizon box by Oct 29)** | Use the full fallback script below. |
 
 ### K1 fallback script (complete, 2:00)
-- **0:00-0:10:** same opening.
-- **0:10-0:25 (B):** "Verizon replaces copper with boxes like this. Its guide asks customers with an alarm to test it. We built the check that makes that test answer back."
-- **0:25-0:58:** demo on the lab-baseline arm. Lower third: *Lab line, not Verizon's network*.
-- **0:58-1:16 (B):** "On a second carrier's wireless line in our lab, at a weak spot the test call sounded clear [k of k] times, while the alarm got through [m of 20]. A clear call isn't proof. Next week this runs on Verizon's box."
-- **1:16-2:00:** as above.
+- **0:00-0:10:** the same opening.
+- **0:10-0:22 (B):** "Verizon replaces copper with boxes like this. Its guide asks alarm customers to test. We built the check that makes that test answer back."
+- **0:22-0:56:** the demo on the other carrier's wireless box. Corner bug: *Another carrier's line · Verizon's box next week*.
+- **0:56-1:14 (B):** "On a wireless home-phone line in our lab, at a weak spot the test call sounded clear [k of k] times, while the alarm got through [m of 20]. A clear call isn't proof. Next, this runs on Verizon's box."
+- **1:14-2:00:** as above.
 - Expect about 60/95 (judge estimate). The live box is worth roughly 8-15 points.
 
 ## Shot list (Nov 4-6)
-1. Armed keypad READY in a dark hallway (lab or a permitted room).
-2. Both presses (PROVE, then keypad TEST) and the console ticks.
-3. Weak spot (attenuator, captioned), the handset prompt, the move, then green.
-4. Two counters side by side.
-5. Receipt printing (macro).
-6. Optional: volunteer hands, with the release on file.
-7. Elevator HELP B-roll: public car, no people, nothing opened.
-8. Two speakers, one clean take per line.
+1. Keypad reading ARMED AWAY in a dark hallway (lab or a permitted room). Check the display text on the actual panel model.
+2. Both presses (PROVE, then keypad TEST), the timer overlay, and the console ticks.
+3. The weak spot (attenuator dial in shot), the handset prompt, the move, then green.
+4. The counters, including the other carrier's box.
+5. The receipt printing (macro).
+6. The pocket PROVE tap in a hand (Pi, line tap, battery pack, in a small case).
+7. Optional: volunteer hands, with the release on file.
+8. Elevator HELP B-roll: a public car, no people, nothing opened.
+9. Both speakers on camera for the ask. One clean take per line.

@@ -1,0 +1,937 @@
+                  Voice Telephone Services: 
+                   Status as of June 30, 2025 
+
+
+                      Industry Analysis Division 
+                 Office of Economics and Analytics 
+                                May 2026 
+
+
+Inquiries regarding the information in this report may be addressed to OEA-IADreports@fcc.gov. 
+                                   Table of Contents 
+
+Introduction ....................................................................................................................................................... 1 
+
+Comparison to Local Telephone Competition Report ................................................................................... 1 
+
+Retail Voice Telephone Service Connections .................................................................................................. 2 
+
+   Figure 1 Retail Voice Telephone Service Connections, 2022-2025 ........................................................ 2 
+   Figure 2 Wireline Retail Voice Telephone Service Connections by Technology, 
+            Regulatory Status, and Customer Type as of June 30, 2025 ..................................................... 3 
+
+Retail Service Relationships ............................................................................................................................. 4 
+
+   Figure 3 Interconnected VoIP Subscribership by Reported Service Features, 
+            Regulatory Status, and Customer Type as of June 30, 2025 ..................................................... 5 
+   Figure 4 Retail Relationships of Wireline Voice Telephone Service with 
+            Internet Access Service by Regulatory Status as of June 30, 2025 ........................................... 6 
+
+Detailed Voice Telephone Services Data ........................................................................................................  7 
+
+   Table 1  Voice Subscriptions – Total for US........................................................................................... 8 
+   Table 2  Number of Providers Reporting Voice Subscriptions – Total for US  .................................... 10 
+   Table 3  Residential Wireline Voice Telephone Service Connections and Households 
+            by State as of June 30, 2025 .................................................................................................... 12 
+   Table 4  Mobile Voice Telephone Service Subscriptions and Population 
+            by State as of June 30, 2025 .................................................................................................... 13 
+
+Technical Notes ................................................................................................................................................ 14 
+
+Glossary ............................................................................................................................................................ 15 
+
+Materials Available on the FCC Website (https://www.fcc.gov/voice-telephone-services-report) 
+
+   Table 1  Voice Subscriptions – Total for US 
+   Table 2  Number of Providers Reporting Voice Subscriptions – Total for US 
+   Table 3  Residential Wireline Voice Telephone Service Connections and Households  
+            by State as of June 30, 2025 
+   Table 4  Mobile Voice Telephone Service Subscriptions and Population by State as of June 30, 2025 
+
+   Table S.1 Voice Subscriptions – State 
+   Table S.2 Number of Providers Reporting Voice Subscriptions – State 
+   Table S.3 Fixed Voice Subscriptions – County 
+   Table S.4 Voice Subscriptions – Back to 2008 
+   Table S.5 Number of Providers Reporting Voice Subscriptions – Back to 2014 
+   Table S.6 Crosswalk to Local Telephone Competition: Status as of December 31, 2013 report
+                          Voice Telephone Services:  Status as of June 30, 2025 
+
+Introduction 
+
+The Commission has used FCC Form 477 to collect subscribership information from providers of voice telephone 
+services – incumbent local exchange carriers (ILECs), competitive local exchange carriers (CLECs), and mobile 
+voice providers – since December 1999.1  The Commission has required interconnected Voice over Internet 
+Protocol (“interconnected VoIP”) service providers to report subscribership information since December 2008.2  
+Also, starting with the data reported for 2014, Form 477 has been modified to distinguish “over-the-top” 
+(colloquially, “bring your own broadband”) interconnected VoIP subscriptions from other interconnected VoIP 
+subscriptions.3      
+
+Comparison to Local Telephone Competition Report 
+
+This report was previously titled Local Telephone Competition.  Reports under the earlier title summarized Form 
+477 data through December 31, 2013.  Reports under the current title provide much of the summarized data as 
+supplemental spreadsheet files, available at https://www.fcc.gov/voice-telephone-services-report.  A crosswalk 
+between data elements in this report and data elements in the Local Telephone Competition report is available at 
+that page.    
+
+
+1 An Incumbent Local Exchange Carrier is an entity that was providing local exchange telephone service in a particular area 
+on February 8, 1996, the date on which the Telecommunications Act of 1996 was enacted into law. See 47 C.F.R. § 51.5. 
+
+2 The FCC’s rules (at 47 C.F.R. § 9.3) state: 
+  An interconnected Voice over Internet Protocol (VoIP) service is a service that: 
+ (1) Enables real-time, two-way voice communications;
+ (2) Requires a broadband connection from the user’s location;
+ (3) Requires Internet protocol-compatible customer premises equipment; and
+ (4) Permits users generally to receive calls that originate on the public switched telephone network and to terminate calls to
+    the public switched telephone network.
+We note that the current interpretation of element (4) of the definition excludes certain VoIP services (e.g., those offered by 
+Skype) and subscribers to those services are not reported on Form 477. 
+
+3 The Technical Notes and the Glossary that appear at the end of this report provide more-detailed information about the 
+current Form 477 and the meaning of terms used in this report.  To be consistent with modifications to Form 477 adopted in 
+2013 (to be effective for reporting June 2014 and later data), this report no longer uses the terms “standalone VoIP” and 
+“broadband bundle.”  Standalone VoIP in the earlier, Local Telephone Competition, reports has a different meaning from 
+“over-the-top” VoIP in this report.  In particular, subscriptions reported as standalone VoIP for December 2013 and earlier 
+dates included over-the-top subscriptions as defined in this report and also video-plus-VoIP service subscriptions sold by 
+cable TV system operators and other entities that own last-mile facilities to end-user premises.  We note that, accordingly, 
+13% of total interconnected VoIP subscriptions were categorized as standalone VoIP in December 2013 and, by contrast, 
+10% of total interconnected VoIP subscriptions were categorized as over-the-top VoIP in December 2014.     
+
+
+    U.S. Federal Communications Commission          1            Voice Telephone Services: Status as of June 30, 2025
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+ 
+Retail Voice Telephone Service Connections  
+ 
+Retail voice telephone service customers are served by two wireline technologies – end-user switched access lines 
+and interconnected VoIP subscriptions – and by mobile wireless subscriptions.4     
+ 
+•  In June 2025, there were 15 million end-user switched access lines in service, 63 million interconnected VoIP 
+   subscriptions, and 395 million mobile subscriptions, for a total of 473 million retail voice telephone service 
+   connections in the United States.  See Figure 1.    
+ 
+•  Over the three-year period presented in Figure 1, interconnected VoIP subscriptions declined at a compound 
+   annual growth rate of 2.3%, mobile voice subscriptions increased at a compound annual growth rate of 2.5%, 
+   and retail switched access lines declined at a compound annual growth rate of 17.9% per year.5       
+ 
+                                      Figure 1 
+             Retail Voice Telephone Service Connections, 2022 – 2025 (In thousands) 
+                        500,000
+                        450,000
+                        400,000
+                        350,000
+                        300,000
+                        250,000
+                        200,000
+                        150,000
+                        100,000
+                         50,000
+                             0
+                               Jun 2022 Dec 2022 Jun 2023 Dec 2023 Jun 2024 Dec 2024 Jun 2025
+         Mobile Voice Subscriptions 366,738 372,604 378,927 386,092 388,286 390,990 394,505
+         Interconnected VoIP Subscriptions 68,034 66,241 65,675 64,437 64,651 63,866 63,378
+         Retail Switched Access Lines 27,186 24,412 22,004 20,680 18,234 16,413 15,025
+                                                                              
+                Note:  Some previously published data have been revised. 
+                Source:  FCC Form 477. 
+ 
+•  Of the 78 million wireline retail voice telephone service connections (including both switched access lines 
+   and interconnected VoIP subscriptions) in June 2025, 26 million (or 33%) were residential connections and 
+   53 million (or 67%) were business connections.6  See Figure 2.   
+ 
+ 
+ 
+ 
+                         
+4 The presentation of mobile wireless telephone subscriber counts in this report does not constitute, or imply, Commission 
+analysis of the extent to which wireline and mobile wireless telephone services are demand substitutes or complements in 
+general or in any particular situation. 
+
+5 The compound annual growth rate is a smoothed rate of growth calculated in three steps.  First, divide the ending value by 
+the beginning value.  Second, raise the result of that division to a power equal to one divided by the number of years in the 
+period (in this case, 3 years, so the power is 1/3).  Third, subtract the number one from the result of the second step.    
+
+ 
+
+
+                                         2
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+           
+                                Figure 2 
+ Wireline Retail Voice Telephone Service Connections by Technology, Regulatory Status,  
+              And Customer Type as of June 30, 2025 (In thousands) 
+ Total                  Switched Access  Interconnected      Total 
+                            Lines            VoIP                
+      ILEC                  12,199            5,468          17,667 
+      Non-ILEC                2,826          57,910          60,736 
+      Total                 15,025           63,378          78,403 
+  Residential                                                      
+      ILEC                    6,011           4,328          10,339 
+      Non-ILEC                  402          15,078          15,480 
+      Residential Total       6,413          19,405          25,819 
+  Business                                                         
+      ILEC                    6,187           1,140            7,328 
+      Non-ILEC                2,425          42,832          45,256 
+      Business Total          8,612          43,972          52,584 
+Notes:  Figures may not sum to totals due to rounding. A voice-service affiliate of an ILEC that is operating 
+outside of the ILEC’s traditional service area (“study area”) is a Non-ILEC.  
+Source:  FCC Form 477. 
+                                     
+                                Residential
+
+                                           ILEC, VoIP, 
+                  ILEC, Switched,           16.8 %
+                     23.3 %
+
+                                            Non-ILEC, Switched, 
+                                                 1.6 %
+
+
+                   Non-ILEC, VoIP, 
+                      58.4 %
+                                                                
+Source:  FCC Form 477. 
+                                     
+                                 Business
+
+
+                                            Non-ILEC, VoIP, 
+                                               81.5%
+
+             Non-ILEC, Switched, 
+                 4.6%
+                 ILEC, VoIP, 
+                   2.2%
+
+                   ILEC, Switched, 
+                      11.8%
+                                                                
+Source:  FCC Form 477. 
+                                     
+
+
+                                   3
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+ 
+•  Cross-classified by technology and the retailer’s regulatory status in Figure 2, the 26 million wireline 
+   residential connections in June 2025 were: 23.3% ILEC switched access lines, 58.4% non-ILEC 
+   interconnected VoIP subscriptions, 16.8% ILEC interconnected VoIP subscriptions, and 1.6% non-ILEC 
+   switched access lines.  Similarly, the 53 million wireline business connections were: 11.8% ILEC switched 
+   access lines, 81.5% non-ILEC interconnected VoIP subscriptions, 2.2% ILEC interconnected VoIP 
+   subscriptions, and 4.6% non-ILEC switched access lines.    
+ 
+Retail Service Relationships   
+ 
+Respondents submit two types of information about retail service relationships on the current Form 477. 
+ 
+•  Interconnected VoIP service retailers distinguish over-the-top (“OTT”) interconnected VoIP subscriptions—
+   where the end user accesses the service using a broadband connection from an entity that is not affiliated with 
+   the VoIP service retailer—from all other interconnected VoIP subscriptions.7 See Figure 3. 
+ 
+•  Retailers of switched access lines and retailers of interconnected VoIP service distinguish between sales to 
+   end users who also purchase Internet access from them (including affiliates) and those who do not.  See 
+   Figure 4.  
+                                           
+
+
+                         
+7
+ A broadband connection may or may not provide the end user with internet access. 
+
+
+                                         4
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+           
+                              Figure 3 
+Interconnected VoIP Subscribership by Reported Service Features, Regulatory Status,  
+            and Customer Type as of June 30, 2025 (In thousands) 
+    Total                Over-the-Top   All Other      Total 
+                            (OTT)         VoIP             
+         ILEC                     19       5,449        5,468 
+          Non-ILEC          27,723        30,187       57,910 
+          Total             27,742        35,636       63,378 
+      Residential                                        
+          ILEC                     5       4,323        4,328 
+          Non-ILEC            1,334       13,744       15,078 
+          Residential Total   1,339       18,066       19,405 
+      Business                                               
+          ILEC                    14       1,126        1,140 
+          Non-ILEC          26,389        16,443       42,832 
+          Business Total    26,403        17,569       43,972 
+    Note:  Figures may not sum to totals due to rounding. 
+    Source:  FCC Form 477. 
+           
+                              Residential
+
+
+              ILEC, All Other, 
+                 22.3%
+
+                                            Non-ILEC, All Other, 
+                                                70.8%
+
+
+                 Non-ILEC, 
+                 OTT, 6.9%
+                                      ILEC, OTT, 
+                                        0.0%
+                                                                 
+    Source:  FCC Form 477.                                                   
+                                   
+                              Business
+                      Non-ILEC, OTT, 
+                         60.0%
+
+
+                                           ILEC, All Other, 
+                                               2.6%
+                   ILEC, OTT, 
+                     0.0%
+                                    Non-ILEC, All Other, 
+                                        37.4%
+                                                                 
+    Source:  FCC Form 477. 
+                                   
+                                   
+
+
+                                 5
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+           
+                              Figure 4 
+Retail Relationships of Wireline Voice Telephone Service with Internet Access Service 
+            By Regulatory Status as of June 30, 2025 (In thousands) 
+ Total                        ILEC        Non-ILEC        Total 
+       Switched Access Lines 12,199         2,826        15,025 
+       Over-the-Top VoIP         19        27,723        27,742 
+       All Other VoIP         5,449        30,187        35,636 
+       Total                 17,667        60,736        78,403 
+   Sold with Internet                                           
+       Switched Access Lines  4,781           925         5,706 
+       Over-the-Top VoIP          0            0             0 
+       All Other VoIP         5,296        25,242        30,538 
+       Total                 10,077        26,167        36,244 
+   Sold Without Internet                                        
+       Switched Access Lines  7,418         1,901         9,319 
+       Over-the-Top VoIP         19        27,723        27,742 
+       All Other VoIP           153         4,945         5,098 
+       Total                  7,590        34,569        42,159 
+             Note:  Figures  may not sum totals due to rounding. 
+             Source:  FCC  Form 477. 
+                                   
+        
+                               ILEC
+        
+
+             Only Voice Sold
+                43.0%
+
+
+                                           Switched Access Lines & Internet
+                                                  27.1%
+
+                VoIP & Internet
+                   30.0%
+
+                                                                  
+             Source:  FCC Form 477. 
+                                   
+                             Non-ILEC
+
+                     Only Voice Sold
+                        56.9%
+
+
+                                           Switched Access Lines & Internet
+                                                   1.5%
+
+                                        VoIP & Internet
+                                           41.6%
+                                                                  
+             Source:  FCC Form 477. 
+                                   
+                                   
+                                   
+
+
+                                 6
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+ 
+Detailed Voice Telephone Services Data 
+ 
+•  Table 1 summarizes national-level voice telephone service subscription data for June and December 2024, 
+   and June 2025 for individual data elements collected by FCC Form 477.     
+ 
+•  Table 2 shows the number of entities that reported subscription data for the same time periods. 
+ 
+•  Table 3 shows residential wireline voice telephone service connections by state for June 2025. 
+ 
+•  Table 4 shows mobile voice telephone service subscriptions by state for June 2025. 
+ 
+Tables 1, 2, 3, and 4 are available in Excel format at https://www.fcc.gov/voice-telephone-services-report.  Also 
+available at that page are: 
+ 
+•  State-level Subscriptions table in Excel format (data back to June 2024) 
+ 
+•  State-level Number of Providers table in Excel format (data back to June 2024) 
+ 
+•  County-level Subscription information in Excel format (data back to June 2014) 
+ 
+•  CSV-format file of the consistent data series that are available back to December 2008, when interconnected 
+   VoIP retailers were first required to report subscription information on Form 477.   
+ 
+Earlier data, back to December 1999, are available in the Local Telephone Competition reports at 
+https://www.fcc.gov/general/local-telephone-competition-reports.  However, researchers using the complete data 
+series for trend analysis should be aware of the following discontinuities in the data.  
+ 
+•  Between December 1999 and December 2004, Form 477 collected state-by-state data only from local 
+   exchange carriers with at least 10,000 end-user switched access lines in service in the state, and from 
+   facilities-based mobile voice carriers with at least 10,000 mobile voice subscriptions in service in the state.   
+ 
+•  Prior to December 2008, interconnected VoIP service retailers were not required to submit Form 477, but an 
+   unknown amount of interconnected VoIP service was included along with the switched access lines reported 
+   by some Form 477 filers. 
+ 
+•  As discussed earlier in this report, the category standalone interconnected VoIP that was reported from 
+   December 2008 to December 2013 is different (that is, includes more subscriptions) than the category over-
+   the-top interconnected VoIP that is reported starting with the June 2014 data.8 
+                                                                   
+
+
+                         
+8
+ See footnote 3, above.   
+
+
+                                         7
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+                                         Table 1. Voice Subscriptions (in Thousands) - Total for US
+
+                                                                                                                  June      Dec       June 
+Reference                                              Data element                                               2024      2024      2025
+    1     Mobile telephony                                                                                        388,286   390,990   394,505
+    2         Directly-billed or prepaid                                                                          343,360   347,272   348,733
+    3         Not directly-billed or prepaid                                                                       44,926    43,718    45,771
+                                                                      
+    4     Wireline End-User Switched Access Lines and Interconnected VoIP Subscriptions                            82,886    80,279    78,403
+    5         Incumbent LECs                                                                                       20,571    19,090    17,667
+    6         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 62,314 61,189 60,736
+    7         Consumer-grade service                                                                               30,110    27,851    25,819
+    8             Incumbent LECs                                                                                   11,991    11,220    10,339
+    9             Other (Non-ILECs)                                                                                18,119    16,631    15,480
+   10         Business & Government-grade service                                                                  52,775    52,427    52,584
+   11             Incumbent LECs                                                                                    8,580     7,870     7,328
+   12             Other (Non-ILECs)                                                                                44,195    44,558    45,256
+                                                                      
+   13     Local exchange telephone service (Switched Access Lines)                                                 18,234    16,413    15,025
+   14         Incumbent LECs                                                                                       14,651    13,321    12,199
+   15         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 3,584 3,092  2,826
+   16         Consumer-grade service                                                                                7,703     7,020     6,413
+   17             Incumbent LECs                                                                                    7,258     6,597     6,011
+   18             Other (Non-ILECs)                                                                                   445      423       402
+   19         Business & Government-grade service                                                                  10,531     9,393     8,612
+   20             Incumbent LECs                                                                                    7,393     6,724     6,187
+   21             Other (Non-ILECs)                                                                                 3,138     2,669     2,425
+                                                                      
+   22     Interconnected VoIP Subscriptions - Note:  Includes both Over-the-top (OTT) and All Other sub-categories. 64,651   63,866    63,378
+   23         Incumbent LECs                                                                                        5,921     5,769     5,468
+   24         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 58,731 58,097 57,910
+   25         Consumer-grade service                                                                               22,407    20,831    19,405
+   26             Incumbent LECs                                                                                    4,733     4,623     4,328
+   27             Other (Non-ILECs)                                                                                17,674    16,208    15,078
+   28         Business & Government-grade service                                                                  42,244    43,035    43,972
+   29             Incumbent LECs                                                                                    1,187     1,146     1,140
+   30             Other (Non-ILECs)                                                                                41,057    41,889    42,832
+                                                                      
+   31     Over-the-top interconnected VoIP                                                                         25,391    26,480    27,742
+   32         Incumbent LECs                                                                                           20        20       19
+   33         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 25,371 26,460 27,723
+   34         Consumer-grade service                                                                                1,387     1,378     1,339
+   35             Incumbent LECs                                                                                        665
+   36             Other (Non-ILECs)                                                                                 1,381     1,372     1,334
+   37         Business & Government-grade service                                                                  24,004    25,103    26,403
+   38             Incumbent LECs                                                                                       14        14       14
+   39             Other (Non-ILECs)                                                                                23,990    25,089    26,389
+                                                                      
+   40     All Other interconnected VoIP                                                                            39,260    37,386    35,636
+   41         Incumbent LECs                                                                                        5,901     5,749     5,449
+   42         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 33,360 31,637 30,187
+   43         Consumer-grade service                                                                               21,020    19,454    18,066
+   44             Incumbent LECs                                                                                    4,727     4,617     4,323
+   45             Other (Non-ILECs)                                                                                16,293    14,836    13,744
+   46         Business & Government-grade service                                                                  18,240    17,932    17,569
+   47             Incumbent LECs                                                                                    1,174     1,132     1,126
+   48             Other (Non-ILECs)                                                                                17,067    16,800    16,443
+                                                                      
+   49     Local exchange telephone service by last-mile delivery medium                                            18,234    16,413    15,025
+   50         Fiber-to-the-premises                                                                                 3,575     3,666     3,486
+   51             Incumbent LECs                                                                                    2,606     2,644     2,524
+   52             Other (Non-ILECs)                                                                                   970     1,021      962
+
+
+                                                                     8
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+                                         Table 1. Voice Subscriptions (in Thousands) - Total for US
+
+                                                                                                                  June      Dec       June 
+Reference                                              Data element                                               2024      2024      2025
+   53         Coaxial cable                                                                                           404      233       224
+   54             Incumbent LECs                                                                                       38        43       45
+   55             Other (Non-ILECs)                                                                                   367      191       179
+   56         Terrestrial fixed wireless                                                                               45        11       20
+   57             Incumbent LECs                                                                                        847
+   58             Other (Non-ILECs)                                                                                    36         7       13
+   59         Copper local loop                                                                                    14,210    12,502    11,295
+   60             Incumbent LECs                                                                                   11,999    10,630     9,622
+   61             Other (Non-ILECs)                                                                                 2,211     1,873     1,672
+                                                                      
+   62     All Other interconnected VoIP by last-mile delivery medium                                               39,260    37,386    35,636
+   63         Fiber-to-the-premises                                                                                 8,381     8,255     8,339
+   64             Incumbent LECs                                                                                    3,654     3,662     3,496
+   65             Other (Non-ILECs)                                                                                 4,727     4,593     4,843
+   66         Coaxial cable                                                                                        20,806    19,179    17,711
+   67             Incumbent LECs                                                                                        876
+   68             Other (Non-ILECs)                                                                                20,798    19,172    17,705
+   69         Terrestrial fixed wireless or satellite                                                                 173      163       151
+   70             Incumbent LECs                                                                                        000
+   71             Other (Non-ILECs)                                                                                   172      163       151
+   72         Copper local loop                                                                                     9,901     9,788     9,434
+   73             Incumbent LECs                                                                                    2,238     2,079     1,946
+   74             Other (Non-ILECs)                                                                                 7,663     7,709     7,488
+                                                                      
+   75     Non-Incumbent LEC local exchange telephone service by means of provisioning                               3,584     3,092     2,826
+   76             Provided over owned last-mile facilities                                                          1,690     1,460     1,365
+   77             Provided over UNE-L obtained from unaffiliated entity                                               264       210      198
+   78             Provided over other services obtained from unaffiliated entity                                    1,629     1,422     1,263
+                                                                      
+   79     Incumbent LEC local exchange telephone service provided to unaffiliated carriers for resale               1,802       826     1,391
+   80             Wholesale lines                                                                                   1,529      740      1,176
+   81             UNE-L                                                                                               273        87      215
+                                                                      
+   82     Local exchange telephone service and long-distance service                                               18,234    16,413    15,025
+   83         Consumer-grade service                                                                                7,703     7,020     6,413
+   84             Incumbent LEC is preferred long-distance carrier for its local exchange service customer          4,827     4,462     3,510
+   85             Incumbent LEC is not preferred long-distance carrier for its local exchange service customer      2,430     2,135     2,501
+   86             Non-ILEC is preferred long-distance carrier for its local exchange service customer                 350       357      347
+   87             Non-ILEC is not preferred long-distance carrier for its local exchange service customer              95        66       55
+   88         Business & Government-grade service                                                                  10,531     9,393     8,612
+   89             Incumbent LEC is preferred long-distance carrier for its local exchange service customer          4,014     2,737     2,277
+   90             Incumbent LEC is not preferred long-distance carrier for its local exchange service customer      3,379     3,987     3,910
+   91             Non-ILEC is preferred long-distance carrier for its local exchange service customer               2,310     1,990     1,827
+   92             Non-ILEC is not preferred long-distance carrier for its local exchange service customer             829       679      598
+                                                                      
+   93     End user buys local exchange telephone service and Internet access service from same entity               6,689     6,150     5,706
+   94             End user buys both services from incumbent LEC or affiliates                                      5,559     5,175     4,781
+   95             End user buys both services from Non-ILEC or affiliates                                           1,130       974      925
+                                                                      
+   96     End user buys interconnected VoIP and Internet access service from same entity                           34,655    32,840    30,538
+   97             End user buys both services from incumbent LEC or affiliates                                      5,771     5,610     5,296
+   98             End user buys both services from Non-ILEC or affiliates                                          28,884    27,230    25,242
+
+
+                                                                     9
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+                                 Table 2. Number of Providers Reporting Voice Subscriptions - Total for US
+
+                                                                                                                  June      Dec       June 
+Reference                                              Data element                                               2024      2024      2025
+    1     Mobile telephony                                                                                             53        53       52
+    2         Directly-billed or prepaid                                                                               50        50       50
+    3         Not directly-billed or prepaid                                                                            81110
+                                                                      
+    4     Wireline End-User Switched Access Lines and Interconnected VoIP Subscriptions                             2,337     2,361     2,373
+    5         Incumbent LECs                                                                                          694      685       678
+    6         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 1,991 2,027  2,049
+    7         Consumer-grade service                                                                                1,256     1,245     1,226
+    8             Incumbent LECs                                                                                      693      684       677
+    9             Other (Non-ILECs)                                                                                   900      903       893
+   10         Business & Government-grade service                                                                   2,281     2,297     2,308
+   11             Incumbent LECs                                                                                      690      681       674
+   12             Other (Non-ILECs)                                                                                 1,935     1,964     1,984
+                                                                      
+   13     Local exchange telephone service (Switched Access Lines)                                                    857       835      823
+   14         Incumbent LECs                                                                                          682      673       666
+   15         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 431  421      414
+   16         Consumer-grade service                                                                                  778      761       751
+   17             Incumbent LECs                                                                                      682      673       666
+   18             Other (Non-ILECs)                                                                                   344      337       329
+   19         Business & Government-grade service                                                                     848      823       814
+   20             Incumbent LECs                                                                                      679      670       663
+   21             Other (Non-ILECs)                                                                                   419      408       404
+                                                                      
+   22     Interconnected VoIP Subscriptions - Note:  Includes both Over-the-top (OTT) and All Other sub-categories. 1,906     1,949     1,975
+   23         Incumbent LECs                                                                                          215      219       227
+   24         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 1,820 1,867  1,889
+   25         Consumer-grade service                                                                                  750      762       761
+   26             Incumbent LECs                                                                                      134      141       145
+   27             Other (Non-ILECs)                                                                                   681      694       692
+   28         Business & Government-grade service                                                                   1,849     1,883     1,909
+   29             Incumbent LECs                                                                                      204      210       220
+   30             Other (Non-ILECs)                                                                                 1,769     1,806     1,827
+                                                                      
+   31     Over-the-top interconnected VoIP                                                                          1,375     1,402     1,420
+   32         Incumbent LECs                                                                                           38        37       39
+   33         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 1,358 1,385  1,402
+   34         Consumer-grade service                                                                                  235      216       207
+   35             Incumbent LECs                                                                                       18        15       15
+   36             Other (Non-ILECs)                                                                                   224      208       199
+   37         Business & Government-grade service                                                                   1,340     1,371     1,385
+   38             Incumbent LECs                                                                                       35        34       36
+   39             Other (Non-ILECs)                                                                                 1,325     1,356     1,369
+                                                                      
+   40     All Other interconnected VoIP                                                                               772      778       779
+   41         Incumbent LECs                                                                                          197      205       213
+   42         Other (Non-ILECs) - Note: ILEC voice-service affiliate operating outside ILEC's study area is included here. 688  697      696
+   43         Consumer-grade service                                                                                  588      610       620
+   44             Incumbent LECs                                                                                      121      131       135
+   45             Other (Non-ILECs)                                                                                   521      542       553
+   46         Business & Government-grade service                                                                     739      737       740
+   47             Incumbent LECs                                                                                      188      198       208
+   48             Other (Non-ILECs)                                                                                   658      658       658
+                                                                      
+   49     Local exchange telephone service by last-mile delivery medium                                               857       835      823
+   50         Fiber-to-the-premises                                                                                   722      722       722
+   51             Incumbent LECs                                                                                      631      627       628
+   52             Other (Non-ILECs)                                                                                   329      337       340
+
+
+                                                                    10
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+                                 Table 2. Number of Providers Reporting Voice Subscriptions - Total for US
+
+                                                                                                                  June      Dec       June 
+Reference                                              Data element                                               2024      2024      2025
+   53         Coaxial cable                                                                                            75        66       69
+   54             Incumbent LECs                                                                                       22        25       29
+   55             Other (Non-ILECs)                                                                                    65        52       54
+   56         Terrestrial fixed wireless                                                                               68        70       67
+   57             Incumbent LECs                                                                                       42        46       41
+   58             Other (Non-ILECs)                                                                                    38        35       40
+   59         Copper local loop                                                                                       535      500       469
+   60             Incumbent LECs                                                                                      405      388       363
+   61             Other (Non-ILECs)                                                                                   220      208       189
+                                                                      
+   62     All Other interconnected VoIP by last-mile delivery medium                                                  772       778      779
+   63         Fiber-to-the-premises                                                                                   643      649       664
+   64             Incumbent LECs                                                                                      186      194       207
+   65             Other (Non-ILECs)                                                                                   563      571       582
+   66         Coaxial cable                                                                                           155      147       139
+   67             Incumbent LECs                                                                                        9911
+   68             Other (Non-ILECs)                                                                                   150      143       134
+   69         Terrestrial fixed wireless or satellite                                                                 230      228       221
+   70             Incumbent LECs                                                                                       11        13       16
+   71             Other (Non-ILECs)                                                                                   221      217       209
+   72         Copper local loop                                                                                       154      142       141
+   73             Incumbent LECs                                                                                       58        56       54
+   74             Other (Non-ILECs)                                                                                   114      107       107
+                                                                      
+   75     Non-Incumbent LEC local exchange telephone service by means of provisioning                                 431       421      414
+   76             Provided over owned last-mile facilities                                                            346      344       343
+   77             Provided over UNE-L obtained from unaffiliated entity                                                64        54       49
+   78             Provided over other services obtained from unaffiliated entity                                      121       112      104
+                                                                      
+   79     Incumbent LEC local exchange telephone service provided to unaffiliated carriers for resale                  35        30       29
+   80             Wholesale lines                                                                                      33        26       26
+   81             UNE-L                                                                                                12        11       12
+                                                                      
+   82     Local exchange telephone service and long-distance service                                                  857       835      823
+   83         Consumer-grade service                                                                                  778      761       751
+   84             Incumbent LEC is preferred long-distance carrier for its local exchange service customer            637       628      623
+   85             Incumbent LEC is not preferred long-distance carrier for its local exchange service customer        616       608      594
+   86             Non-ILEC is preferred long-distance carrier for its local exchange service customer                 322       309      306
+   87             Non-ILEC is not preferred long-distance carrier for its local exchange service customer             242       246      232
+   88         Business & Government-grade service                                                                     848      823       814
+   89             Incumbent LEC is preferred long-distance carrier for its local exchange service customer            633       625      620
+   90             Incumbent LEC is not preferred long-distance carrier for its local exchange service customer        598       594      585
+   91             Non-ILEC is preferred long-distance carrier for its local exchange service customer                 378       365      359
+   92             Non-ILEC is not preferred long-distance carrier for its local exchange service customer             288       288      281
+                                                                      
+   93     End user buys local exchange telephone service and Internet access service from same entity                 786       782      771
+   94             End user buys both services from incumbent LEC or affiliates                                        670       666      656
+   95             End user buys both services from Non-ILEC or affiliates                                             358       365      360
+                                                                      
+   96     End user buys interconnected VoIP and Internet access service from same entity                              732       742      738
+   97             End user buys both services from incumbent LEC or affiliates                                        187       194      197
+   98             End user buys both services from Non-ILEC or affiliates                                             648       663      659
+
+
+                                                                    11
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+              
+Table 3: Residential Wireline Voice Telephone Service Connections and Households by State 
+                                         as of June 30, 2025 
+                               (Connections and households, in thousands) 
+                                        Switched Access      Interconnected VoIP         Total 
+ State                   Households    Connections  Ratio    Connections Ratio     Connections Ratio 
+ Alabama                      1,997            83   0.04            227   0.11           310   0.16 
+ Alaska                        271              *    *               *     *              47   0.17 
+ American Samoa                 10              7   0.72              -    *               7   0.72 
+ Arizona                      2,856           103   0.04            259   0.09           362   0.13 
+ Arkansas                     1,206            62   0.05            78    0.06           139   0.12 
+ California                  13,548           489   0.04          2,199   0.16          2,689  0.20 
+ Colorado                     2,374           141   0.06            281   0.12           421   0.18 
+ Connecticut                  1,434            55   0.04            394   0.27           448   0.31 
+ Delaware                      402             12   0.03            118   0.29           130   0.32 
+ District of Columbia          324              9   0.03            48    0.15            57   0.18 
+ Florida                      8,753           177   0.02          1,208   0.14          1,385  0.16 
+ Georgia                      4,074           223   0.05            449   0.11           672   0.16 
+ Guam                           42              *    *               *     *              12   0.29 
+ Hawaii                        492             50   0.10            83    0.17           133   0.27 
+ Idaho                         713             55   0.08            28    0.04            82   0.12 
+ Illinois                     5,036           171   0.03            589   0.12           761   0.15 
+ Indiana                      2,716           115   0.04            261   0.10           375   0.14 
+ Iowa                         1,316           148   0.11            80    0.06           228   0.17 
+ Kansas                       1,174            52   0.04            98    0.08           150   0.13 
+ Kentucky                     1,814           173   0.10            182   0.10           355   0.20 
+ Louisiana                    1,805            53   0.03            179   0.10           232   0.13 
+ Maine                         597             59   0.10            108   0.18           167   0.28 
+ Maryland                     2,363            93   0.04            564   0.24           657   0.28 
+ Massachusetts                2,785            98   0.04            792   0.28           891   0.32 
+ Michigan                     4,076           140   0.03            575   0.14           715   0.18 
+ Minnesota                    2,308           231   0.10            222   0.10           453   0.20 
+ Mississippi                  1,145            38   0.03            91    0.08           128   0.11 
+ Missouri                     2,508           106   0.04            264   0.11           370   0.15 
+ Montana                       459             51   0.11            56    0.12           107   0.23 
+ Nebraska                      798             79   0.10            60    0.08           139   0.17 
+ Nevada                       1,203            40   0.03            137   0.11           177   0.15 
+ New Hampshire                 556             40   0.07            134   0.24           174   0.31 
+ New Jersey                   3,508            97   0.03          1,082   0.31          1,179  0.34 
+ New Mexico                    837             82   0.10            80    0.10           162   0.19 
+ New York                     7,723           288   0.04          2,199   0.28          2,488  0.32 
+ North Carolina               4,282           220   0.05            620   0.14           839   0.20 
+ North Dakota                  331             40   0.12            23    0.07            63   0.19 
+ Northern Mariana Islands       16              5   0.31             *     *               *    * 
+ Ohio                         4,863           276   0.06            670   0.14           946   0.19 
+ Oklahoma                     1,562            67   0.04            103   0.07           170   0.11 
+ Oregon                       1,718           103   0.06            223   0.13           326   0.19 
+ Pennsylvania                 5,275           342   0.06          1,134   0.21          1,476  0.28 
+ Puerto Rico                  1,291             *    *               *     *               *    * 
+ Rhode Island                  442             15   0.03            93    0.21           108   0.24 
+ South Carolina               2,118           136   0.06            248   0.12           384   0.18 
+ South Dakota                  366             48   0.13            24    0.07            72   0.20 
+ Tennessee                    2,824           156   0.06            277   0.10           433   0.15 
+ Texas                       10,993           295   0.03            950   0.09          1,245  0.11 
+ Utah                         1,125            48   0.04            89    0.08           137   0.12 
+ Vermont                       273             52   0.19            50    0.18           102   0.37 
+ Virgin Islands                 30              *    *               *     *               7   0.24 
+ Virginia                     3,366           172   0.05            603   0.18           776   0.23 
+ Washington                   3,065           171   0.06            407   0.13           578   0.19 
+ West Virginia                 729             87   0.12            137   0.19           224   0.31 
+ Wisconsin                    2,479           190   0.08            337   0.14           527   0.21 
+ Wyoming                       243             24   0.10            21    0.09            45   0.18 
+ United States              130,616         6,413   0.05         19,405   0.15         25,819  0.20 
+  - = Rounds to Zero; * = Data withheld to maintain firm confidentiality. 
+  Notes:  Numbers may not sum to totals due to rounding.  Total fixed voice connections equal the sum of switched access lines and 
+  interconnected VoIP subscriptions.   
+  Source:  FCC Form 477; 2020-2024 ACS 5-year estimates; and Census 2010. 
+   
+
+
+                                                  12
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+              
+     Table 4: Mobile Voice Telephone Service Subscriptions and Population by State 
+                                       as of June 30, 2025 
+                             (Connections and population, in thousands) 
+                                      Directly Billed      Not Directly Billed        Total 
+State                  Population  Subscriptions Ratio   Subscriptions Ratio  Subscriptions Ratio 
+Alabama                    5,087         5,052   0.99           544   0.11           5,596  1.10 
+Alaska                      736            762   1.04            32   0.04            794   1.08 
+American Samoa               56              *    *               *     *               *    * 
+Arizona                    7,379         7,716   1.05           601   0.08           8,317  1.13 
+Arkansas                   3,049         3,046   1.00           219   0.07           3,265  1.07 
+California                39,287        43,481   1.11          6,163  0.16          49,645  1.26 
+Colorado                   5,862         5,876   1.00           847   0.14           6,723  1.15 
+Connecticut                3,625         3,882   1.07           474   0.13           4,356  1.20 
+Delaware                   1,021         1,065   1.04           146   0.14           1,211  1.19 
+District of Columbia        681          1,541   2.26           164   0.24           1,705  2.50 
+Florida                   22,416        23,480   1.05          3,095  0.14          26,575  1.19 
+Georgia                   10,940        11,539   1.05          1,291  0.12          12,830  1.17 
+Guam                        159            142   0.89            49   0.31            190   1.19 
+Hawaii                     1,445         1,511   1.05           235   0.16           1,746  1.21 
+Idaho                      1,934         1,932   1.00           137   0.07           2,068  1.07 
+Illinois                  12,695        13,510   1.06          1,716  0.14          15,226  1.20 
+Indiana                    6,851         6,486   0.95           917   0.13           7,403  1.08 
+Iowa                       3,211         3,290   1.02           174   0.05           3,464  1.08 
+Kansas                     2,947         2,978   1.01           222   0.08           3,200  1.09 
+Kentucky                   4,535         4,157   0.92           661   0.15           4,817  1.06 
+Louisiana                  4,612         4,647   1.01           565   0.12           5,211  1.13 
+Maine                      1,388         1,259   0.91           210   0.15           1,469  1.06 
+Maryland                   6,206         6,545   1.05           766   0.12           7,311  1.18 
+Massachusetts              7,044         7,392   1.05          1,013  0.14           8,406  1.19 
+Michigan                  10,078         9,670   0.96          1,707  0.17          11,377  1.13 
+Minnesota                  5,739         5,853   1.02           667   0.12           6,520  1.14 
+Mississippi                2,947         2,765   0.94           221   0.07           2,985  1.01 
+Missouri                   6,192         6,001   0.97           730   0.12           6,732  1.09 
+Montana                    1,117         1,095   0.98           135   0.12           1,229  1.10 
+Nebraska                   1,979         2,064   1.04           195   0.10           2,258  1.14 
+Nevada                     3,185         3,298   1.04           351   0.11           3,649  1.15 
+New Hampshire              1,395         1,339   0.96           223   0.16           1,562  1.12 
+New Jersey                 9,344        10,487   1.12          1,154  0.12          11,642  1.25 
+New Mexico                 2,120         2,184   1.03           205   0.10           2,389  1.13 
+New York                  19,852        21,957   1.11          3,680  0.19          25,638  1.29 
+North Carolina            10,730        10,199   0.95          1,689  0.16          11,888  1.11 
+North Dakota                785            883   1.13            41   0.05            924   1.18 
+Northern Mariana Islands     54              *    *               *     *               *    * 
+Ohio                      11,810        11,590   0.98          2,032  0.17          13,622  1.15 
+Oklahoma                   4,029         3,858   0.96           382   0.09           4,240  1.05 
+Oregon                     4,254         4,160   0.98           616   0.14           4,776  1.12 
+Pennsylvania              13,019        13,293   1.02          1,813  0.14          15,105  1.16 
+Puerto Rico                3,234         2,086   0.64          1,106  0.34           3,192  0.99 
+Rhode Island               1,102         1,119   1.02           104   0.09           1,224  1.11 
+South Carolina             5,296         5,025   0.95           657   0.12           5,681  1.07 
+South Dakota                907            944   1.04            63   0.07           1,007  1.11 
+Tennessee                  7,066         7,191   1.02           844   0.12           8,035  1.14 
+Texas                     30,188        31,914   1.06          3,238  0.11          35,152  1.16 
+Utah                       3,392         3,280   0.97           388   0.11           3,668  1.08 
+Vermont                     647            545   0.84           104   0.16            649   1.00 
+Virgin Islands              106              *    *               *     *               *    * 
+Virginia                   8,705         9,160   1.05           911   0.10          10,072  1.16 
+Washington                 7,816         7,783   1.00          1,085  0.14           8,868  1.13 
+West Virginia              1,778         1,526   0.86           211   0.12           1,737  0.98 
+Wisconsin                  5,915         5,390   0.91           892   0.15           6,282  1.06 
+Wyoming                     582            617   1.06            70   0.12            688   1.18 
+United States            338,532       348,733   1.03         45,771  0.14         394,505  1.17 
+- = Rounds to Zero; * = Data withheld to maintain firm confidentiality. 
+Notes:  Numbers may not sum to totals due to rounding.  Directly billed subscriptions are those where the customer is directly 
+billed by the facilities-based provider. Total mobile voice subscriptions equal the sum of subscriptions that are directly billed and 
+those that are not.  
+Source:  FCC Form 477; 2020-2024 ACS 5-year estimates; and Census 2010. 
+
+
+                                                13
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+ 
+Technical Notes 
+ 
+Detailed information about the current Form 477 reporting requirements is available at 
+https://www.fcc.gov/general/form-477-resources-filers.     
+ 
+Counting lines and subscribers 
+•  Form 477 counts both switched access lines and interconnected VoIP subscriptions as the maximum number 
+   of calls that may be active, simultaneously, from the end user’s location under the purchased service plan.  All 
+   VoIP subscriptions discussed in this report are interconnected VoIP subscriptions.   
+ 
+•  Form 477 data may not count all VoIP phone connections to Internet Protocol Private Branch Exchange (IP 
+   PBX) equipment that is owned by business end users because of the variety of ways the IP PBX may connect 
+   to the public switched telephone network. 
+ 
+Holding company-subsidiary relationships 
+•  When counting service providers that report voice telephone service in a particular geography, we count a 
+   holding company or common-control entity no more than once in any specified sub-category of total 
+   providers.   
+ 
+•  Nationwide counts of providers are unique counts for any specified sub-category of total providers (for 
+   example, all non-ILECs or all interconnected VoIP providers); an entity operating in multiple states is 
+   counted only once. 
+ 
+ILEC-CLEC affiliations 
+•  If a CLEC is affiliated with an ILEC and reports some end-user switched access lines or interconnected VoIP 
+   subscriptions in the ILEC’s service area in the state, then the switched access lines or interconnected VoIP 
+   subscriptions reported by the CLEC are allocated between the ILEC and non-ILEC categories based on staff 
+   estimates. 
+ 
+Mobile voice subscriptions 
+•  Commercial mobile radio service carriers that own or operate wireless networks report both their retail voice 
+   service subscriptions and the retail subscriptions of the mobile voice service resellers that use their network.  
+   Mobile voice service resellers do not file Form 477.    
+ 
+•  Providers may assign subscriptions to a particular state based on the area code of the device’s telephone 
+   number, or by using some other method that best reflects the subscriber’s location, such as a billing address of 
+   the device’s place of primary use address. 
+ 
+UNE-Platform lines replaced by commercial agreements 
+•  UNE-Platform (UNE-P) was the combination of ILEC loop UNE, switching UNE, and transport UNE.  The 
+   Commission directed CLECs to migrate their retail customers served by UNE-P to an alternative arrangement 
+   within 12 months of the effective date of the Triennial Review Remand Order, that is, by March 11, 2006.  See 
+   C.F.R. § 51.319(d)(2)(ii).  Such lines are reported on Form 477 as ILEC wholesale lines provided to 
+   unaffiliated providers for resale.  
+
+
+                                         14
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+ 
+Glossary 
+ 
+   Term                   Definition 
+   All Other interconnected Interconnected VoIP service other than OTT interconnected VoIP.  (See 
+   VoIP                   the definition of OTT VoIP, below.) 
+   Broadband connection   A wired line or wireless channel that terminates at an end-user location 
+                          and enables the end user to receive information from and/or send 
+                          information to the Internet at information transfer rates exceeding 200 
+                          kilobits per second in at least one direction. 
+   Circuit switching      A method of completing electronic communications in which a 
+                          transmission path is established for dedicated use by a communication; 
+                          the basis of the public switched telephone network.   
+   Coaxial cable          The technology widely used by cable system operators to terminate their 
+                          services at the end user’s premises. 
+   Copper local loop      The technology widely used by telephone companies to terminate their 
+                          service at the end user’s premises.     
+   CLEC                   Competitive Local Exchange Carrier:  A local exchange carrier (LEC) 
+                          that operates within the traditional service area of an unaffiliated 
+                          incumbent LEC.   
+   End users              Residential, business, institutional, or government entities that use 
+                          services for their own purposes and who do not resell such services to 
+                          other entities. 
+   Fixed wireless service A radio communication service between specified fixed points.   
+   FTTP or FTTH           Fiber to the Premises (Home):  A network access architecture in which 
+                          optical fiber is deployed all the way to the customer’s premises (home). 
+   Internet access service Service that provides end users access to the Internet. 
+   ILEC                   Incumbent Local Exchange Carrier:  A company or cooperative that was 
+                          providing telephone service in a localized area, typically on a monopoly 
+                          basis, prior to enactment of the Telecommunications Act of 1996.   
+   Internet protocol or IP A language and set of formal rules that govern how packets transit the 
+                          Internet.   
+   Interconnected VoIP    A service that enables real-time, two-way voice communications; requires 
+                          a broadband connection from the user’s location; requires Internet-
+                          protocol compatible customer premises equipment; and permits users 
+                          generally to receive calls that originate on the public switched telephone 
+                          network and to terminate calls to the public switched telephone network. 
+   LEC                    Local Exchange Carrier:  A company that provides telephone service 
+                          within a localized area and access services that connect its customers to 
+                          long-distance (Interexchange Carrier) networks.   
+   Local loop             The physical connection between the customer’s premises and the 
+                          telephone company’s local switching office, typically provided using 
+                          copper, fiber, or a combination of copper and fiber facilities.  
+   Mobile wireless service A radio communication service between mobile and fixed stations, or 
+                          between mobile stations. 
+
+                         
+
+
+                                         15
+U.S. Federal Communications Commission                                            Voice Telephone Services: Status as of June 30, 2025
+           
+Non-ILEC               Any provider of communications services who does not have ILEC 
+                       regulatory status. A voice-service affiliate of an ILEC that is operating 
+                       outside the ILEC’s traditional service area (“study area”) is a Non-ILEC. 
+OTT interconnected VoIP Over-the-top interconnected VoIP:  Service delivered to the end-user 
+                       customer’s premises over a high-capacity connection that the customer 
+                       obtains (that is, buys), or has the use of, from an entity not affiliated with 
+                       the interconnected VoIP service provider.  (Colloquially, “bring-your-
+                       own-broadband.”)    
+PBX                    Private Branch Exchange:  A communications switch that is owned or 
+                       leased by the service provider’s end-user customer and generally located 
+                       on the customer’s premises.   
+Packet switching       A method of completing electronic communications in which the 
+                       information is disassembled into discrete packets that are transmitted 
+                       independently and later reassembled; IP is an example.   
+Retail wireline voice  Switched access lines and interconnected VoIP subscriptions for which an 
+telephone service      end user is the customer. 
+Switched access line   A service connection between an end user and the local telephone 
+                       company’s switch; the basis of plain old telephone service (POTS).   
+UNE                    Unbundled Network Element:  A physical or functional element of an 
+                       ILEC network that must be provided to a CLEC at a cost-based price, as 
+                       provide for in the Telecommunications Act of 1996.   
+UNE-L                  UNE-Loop:  An ILEC unbundled local loop provided to a CLEC at a 
+                       cost-based price. 
+Wholesale switched access Local telephone service provided to an unaffiliated telephone company, 
+lines                  which resells the service to end users; typically provided by an ILEC to a 
+                       CLEC. 
+
+           
+           
+
+
+                                      16
