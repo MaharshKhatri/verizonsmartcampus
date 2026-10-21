@@ -7,7 +7,46 @@ Two rubrics, because the team must win both rooms:
 
 Scores are the red team's judgment, written down so the next generation can argue with them.
 
-## Generation 3: founder tournament (current standings)
+## Generation 4: verification, 60 new ideas, and the pivot to PROVE IT (current standings)
+
+Gen 4 checked Last Copper's kill gates with 22 research agents (`research/06_gen4_verification.md`, primary texts in `research/sources/`).
+
+**What weakened Last Copper**
+- The Rutgers countdown story failed. Fire communicators (2020) and blue lights (2023) are already off copper, and the main numbers sit on another carrier.
+- Prior art is real. IP emergency phones self-test their audio, and Deaf text mode already ships on new cars.
+
+**What changed nationally**
+- About 1,763 wire centers are retiring copper in 2026.
+- FCC 26-19 removed the "adequate replacement" showing on Oct 15, 2026.
+- The business-line exit (WC 26-228) drew no pause.
+- Verizon's own Voice Connect guide says "Compatibility is determined by your testing of your alarm and/or medical device at time of install."
+
+**The idea round:** 12 lenses produced 55+ ideas, and four judge personas screened them against the founder's merged contender.
+
+| Rank | Entry | Lens | Votes (of 4) | Avg /95 |
+|---:|---|---|---:|---:|
+| 1 | **PROVE IT (founder merge)** | founder | 4 | 73.0 |
+| 2 | Plug-and-Prove | tactile_demo | 4 | 72.2 |
+| 3 | WRONG ANSWER | silent_failures | 4 | 70.5 |
+| 4 | WHO ANSWERS? (Last Copper v3) | extend_champion | 4 | 70.2 |
+| 5 | Dark Hours | tactile_demo | 4 | 68.2 |
+| 6 | SILENT AFTER CUTOVER | extend_champion | 4 | 67.8 |
+| 7 | Kiss-Off Check | tactile_demo | 4 | 65.5 |
+| 8 | Basement Truth | tactile_demo | 2 | 68.0 |
+| 9 | ECRC Zero | verizon_programs | 2 | 65.5 |
+| 10 | Fix First | customer_experience | 2 | 65.0 |
+| 11 | Still Works? | customer_experience | 2 | 64.0 |
+| 12 | Leaf-Off | contrarian | 2 | 62.5 |
+
+**Unanimous verdict:** PROVE IT is #1, but it reads as "two pitches stapled together". Fixes:
+- One video hero: install-time Plug-and-PROVE on Verizon's own box, pitched as install capacity.
+- One bench-measured result on the receipt.
+- One Rutgers number.
+- Everything else goes to the poster and the final.
+
+Two finalists (install hero vs elevator hero) then went through deep dossiers, red teams and a judge panel; see EVOLUTION_LOG.md.
+
+## Generation 3: founder tournament
 
 Gen 3 dropped the CEO rubric and scored only on the **official rubric (95)** plus uniqueness against a simulated crowd of LLM-assisted teams. The full record is in [research/05_gen3_tournament.md](research/05_gen3_tournament.md): 40 crowd ideas, 120 raw ideas, 27 screened concepts, 9 dossiers with two red teams each, and a judge panel.
 
