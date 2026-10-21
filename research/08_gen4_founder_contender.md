@@ -1,5 +1,11 @@
 # Founder's contender v3: "PROVE IT": every copper replacement proves itself, at install and every night after
 
+> **Corrections found in Gen 4 finalist review (apply everywhere):**
+> - Chicago: about a quarter (1,613-1,721) of the 6,725 inspections that drew an elevator maintain/repair violation since Jan 2023 mention the emergency phone. That is 7.6% of the 23,025 violations, and it is not a per-car failure rate. Where a fault type is named, route or location faults outnumber "dead" about 4 to 1 (346 vs 78); 72% name no fault type.
+> - FDNY: 27,247 occupied-elevator emergencies in 2025 stands. Drop "98.5% via the phone": PHONE is how FDNY dispatch was notified, not the elevator phone.
+> - The Farmingdale voicemail case (News12, May 25 2026) is the tenant's account; the line type is unknown.
+
+
 **One line:** On Oct 15, 2026 the FCC stopped requiring carriers to show that copper replacements work with alarms, medical alerts and other key applications. Verizon's own Voice Connect guide says "Compatibility is determined by your testing of your alarm and/or medical device at time of install." PROVE IT is the test. It is a routine on Verizon's replacement box, or a $1.50/month ThingSpace probe for retrofits, that proves in-band, end to end, that the voice, the alarm, the medical alert and the elevator HELP button get through. It runs at install, so a pass sends no truck, and then every night. Verizon sees the health of every lifeline it moved, per wire center, across 1,763 retiring wire centers.
 
 ## Problem (all verified; sources in research/06 and research/sources)
@@ -24,7 +30,7 @@
 
 **Elevator code checks the wire, not the voice**
 - A17.1 2.27.1.1.6 line verification "shall not require activation of the two-way communication link" and may take up to 24 h.
-- Chicago inspections: about 24% of elevator maintenance violations are emergency-phone faults (wrong address, wrong car, old contractor).
+- Chicago inspections: about a quarter of inspections that drew an elevator maintenance violation mention the emergency phone (see corrections above).
 - Analog stations behind cellular gateways lose diagnostics (Talkaphone's own notes).
 
 **Mobile "adequate" coverage is an outdoor map** (47 CFR 1.7004(c)(5)), while the phone jack and the alarm panel are in the basement.
@@ -89,7 +95,7 @@
     - passive metadata on every real call: digits dialed vs a registry (old contractor, 911 misprogramming), seconds to answer, 45 s redirect, voicemail/IVR detected from spectral features only;
     - a monthly 10-second confirmation that the real answerer's screen shows the right building and car.
   - The in-car two-transducer acoustic test is an optional add-on installed by a licensed mechanic.
-  - Evidence: Chicago inspections, 24% emergency-phone faults. Ooma AirDial at BOMA 2024 (vendor claim): "about 50% of them don't work at the time we go to replace them". FDNY: 27,247 occupied-elevator emergencies in 2025, 98.5% via the phone. Kings III reportedly says its auto-test cannot detect mic, speaker or wiring faults. UK SENTINEL excludes lift audio.
+  - Evidence: Chicago inspections, about a quarter of maintenance-violation inspections mention the emergency phone (see corrections). Ooma AirDial at BOMA 2024 (vendor claim): "about 50% of them don't work at the time we go to replace them". FDNY: 27,247 occupied-elevator emergencies in 2025, 98.5% via the phone. Kings III reportedly says its auto-test cannot detect mic, speaker or wiring faults. UK SENTINEL excludes lift audio.
 - **National scale = Plug-and-PROVE for Voice Connect/BPC100 installs.**
   - Verizon has about 46k fixed-wireless POTS-replacement customers nationwide, against about 140k legacy lines in Frontier's 8 states alone and 277k/750k in Verizon filings (press). Installs must scale several-fold.
   - The technician visit checks only phone jacks and coverage; alarm and medical are left to the customer. Device swaps are already mail-and-IVR self-installs.
