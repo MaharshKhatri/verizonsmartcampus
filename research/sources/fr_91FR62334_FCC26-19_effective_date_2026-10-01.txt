@@ -1,0 +1,1510 @@
+Federal Register / Vol. 91, No. 189 / Thursday, October 1, 2026 / Rules and Regulations
+
+9. On page 49028, middle of the page,
+first column, second paragraph, line 10,
+the figure that reads ‘‘$8,857’’ is
+corrected to read ‘‘$8,856’’.
+
+FEDERAL COMMUNICATIONS
+COMMISSION
+
+Liesl I. Fowler,
+Executive Secretary to the Department,
+Department of Health and Human Services.
+
+[WC Docket Nos. 25–208, 25–209; FCC
+26–19; FR ID 370342] Reducing
+Barriers to Network Improvements and
+Service Changes, Accelerating
+Network Modernization
+
+[FR Doc. 2026–20131 Filed 9–30–26; 8:45 am]
+BILLING CODE 4169–69–C
+
+47 CFR Parts 51 and 63
+
+AGENCY: Federal Communications
+
+Commission.
+ACTION: Final rule; announcement of
+
+effective date.
+
+VerDate Sep<11>2014
+
+21:53 Sep 30, 2026
+
+Jkt 268001
+
+PO 00000
+
+Frm 00038
+
+Fmt 4700
+
+Sfmt 4700
+
+SUMMARY: In this document, the
+
+Wireline Competition Bureau (Bureau)
+announces that the Office of
+Management and Budget (OMB) has
+approved the information collection
+associated with the Commission’s
+revised network change disclosure and
+service discontinuance rules in a Report
+and Order, which stated that the revised
+rules would not become effective until
+OMB completed its review of any
+information collection requirements
+under the Paperwork Reduction Act and
+that the Bureau would announce the
+
+E:\FR\FM\01OCR1.SGM
+
+01OCR1
+
+ER01OC26.006</GPH>
+
+lotter on DSK8BHNXB4PROD with RULES1
+
+62334
+
+lotter on DSK8BHNXB4PROD with RULES1
+
+Federal Register / Vol. 91, No. 189 / Thursday, October 1, 2026 / Rules and Regulations
+effective date for the revised rules by
+subsequent Public Notice.
+DATES: The amendments to §§ 51.329,
+51.333, 63.60, 63.62(a), (b), and (d),
+63.63, 63.71, and 63.602, published at
+91 FR 20913, April 20, 2026, are
+effective on October 15, 2026.
+FOR FURTHER INFORMATION CONTACT:
+Michele Berlove, Assistant Division
+Chief, Wireline Competition Bureau, at
+(202) 418–0357, or by email at
+Michele.Berlove@fcc.gov. For additional
+information concerning the Paperwork
+Reduction Act information collection
+requirements, contact Nicole Ongele at
+(202) 418–2991 or nicole.ongele@
+fcc.gov.
+SUPPLEMENTARY INFORMATION: On March
+26, 2026, the Commission adopted a
+Report and Order, FCC 26–19,
+published at 91 FR 20913, April 20,
+2026. In the Report and Order, the
+Commission adopted rules to reduce
+regulatory barriers and costs that hinder
+the transition from outdated legacy
+networks and services to nextgeneration, Internet Protocol (IP)-based
+infrastructure. The Commission stated
+that these rule changes may contain new
+or modified information collection
+requirements and would not become
+effective until OMB completes its
+review of any information collection
+requirements that the Bureau
+determined is required under the
+Paperwork Reduction Act. The
+Commission also directed the Bureau to
+announce the effective date for the
+revisions to §§ 51.329, 51.333, 63.60,
+63.62(a)–(b), (d), 63.63, 63.71, and
+63.602 by subsequent public notice.
+On September 21, 2026, OMB
+approved the information collection
+requirements related to the
+discontinuance rules contained in the
+Report and Order. The OMB Control
+Number is 3060–0149. On September
+25, 2026, OMB approved the
+information collection requirements
+related to the network change disclosure
+rules contained in the Report and Order.
+The OMB Control Number is 3060–
+0741. The Bureau publishes this
+document as an announcement of the
+effective dates of the service
+discontinuance rules and network
+change disclosure rules adopted in the
+Report and Order. If you have any
+comments on the burden estimates
+listed below, or how the Commission
+can improve the collections and reduce
+any burdens caused thereby, please
+contact Nicole Ongele, Federal
+Communications Commission, 45 L
+Street NE, Washington, DC 20554.
+Please include the OMB Control
+Numbers 3060–0741 and 3060–0149 in
+your correspondence. The Commission
+
+VerDate Sep<11>2014
+
+21:53 Sep 30, 2026
+
+Jkt 268001
+
+also will accept your comments via
+email at PRA@fcc.gov. To request
+materials in accessible formats for
+people with disabilities (Braille, large
+print, electronic files, audio format),
+send an email to fcc504@fcc.gov or call
+the Consumer and Governmental Affairs
+Bureau at (202) 418–0530 (voice).
+Synopsis
+As required by the Paperwork
+Reduction Act of 1995 (44 U.S.C. 3507),
+the Bureau is notifying the public that
+it received final OMB approval on
+September 25, 2026, for the information
+collection requirements contained in the
+changes to the Commission’s network
+change disclosure rules in 47 CFR part
+51, and on September 21, 2026, for the
+information collection requirements
+contained in the changes to the
+Commission’s service discontinuance
+rules in 47 CFR part 63.
+Under 5 CFR part 1320, an agency
+may not conduct or sponsor a collection
+of information unless it displays a
+current, valid OMB Control Number.
+No person shall be subject to any
+penalty for failing to comply with a
+collection of information subject to the
+Paperwork Reduction Act that does not
+display a current, valid OMB Control
+Number.
+The foregoing notification is required
+by the Paperwork Reduction Act of
+1995, Public Law 104–13, October 1,
+1995, and 44 U.S.C. 3507.
+The total annual reporting burdens
+and costs for the affected respondents
+are as follows:
+OMB Control Number: 3060–0741.
+OMB Approval Date: September 25,
+2026.
+OMB Expiration Date: September 30,
+2029.
+Title: Reducing Barriers to Network
+Improvements and Service Changes,
+Accelerating Network Modernization,
+WC Docket Nos. 25–209, 25–208.
+Form Number: N/A.
+Respondents: Business or other forprofit entities.
+Number of Respondents and
+Responses: 4,452 respondents; 450,838
+responses.
+Estimated Time per Response: 0.5–4.5
+hours.
+Frequency of Response: On occasion
+reporting requirements; recordkeeping
+and third-party disclosure requirements.
+Obligation to Respond: Required to
+obtain or retain benefits. Statutory
+authority for this information collection
+is contained in 47 U.S.C. 222 and 251.
+Total Annual Burden: 452,623 hours.
+Total Annual Cost: No cost.
+Needs and Uses: The Commission
+received OMB approval for revisions to
+an existing information collection, OMB
+
+PO 00000
+
+Frm 00039
+
+Fmt 4700
+
+Sfmt 4700
+
+62335
+
+Collection 3060–0741. Section 251 of
+the Communications Act of 1934, as
+amended, 47 U.S.C. 251, is designed to
+accelerate private sector development
+and deployment of telecommunications
+technologies and services by spurring
+competition. Section 222(e) is also
+designed to spur competition by
+prescribing requirements for the sharing
+of subscriber list information. These
+information collection requirements are
+designed to help implement certain
+provisions of sections 222(e) and 251,
+and to eliminate operational barriers to
+competition in the telecommunications
+services market. Specifically, these
+information collection requirements
+will be used to implement (1) local
+exchange carriers’ (LECs) obligations to
+provide their competitors with dialing
+parity and non-discriminatory access to
+certain services and functionalities; (2)
+incumbent local exchange carriers’
+(ILECs) duty to make network
+information disclosures; and (3)
+numbering administration. In November
+2017, the Commission adopted new
+rules concerning certain information
+collection requirements implemented
+under section 251(c)(5) of the Act,
+pertaining to network change
+disclosures. Most of the changes to
+those rules applied specifically to a
+certain subset of network change
+disclosures, namely notices of planned
+copper retirements. In addition, the
+changes removed a rule that prohibits
+incumbent LECs from engaging in useful
+advanced coordination with entities
+affected by network changes. In June
+2018, the Commission revised its
+network change disclosure rules to (1)
+revise the types of network changes that
+trigger an incumbent LEC’s public
+notice obligation, and (2) extend the
+force majeure provisions applicable to
+copper retirements to all types of
+network changes. On March 26, 2026,
+the Commission adopted a Report and
+Order that modified certain
+recordkeeping or reporting requirements
+that relate to the obligations of ILECs
+planning to retire copper
+communications facilities or make other
+changes to their networks that might
+impact interoperability. Specifically, the
+Commission: (1) eliminated all filing
+requirements in the Commission’s
+network change disclosure rules and the
+Commission’s process of issuing public
+notices for short-term network changes
+and copper retirements and the
+associated objection process for
+interconnected service providers, (2)
+required that the method of notice the
+incumbent LEC uses be publicly
+accessible, and (3) expanded the direct
+notice requirement for copper
+
+E:\FR\FM\01OCR1.SGM
+
+01OCR1
+
+lotter on DSK8BHNXB4PROD with RULES1
+
+62336
+
+Federal Register / Vol. 91, No. 189 / Thursday, October 1, 2026 / Rules and Regulations
+
+retirements and short-term network
+changes to include 911 service
+providers and directly interconnecting
+LECs that support essential functions
+within 911 networks, including
+providers delivering 911 traffic to
+selective routers for transmission to
+public safety answering points. The
+changes were aimed at removing
+unnecessary regulatory barriers to the
+deployment of high-speed broadband
+networks while providing reasonable
+public notice of planned network
+changes to impacted stakeholders and
+ensuring continued 911 connectivity.
+The total annual reporting burdens
+and costs for the affected respondents
+are as follows:
+OMB Control Number: 3060–0149.
+OMB Approval Date: September 21,
+2026.
+OMB Expiration Date: September 30,
+2029.
+Title: Part 63, Reducing Barriers to
+Network Improvements and Service
+Changes, Accelerating Network
+Modernization, WC Docket Nos. 25–208,
+25–209, FCC 26–19. Form Number: N/
+A.
+Respondents: Business or other for
+profit.
+Number of Respondents and
+Responses: 78 respondents; 90
+responses.
+Estimated Time per Response: 6–10
+hours per response.
+Frequency of Response: One-time
+reporting requirement and third-party
+disclosure requirements.
+Obligation to Respond: Required to
+obtain or retain benefits. Statutory
+authority for this collection of
+information is contained in 47 U.S.C.
+214 and 402 of the Communications Act
+of 1934, as amended.
+Total Annual Burden: 648 hours.
+Total Annual Cost: No Cost.
+Needs and Uses: The Commission
+received OMB approval for revisions to
+an existing information collection, OMB
+Collection 3060–0149. Section 214 of
+the Communications Act of 1934, as
+amended, requires that a carrier must
+first obtain FCC authorization either to
+(1) construct, operate, or engage in
+transmission over a line of
+communications; or (2) discontinue,
+reduce or impair service over a line of
+communications. Part 63 of Title 47 of
+the Code of Federal Regulations (CFR)
+implements Section 214. Part 63 also
+implements provisions of the Cable
+Communications Policy Act of 1984
+pertaining to video which was approved
+under this OMB Control Number 3060–
+0149. In 2009, the Commission modified
+Part 63 to extend to providers of
+interconnected Voice of internet
+Protocol (VoIP) service the
+
+VerDate Sep<11>2014
+
+21:53 Sep 30, 2026
+
+Jkt 268001
+
+discontinuance obligations that apply to
+domestic non-dominant
+telecommunications carriers under
+Section 214 of the Communications Act
+of 1934, as amended. In 2014, the
+Commission adopted improved
+administrative filing procedures for
+domestic transfers of control, domestic
+discontinuances and notices of network
+changes, and among other adjustments,
+modified Part 63 to require electronic
+filing for applications for authorization
+to discontinue, reduce, or impair service
+under Section 214(a) of the Act. In July
+2016, the Commission concluded that
+applicants seeking to discontinue a
+legacy time division multiplexing
+(TDM)-based voice service as part of a
+transition to a new technology, whether
+internet Protocol (IP), wireless, or
+another type (technology transition
+discontinuance application) must
+demonstrate that an adequate
+replacement for the legacy service exists
+in order to be eligible for streamlined
+treatment and revised part 63
+accordingly. The Commission
+concluded that an applicant for a
+technology transition discontinuance
+may demonstrate that a service is an
+adequate replacement for a legacy voice
+service by certifying or showing that one
+or more replacement service(s) offers all
+of the following: (i) Substantially similar
+levels of network infrastructure and
+service quality as the applicant service;
+(ii) compliance with existing federal
+and/or industry standards required to
+ensure that critical applications such as
+911, network security, and applications
+for individuals with disabilities remain
+available; and (iii) interoperability and
+compatibility with an enumerated list of
+applications and functionalities
+determined to be key to consumers and
+competitors (the ‘‘adequate replacement
+test’’). In November 2017, the
+Commission further modified the rules
+applicable to Section 214(a)
+discontinuance applications by (1)
+expediting applications that
+‘‘grandfather’’ low speed legacy services
+for existing customers; (2) expediting
+applications to discontinue previously
+grandfathered legacy data services; and
+(3) expediting applications to
+discontinue legacy voice or data
+services below 1.544 Mbps for which
+the carrier has had no customers and no
+request for service for at least a 30-day
+period immediately preceding
+submission of the application. In June
+2018, the Commission again modified
+the rules applicable to Section 214(a)
+discontinuance applications. First, all
+carriers, whether dominant or nondominant, that seek approval to
+grandfather data services below speeds
+
+PO 00000
+
+Frm 00040
+
+Fmt 4700
+
+Sfmt 4700
+
+of 25 Mbps download speed and 3 Mbps
+upload speed are subject to a uniform
+reduced public comment period of 10
+days and an automatic grant period of
+25 days. Second, all carriers, whether
+dominant or nondominant, seeking
+authorization to discontinue data
+services below speeds of 25 Mbps
+download speed and 3 Mbps upload
+speed that have previously been
+grandfathered for a period of at least 180
+days are subject to a uniform reduced
+public comment period of 10 days and
+an automatic grant period of 31 days,
+provided they submit a statement as
+part of their discontinuance application
+that they have received Commission
+authority to grandfather the services at
+issue at least 180 days prior to the filing
+of the discontinuance application. The
+statement must reference the file
+number of the prior Commission
+authorization to grandfather the services
+the carrier then seeks to permanently
+discontinue. Third, carriers are no
+longer required to file an application to
+discontinue, reduce, or impair any
+service for which it has had no
+customers and no request for service for
+at least a 30-day period immediately
+preceding the discontinuance. Fourth,
+all carriers, whether dominant or
+nondominant, that seek approval to
+discontinue legacy voice service can
+obtain further streamlined processing
+with a public comment period of 15
+days and an automatic grant period of
+31 days, provided (1) they offer a
+standalone interconnected VoIP service
+throughout the service area, and (2) at
+least one alternative stand-alone,
+facilities-based voice service is available
+from an unaffiliated provider
+throughout the affected service area (the
+‘‘alternative options test’’). Finally, all
+carriers, whether dominant or
+nondominant, that seek approval to
+grandfather legacy voice service are
+subject to a uniform reduced public
+comment period of 10 days and an
+automatic grant period of 25 days.
+Certain rules are now modified as
+described below. In March 2026, the
+Commission further modified the rules
+applicable to Section 214(a)
+discontinuance applications by: (1)
+adopting one consolidated rule
+applicable to all technology transitions
+discontinuance applications, whereby
+an application to discontinue a
+currently offered retail voice service as
+part of a technology transition is eligible
+for streamlined processing if the
+applicant certifies that one or more of
+five specified categories of replacement
+services is available in every location
+throughout the affected service area; (2)
+granting blanket section 214(a) authority
+
+E:\FR\FM\01OCR1.SGM
+
+01OCR1
+
+lotter on DSK8BHNXB4PROD with RULES1
+
+Federal Register / Vol. 91, No. 189 / Thursday, October 1, 2026 / Rules and Regulations
+for carriers to grandfather legacy voices
+services, lower-speed data
+telecommunications services (defined as
+those operating at speeds below 25/3
+Mbps), and interconnected Voice over
+internet Protocol (VoIP) service
+provisioned over copper wire, thus
+eliminating the need for carriers to file
+a section 214(a) application when
+grandfathering these services; (3)
+adopting requirements providing that
+carriers seeking authority to discontinue
+a service supporting interconnection
+trunks or the exchange of traffic must
+specifically identify the service to be
+discontinued, not just the branded name
+of the service being discontinued, and
+that they must include in such
+discontinuance applications a statement
+that at least 90 days prior to the planned
+discontinuance filing, the carrier
+provided a designated point of contact
+with authority to facilitate the orderly
+transition from legacy facilities that
+support 911 to the 911 Authorities, 911
+service providers, and directly
+interconnecting local exchange service
+providers that support essential
+functions within 911 networks,
+including delivering 911 traffic to
+selective routers for transmission to
+public safety answering points (PSAPs)
+in the affected service area for
+coordination of the transition to ensure
+continued 911 connectivity, and a list of
+providers that received notice in the
+affected service area with which the
+carrier has coordinated and the date(s)
+of that coordination; (4) granting
+conditional forbearance relief from
+section 214(a) discontinuance
+requirements for resellers discontinuing
+resold services where the reseller’s
+wholesale provider is engaging in a
+technology transitions discontinuance,
+with the condition that the
+discontinuing resellers provide
+reasonable notice to their customers; (5)
+applying the 31-day automatic grant
+period to all discontinuance
+applications; (6) setting forth content
+requirements for discontinuance
+applications; and (6) providing that a
+carrier may permanently discontinue a
+service after a showing that it has
+previously obtained emergency
+discontinuance authority for the service
+in question, that the service is one for
+which the requesting carrier has had no
+customers or reasonable requests for
+service during the 60-day period
+immediately preceding the permanent
+discontinuance, and that an adequate
+replacement service is available
+throughout the affected service area.
+The Commission also eliminated 47
+CFR 63.66, 63.90, 63.100, 63.504,
+63.601, and 63.602, and revised 47 CFR
+
+VerDate Sep<11>2014
+
+21:53 Sep 30, 2026
+
+Jkt 268001
+
+63.60, 63.62, and 63.63 to account for
+any references or cross-references in
+those sections caused by the elimination
+of the previously enumerated rule
+provisions.
+List of Subjects
+47 CFR Part 51
+Communications, Communications
+common carriers, Telecommunications,
+Telephone.
+47 CFR Part 63
+Authority delegations (Government
+agencies), Cable television,
+Communications, Communications
+common carriers, Organization and
+functions (Government agencies), Radio,
+Reporting and recordkeeping
+requirements, Telegraph, Telephone.
+Federal Communications Commission,
+Marlene Dortch,
+Secretary, Office of the Secretary.
+
+Final Rules
+For the reasons discussed in the
+preamble, the Federal Communications
+Commission amends 47 CFR parts 51
+and 63 as follows:
+PART 51—INTERCONNECTION
+■ 1. The authority citation for part 51
+
+continues to read as follows:
+Authority: 47 U.S.C. 151–55, 201–05, 207–
+09, 218, 225–27, 251–52, 271, 332 unless
+otherwise noted.
+■ 2. Amend § 51.329 by:
+■ a. Revising paragraph (a); and
+■ b. Removing paragraph (c).
+
+The revision reads as follows:
+§ 51.329 Notice of network changes:
+Methods for providing notice.
+
+(a) An incumbent LEC may provide
+the required notice to the public of
+network changes through publicly
+accessible industry fora, industry
+publications, or the incumbent LEC’s
+website.
+*
+*
+*
+*
+*
+■ 3. Amend § 51.333 by:
+■ a. Revising the section heading and
+paragraph (a);
+■ b. Removing paragraphs (b) through
+(f);
+■ c. Redesignating paragraph (g) as
+paragraph (b);
+■ d. Removing newly redesignated
+paragraph (b)(1)(iii);
+■ e. Further redesignating newly
+redesignated paragraphs (b)(1)(iv) and
+(v) as paragraphs (b)(1)(iii) through (iv);
+and
+■ f. Revising newly redesignated
+paragraph (b)(2)(i) and (ii).
+The revisions read as follows:
+
+PO 00000
+
+Frm 00041
+
+Fmt 4700
+
+Sfmt 4700
+
+62337
+
+§ 51.333 Notice of network changes:
+Short-term network changes and copper
+retirement.
+
+(a) Direct notice. If an incumbent LEC
+wishes to provide less than six months’
+notice of planned network changes, or
+provide notice of a planned copper
+retirement, the incumbent LEC must
+serve a copy of its public notice upon
+each telephone exchange service
+provider that directly interconnects
+with the incumbent LEC’s network, 911
+service providers, and directly
+interconnecting local exchange service
+providers that support essential
+functions within 911 networks in the
+affected service areas, provided that,
+with respect to copper retirement
+notices, such service may be made by
+postings on the incumbent LEC’s
+website if the directly interconnecting
+telephone exchange service provider has
+agreed to receive notice by website
+postings. For purposes of this section,
+‘‘911 service provider’’ is defined as an
+entity that provides 911, E911, or
+NG911 capabilities such as call routing,
+automatic location information,
+automatic number identification, or the
+functional equivalent of those
+capabilities, directly to a public safety
+answering point (PSAP), statewide
+default answering point, or appropriate
+local emergency authority as defined in
+§ 9.3 of this chapter; and/or operates one
+or more central offices that directly
+serve a PSAP.
+(1) An incumbent LEC must provide
+the required direct notice of a short-term
+network change at least 10 days prior to
+implementation.
+(2) An incumbent LEC must provide
+direct notice of a planned copper
+retirement at least 90 days prior to
+implementation, except that it must
+provide direct notice of a planned
+copper retirement involving copper
+facilities not being used to provision
+services to any customers at least 15
+days prior to implementation.
+(b) * * *
+(2) * * *
+(i) Notwithstanding the requirements
+of this section, if in response to
+circumstances outside of its control
+other than a force majeure event
+addressed in paragraph (b)(1) of this
+section, an incumbent LEC cannot
+comply with the timing requirement set
+forth in paragraph (a) of this section,
+hereinafter referred to as the waiting
+period, the incumbent LEC must give
+notice of the network change as soon as
+practicable.
+(ii) A short-term network change or
+copper retirement notice subject to
+paragraph (b)(2) of this section must
+include a brief explanation of the
+circumstances necessitating the reduced
+
+E:\FR\FM\01OCR1.SGM
+
+01OCR1
+
+62338
+
+Federal Register / Vol. 91, No. 189 / Thursday, October 1, 2026 / Rules and Regulations
+
+waiting period and how the incumbent
+LEC intends to minimize the impact of
+the reduced waiting period on directly
+interconnected telephone exchange
+service providers.
+*
+*
+*
+*
+*
+PART 63—EXTENSION OF LINES, NEW
+LINES, AND DISCONTINUANCE,
+REDUCTION, OUTAGE AND
+IMPAIRMENT OF SERVICE BY
+COMMON CARRIERS; AND GRANTS
+OF RECOGNIZED PRIVATE
+OPERATING AGENCY STATUS
+■ 4. The authority citation for part 63
+
+§ 63.62 Type of discontinuance, reduction,
+or impairment of telephone service
+requiring formal application.
+
+continues to read as follows:
+Authority: 47 U.S.C. 151, 154(i), 154(j),
+160, 201–205, 214, 218, 403, 571, unless
+otherwise noted.
+■ 5. Amend § 63.60 by revising
+
+paragraphs (a), (b)(1) and (2), (c), and (g)
+to read as follows:
+§ 63.60
+
+Definitions.
+
+lotter on DSK8BHNXB4PROD with RULES1
+
+*
+
+*
+*
+*
+*
+(a) For the purposes of §§ 63.60
+through 63.71, the term ‘‘carrier,’’ when
+used to refer either to all
+telecommunications carriers or more
+specifically to non-dominant
+telecommunications carriers, shall
+include interconnected VoIP providers.
+(b) * * *
+(1) The closure by a carrier of a
+telephone exchange rendering interstate
+or foreign telephone toll service, or a
+public toll station serving a community
+or part of a community.
+(2) The reduction in hours of service
+by a carrier at a telephone exchange
+rendering interstate or foreign telephone
+toll service or at any public toll station
+(except at a toll station at which the
+availability of service to the public
+during any specific hours is subject to
+the control of the agent or other persons
+controlling the premises on which such
+office or toll station is located and is not
+subject to the control of such carrier);
+the term reduction in hours of service
+does not include a shift in hours which
+does not result in any reduction in the
+number of hours of service.
+*
+*
+*
+*
+*
+(c) Emergency discontinuance,
+reduction, or impairment of service
+means any discontinuance, reduction,
+or impairment of the service of a carrier
+occasioned by conditions beyond the
+control of such carrier where the
+original service is not restored or
+comparable service is not established
+within a reasonable time. For the
+purpose of this part, a reasonable time
+shall be deemed to be a period not in
+excess of 60 days.
+*
+*
+*
+*
+*
+
+VerDate Sep<11>2014
+
+21:53 Sep 30, 2026
+
+Jkt 268001
+
+(g) For the purposes of §§ 63.60
+through 63.71, the term ‘‘service,’’ when
+used to refer to a real-time, two-way
+voice communications service, shall
+include interconnected VoIP service as
+that term is defined in § 9.3 of this
+chapter but shall not include any
+interconnected VoIP service that is a
+‘‘mobile service’’ as defined in § 20.3 of
+this chapter.
+*
+*
+*
+*
+*
+■ 6. Amend § 63.62 by revising the
+introductory text and paragraphs (a), (b),
+and (d) to read as follows:
+
+Authority for the following types of
+discontinuance, reduction, or
+impairment of service shall be requested
+by formal application containing the
+information required by the
+Commission in the appropriate sections
+to this part, including § 63.505, or in
+emergency cases (as defined in
+§ 63.60(b)) as provided in § 63.63:
+(a) The dismantling or removal of a
+trunk line (for contents of application
+see §§ 63.71 and 63.500) for all domestic
+carriers and for dominant international
+carriers except as modified in § 63.19;
+(b) The severance of physical
+connection or the termination or
+suspension of the interchange of traffic
+with another carrier (for contents of
+application see §§ 63.71 and 63.501);
+*
+*
+*
+*
+*
+(d) The closure of a public toll station
+where no other such toll station of the
+applicant in the community will
+continue service (for contents of
+application, see § 63.505): Provided,
+however, That no application shall be
+required under this part with respect to
+the closure of a toll station located in a
+community where telephone toll service
+is otherwise available to the public
+through a telephone exchange
+connected with the toll lines of a carrier;
+*
+*
+*
+*
+*
+■ 7. Amend § 63.63 by revising
+introductory text of paragraph (a) and
+paragraph (b) to read as follows:
+§ 63.63 Emergency discontinuance,
+reduction or impairment of service.
+
+(a) Application for authority for
+emergency discontinuance, reduction,
+or impairment of service shall be made
+by electronically filing an informal
+request through the ‘‘Submit a NonDocketed Filing’’ module of the
+Commission’s Electronic Comment
+Filing System. Such requests shall be
+made as soon as practicable but not later
+than 65 days after the occurrence of the
+conditions which have occasioned the
+
+PO 00000
+
+Frm 00042
+
+Fmt 4700
+
+Sfmt 4700
+
+discontinuance, reduction, or
+impairment. The request shall make
+reference to this section and show the
+following:
+*
+*
+*
+*
+*
+(b) Authority for the emergency
+discontinuance, reduction, or
+impairment of service for a period of 60
+days shall be deemed to have been
+granted by the Commission effective as
+of the date of the filing of the request
+unless, on or before the 15th day after
+the date of filing, the Commission shall
+notify the carrier to the contrary.
+Renewal of such authority may be
+requested by letter, filed with the
+Commission not later than 10 days prior
+to the expiration of such 60-day period,
+making reference to this section and
+showing that such conditions may
+reasonably be expected to continue for
+a further period and what efforts the
+applicant has made to restore the
+original or establish comparable service.
+If the same or comparable service is
+reestablished before the termination of
+the emergency authorization, the carrier
+shall notify the Commission promptly.
+However, the Commission may, upon
+specific request of the carrier and upon
+a proper showing, contained in such
+informal request or in the initial
+application, authorize such
+discontinuance, reduction, or
+impairment of service for an indefinite
+period or permanently. In addition, the
+carrier may permanently discontinue,
+reduce, or impair a service for which it
+has received authority for emergency
+discontinuance, reduction, or
+impairment upon a showing that:
+(1) It has had no customers or
+reasonable requests for service during
+the 60-day period immediately
+preceding the discontinuance; and
+(2) An adequate replacement service
+is available throughout the affected
+service area.
+■ 8. Amend § 63.71 by:
+■ a. Revising paragraph (a)(5);
+■ b. Removing paragraphs (a)(6) and
+(c)(4);
+■ c. Redesignating paragraphs (c)(2), (3),
+and (5) as paragraphs (c)(3), (4), and (9);
+■ d. Adding new paragraphs (c)(2) and
+(5) and paragraphs (c)(6) through (8);
+■ e. Revising paragraph (f);
+■ f. Removing paragraphs (h) and (l);
+■ g. Redesignating paragraphs (i), (j),
+and (k) as paragraphs (h), (i), and (j),
+respectively;
+■ h. Revising newly redesignated
+paragraphs (h) and (j); and
+■ i. Adding new paragraph (k).
+The revisions and additions read as
+follows:
+
+E:\FR\FM\01OCR1.SGM
+
+01OCR1
+
+Federal Register / Vol. 91, No. 189 / Thursday, October 1, 2026 / Rules and Regulations
+
+lotter on DSK8BHNXB4PROD with RULES1
+
+§ 63.71 Procedures for discontinuance,
+reduction or impairment of service by
+domestic carriers.
+
+(a) * * *
+(5) One of the following statements:
+(i) The following statement: The FCC
+will normally authorize this proposed
+discontinuance of service (or reduction
+or impairment) unless it is shown that
+customers would be unable to receive
+service or a reasonable substitute from
+another carrier or that the public
+convenience and necessity is otherwise
+adversely affected. If you wish to object,
+you should file your comments as soon
+as possible, but no later than 15 days
+after the Commission releases public
+notice of the proposed discontinuance.
+You may file your comments
+electronically through the FCC’s
+Electronic Comment Filing System
+using the docket number established in
+the Commission’s public notice for this
+proceeding, or you may address them to
+the Federal Communications
+Commission, Wireline Competition
+Bureau, Competition Policy Division,
+Washington, DC 20554, and include in
+your comments a reference to the
+§ 63.71 Application of (carrier’s name).
+Comments should include specific
+information about the impact of this
+proposed discontinuance (or reduction
+or impairment) upon you or your
+company, including any inability to
+acquire reasonable substitute service.
+(ii) For discontinuances involving
+technology transitions, as defined in
+§ 63.60(i), in addition to the statement
+required by paragraph (a)(5)(i) of this
+section, specific information as to how
+a customer who wants to object to or
+comment on the proposed
+discontinuance of service will be able to
+do so, including but not limited to
+providing the master docket number
+established by the Wireline Competition
+Bureau for such objections and
+comments and the web page(s)
+identified by the Wireline Competition
+Bureau for further guidance and
+resources to file an objection or
+comment.
+*
+*
+*
+*
+*
+(c) * * *
+(2) For technology transitions
+discontinuance applications, as defined
+in § 63.60(i):
+(i) Statement identifying the
+application as involving a technology
+transition;
+(ii) Statement of the difference in
+price, if any, between the service being
+discontinued and replacement services
+available in the affected service area;
+and
+(iii) Brief description of the affected
+community or part of a community,
+including the population size and any
+
+VerDate Sep<11>2014
+
+21:53 Sep 30, 2026
+
+Jkt 268001
+
+relevant characteristics of the customer
+population affected;
+*
+*
+*
+*
+*
+(5) Brief description of replacement
+services, whether available from the
+applicant or third parties, that would
+remain in the affected community or
+part of the affected community in the
+event the application is granted,
+including the name of any other
+carrier(s) providing replacement
+services to the affected community, and
+where in the affected community those
+services are available;
+(6) Statement of the factors otherwise
+showing that neither the present nor
+future public convenience and necessity
+would be adversely affected by the
+granting of the application;
+(7) For applications to discontinue a
+service supporting interconnection
+trunks or the exchange of traffic, in
+addition to the requirements set forth in
+§§ 63.500 and 63.501:
+(i) Specific identity of the type of
+service to be discontinued in addition to
+any branded name of the service being
+discontinued;
+(ii) Statement that at least 90 days
+prior to the planned discontinuance, the
+carrier provided a designated point of
+contact with authority to facilitate the
+orderly transition from legacy facilities
+that support 911 to the 911 Authorities,
+as defined in § 9.28 of this chapter, 911
+service providers, and local exchange
+service providers that support essential
+functions within 911 networks in the
+affected service area. For purposes of
+this section, ‘‘911 service provider’’ is
+defined as an entity that provides 911,
+E911, or NG911 capabilities such as call
+routing, automatic location information,
+automatic number identification, or the
+functional equivalent of those
+capabilities, directly to a public safety
+answering point (PSAP), statewide
+default answering point, or appropriate
+local emergency authority as defined in
+§ 9.3 of this chapter; and/or operates one
+or more central offices that directly
+serve a PSAP; and
+(iii) List of the 911 Authorities, 911
+service provider, and local exchange
+service providers that support essential
+functions within 911 networks in the
+affected service areas with which the
+carrier has coordinated and the date(s)
+of that coordination;
+(8) A certification, executed by an
+officer or other authorized
+representative of the applicant and
+meeting the requirements of § 1.16 of
+this chapter, that the information
+required by this section is true and
+accurate; and
+*
+*
+*
+*
+*
+(f)(1) The application to discontinue,
+reduce, or impair service that does not
+
+PO 00000
+
+Frm 00043
+
+Fmt 4700
+
+Sfmt 4700
+
+62339
+
+constitute a technology transition or, if
+constituting a technology transition,
+meets the requirements of paragraph
+(f)(2) of this section, shall be
+automatically granted on the 31st day
+after its filing with the Commission
+without any Commission notification to
+the applicant unless the Commission
+has notified the applicant that the grant
+will not be automatically effective. For
+purposes of this section, an application
+will be deemed filed on the date the
+Commission releases public notice of
+the filing.
+(2) An application to discontinue,
+reduce, or impair an existing retail
+service as part of a technology
+transition, as defined in § 63.60(i), may
+be automatically granted only if the
+applicant certifies that in every location
+throughout the affected service area, at
+least one of the following types of
+services is available:
+(i) A facilities-based interconnected
+VoIP service, as defined in § 9.3 of this
+chapter;
+(ii) A facilities-based mobile wireless
+service operating at speeds of at least 5
+Mbps download and 1 Mbps upload,
+consistent with the coverage parameters
+set forth in § 1.7004(c)(3) of this chapter;
+(iii) A voice service offered pursuant
+to an obligation from one of the
+Commission’s modernized high-cost
+support programs;
+(iv) A voice service already available
+from the applicant in the affected
+service area that that the applicant
+certifies offers substantially similar
+levels of network performance and
+availability as the legacy voice service
+being discontinued based on the
+applicant’s own internal network testing
+in connection with rolling out a new
+product or service, provides access to
+911 and complies with applicable 911
+requirements in part 9 of this title, and
+permits users generally to receive calls
+that originate on the public switched
+telephone network and to terminate
+calls to the public switched telephone
+network or any successor network that
+utilizes numbers issued pursuant to the
+North American Numbering Plan and
+supports access to 911 and complies
+with applicable 911 requirements in
+part 9 of this title; or
+(v) A widely available alternative
+service offered by a third party that the
+applicant certifies offers substantially
+similar levels of network performance
+and availability as the legacy voice
+service being discontinued, and permits
+users generally to receive calls that
+originate on the public switched
+telephone network and to terminate
+calls to the public switched telephone
+network or any successor network that
+utilizes numbers issued pursuant to the
+
+E:\FR\FM\01OCR1.SGM
+
+01OCR1
+
+lotter on DSK8BHNXB4PROD with RULES1
+
+62340
+
+Federal Register / Vol. 91, No. 189 / Thursday, October 1, 2026 / Rules and Regulations
+
+North American Numbering Plan and
+supports access to 911 and complies
+with applicable 911 requirements in
+part 9 of this title.
+*
+*
+*
+*
+*
+(h) An application to discontinue,
+reduce, or impair a service filed by a
+competitive local exchange carrier in
+response to a copper retirement notice
+provided pursuant to § 51.333 of this
+chapter shall be automatically granted
+on the effective date of the copper
+retirement; provided that:
+(1) The competitive local exchange
+carrier submits the application to the
+Commission for filing at least 40 days
+prior to the copper retirement effective
+date; and
+(2) The application includes a
+certification, executed by an officer or
+other authorized representative of the
+applicant and meeting the requirements
+of § 1.16 of this chapter, that the copper
+retirement is the basis for the
+application and that the applicant has
+notified and coordinated with all 911
+Authorities as defined in § 9.28 of this
+chapter with jurisdiction within the
+affected service area.
+*
+*
+*
+*
+*
+(j)(1) Notwithstanding any other
+provision of this section, a carrier is not
+required to file an application to
+grandfather a legacy voice service,
+lower-speed data service, or
+interconnected VoIP service provisioned
+over copper wire; however, it must
+provide notice to existing customers
+that it is grandfathering a service they
+current receive from that carrier. Such
+notice shall include:
+(i) An approximate date by which it
+intends to seek to permanently
+discontinue the service; and
+(ii) A statement regarding alternative
+services available in the affected service
+area.
+(2) For purposes of this paragraph (j),
+‘‘lower-speed data service’’ is defined as
+a data service operating at speeds below
+25 Mbps download and 3 Mbps upload.
+(k) Notwithstanding any other
+provision of this section, where a
+wholesale provider is engaging in a
+technology transitions discontinuance
+of a legacy voice service resold by
+another provider, the reseller is not
+required to file an application to
+discontinue the resold service, except
+that the reseller must provide notice to
+its customers, as soon as practicable,
+that it will no longer be able to provide
+the relevant legacy voice service. Such
+notice shall be via any means to which
+the customer has previously provided
+express, verifiable approval. Notice
+shall include the following:
+(1) Name and address of carrier;
+
+VerDate Sep<11>2014
+
+21:53 Sep 30, 2026
+
+Jkt 268001
+
+(2) Date of planned service
+discontinuance, reduction or
+impairment;
+(3) Points of geographic areas of
+service affected;
+(4) Brief description of type of service
+affected; and
+(5) Statement regarding the
+availability of alternative services in the
+affected service area.
+§ 63.602
+
+[Removed and Reserved]
+
+■ 9. Remove and reserve § 63.602.
+[FR Doc. 2026–20192 Filed 9–30–26; 8:45 am]
+BILLING CODE 6712–01–P
+
+DEPARTMENT OF COMMERCE
+National Oceanic and Atmospheric
+Administration
+50 CFR Part 665
+[Docket No. 260911–0004]
+RIN 0648–BN73
+
+Pacific Island Fisheries; Annual Catch
+Limit and Accountability Measures for
+Mariana Bottomfish Management Unit
+Species in the Guam Management
+Subarea
+AGENCY: National Marine Fisheries
+
+Service (NMFS), National Oceanic and
+Atmospheric Administration (NOAA),
+Commerce.
+ACTION: Final rule.
+SUMMARY: NMFS is modifying the
+
+annual catch limit (ACL) and
+accountability measures (AM) for
+Mariana bottomfish management unit
+species (MUS) in the Guam
+Management Subarea (the fishery). The
+rule increases the ACL from 31,000
+pounds (lb) (14,061 kilograms (kg)) to
+34,500 lb (15,649 kg), replaces the inseason AM with a post-season overage
+adjustment if the average catch from the
+most recent 3 years exceeds the ACL,
+and removes the higher performance
+standard that closes the fishery in
+Federal waters for any overage. The rule
+is based on the best available scientific,
+commercial, and other information
+about the fishery, and supports
+rebuilding of the fishery.
+DATES: The final rule is effective
+November 2, 2026.
+ADDRESSES: Copies of the Fishery
+Ecosystem Plan for the Mariana
+Archipelago (FEP) are available from the
+Western Pacific Fishery Management
+Council (Council), 1164 Bishop St.,
+Suite 1400, Honolulu, HI 96813, tel.
+808–522–8220, fax 808–522–8226, or
+https://www.wpcouncil.org.
+
+PO 00000
+
+Frm 00044
+
+Fmt 4700
+
+Sfmt 4700
+
+Copies of the environmental analyses
+and other supporting documents for this
+action are available from https://
+www.regulations.gov/docket/NOAANMFS-2025-0504, or from Sarah J.
+Malloy, Regional Administrator, NMFS
+Pacific Islands Regional Office (PIRO),
+1845 Wasp Blvd., Bldg. 176, Honolulu,
+HI 96818.
+FOR FURTHER INFORMATION CONTACT:
+Keith Kamikawa, NMFS PIRO
+Sustainable Fisheries, 808–725–5177.
+SUPPLEMENTARY INFORMATION: NMFS and
+the Council manage bottomfish fishing
+in Federal waters around Guam in
+accordance with the FEP, as authorized
+by the Magnuson-Stevens Fishery
+Conservation and Management Act
+(Magnuson-Stevens Act). The Council
+recommended the subject action at its
+201st meeting in December 2024, based
+on: (1) a 2024 stock assessment update
+for Mariana bottomfish MUS in Guam;
+(2) consideration of the best scientific,
+commercial, and other information
+about the fishery; (3) a review from the
+Council’s Scientific and Statistical
+Committee; and (4) input from the
+public. Accordingly, NMFS implements
+this action under section 303(c) and
+section 304(b) of the Magnuson-Stevens
+Act.
+The fishery targets 13 species of
+bottomfish that are managed as a multispecies stock complex. Accordingly,
+stock status and management measures
+such as ACLs and AMs are applied to
+the stock complex rather than to
+individual species. NMFS determined
+the stock complex was overfished but
+not experiencing overfishing (85 FR
+26940, May 6, 2020), and it has been
+subject to a rebuilding plan with an ACL
+of 31,000 lb (14,061 kg) since 2022 (87
+FR 9271, February 18, 2022). An
+updated stock assessment completed in
+2024 by the NMFS Pacific Islands
+Fisheries Science Center found that the
+stock was no longer overfished and
+continued to not experience overfishing.
+However, while stock biomass had
+increased above the ‘‘minimum stock
+size threshold’’ for the overfished
+condition, it had not increased to the
+biomass that would produce maximum
+sustainable yield. This means the stock
+is not yet fully rebuilt, so NMFS and the
+Council continue to manage the fishery
+under the rebuilding plan with a target
+time to rebuild by 2031. The stock
+assessment update also provided new
+projections showing the stock could
+support moderately larger catches and
+still rebuild by 2031.
+The subject action will also remove
+the in-season AM that would close the
+fishery in Federal waters if NMFS
+projects catch will reach the ACL
+
+E:\FR\FM\01OCR1.SGM
+
+01OCR1
+
+
