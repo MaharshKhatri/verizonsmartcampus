@@ -1,0 +1,726 @@
+                                   Federal Communications Commission                                 DA 26-1042
+
+                                              Before the
+                                   Federal Communications Commission
+                                         Washington, D.C. 20554
+
+ In the Matter of
+
+ Facilitating Implementation of Next                            PS Docket No. 21-479
+ Generation 911 Services (NG911)
+
+
+                                                    ORDER
+
+Adopted: September 28, 2026                                                      Released: September 28, 2026
+
+By the Chief, Public Safety and Homeland Security Bureau:
+
+I.      INTRODUCTION
+         1.      In this Order, the Public Safety and Homeland Security Bureau (Bureau) conditionally
+grants a limited waiver to Verizon of section 9.30(a)(1) of the Commission’s rules,1 which establishes
+deadlines for originating service providers (OSPs) to implement Phase 1 of the transition to Next
+Generation 911 (NG911).2 Verizon requests an extension of the six-month deadline to comply with Phase
+1 requirements for its wireless and wireline services in the Commonwealth of Massachusetts and for its
+wireline service in other jurisdictions that filed Phase 1 requests prior to January 31, 2026. Verizon
+requests the waiver to allow it additional time to address technical challenges it encountered with certain
+multi-line telephone system (MLTS) customers when implementing Phase 1 in Massachusetts.
+         2.       For the reasons set forth below and subject to the conditions outlined herein, we grant
+Verizon a limited extension of the deadline for Phase 1 implementation of its wireline services in
+Massachusetts and certain other jurisdictions. (We identify the specific jurisdictions covered by the
+waiver in the Appendix.) We also dismiss as moot Verizon’s request to extend the Phase 1 deadline for
+its wireless service in Massachusetts, as both Verizon and the Massachusetts State 911 Department
+(Massachusetts) agree that Verizon Wireless achieved compliance with Phase 1 requirements prior to
+submitting its waiver request.
+II.     BACKGROUND
+         3.     In July 2024, the Commission adopted a framework to accelerate the nationwide
+transition to NG911 by enabling 911 Authorities to initiate NG911 deployments in their jurisdictions in
+
+1 Verizon, Petition for Waiver, PS Docket No. 21-479 (filed Apr. 17, 2026), https://www.fcc.gov/ecfs/search/search-
+
+filings/filing/10417519901088 (Verizon Petition); see also Letter from Robert G. Morse, Associate General
+Counsel, Verizon, to Marlene H. Dortch, Secretary, FCC, PS Docket Nos. 21-479, 25-143 (filed May 28, 2026)
+(Verizon May 28 Ex Parte) (supplementing the Petition with information on Verizon’s efforts to reach out to
+relevant stakeholders to communicate the MLTS PS/ALI issue); Letter from Robert G. Morse, Associate General
+Counsel, Verizon, to Marlene H. Dortch, Secretary, FCC, PS Docket Nos. 21-479, 25-145 (filed July 7, 2026)
+(Verizon July 7 Ex Parte) (providing an update on Verizon’s wireless and wireline Phase 1 implementation efforts
+for Massachusetts and other jurisdictions covered by the Petition); Letter from Robert G. Morse, Associate General
+Counsel, Verizon, to Marlene H. Dortch, Secretary, FCC, PS Docket Nos. 21-479, 25-143 (filed Aug. 19, 2026)
+(Verizon Aug. 19 Ex Parte) (responding to the Bureau’s request that Verizon identify the specific jurisdictions
+covered by the Petition); Letter from Robert G. Morse, Associate General Counsel, Verizon, to Marlene H. Dortch,
+Secretary, FCC, PS Docket Nos. 21-479, 25-143 (filed Sept. 8, 2026) (Verizon Sept. 8 Ex Parte) (providing an
+update on Phase 1 implementations in certain jurisdictions and supplementing the record with additional information
+on Private Switch/Automatic Location Identification (PS/ALI) service and market structure).
+2 See 47 CFR § 9.30(a)(1).
+
+
+                                                        1
+                                   Federal Communications Commission                                 DA 26-1042
+
+two phases.3 Since March 2025, 911 Authorities who meet specific NG911 readiness thresholds have
+been able to submit requests to OSPs to begin delivering 911 traffic in Internet Protocol (IP) format.4 In
+Phase 1, OSPs must commence delivery of 911 traffic in IP-based Session Initiation Protocol (SIP)
+format to NG911 Delivery Points designated by the 911 Authority.5 In Phase 2, OSPs must deliver 911
+traffic in IP-based SIP format that complies with commonly accepted NG911 standards, including having
+location information embedded in the call signaling using Presence Information Data Format-Location
+Object (PIDF-LO) or the functional equivalent.6 Upon receipt of a valid Phase 1 request from a 911
+Authority, Verizon and other nationwide OSPs must implement Phase 1 in the relevant jurisdiction within
+six months.7 OSPs and 911 Authorities may also negotiate alternative timelines at their discretion.8
+         4.      The framework adopted in the NG911 Transition Order requires OSPs implementing
+Phase 1 to “conduct connectivity testing to confirm that the 911 Authority receives 911 traffic in the IP-
+based SIP format requested by the 911 Authority.”9 The Commission noted that testing NG911 systems
+in advance will help ensure that the connection from the OSP to the 911 Authority is implemented
+correctly and meets the requirements of the 911 Authority.10 In addition, the NG911 Transition Order
+encourages 911 Authorities and OSPs to collaborate throughout the transition to NG911, and particularly
+when initiating first time deployments.11 Recognizing that initial NG911 transitions “may take longer as
+OSPs connect with ESInets and NG911 service providers for the first time,” the Commission highlighted
+that the waiver process is available to providers facing “extraordinary circumstances.”12
+        5.       Verizon’s Petition for Waiver. On April 17, 2026, Verizon filed a Petition with the
+Commission requesting a waiver of certain Phase 1 deadlines to address technical challenges it discovered
+during the Phase 1 implementation in Massachusetts.13 Specifically, Verizon requested an extension of
+the deadlines for implementing Phase 1 for its wireline services as follows:
+
+
+3 Facilitating Implementation of Next Generation 911 Services (NG911), Location-Based Routing for Wireless 911
+
+Calls, PS Docket Nos. 21-479 and 18-64, Report and Order, 39 FCC Rcd 8137, 8139, para. 3 (2024) (NG911
+Transition Order); see also 47 CFR §§ 9.27-9.34.
+4 Public Safety and Homeland Security Bureau Announces Compliance Date and Provides Guidance on Information
+
+Collection for the Implementation of Next Generation 911, PS Docket Nos. 21-479, 18-64, 25-143, 25-144, and 25-
+145, Public Notice, 40 FCC Rcd 2057 (PSHSB 2025) (NG911 Implementation Public Notice); see also NG911
+Transition Order, 39 FCC Rcd at 8139, para. 4.
+5 NG911 Transition Order, 39 FCC Rcd at 8139, 8171, paras. 3, 71; 47 CFR § 9.29(a).
+
+6 NG911 Transition Order, 39 FCC Rcd at 8139, 8175, paras. 3, 78; 47 CFR § 9.29(b).
+
+7 NG911 Transition Order, 39 FCC Rcd at 8140, 8189, paras. 5, 113; 47 CFR § 9.30(a).    A similar timeline applies
+to implementation of Phase 2 requests by nationwide OSPs.
+8 NG911 Transition Order, 39 FCC Rcd at 8140, 8195-96, paras. 5, 130; 47 CFR § 9.34(a).
+
+9 NG911 Transition Order, 39 FCC Rcd at 8173, para. 75; 47 CFR § 9.29(a)(4).
+
+10 NG911 Transition Order, 39 FCC Rcd at 8173-74, para. 75.
+
+11 Id. at 8194, para. 127.
+
+12 With respect to first time connections, the NG911 Transition Order states, “Although such transitions may take
+
+longer as OSPs connect with ESInets and NG911 service providers for the first time, our rules provide ample
+flexibility for OSPs and 911 Authorities to address these issues. We encourage 911 Authorities to collaborate with
+OSPs that are connecting to ESInets and NG911 vendors in the first instance. In addition, the Commission’s waiver
+process is available to providers facing extraordinary circumstances.” Id. (citing 47 CFR § 1.3). The Commission’s
+rules define an Emergency Services Internet Protocol Network (ESInet) as “[a]n Internet Protocol (IP)-based
+network that is managed or operated by a 911 Authority or its agents or vendors and that is used for emergency
+services communications, including Next Generation 911.” 47 CFR § 9.28.
+13 See Verizon Petition.
+
+
+                                                         2
+                                      Federal Communications Commission                                  DA 26-1042
+
+                  •   Through June 30, 2026, for Verizon’s wireline services in the Commonwealth of
+                      Massachusetts and in other jurisdictions that filed Phase 1 requests prior to November 1,
+                      2025, and
+                  •   Through July 31, 2026, for Verizon’s wireline services in jurisdictions that filed Phase 1
+                      requests between November 1, 2025, and January 31, 2026.14
+In addition, Verizon requested a waiver through March 31, 2026, of the Phase 1 deadline for its wireless
+services in Massachusetts due to “unforeseen technical issues.”15
+         6.       The Petition states that Verizon has largely implemented Phase 1 for its wireline services
+in Massachusetts and other jurisdictions that submitted Phase 1 requests, but that additional time is
+necessary to ensure that 911 calls from certain MLTS users are routed with appropriate location
+information, which Verizon does not currently possess.16 Verizon states that in jurisdictions where it has
+customers using MLTS with legacy Time Division Multiplexing (TDM) technology and third-party
+Private Switch/Automatic Location Identification (PS/ALI) service for 911 calling, Verizon does
+not have the MLTS customer’s location information needed to route 911 calls in Phase 1 or to provide
+location in PIDF-LO in Phase 2.17 As a result, Verizon states that it must send these calls to a national
+call center for routing rather than to the appropriate public safety answering point (PSAP). As Verizon
+notes, this routing process requires the 911 caller to verbally communicate with a telecommunicator at the
+national call center to provide the caller’s location so that it can be used to route the call to the correct
+PSAP.18 Verizon asserts that it needs additional time to implement a solution for obtaining
+location information from its MLTS customers using PS/ALI service so that Verizon will be able to route
+911 calls directly to the appropriate PSAP in Phase 1.19
+        7.       Verizon’s discovery of the PS/ALI issue. Verizon states that it has contracted with Intrado
+Life & Safety, Inc. (Intrado) to support NG911 delivery of its wireline 911 traffic across the United States
+and that Intrado’s NG911 solution is designed to support both Phase 1 and Phase 2 call delivery
+nationwide.20 Verizon further states that Verizon and Intrado “have worked diligently” with
+Massachusetts’ Next Generation Core Services (NGCS) vendor, Allerium, to establish SIP connectivity in
+the Commonwealth, including by conducting connectivity testing.21
+        8.       Part of Intrado’s NG911 solution requires Verizon to provision the telephone numbers
+and location information for 911 calls within each 911 Authority’s footprint to ensure successful call
+
+14 Id. at 9-10.
+
+15 Id. at 2.
+
+16 Id. at 5-9.
+
+17 Id. at 7.
+           Verizon states that “Private Switch/Automatic Location Identification (PS/ALI) products enable
+businesses with MLTS systems to support delivery of dispatchable location information for 911 calls by allowing
+them to directly update the relevant 911 ALI database. PS/ALI works by creating a direct bridge between the
+MLTS’s internal phone directory and the ALI 911 database.” Id. at 7 n.11.
+18 Id. at 7.
+
+19 Id. at 7-9.
+
+20 Id. at 5; see also Letter from Sean Ward, Vice President, Government Affairs, Intrado, to Marlene H. Dortch,
+
+Secretary, FCC, PS Docket Nos. 21-479 and 25-143 at 2 (filed July 9, 2026) (explaining that Intrado does not
+transport Verizon’s legacy wireline 911 traffic and that Verizon retains responsibility for transporting legacy
+wireline traffic until Verizon moves those records onto Intrado’s IP-based VoIP and MLTS systems and NG911
+platform).
+21 Verizon Petition at 6 (describing the challenges related to designing, deploying, and testing configurations to
+
+exchange IP traffic between two providers’ networks and explaining that Verizon and Intrado “have worked
+diligently with the Commonwealth’s NGCS vendor Comtech and successfully resolved these issues in the State of
+Massachusetts”). Allerium was formerly known as Comtech.
+                                                           3
+                                    Federal Communications Commission                                  DA 26-1042
+
+routing and location delivery for all calls.22 Verizon states that during First Office Application (FOA)
+testing in Massachusetts on January 12, 2026, it observed that some 911 calls carried over Verizon’s
+network from MLTS customers were delivered to Intrado’s Emergency Call Relay Center (ECRC) rather
+than directly to Allerium.23 Upon investigation, Verizon determined that the calls being routed to the
+ECRC came from TDM “dialtone customers” of Verizon using third-party PS/ALI providers to support
+MLTS location.24 In the legacy 911 environment, when 911 calls from these customers are placed, the
+PS/ALI service links the MLTS’s internal phone directory directly with the ALI 911 database.25 In these
+instances, the location data for the MLTS telephone number is delivered directly to the 911 service
+provider and is not provided to Verizon.26 Consequently, when Verizon sought to implement Phase 1, it
+lacked the MLTS location data necessary for Intrado’s NG911 solution to appropriately route these calls,
+and the calls were instead routed to the Intrado ECRC.27 After discovering the issue on January 12, 2026,
+Verizon informed Massachusetts on January 16, 2026.28 Simultaneously, Verizon began working to
+develop a solution that would enable impacted MLTS customers to provide their location information to
+Verizon.29
+         9.      Verizon states that the PS/ALI issue is “most acute in Massachusetts given the status of
+Verizon’s implementation efforts there,” but that it extends to all jurisdictions in which Verizon has
+TDM-based MLTS customers that use a PS/ALI service.30 In addition, Verizon asserts that this issue will
+also affect Phase 2 implementation and that “[n]o OSP with customers that choose to utilize a PS/ALI
+service will have the location data necessary to route and deliver 911 calls in a Phase 2 compliant format
+unless that data is provided by the PS/ALI customers.”31
+          10.     Verizon’s proposed solution. To obtain location data from its MLTS customers using
+PS/ALI services, Verizon developed a template form for such customers to provide updated location
+information, which Verizon will use to populate the Intrado NG911 solution.32 According to Verizon, the
+template solution will be implemented at no cost to its MLTS customers.33 In addition, Verizon states
+that it communicated this solution and the process for updating customer records to Massachusetts,
+relevant NGCS providers, and 911 Authority stakeholders, and that it intends to “separately communicate
+directly with its own enterprise voice dialtone customers as soon as possible after the solution is
+available.”34 Verizon states that the additional time requested in the Petition is needed to afford impacted
+MLTS customers “a meaningful period to implement the address database updates necessary to continue
+
+22 Id. at 6.
+
+23 Id. at 6-7.
+
+24 Id. at 7.
+
+25 Id. at 7 n.11.
+
+26 Id. at 7 (noting that customers who subscribe to a third-party PS/ALI service typically do not provide Verizon
+
+their location information because doing so would be a “redundant effort”).
+27 Id.
+
+28 Id. at 8.
+
+29 Id.
+
+30 Id. at 7.
+
+31 Id. at 7 n.12.
+
+32 Verizon Reply at 4.
+
+33 Id.
+
+34 Verizon Petition at 8 n.13.
+                             Verizon explains that it has contact information for its customers that have a PS/ALI
+agreement with Verizon but that customers using a PS/ALI service not provided by Verizon do not always identify
+the telephone numbers managed by the third-party PS/ALI service. Verizon has developed an outreach program to
+reach these customers but asserts that some PS/ALI users are not reachable. See Verizon Sept. 8 Ex Parte at 3.
+                                                          4
+                                    Federal Communications Commission                                 DA 26-1042
+
+to route 911 calls and deliver dispatchable location information to the appropriate PSAP.”35 Further,
+Verizon notes that its solution “will accommodate affected PS/ALI customers across Verizon’s national
+wireline footprint.”36
+         11.      Since Verizon filed its Petition, it has provided updates in the record describing
+additional steps taken to implement its solution. Verizon conducted outreach to “educate external
+stakeholders” and “communicate[d] directly with potentially affected enterprise voice dialtone
+customers.”37 To raise awareness of the issue, Verizon briefed representatives from major public safety
+associations, industry standards bodies, additional NGCS providers, state- and county-level 911
+Authorities, and other wireline OSPs that may encounter PS/ALI challenges.38 Verizon also reached out
+to all 911 Authorities that had filed Phase 1 requests as of mid-March.39 In addition, Verizon launched a
+public-facing webpage for enterprise customers that explains the PS/ALI issue and Verizon’s template-
+based solution.40 Verizon also worked with Massachusetts and Allerium to identify MLTS customers that
+provided location data to the Massachusetts ALI database rather than through a PS/ALI service.41 On
+September 8, 2026, Verizon indicated that it has developed a process to review the daily report of 911
+calls sent to the Intrado ECRC and investigate any calls routed to the ECRC from an enterprise
+customer.42 Once Verizon identifies a customer who has used the ECRC, it will reach out to the customer
+to “educate the enterprise of the need for Verizon to obtain the device location data to incorporate it into
+the Intrado solution.”43 Verizon asserts that under this approach, some PS/ALI users are not reachable
+and may have their calls routed to the Intrado ECRC for reasons outside of Verizon’s control.44
+         12.     Supplemental filings and current status of Verizon’s Phase 1 deployment. On July 7,
+2026, Verizon stated that it had either deployed or expected to deploy Phase 1 for all wireline traffic in
+jurisdictions covered by the waiver request by the end of July 2026.45 Verizon also stated that it had
+communicated with 911 Authorities “the relevant information concerning the PS/ALI issue” and had
+“discussed the matter with their NGCS vendors.”46 In addition, Verizon indicated that it would move
+
+
+
+
+35 Verizon May 28 Ex Parte at 1.
+
+36 Verizon Petition at 8.
+
+37 Verizon May 28 Ex Parte at 1.
+
+38 Id.
+
+39 Id.
+
+40 Verizon, Verizon Business Wireline 9-1-1 Support, https://www.verizon.com/business/support/product-
+
+support/products/wireline-911-location-management/ (last visited Sept. 18, 2026).
+41 Verizon Reply at 2.
+
+42 Verizon Sept. 8 Ex Parte at 3.
+
+43 Id.
+
+44 Verizon explains that a PS/ALI user’s 911 call may still be routed to the Intrado ECRC if the customer’s contact
+
+data is outdated, merger activity or corporate reorganization has moved the customer’s responsibility for 911
+location management to another department or subsidiary, the 911 caller cannot identify who is responsible for
+managing 911 location data, the 911 call originated from a device in a public space and Verizon’s attempts to reach
+out to the number are unanswered, or the enterprise uses call forwarding from a security desk to 911 and the security
+desk personnel are not associated with the team that manages voice technologies for the enterprise. Id.
+45 Verizon July 7 Ex Parte at 2.
+
+46 Id.
+
+
+                                                         5
+                                    Federal Communications Commission                                 DA 26-1042
+
+forward with Phase 1 deployment in these jurisdictions unless “911 Authorities request that [Verizon]
+delay implementation.”47
+         13.      On August 19, 2026, at the request of the Bureau, Verizon further supplemented its
+Petition with a list of the wireline Phase 1 requests submitted within the time period covered by the
+Petition.48 The supplemental filing also provided the known implementation status as of August 18, 2026,
+for each jurisdiction covered by the Petition.49 Verizon indicated that it began migrating TDM wireline
+customers in Massachusetts to Verizon’s Phase 1 solution on July 6, 2026, and that all TDM customers in
+the Commonwealth were migrated to Phase 1 by July 27, 2026.50 Further, Verizon stated that “Phase 1
+deployment for the remaining jurisdictions subject to the waiver request was completed or substantially
+completed on or about June 2, 2026.”51
+        14.       Public Notice and comments. On April 24, 2026, the Bureau issued a Public Notice
+seeking comment on Verizon’s waiver request.52 The Bureau received comments from the South
+Carolina Revenue and Fiscal Affairs Office, CTIA, USTelecom – The Broadband Association, the Joint
+Texas 9-1-1 Districts, and Massachusetts. The Bureau received reply comments from Verizon, INdigital
+Telecom, and Intrado. Commenters in support of Verizon’s Petition noted that the Commission
+recognized the need for flexibility in NG911 implementation timelines in the NG911 Transition Order,
+particularly for first time efforts to implement NG911.53 In addition, commenters asserted that service
+providers who have acted in good faith to meet implementation deadlines should not be penalized for
+unforeseeable technical challenges.54
+         15.      Commenters opposing the Petition argued that an extension of the Phase 1 deadlines
+would delay the nationwide transition to NG911 and place additional financial burdens on 911
+Authorities by requiring the continued support of legacy services.55 The Texas 911 Districts also opposed
+granting a blanket waiver for all Phase 1 requests filed within the identified time periods and requested
+that relief be limited to specifically identified markets where the PS/ALI limitations are present.56
+Finally, Massachusetts asserted that Verizon’s implementation efforts revealed a gap in MLTS call
+routing that only existed because Verizon made the business decision several years ago to cease providing
+PS/ALI services for MLTS customers in Massachusetts and other markets.57
+       16.     Requested conditions. In comments, Massachusetts encouraged the Bureau to require
+Verizon and other OSPs seeking waivers to provide a detailed plan specifying how the OSPs intend to
+
+
+
+47 Id. Verizon indicated that as of July 7, 2026, no 911 Authority had asked it not to implement Phase 1 in response
+to the PS/ALI issue.
+48 Verizon Aug. 19 Ex Parte, Attach.
+
+49 Id.
+
+50 Id. at 1.
+
+51 Id.
+
+52 Public Safety and Homeland Security Bureau Seeks Comment on Verizon Petition for Waiver of Next Generation
+
+911 (NG911) Phase 1 Deadlines, PS Docket Nos. 21-479 and 25-143, Public Notice, DA 26-407 (PSHSB Apr. 24,
+2026).
+53 CTIA Comments at 2-3; USTelecom – The Broadband Association Comments at 2 (USTelecom Comments).
+
+54 CTIA Comments at 3; USTelecom Comments at 3.
+
+55 INdigital Telecom Reply at 3 (INdigital Reply); Joint Texas 9-1-1 Districts Comments at 4 (Texas 9-1-1 Districts
+
+Comments); South Carolina Revenue and Fiscal Affairs Office Comments at 1-2 (South Carolina RFA Comments) .
+56 Texas 9-1-1 Districts Comments at 3.
+
+57 Massachusetts State 911 Department Comments at 7 (Massachusetts Comments).
+
+
+                                                         6
+                                     Federal Communications Commission                                   DA 26-1042
+
+achieve compliance with the NG911 rules.58 Massachusetts asked the Bureau to “require Verizon to
+assume all expenses associated with the services performed by the third-party transport provider (funded
+by State 911) retroactive to October 4, 2025 (State 911’s Phase 1 compliance date) until such time they
+connect directly to the NG911 Designated Delivery Point.”59 In addition, after Verizon implemented its
+template-based solution in Massachusetts, the Commonwealth raised concerns regarding the adequacy of
+Verizon’s notice to MLTS operators and the number of MLTS 911 calls still being routed to the Intrado
+ECRC.60
+III.      DISCUSSION
+         17.     Waiver standard. Section 1.3 of the Commission’s rules provides that the Commission
+may “on its own motion or on petition” waive a rule “for good cause shown, in whole or in part, at any
+time.”61 The Commission may find that the “good cause” standard is met only if: (1) “special
+circumstances warrant a deviation from the general rule”; and (2) “such deviation will serve the public
+interest.”62 Section 1.925(b)(3) of the rules provides that the Commission may grant a waiver when either
+(i) the underlying purpose of the rule(s) “would not be served or would be frustrated by application to the
+instant case,” and a grant of the requested waiver would be in the public interest, or (ii) in view of unique
+or unusual factual circumstances of the instant case, application of the rule(s) would be “inequitable,
+unduly burdensome or contrary to the public interest, or the applicant has no reasonable alternative.”63
+The waiver standard under these two rule sections is “virtually identical.”64 With respect to NG911
+implementations, the Commission stated in the NG911 Transition Order that the waiver process is
+available for “providers facing extraordinary circumstances,” particularly in the context of OSPs
+connecting with ESInets and NGCS service providers for the first time.65 After consideration of the
+Verizon Petition and the record in this proceeding, we find that good cause exists under the special
+circumstances of this case and that it is in the public interest to grant Verizon a limited waiver of the
+Phase 1 deadline, subject to the conditions set forth below.
+         18.      Verizon has shown special circumstances warranting a waiver. We find that Verizon has
+shown special circumstances that warrant a waiver in this instance. On March 25, 2025, the NG911
+transition rules took effect authorizing 911 Authorities to submit Phase 1 and Phase 2 requests, thereby
+triggering implementation deadlines for OSPs.66 Massachusetts filed its Phase 1 request 10 days later, on
+April 4, 2025. Accordingly, Verizon’s implementation of Phase 1 in Massachusetts was one of its earliest
+wireline NG911 deployments. As Verizon initiated deployment in Massachusetts, its connectivity testing
+uncovered the issue involving location information for MLTS using third-party PS/ALI service and the
+
+
+58 Id. at 9.
+
+59 Id.
+
+60 Letter from Frank Pozniak, Executive Director, Massachusetts State 911 Department, to Marlene H. Dortch,
+
+Secretary, FCC, PS Docket 21-479 at 2 (filed July 31, 2026) (Massachusetts July 31 Ex Parte).
+61 47 CFR § 1.3.
+
+62 Ne. Cellular Tel. Co. v. FCC, 897 F.2d 1164, 1166 (D.C. Cir. 1990); see also WAIT Radio v. FCC, 418 F.2d 1153,
+
+1157 (D.C. Cir. 1969) (stating that an agency’s discretion to proceed in difficult areas through general rules is
+“intimately linked to the existence of a safety valve procedure for consideration of an application for exemption
+based on special circumstances”).
+63 47 CFR § 1.925(b)(3).   Section 1.925 applies to waiver of rules associated with licenses or applications in the
+Wireless Radio Services.
+64 See Delta Radio Inc., Memorandum Opinion and Order, 18 FCC Rcd 16889, 16891, para. 7 (2003) (affirming
+
+Bureau-level waiver denial and citing BellSouth Corp. v. FCC, 162 F.3d 1215, 1225 n.10 (D.C. Cir. 1999)).
+65 NG911 Transition Order, 39 FCC Rcd at 8194, para. 127 (citing 47 CFR § 1.3).
+
+66 See 47 CFR § 9.30; NG911 Implementation Public Notice.
+
+
+                                                           7
+                                    Federal Communications Commission                                   DA 26-1042
+
+parties agreed to extend Verizon’s initial wireline Phase 1 deadline to March 13, 2026.67 We find that
+under the circumstances presented by Verizon, this issue was novel and not foreseeable, and that Verizon
+reasonably needed additional time beyond March 13, 2026, to address the issue with potentially affected
+MLTS PS/ALI customers before implementing Phase 1 in the relevant jurisdictions.
+         19.      We also find that Verizon’s uncovering of the MLTS PS/ALI issue is the sort of “first-
+time” transition challenge that warrants flexibility under the Commission’s NG911 rules. USTelecom
+asserts that Verizon took “the actions the Commission would expect of an OSP in these circumstances –
+i.e., coordination with 911 Authorities and vendors, troubleshooting and remediation of issues revealed in
+testing, and a path forward to compliance.”68 Similarly, CTIA states that Verizon’s Petition describes
+“the very circumstances that warrant flexible timeframes to accommodate the complicated NG911
+implementation variables that 911 Authorities, PSAPs and OSPs may encounter, especially in the
+‘onboarding phase’ of initial deployments.”69
+         20.      We disagree with the suggestion that Verizon should have foreseen the PS/ALI issue
+earlier because of its prior business decision not to provide its own PS/ALI service.70 Verizon was free to
+make this business decision, and the record does not indicate that Verizon should have anticipated at that
+time that its decision might impact future transition to NG911. In fact, Verizon appears to have been the
+first OSP to discover the impact of this issue on the NG911 transition, and Verizon and other commenters
+have since recognized that the issue extends beyond Massachusetts and may affect any OSP with
+customers who have chosen to use a PS/ALI service.71 As Intrado notes, “No other carriers, 9-1-1
+vendors, or industry experts identified this architectural interaction between legacy PS/ALI products and
+Phase 1 SIP connectivity until Verizon’s January 2026 [FOA] testing revealed it.”72
+        21.      Granting the waiver serves the public interest. In addition, we find that granting Verizon
+a limited Phase 1 extension serves the public interest because resolving the PS/ALI issue will lead to
+proper routing of MLTS 911 calls and will reduce or eliminate calls that otherwise would be routed to a
+national relay center. We agree with Massachusetts that routing 911 calls to a relay center should be
+minimized because it can cause a delay in police, fire, and ambulance response times.73 But we also find
+that once Verizon identified the MLTS PS/ALI issue, it responded in a manner that was reasonable and
+proactive. Verizon promptly brought the issue to the attention of Massachusetts, Allerium, the
+Commission, other OSPs, and 911 Authorities. Verizon also worked with Intrado to develop a solution
+enabling it to obtain location data from its TDM-based MLTS customers. Verizon established and tested
+
+67 Massachusetts submitted its original Phase 1 request for all OSPs on April 4, 2025, which established a deadline
+
+of October 4, 2025, for Verizon to implement Phase 1. Massachusetts and Verizon subsequently agreed to two
+extensions of Verizon’s wireline Phase 1 deadline, the first extending the deadline to November 21, 2025, and the
+second extending the deadline to March 13, 2026.
+68 USTelecom Comments at 3.
+
+69 CTIA Comments at 3; see also Intrado Reply at 6 (stating that the PS/ALI issue identified by Verizon is
+
+“precisely the kind of novel, unforeseen implementation challenge that the Commission’s NG9-1-1 Transition Order
+and general waiver framework under Section 1.3 of the Commission’s rules exist to address”).
+70 Massachusetts Comments at 7 (noting that Verizon “made the business choice” not to provide PS/ALI service for
+
+most or all of its Time Division Multiple Access (TDMA) customers); see also Texas 9-1-1 Districts Comments at 3
+(asserting that the PS/ALI issue was foreseeable); INdigital Reply at 2 (asserting that Verizon’s inability to meet its
+Phase 1 deadlines was foreseeable).
+71 See Verizon Petition at 7 and 7 n.12; see also Intrado Reply at 5-6 (stating that the PS/ALI issue “has implications
+
+for OSPs and State 911 Authorities well beyond Massachusetts”); USTelecom Comments at 3 (stating that
+Verizon’s testing “revealed an issue with implications for OSPs and 911 Authorities beyond Verizon and
+Massachusetts”).
+72 Intrado Reply at 5.
+
+73 Massachusetts July 31 Ex Parte at 2.
+
+
+                                                           8
+                                    Federal Communications Commission                               DA 26-1042
+
+this process internally and indicates that it has been used successfully.74 Extending the Phase 1 deadlines
+for a limited time will allow Verizon to continue its efforts to identify these customers and inform them of
+the need to provide their location information, and for these customers to provide the information to
+Verizon. Once this information is available to Verizon and Intrado, the need to route such calls to a relay
+center should be reduced or eliminated.
+         22.     The Texas 9-1-1 Districts note that Verizon’s initial Petition did not identify specific
+markets other than Massachusetts and instead sought relief for unspecified “other markets where the
+PS/ALI limitation is present.”75 These commenters also assert that Verizon’s requested relief should be
+limited to specifically identified markets where the PS/ALI limitation is present, and they urge the
+Commission not to grant a “blanket” waiver.76 We agree. At the Bureau’s request, Verizon has
+supplemented its Petition by identifying the specific jurisdictions where it has encountered the PS/ALI
+issue and has not entered an agreement with the relevant 911 Authority allowing it additional time to
+implement its solution.77 We have listed those jurisdictions in the Appendix to this Order, and the Phase 1
+extension we grant to Verizon is limited to the jurisdictions identified in the Appendix. In addition, the
+extension we grant herein is limited in duration. In the case of Massachusetts, it extends Verizon’s
+wireline Phase 1 deadline by three and a half months from the March 13, 2026, deadline previously
+agreed upon by Massachusetts and Verizon. In no case will Verizon receive an extension later than July
+31, 2026. Accordingly, we find that the waiver is narrowly tailored and does not provide overly inclusive
+“blanket” relief to Verizon.
+         23.      Further, we believe the waiver will not unduly delay the transition to NG911 or
+inappropriately shift costs to 911 Authorities, as some commenters assert.78 To the contrary, by
+implementing a solution to the PS/ALI issue before deploying NG911 in a live environment, Verizon will
+be able to more efficiently deploy both Phase 1 and Phase 2 for MLTS not only in Massachusetts but also
+in other jurisdictions. In addition, Verizon has raised awareness of the MLTS issue with other OSPs and
+911 Authorities so that they can address it as well without necessarily needing Phase 1 or Phase 2
+extensions.
+         24.     We emphasize that the extension of time granted to Verizon is limited to the situation and
+facts that Verizon has presented. If other OSPs submit waiver requests raising similar issues, we will
+evaluate such requests based on their specific circumstances, which may differ from Verizon’s. We also
+note that since Verizon has raised awareness of the MLTS PS/ALI issue among OSPs and in the public
+record, we consider all OSPs nationwide to be on notice of the need to assess whether they will face
+similar issues when deploying Phase 1 (or Phase 2) for wireline services in all jurisdictions they serve.
+Wireline OSPs should therefore promptly examine whether they have TDM-based MLTS customers
+using PS/ALI services and begin efforts to obtain location information for such customers, even if they
+have not yet received a Phase 1 or Phase 2 request. Similarly, MLTS operators and managers using TDM
+systems and third-party PS/ALI services should work with their OSPs to help ensure that MLTS 911 calls
+will be routed successfully in Phase 1 and Phase 2.
+        25.      Verizon’s wireless waiver request. Verizon also seeks a waiver of the Phase 1
+implementation deadline for its wireless service in Massachusetts.79 Massachusetts’ original Phase 1
+request established a deadline of October 4, 2025, for Verizon Wireless to complete Phase 1, and
+Massachusetts and Verizon mutually agreed to extend this deadline to January 9, 2026. Since the Petition
+
+74 Verizon May 28 Ex Parte at 2.
+
+75 Texas 9-1-1 Districts Comments at 3 (quoting Verizon Petition at 8).
+
+76 Id.
+
+77 See Verizon Aug. 19 Ex Parte, Attach.; see also Verizon Sept. 8 Ex Parte (updating Verizon’s Aug. 19 Ex Parte).
+
+78 See INdigital Reply at 3; South Carolina RFA Comments at 1-2; Texas 9-1-1- Districts Comments at 1, 4-5.
+
+79 Verizon Petition at 9.
+
+
+                                                         9
+                                    Federal Communications Commission                                  DA 26-1042
+
+was filed, Verizon and Massachusetts have agreed that Verizon Wireless completed Phase 1 as of March
+31, 2026, at no cost to Massachusetts.80 Because Verizon was Phase 1 compliant with respect to its
+wireless service prior to submitting its Petition, we agree that this issue is “no longer a matter of dispute,”
+and we dismiss this portion of Verizon’s Petition as moot.81
+         26.     Other issues raised in the record. In responding to Verizon’s Petition, a number of
+parties have raised additional NG911 implementation issues in the record unrelated to the PS/ALI issue,
+including aggregation of non-MLTS calls and implementation of Phase 2.82 We find these issues to be
+outside the scope of Verizon’s requested relief and decline to address them here. In particular, we agree
+with Intrado that because Verizon’s waiver request only sought relief for Phase 1, issues relating to Phase
+2 compliance (by Verizon or any other OSP) are outside the scope of this Order.83
+        27.     Waiver grant and conditions. In sum, we find that good cause exists under the special
+circumstances of this case and that it is in the public interest to conditionally grant Verizon’s request for a
+waiver of the Commission’s wireline Phase 1 implementation deadlines, as follows:
+    •    Through June 30, 2026, in Massachusetts and other jurisdictions identified in the Appendix that
+         filed Phase 1 requests prior to November 1, 2025; and
+    •    Through July 31, 2026, in jurisdictions identified in the Appendix that filed Phase 1 requests
+         between November 1, 2025, and January 31, 2026.
+        28.       We agree with Massachusetts on the importance of ensuring that Verizon takes all
+necessary actions to resolve the MLTS PS/ALI issue as quickly and comprehensively as possible. We
+therefore grant the waiver request subject to the following conditions. First, we require that within 45
+days after the release of this Order, Verizon must use its best efforts to individually contact all of its
+MLTS customers who use PS/ALI services and inform them of the need to provide their location
+information, with updates, to Verizon on an ongoing basis. This condition will help to ensure that
+Verizon completes the process of notifying its MLTS PS/ALI customers in a timely manner. It also
+responds to Massachusetts’ objection that the notice Verizon has provided to its customers concerning the
+PS/ALI issue has not been adequate.84 We agree with Massachusetts on the importance of ensuring that
+notice of this issue reaches as many of Verizon’s MLTS PS/ALI customers as possible and accordingly
+require Verizon to use its best efforts to notify these customers individually.
+        29.      Second, we require Verizon to report to the Bureau on its progress in implementing its
+solution to the MLTS PS/ALI issue. Specifically, we require Verizon to report its progress in identifying
+
+80 Verizon July 7 Ex Parte at 1; see also Verizon Petition at 2 (stating that Verizon collaborated with Massachusetts
+
+and “after resolving unforeseen technical issues” was Phase 1 compliant for wireless service by March 31, 2026);
+Massachusetts Comments at 8 (stating that Massachusetts “agrees that Verizon Wireless has obtained Phase 1
+compliance”); Letter from Frank Pozniak, Executive Director, Massachusetts State 911 Department, to Marlene H.
+Dortch, Secretary, FCC, PS Docket No. 21-479 at 3 (filed June 25, 2026) (Massachusetts June 25 Ex Parte)
+(agreeing that “Verizon Wireless has established Phase 1 connectivity at no cost to the Department”).
+81 Verizon July 7 Ex Parte at 1.
+
+82 For example, the record reveals disagreement between Massachusetts, Verizon, and Intrado regarding Verizon’s
+
+use of multiple aggregation services to deliver Phase 1 wireline 911 traffic to Massachusetts’ NG911 Delivery
+Points. Compare Intrado Reply at 5 (asserting that the Commission’s rules support the use of aggregation services
+for OSPs and their vendors to connect to NG911 Delivery Points) with Massachusetts June 25 Ex Parte at 2
+(disagreeing with Intrado and asserting that the Commission’s rules apply to OSPs and not aggregators). See also
+Massachusetts Comments at 7 (raising concerns that Verizon MLTS customers must “configure their MLTS to dial
+a ten-digit number in order to ‘connect to 911’”).
+83 Intrado Reply at 6 (asking the Bureau to “decline to address or resolve Phase 2 compliance questions in the
+
+context of Verizon’s waiver request for an extension of time to deploy Phase 1”).
+84 See Massachusetts July 31 Ex Parte at 2 (asserting that the notice Verizon provided has been ineffective).
+
+
+                                                         10
+                                 Federal Communications Commission                            DA 26-1042
+
+its MLTS customers who use PS/ALI service; notifying these customers individually of their obligation to
+provide location information to Verizon; and using such information to route 911 calls from these
+customers to the appropriate PSAP. We also require Verizon to report the number of calls from its MLTS
+PS/ALI customers that are routed to Intrado’s ECRC and the changes in that number over the period of
+time covered by the report. Verizon shall provide this information to the Bureau with an initial report due
+60 days after the release of this Order and shall provide an update of the initial report 120 days after the
+release of this Order.
+IV.     ORDERING CLAUSES
+        30.     Accordingly, IT IS ORDERED that pursuant to Section 4(i) of the Communications Act,
+as amended, 47 U.S.C. § 154(i), and sections 1.3 and 1.925 of the Commission’s Rules, 47 CFR §§ 1.3,
+1.925, the Verizon Petition for Waiver is GRANTED IN PART and DISMISSED AS MOOT IN PART
+as described and with the conditions specified herein.
+       31.    These actions are taken under delegated authority pursuant to sections 0.191 and 0.392 of
+the Commission’s Rules, 47 CFR §§ 0.191, 0.392.
+
+
+
+                                                 FEDERAL COMMUNICATIONS COMMISSION
+
+
+
+
+                                                 Zenji Nakazawa
+                                                 Chief
+                                                 Public Safety and Homeland Security Bureau
+
+
+
+
+                                                    11
+                                   Federal Communications Commission                                 DA 26-1042
+
+                                                  APPENDIX
+                                    Jurisdictions Covered by the Waiver
+
+                                                                                        Date          Waiver
+                         911 Authority Name1                                 State    Posted to     Compliance
+                                                                                       ECFS2         Deadline
+Massachusetts State 911 Department                                            MA       4/4/2025       6/30/2026
+Indiana 911 Board                                                             IN       5/7/2025       6/30/2026
+Charleston County Consolidated Emergency Communications
+                                                                              SC      5/19/2025       6/30/2026
+Center (South Carolina)
+Alachua County 911 (Florida)                                                  FL      5/20/2025       6/30/2026
+Ozark County 911 (Missouri)                                                   MO      6/13/2025       6/30/2026
+St. Johns County 911 (Florida)                                                FL      6/16/2025       6/30/2026
+Taylor County 911 (Florida)                                                   FL      6/17/2025       6/30/2026
+Columbia County 911 (Florida)                                                 FL      6/20/2025       6/30/2026
+Duval County 911 (Florida)                                                    FL      6/23/2025       6/30/2026
+Madison County 911 (Florida)                                                  FL      6/23/2025       6/30/2026
+South Carolina Revenue and Fiscal Affairs Office (SC Wireless 911
+                                                                              SC      6/25/2025       6/30/2026
+Program)
+Bradford County 911 (Florida)                                                 FL      6/27/2025       6/30/2026
+Berkeley County South Carolina 911                                            SC      6/27/2025       6/30/2026
+Doniphan Police Department 911 (in Ripley County, Missouri)                   MO       7/2/2025       6/30/2026
+Beaufort County 911 (South Carolina)                                          SC       7/2/2025       6/30/2026
+Flagler County 911 (Florida)                                                  FL       7/3/2025       6/30/2026
+Putnam County 911 (Florida)                                                   FL      7/10/2025       6/30/2026
+Nassau County 911 (Florida)                                                   FL      7/16/2025       6/30/2026
+Henry County 911 (Missouri)                                                   MO      7/16/2025       6/30/2026
+Webster County 911 (Missouri)                                                 MO      7/16/2025       6/30/2026
+Howell County 911 (Missouri)                                                  MO      7/17/2025       6/30/2026
+Polk County 911 (Florida)                                                     FL      7/21/2025       6/30/2026
+Gulf County 911 (Florida)                                                     FL      7/21/2025       6/30/2026
+North Central Texas Emergency Communications District (NCT
+                                                                              TX      7/25/2025       6/30/2026
+9-1-1)
+Baker County 911 (Florida)                                                    FL      7/30/2025       6/30/2026
+Gilchrist County 911 (Florida)                                                FL      7/30/2025       6/30/2026
+Horry County South Carolina 911                                               SC      7/31/2025       6/30/2026
+Wright County Missouri 911                                                    MO      7/31/2025       6/30/2026
+City of Goose Creek (in Berkeley County) South Carolina                       SC       8/5/2025       6/30/2026
+
+
+1 As provided on NG911 Valid Request Forms in PS Docket No. 25-143.      See
+https://www.fcc.gov/ecfs/search/search-filings/results?q=(proceedings.name:(“25-143”)).
+2 In cases where the 911 Authority has filed an amendment to its initial request, this column shows the amendment
+
+date.
+                                                        12
+                                     Federal Communications Commission                                    DA 26-1042
+
+
+                                                                                             Date           Waiver
+                          911 Authority Name1                                    State     Posted to      Compliance
+                                                                                            ECFS2          Deadline
+Benton County 911 Missouri                                                        MO       8/6/2025        6/30/2026
+Dent County 911 Missouri                                                          MO      8/20/2025        6/30/2026
+Hillsborough County 911 (Florida)                                                 FL      8/26/2025        6/30/2026
+St Francois County Communications Center (Perry, Iron, St.
+                                                                                  MO      9/17/2025        6/30/2026
+Francois & Ste. Genevieve) - Missouri
+Texas Eastern 9-1-1 Network                                                       TX      11/25/2025       7/31/2026
+Ark-Tex Council of Governments                                                    TX      11/13/2025       7/31/2026
+Concho Valley Council of Governments                                              TX      11/13/2025       7/31/2026
+City of Kilgore                                                                   TX      11/14/2025       7/31/2026
+El Paso County 911 District                                                       TX      11/17/2025       7/31/2026
+North Texas Emergency Communications Center                                       TX      11/14/2025       7/31/2026
+Panhandle Regional Planning Commission                                            TX      11/14/2025       7/31/2026
+Ohio Department of Administrative Services 9-1-1 Program Office
+                                                                                  OH      11/14/2025       7/31/2026
+(“Ohio 911 Program Office”)3
+City of Denison Police Department                                                 TX      11/17/2025       7/31/2026
+City of Sherman Police Department                                                 TX      11/17/2025       7/31/2026
+City of DeSoto, City of Cedar Hill, City of Duncanville4                          TX       12/8/2025       7/31/2026
+Midland County Emergency Communications District                                  TX       1/23/2026       7/31/2026
+
+
+
+
+3 Specific to PSAPs in Hardin County and Perry County, Ohio.       See https://www.fcc.gov/ecfs/filing/111465315188.
+Additionally with regard to Ohio, Verizon states that it “has completed provisioning VoIP customers, but has held
+further efforts to deliver 911 calls via SIP in abeyance at the State’s request pending resolution of a technical matter
+with the underlying NGCS provider.” Verizon Sept. 8 Ex Parte at 2.
+4 Verizon lists this 911 Authority as “Southwest Regional Comm Cen TX” with an original request date of
+
+11/7/2025. Verizon Aug. 19 Ex Parte, Attach. at 2. The 911 Authority filed a Phase 1 request form (identifying
+“City of DeSoto, City of Cedar Hill, City of Duncanville” as the 911 Authority name at question 1 and “Southwest
+Regional Communications Center” as the filer’s agency in question 3) that posted to ECFS on November 13, 2025
+(https://www.fcc.gov/ecfs/filing/11070458715785). The same 911 Authority filed an amended Phase 1 request form
+(with a modification at question 7) that posted to ECFS on December 8, 2025
+(https://www.fcc.gov/ecfs/filing/120821888407).
+                                                           13
+
