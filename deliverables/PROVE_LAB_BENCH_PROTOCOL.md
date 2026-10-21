@@ -26,6 +26,17 @@ Only a bench can settle it. Everything below is safe, legal and doable by two st
 | Phone with a field-test app (Android: Network Cell Info / NetMonster) | RSRP/RSRQ/SINR at each placement | (own) |
 | Lithium and alkaline AA, a kill-a-watt or USB power meter, a stopwatch | Battery runtime | $25 |
 
+## 2a. Control arms (required: report differences, not absolutes)
+The call path is long: panel -> box -> Verizon VoLTE/IMS -> interconnect -> our SIP DID provider -> Asterisk. Any leg can mangle 50-60 ms DTMF digits, so a raw "44/50" proves nothing about Verizon. Run three arms with the same panel and receiver on the same day:
+- **(A) LAN baseline:** panel -> HT813 FXS -> Asterisk on the LAN (G.711, in-band DTMF). It must be about 100%; otherwise our receiver is the problem.
+- **(B) Non-Verizon path:** the same panel through a different carrier's line to the same DID.
+- **(C) Verizon box:** panel -> BPC100 / Voice Gateway -> the same DID.
+- **Dual taps:** record at the panel's line side and at Asterisk, so a failure can be placed on a leg.
+- **Receiver limits:** Asterisk AlarmReceiver decodes Ademco DTMF formats (Contact ID, 4+1/4+2) only. It cannot decode SIA FSK or pulse 4/2, so never report SIA or 4/2 "failures" from it.
+- **Signal:** read RSRP/RSRQ/SINR from the box's own admin page where available. A phone beside the box is only a labelled proxy.
+- **Hero device:** if orderable, test Verizon's current Voice Gateway (VG10A, customer self-install, alarm numbers in Settings) as the hero and the BPC100 as the second arm. State on screen which device was tested.
+- **Stage reliability:** for the poster and the final, use SMA step attenuators on the box antennas (instant, repeatable "bad signal"), two pre-programmed panels on an A/B switch, a scripted trouble-reset, and Asterisk on a cloud VM.
+
 ## 2. Tests (each produces a row in `field_data/prove_lab.csv`)
 Columns: `test_id, date, box, firmware, placement, rsrp_dbm, rsrq_db, sinr_db, device, format, registered_21, attempt, delivered, kissoff_s, attempts_used, notes`
 
@@ -81,6 +92,11 @@ Run `python3 scripts/analyze_prove_lab.py field_data/prove_lab.csv` (to be writt
 The output table becomes the **Rutgers PROVE Lab matrix** on the poster, and the source of the one line on the video receipt.
 
 ## 4. Ethics and safety
+- **FACTORY-DEFAULT EVERY USED PANEL BEFORE IT TOUCHES A LINE.** A panel bought used can still hold the previous owner's central-station number and account. Powered on with a live line, it can send AC-loss, tamper or low-battery events to a real monitoring company and trigger a dispatch to a stranger's home.
+  - Hardware- or installer-default it, with the phone line disconnected.
+  - Program our DID as the only dial-out number.
+  - Prove it on the LAN baseline arm (A) first.
+  - The faculty sponsor signs off before any panel is connected to a carrier line.
 - Use our own receiver numbers only. No real central station, PSAP or medical-alert center unless it has agreed in writing and a test window is booked.
 - No customer lines. No CPNI. The BPC100 is on a Rutgers department or faculty business account.
 - Results go to the Verizon mentor first if they show a failure. Frame it as "we measured this so it can be fixed", never as a gotcha.
