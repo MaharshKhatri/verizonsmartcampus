@@ -189,5 +189,21 @@ class TestMigrationReceipt(unittest.TestCase):
         self.assertIn("Verizon", loc["owner"])
 
 
+class TestSignalModelAndAnalysis(unittest.TestCase):
+    def test_learned_threshold_is_monotone_and_reasonable(self):
+        from prototype.prove import signal_model
+        res = signal_model.fit(signal_model.synthetic_rows(n=60, seed=3), boot=40)
+        self.assertGreater(res["coef"][1], 0)                       # better signal -> more delivery
+        ps = [c["p_first_try"] for c in res["curve"]]
+        self.assertEqual(ps, sorted(ps))
+        self.assertTrue(0 < res["sinr_for_90pct_first_try_db"] < 20)
+
+    def test_wilson_interval(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
+        import analyze_prove_lab as apl
+        lo, hi = apl.wilson(19, 20)
+        self.assertTrue(0.7 < lo < 0.8 and 0.98 < hi <= 1.0)
+
+
 if __name__ == "__main__":
     unittest.main()
