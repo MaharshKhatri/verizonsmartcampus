@@ -60,7 +60,7 @@ On the record: in FCC 26-19 the Commission declined alarm-compatibility conditio
 No filing says. As a crude range, the alarm committee's 5 million dial-out panels over the FCC's 78 million wireline voice connections is about 6%. Over the 26 million residential connections, it is about 19%. On 46,000 boxes that is roughly 3,000-9,000 households. Verizon can replace the range with an exact count: every box with an alarm number registered via ##21. That is our sixth mentor question.
 
 **12b. "Is the demo running on our box's firmware?"**
-No, and the video says so: on our bench PROVE runs on a tap at the box's alarm port. That tap is Phase 1 of the ask, a pocket device for technicians with no change to the box. Phase 2 is firmware. The box already decodes DTMF to dial, and PROVE adds a Contact ID parser and two tone detectors. `tap.compute_budget()` estimates the cost analytically; it is not yet ported or measured on the box.
+No, and the video says so: on our bench PROVE runs on a tap at the box's alarm port. That tap is Phase 1 of the ask, a pocket device for technicians with no change to the box. Phase 2 is firmware. The box already decodes DTMF to dial, and PROVE adds a Contact ID parser and two tone detectors. `tap.compute_budget()` estimates it at about 0.17 million multiply-accumulates per second and 2 KB of detector state. That is an analytic estimate, not yet ported or measured on the box.
 
 **12c. "You dialled in the one attenuation where voice survives and DTMF fails."**
 We stepped the attenuator in 2 dB steps across the whole range, on Verizon's box and another carrier's box at matched SINR. "Clear" was fixed before the run: PESQ (ITU-T P.862) of at least 3.0, or a blinded listener getting at least 9 of 10 keywords. `scripts/analyze_prove_lab.py` prints every step and flags the gap steps, where calls are clear but alarms are under 90%. The full sweep is on the poster. If the other carrier's box had not shown the same gap, the number would not be in the video.
@@ -80,7 +80,7 @@ Elevator HELP phones are the lifeline that still has no routine proof that someo
 
 **14. "Where's the AI?"**
 Three places, each with its error rate:
-- **A learned SIGNAL threshold.** A logistic model maps the box modem's SINR to the probability that an alarm is delivered on the first try, with bootstrap CIs (`prototype/prove/signal_model.py`). On modelled data it gives about 10 dB SINR for 90% first-try delivery (CI 8.6-11.5). It is refit on bench data, and that refit is the number we would quote. The video shows it as "Signal bar learned from [N] bench alarm tests".
+- **A learned SIGNAL threshold.** A logistic model maps the box modem's SINR to the probability that an alarm is delivered on the first try, with bootstrap CIs (`prototype/prove/signal_model.py`). On modelled data it gives about 10 dB SINR for 90% first-try delivery (CI 8.6-11.5). That figure comes from an assumed worst-case loss model (lost frames zeroed, no concealment), so it is a placeholder, not a prediction. The bench refit is the only number we would quote, and it is labelled "fitted to [N] bench alarm tests on one cell". The video shows it as "Signal bar learned from [N] bench alarm tests".
 - **Fault triage** that routes each failure to its owner. Routing accuracy is 92% in simulation and 87% when our symptom assumptions are wrong by ±15 points.
 - **Plain-language fix instructions** for each failed line. These are rule-based today; an LLM rephrasing step is planned, not built.
 

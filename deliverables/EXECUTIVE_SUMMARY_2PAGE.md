@@ -21,7 +21,7 @@
    - the receiver confirmed it (kiss-off).
    It also checks voice both ways and battery backup. The alarm company still confirms the event on its side, as today.
 2. **AI that sets the bar.**
-   - **Learned signal bar.** A logistic model fitted to bench alarm tests maps the box's SINR to the chance an alarm gets through on the first try, with a confidence interval. It decides GREEN or MOVE THE BOX, judged on the spot's worst season (leaf-on margin). On modelled data the bar is about 10 dB (95% CI 8.6-11.5). It is refit on bench data: [x] dB, CI [a-b], n = [N].
+   - **Learned signal bar.** A logistic model fitted to bench alarm tests maps the box's SINR to the chance an alarm gets through on the first try, with a confidence interval. It decides GREEN or MOVE THE BOX. Until bench data exists, the bar comes from an assumed loss model; it is a placeholder, not a prediction. Bench refit: [x] dB, CI [a-b], from n = [N] bench alarm tests on one cell. Field data refits it in Phase 1. A leaf-on margin is an assumed dB offset, stated as such.
    - **Fault triage.** A triage model routes each failure to its owner: Verizon RF, the alarm company, the customer's batteries, or a copper line not yet moved. It is 92% accurate in simulation, and 87% when our symptom assumptions are off by 15 points.
    - Fix wording is rule-based today.
 3. **A receipt, spoken through the handset and printed or texted.**
@@ -39,7 +39,7 @@
 | Phase | What | When | Cost |
 |---|---|---|---|
 | **1. Pocket PROVE tap** | Technicians on one migration batch's alarm installs carry a pocket tap for 30 days, against a control group. The tap is a Raspberry Pi with a passive, isolated line tap on the box's alarm port, a USB sound card and a battery. It runs our decoder (`prototype/prove/tap.py`), and the receipt goes to the technician's phone. | Ready to start after the bench readout | About $100-200 in parts per tap. No change to the box or the network. |
-| **2. Box firmware** | The same checks shipped to the box through Verizon device management, for self-installs and mail-in swaps. The box already decodes DTMF to dial. PROVE adds a Contact ID parser and two tone detectors (analytic budget: [y] MMAC/s, [z] KB; not yet ported). | Firmware scoping with Inseego after the trial readout | Engineering time only |
+| **2. Box firmware** | The same checks shipped to the box through Verizon device management, for self-installs and mail-in swaps. The box already decodes DTMF to dial. PROVE adds a Contact ID parser and two tone detectors. The analytic budget is about 0.17 million multiply-accumulates per second and 2 KB of detector state; it is not yet ported or measured on the box. | Firmware scoping with Inseego after the trial readout | Engineering time only |
 
 **Pre-registered success rule for Phase 1** (written before the trial, so nobody can move the goalposts):
 - **Primary:** the 30-day repeat-dispatch rate in alarm households, PROVE arm vs control. We report the difference with its 95% CI.
@@ -66,9 +66,9 @@
 | Item | Status |
 |---|---|
 | Copper notices, FCC filings, Verizon device guides, FCC order text | Primary sources read and saved in `research/sources/` |
-| Working prototype (`prototype/prove`) | Contact ID encoder/decoder with handshake and kiss-off detectors; whole-call tap analyser; learned signal bar with bootstrap CIs; fault triage; install, cutover and elevator receipts; hash-chained evidence ledger verified in the browser; live console; [T] automated tests |
+| Working prototype (`prototype/prove`) | Contact ID encoder/decoder with handshake and kiss-off detectors; whole-call tap analyser; learned signal bar with bootstrap CIs; fault triage; install, cutover and elevator receipts; hash-chained evidence ledger verified in the browser; live console; 67 automated tests |
 | Bench at Rutgers | [Filled before submission: arms, n, CIs.] Three arms: lab baseline, another carrier's box, Verizon's box. Attenuation sweep in 2 dB steps at matched SINR. "Clear" means PESQ ≥ 3.0, a pre-registered rule. Results go to Verizon first. |
-| Modelled, labelled as such | Alarm success falls steeply as voice-frame loss rises (5% loss: 13% first try, 60% within 4 tries; 30 simulated calls). |
+| Modelled, labelled as such | Alarm success falls steeply as voice-frame loss rises (5% loss: 13% first try, 60% within 4 tries; 30 simulated calls). This is a worst case: lost frames are zeroed, loss is random, and there is no concealment. A concealment model is in progress. |
 
 **Honest negatives we publish.** Passive "who answered?" detection fails in our simulation of a 2-wire line once the car's location message plays, so we switched to challenge-response.
 
