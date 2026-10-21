@@ -123,3 +123,17 @@ Question: is Circadian the idea that wins, or only the idea we built first? A mu
 - The bench beat now has a decision table, and a complete K1-fallback script exists.
 
 **Sources.** The 277,000 lines in WC 26-227 and the 140,000 in WC 26-170 are now verified from saved primary texts. The Inseego "no fax" claim was withdrawn as unverified.
+
+## Generation 5b/6: three more review rounds (2026-10-21)
+- **Gen 5b (v2 rescore): 70 / 71 / 71, ceilings 78 / 78 / 77.**
+  - v3 cut the script to 253 words and fixed ARMED AWAY.
+  - The ask became two phases: a pocket tap first, firmware second.
+  - Impact got arithmetic and a crude range of 3,000-9,000 alarm households (AICC panels over the FCC's June 2025 voice counts).
+  - The bench gained a second-carrier control and an attenuator sweep.
+  - The poster plan was added.
+- **Built:** `tap.py` decodes a whole call from a line-tap recording and gives an analytic on-box budget (~0.17 MMAC/s, ~2 KB). The sweep analysis and a synthetic rehearsal CSV came with it, for 67 tests.
+- **Gen 6 (v3 rescore): 73 / 76 / 74, ceilings 80 / 84 / 80, plus a film editor and a RAN/VoLTE engineer** (`research/12_gen6_review.md`).
+  - **Method.** The RAN review rebuilt the bench method around delta (how many more dB Contact ID needs than a clear call, measured against each box's own dropout point) and added the T0 DTMF-transport check.
+  - **Sound.** The film review made the kiss-off tone the film's sound signature.
+  - **Video v4.** "Alarm test" and "phone call" are kept separate; both carriers appear on screen together; Verizon technology is named; the catch rate is the primary endpoint; Phase 1 and Phase 2 are described honestly; the decision table gained row 1b (an unregistered alarm number), with the full list of lines each row changes.
+- **Lesson.** Each round of cuts to save words removed something a judge had credited, such as the Verizon technology names and the stock/flow fix. Keep a list of credited elements, and check every cut against it.
