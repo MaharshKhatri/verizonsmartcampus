@@ -94,22 +94,52 @@ footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
 <body>
 <header>
   <span class="dot"></span>
-  <div><h1>Last Copper · PROVE</h1><div class="sub">Every HELP button, proven every night</div></div>
+  <div><h1>PROVE</h1><div class="sub">Sent isn't received: every lifeline Verizon moves arrives with proof</div></div>
   <span class="sp"></span>
   <span class="chip" id="mode">Offline demo</span>
   <button class="btn" id="theme" title="Toggle theme">◐</button>
 </header>
 <main>
   <section class="strip">
-    <div><div class="sub">Verizon NJ copper retirement notice <b id="nid"></b></div>
-      <div class="big"><span id="days"></span> days</div><div class="sub">to "on or after Dec 10, 2026"</div></div>
-    <div style="flex:1;min-width:220px">Piscataway (<span class="mono">PSWYNJPI</span>, home of Busch, Livingston and SHI Stadium) is on the list with <b id="nwc"></b> NJ wire centers.
-      <div class="sub" id="quote"></div>
-      <div style="margin-top:6px"><b>FCC review:</b> <span id="fcc"></span></div></div>
-    <a id="nlink" target="_blank" rel="noopener">Read the notice ↗</a>
+    <div><div class="big">46,000</div><div class="sub">fixed-wireless phone-replacement customers Verizon reports today (Jul 2026 filing)</div></div>
+    <div><div class="big">417,000</div><div class="sub">more legacy lines in two of Verizon's 2026 filings</div></div>
+    <div><div class="big"><span id="natn2"></span></div><div class="sub">wire centers in 2026 copper-retirement notices (<span id="nats2"></span> states)</div></div>
+    <div style="flex:1;min-width:220px" class="sub">Every one of those moves can carry an alarm panel, a medical alert or an elevator HELP button. PROVE gives each one a test record. Sources at the bottom of this page.</div>
   </section>
 
   <div class="grid">
+    <section class="card full">
+      <h2>Plug-and-PROVE: sent isn't received</h2>
+      <p class="note">Verizon's copper-replacement box for homes and small businesses (Voice Connect / Business Phone Connect, the Inseego BPC100) already asks every customer to test their alarm at install. PROVE makes that test one button. It listens to the alarm's own test call through Verizon's network, checks the signal at the box's spot on its worst season, voice both ways, and the batteries, then gives a spoken and printed test record. (Model with labeled assumptions. The Rutgers PROVE Lab measures the real rates.)</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
+        <div style="flex:1;min-width:240px">
+          <div class="rig" id="homerig"></div>
+          <h2 style="margin-top:14px">Alarm data is fragile; voice is not</h2>
+          <p class="note">Contact ID alarm delivery through the ordinary voice path vs frame loss (model). A spot that sounds fine for a phone call can still lose the alarm.</p>
+          <div class="tablewrap"><table id="losscurve"></table></div>
+        </div>
+        <div class="receipt" id="receipt"></div>
+      </div>
+    </section>
+
+    <section class="card full">
+      <h2>SAME ANSWER: every lifeline Verizon moves arrives with proof</h2>
+      <p class="note">Before the cutover, PROVE records what the line does on copper. After it, PROVE runs the same checks on Verizon's replacement path and compares: the number dialed, the caller ID presented (answering centers often look up the building by it), who answers and how fast, the location shown, alarm acknowledgement, and signal judged on its worst season. The receipt is a timestamped test record, not a guarantee.</p>
+      <div class="rig" id="migrig"></div>
+      <div class="tablewrap"><table id="migtab"></table></div>
+      <p class="note" id="migverdict" style="font-weight:700;margin-top:8px"></p>
+    </section>
+
+    <section class="card full">
+      <h2>Who answers? HELP reaches a person, fast, who knows where you are</h2>
+      <p class="note">Elevator code checks the wire and never places a call. From the gateway's port in the machine room (no work in the car), PROVE checks each test or real HELP call. It reads the digits dialed against the building's registry, checks who picked up, checks the answer time against A17.1's 45-second redirect, and confirms the building and car the answerer sees. <b>An honest result:</b> passive "who answered?" detection works on clean audio (<b id="ansclean"></b>) but fails on a real 2-wire line once the car's own location message is on it (<b id="ans8"></b> of real people recognised with an 8-second message). So the test call uses <b>challenge-response</b>: "press 1 and read back the car ID". It recognised <b id="anscr"></b> of people and rejected <b id="ansrej"></b> of machines on the same mixed audio. Synthetic signals; the pilot measures real calls.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
+        <div class="rig" id="ansrig" style="flex:1;min-width:240px"></div>
+        <div class="receipt" id="ansout" style="min-width:280px"></div>
+      </div>
+    </section>
+
+    <section class="card full"><h2>Elevator HELP: the nightly two-tone test (finals pilot)</h2><p class="note">The elevator side of PROVE, for the Rutgers pilot with Facilities. Below: the car-station rig, tonight's test, 60 nights of one car, and how long a broken HELP phone stays broken.</p></section>
     <section class="card">
       <h2>Car station</h2>
       <p class="note" id="carlabel"></p>
@@ -135,36 +165,8 @@ footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
       <p class="note mono" id="hash" style="margin-top:8px"></p>
     </section>
 
-    <section class="card full">
-      <h2>SAME ANSWER: every lifeline Verizon moves arrives with proof</h2>
-      <p class="note">Before the cutover, PROVE records what the line does on copper. After it, PROVE runs the same checks on Verizon's replacement path and compares: the number dialed, the caller ID presented (answering centers often look up the building by it), who answers and how fast, the location shown, alarm acknowledgement, and signal judged on its worst season. The receipt is a timestamped test record, not a guarantee.</p>
-      <div class="rig" id="migrig"></div>
-      <div class="tablewrap"><table id="migtab"></table></div>
-      <p class="note" id="migverdict" style="font-weight:700;margin-top:8px"></p>
-    </section>
 
-    <section class="card full">
-      <h2>Who answers? HELP reaches a person, fast, who knows where you are</h2>
-      <p class="note">Elevator code checks the wire and never places a call. From the gateway's port in the machine room (no work in the car), PROVE checks each test or real HELP call. It reads the digits dialed against the building's registry, checks who picked up, checks the answer time against A17.1's 45-second redirect, and confirms the building and car the answerer sees. <b>An honest result:</b> passive "who answered?" detection works on clean audio (<b id="ansclean"></b>) but fails on a real 2-wire line once the car's own location message is on it (<b id="ans8"></b> of real people recognised with an 8-second message). So the test call uses <b>challenge-response</b>: "press 1 and read back the car ID". It recognised <b id="anscr"></b> of people and rejected <b id="ansrej"></b> of machines on the same mixed audio. Synthetic signals; the pilot measures real calls.</p>
-      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
-        <div class="rig" id="ansrig" style="flex:1;min-width:240px"></div>
-        <div class="receipt" id="ansout" style="min-width:280px"></div>
-      </div>
-    </section>
 
-    <section class="card full">
-      <h2>Plug-and-PROVE: the home box proves itself at install</h2>
-      <p class="note">This is Verizon's copper replacement for homes and small businesses (Voice Connect, the Inseego BPC100). Its own guide says: "Compatibility is determined by your testing of your alarm and/or medical device at time of install". The alarm number must be keyed in by hand (##21), and backup is 3 AA batteries. Today a technician drives out. PROVE runs those checks through the real voice path and prints a receipt. (Model with labeled assumptions. The Rutgers bench measures the real rates.)</p>
-      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
-        <div style="flex:1;min-width:240px">
-          <div class="rig" id="homerig"></div>
-          <h2 style="margin-top:14px">Alarm data is fragile; voice is not</h2>
-          <p class="note">Contact ID alarm delivery through the ordinary voice path vs frame loss (model). A spot that sounds fine for a phone call can still lose the alarm.</p>
-          <div class="tablewrap"><table id="losscurve"></table></div>
-        </div>
-        <div class="receipt" id="receipt"></div>
-      </div>
-    </section>
 
     <section class="card full">
       <h2>One car, 60 nights</h2>
@@ -208,8 +210,10 @@ footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
     </section>
 
     <section class="card full">
-      <h2>The 62 wire centers in notice 2026-03-A-NJ</h2>
-      <p class="note">From Verizon's public notice. New Brunswick is not on the list. Lifeline locations are never shown here.</p>
+      <h2>Sources: New Jersey notice 2026-03-A-NJ and the FCC record</h2>
+      <p class="note">Verizon New Jersey's notice <span id="nid"></span> lists these 62 wire centers, Piscataway among them, for copper retirement "on or after December 10, 2026": <span id="quote"></span> <a id="nlink" target="_blank" rel="noopener">Read the notice ↗</a></p>
+      <p class="note"><b>FCC record:</b> <span id="fcc"></span></p>
+      <p class="note">New Brunswick is not on the list. Lifeline locations are never shown here.</p>
       <div class="wc" id="wc"></div>
     </section>
   </div>
@@ -235,12 +239,10 @@ $("theme").onclick = () => {
 // notice strip
 const N = D.notice;
 $("nid").textContent = N.id + " (" + N.dated + ")";
-$("nwc").textContent = N.wire_centers.length - 1 + " other";
+if (D.national && D.national.total) { $("natn2").textContent = D.national.total.toLocaleString(); $("nats2").textContent = Object.keys(D.national.states).length; }
 $("quote").textContent = "“" + N.quote + "”";
 $("nlink").href = N.url;
 $("fcc").innerHTML = (N.fcc || []).map(f => `<a href="${f.url}" target="_blank" rel="noopener">${esc(f.id)}</a> (${f.date}): ${esc(f.text)}`).join(" ");
-const days = Math.max(0, Math.ceil((new Date(N.implementation + "T00:00:00-05:00") - new Date()) / 86400000));
-$("days").textContent = days;
 $("passdb").textContent = D.pass_db; $("noisedb").textContent = D.noise_only_max_db;
 $("wc").innerHTML = N.wire_centers.map(w => `<span class="${w.clli === "PSWYNJPI" ? "hl" : ""}" title="${esc(w.address)} · ${w.clli}">${esc(w.name)}</span>`).join("");
 
@@ -407,14 +409,14 @@ $("help").onclick = async () => {
 // Plug-and-PROVE receipts
 (function home() {
   const I = D.install; if (!I) return;
-  const names = {all_good: "Everything plugged in right", unregistered: "Alarm number not keyed in (##21)", sia_panel: "Older SIA-format alarm panel", basement: "Box in the basement", no_batteries: "No batteries in the box", medical_untested: "Medical alert, no test window"};
+  const names = {all_good: "Everything plugged in right", unregistered: "Alarm number not keyed in (##21)", sia_panel: "Older SIA-format alarm panel", basement: "Box in the basement", no_batteries: "No batteries in the box", medical_untested: "Medical alert, no test window", leaf_off_trees: "Box under trees, November install"};
   $("homerig").innerHTML = Object.keys(I).map(k => `<button class="btn" data-h="${k}">${names[k] || k}</button>`).join("");
   const show = k => {
     const r = I[k];
     document.querySelectorAll("#homerig button").forEach(b => b.classList.toggle("on", b.dataset.h === k && k !== "all_good"));
-    $("receipt").innerHTML = "PROVE · Voice Connect install check\n" + "-".repeat(36) + "\n" +
+    $("receipt").innerHTML = "PROVE · test record\n" + "-".repeat(36) + "\n" +
       r.lines.map(l => `${l.check.padEnd(8)} <span class="${l.status}">${l.status.padEnd(4)}</span> ${esc(l.detail)}` + (l.fix ? `\n${" ".repeat(14)}→ ${esc(l.fix)}` : "")).join("\n") +
-      "\n" + "-".repeat(36) + `\n<div class="v">${esc(r.verdict)}</div>`;
+      "\n" + "-".repeat(36) + `\n<div class="v">${esc(r.verdict)}</div>Test record, not a guarantee.`;
   };
   document.querySelectorAll("#homerig button").forEach(b => b.onclick = () => show(b.dataset.h));
   show("all_good");

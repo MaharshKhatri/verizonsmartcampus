@@ -51,7 +51,7 @@ def _alarm_check(setup, loss, rng):
     if not setup.alarm_number_registered:
         return ("FAIL", f"Alarm number not registered (##21): alarm calls ride the ordinary voice path "
                         f"(through on the first try {first}/3, delivered {ok}/3)",
-                "Dial ##21*<alarm company number>#, power-cycle the box, re-run PROVE (fix sent by text)", False)
+                "Re-enter the alarm company number (##21*number#), restart the box, press PROVE again", False)
     if ok < 3:
         return ("FAIL", f"Kiss-off received {ok}/3 at this spot: signal too weak for alarm data",
                 "Move the box 1 m toward a window and re-run", False)
@@ -117,7 +117,7 @@ def install_proof(setup, seed=0):
                           "" if r["delivered"] else "Call the monitoring company; ask about a cellular PERS", False))
         else:
             lines.append(("MEDICAL", "WARN", "Not tested: no test window with the monitoring company",
-                          "PROVE texts the monitoring company to book a 5-minute test window", False))
+                          "Book a 5-minute test window with the monitoring company, then re-run", False))
     if "fax" in setup.devices:
         ok = loss < 0.02
         lines.append(("FAX", "OK" if ok else "WARN", f"T.30 handshake at 9600 bps {'completed' if ok else 'retried'}",
@@ -136,8 +136,9 @@ def install_proof(setup, seed=0):
                       "Keep one corded phone on the box", False))
 
     truck = any(t for *_, t in lines)
-    fails = sum(s == "FAIL" for _, s, *_ in lines)
-    verdict = "TRUCK NEEDED" if truck else ("FIX BY TEXT, THEN RE-RUN" if fails else "TRUCK NOT NEEDED")
+    # a life-safety line is green only if signal, alarm and battery are all clean
+    fixes = sum(s == "FAIL" or (s == "WARN" and c in ("SIGNAL", "ALARM", "BATTERY")) for c, s, *_ in lines)
+    verdict = "VISIT NEEDED" if truck else ("FIX AND RE-RUN" if fixes else "GREEN: NO VISIT NEEDED")
     return {"lines": [{"check": c, "status": s, "detail": d, "fix": f, "needs_truck": t} for c, s, d, f, t in lines],
             "verdict": verdict, "place": setup.place}
 
@@ -158,12 +159,12 @@ def scenarios():
 
 
 def receipt_text(res):
-    out = ["PROVE · Voice Connect install check", "-" * 34]
+    out = ["PROVE · test record", "-" * 34]
     for ln in res["lines"]:
         out.append(f"{ln['check']:<8} {ln['status']:<4} {ln['detail']}")
         if ln["fix"]:
             out.append(f"{'':<14}-> {ln['fix']}")
-    out += ["-" * 34, res["verdict"]]
+    out += ["-" * 34, res["verdict"], "Test record, not a guarantee."]
     return "\n".join(out)
 
 
