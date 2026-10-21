@@ -709,6 +709,275 @@
    "place": "interior"
   }
  },
+ "migration": {
+  "elevator_same": {
+   "label": "Hill Center, Car 2",
+   "lines": [
+    {
+     "check": "dials",
+     "before": "7329327211",
+     "after": "7329327211",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "caller_id",
+     "before": "7324451000",
+     "after": "7324451000",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "answered_by",
+     "before": "person",
+     "after": "person",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "ring_s",
+     "before": 12.0,
+     "after": 12.0,
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "location_shown",
+     "before": "Hill Center, Car 2",
+     "after": "Hill Center, Car 2",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "signal_worst_season_sinr_db",
+     "before": "copper",
+     "after": 14.0,
+     "status": "OK",
+     "owner": ""
+    }
+   ],
+   "verdict": "SAME ANSWER"
+  },
+  "elevator_new_caller_id": {
+   "label": "Hill Center, Car 2",
+   "lines": [
+    {
+     "check": "dials",
+     "before": "7329327211",
+     "after": "7329327211",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "caller_id",
+     "before": "7324451000",
+     "after": "7325550143",
+     "status": "CHANGED",
+     "owner": "Verizon provisioning (calling number) + answering service (lookup table)"
+    },
+    {
+     "check": "answered_by",
+     "before": "person",
+     "after": "person",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "ring_s",
+     "before": 12.0,
+     "after": 12.0,
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "location_shown",
+     "before": "Hill Center, Car 2",
+     "after": "UNKNOWN CALLER",
+     "status": "CHANGED",
+     "owner": "answering service lookup + Verizon calling number"
+    },
+    {
+     "check": "signal_worst_season_sinr_db",
+     "before": "copper",
+     "after": 14.0,
+     "status": "OK",
+     "owner": ""
+    }
+   ],
+   "verdict": "CHANGED: FIX BEFORE COPPER IS CUT"
+  },
+  "elevator_voicemail": {
+   "label": "Hill Center, Car 2",
+   "lines": [
+    {
+     "check": "dials",
+     "before": "7329327211",
+     "after": "7329327211",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "caller_id",
+     "before": "7324451000",
+     "after": "7324451000",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "answered_by",
+     "before": "person",
+     "after": "voicemail",
+     "status": "CHANGED",
+     "owner": "answering service"
+    },
+    {
+     "check": "ring_s",
+     "before": 12.0,
+     "after": 22,
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "location_shown",
+     "before": "Hill Center, Car 2",
+     "after": "Hill Center, Car 2",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "signal_worst_season_sinr_db",
+     "before": "copper",
+     "after": 14.0,
+     "status": "OK",
+     "owner": ""
+    }
+   ],
+   "verdict": "CHANGED: FIX BEFORE COPPER IS CUT"
+  },
+  "alarm_same": {
+   "label": "Hill Center, Car 2",
+   "lines": [
+    {
+     "check": "dials",
+     "before": "7329327211",
+     "after": "7329327211",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "caller_id",
+     "before": "7324451000",
+     "after": "7324451000",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "alarm_ack",
+     "before": "3/3",
+     "after": "3/3",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "alarm_first_try",
+     "before": "3/3",
+     "after": "3/3",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "signal_worst_season_sinr_db",
+     "before": "copper",
+     "after": 14.0,
+     "status": "OK",
+     "owner": ""
+    }
+   ],
+   "verdict": "SAME ANSWER"
+  },
+  "alarm_unregistered": {
+   "label": "Hill Center, Car 2",
+   "lines": [
+    {
+     "check": "dials",
+     "before": "7329327211",
+     "after": "7329327211",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "caller_id",
+     "before": "7324451000",
+     "after": "7324451000",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "alarm_ack",
+     "before": "3/3",
+     "after": "3/3",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "alarm_first_try",
+     "before": "3/3",
+     "after": "1/3",
+     "status": "CHANGED",
+     "owner": "Verizon (alarm path / signal)"
+    },
+    {
+     "check": "signal_worst_season_sinr_db",
+     "before": "copper",
+     "after": 14.0,
+     "status": "OK",
+     "owner": ""
+    }
+   ],
+   "verdict": "CHANGED: FIX BEFORE COPPER IS CUT"
+  },
+  "alarm_basement_trees": {
+   "label": "Hill Center, Car 2",
+   "lines": [
+    {
+     "check": "dials",
+     "before": "7329327211",
+     "after": "7329327211",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "caller_id",
+     "before": "7324451000",
+     "after": "7324451000",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "alarm_ack",
+     "before": "3/3",
+     "after": "3/3",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "alarm_first_try",
+     "before": "3/3",
+     "after": "3/3",
+     "status": "SAME",
+     "owner": ""
+    },
+    {
+     "check": "signal_worst_season_sinr_db",
+     "before": "copper",
+     "after": 3.0,
+     "status": "MARGINAL",
+     "owner": "customer (placement) or Verizon (antenna)"
+    }
+   ],
+   "verdict": "CHANGED: FIX BEFORE COPPER IS CUT"
+  }
+ },
  "answer": {
   "calls": {
    "A person answers in 12 s": {
@@ -812,9 +1081,19 @@
     }
    }
   },
-  "accuracy": 1.0,
-  "stress_accuracy": 0.936,
-  "stress_person_vs_not": 1.0,
+  "honest": {
+   "passive_clean_person": 1.0,
+   "passive_two_wire_person_car_msg_3s": 0.667,
+   "passive_two_wire_person_car_msg_8s": 0.0,
+   "challenge_two_wire_car_msg_3s": {
+    "person_detected": 1.0,
+    "machine_rejected": 1.0
+   },
+   "challenge_two_wire_car_msg_8s": {
+    "person_detected": 0.917,
+    "machine_rejected": 1.0
+   }
+  },
   "label": "Hill Center, Car 2"
  },
  "alarm": {

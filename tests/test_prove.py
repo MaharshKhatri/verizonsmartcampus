@@ -139,6 +139,15 @@ class TestInstallProof(unittest.TestCase):
 
 
 class TestWhoAnswers(unittest.TestCase):
+    def test_passive_fails_on_two_wire_but_challenge_response_holds(self):
+        from prototype.prove import answer
+        rng = np.random.default_rng(6)
+        persons = [answer.classify(answer.two_wire(answer.synth("person", rng)[0], rng, 8.0))[0] for _ in range(6)]
+        self.assertLess(sum(p == "person" for p in persons), 2)          # the failure the red team found
+        self.assertTrue(all(answer.challenge_response("person", rng, car_msg_s=8.0)[0] == "person" for _ in range(4)))
+        self.assertTrue(all(answer.challenge_response(k, rng, car_msg_s=8.0)[0] == "no_ack"
+                            for k in ("voicemail", "ivr", "intercept")))
+
     def test_classifier_person_vs_machine_under_stress(self):
         from prototype.prove import answer
         d = answer.confusion(trials=8, stress=True, seed=4)

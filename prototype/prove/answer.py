@@ -12,6 +12,14 @@ using spectral features only (nothing is recorded or transcribed), and checks
 the call's metadata against a registry. Signals here are synthetic stand-ins;
 the classifier's thresholds are tuned on them and must be re-checked on real
 calls during the pilot.
+
+HONEST RESULT (honest_eval): passive classification works on clean far-end audio
+but FAILS on a passive 2-wire tap once the car's own location message is on the
+line. With an 8 s message no real person is recognised (the red team found the
+same). Passive detection therefore needs the far-end audio alone (gateway
+firmware sees each direction separately), and the pilot uses CHALLENGE-RESPONSE:
+the test call asks the answerer to press 1 (and read back the car ID), which a
+machine never does and which survives a mixed line.
 """
 from dataclasses import dataclass
 
@@ -178,6 +186,65 @@ def hard(y, kind, rng):
         n = int(0.6 * FS)
         y[-int(2.1 * FS):-int(2.1 * FS) + n] = rng.normal(0, 0.012, n)    # beep removed
     return y
+
+
+def two_wire(y, rng, car_msg_s=3.0):
+    """What a passive 2-wire tap really hears: the car's own location message (sent toward the
+    answerer at call start) mixed with whatever answers, plus car-side room noise."""
+    msg = _speech(rng, car_msg_s, rate=4.5) * 0.9
+    out = y.copy()
+    n = min(len(msg), len(out))
+    out[:n] += msg[:n]
+    return out + rng.normal(0, 0.006, len(out))
+
+
+CHALLENGE_PROMPT_S = 2.5    # "PROVE test call from Hill Center car 2. If you can hear this, press 1."
+
+
+def challenge_response(kind, rng, ring_s=10.0, press_delay=(1.0, 6.0), mixed=True, car_msg_s=3.0):
+    """Active test: the test call asks the answerer to press 1. Only a person does.
+
+    Persons press 1 after the prompt (delay drawn from press_delay); machines never do.
+    The DTMF digit is detected even on a mixed 2-wire line. Returns (verdict, seconds to acknowledge).
+    """
+    from .alarm import dtmf, decode_dtmf
+    y, _ = synth(kind, rng)
+    y = two_wire(y, rng, car_msg_s) if mixed else y
+    pressed_at = None
+    if kind == "person":
+        pressed_at = CHALLENGE_PROMPT_S + rng.uniform(*press_delay)
+        i = int(pressed_at * FS)
+        tone = dtmf("1")[:int(0.08 * FS)] * 0.8
+        if i + len(tone) < len(y):
+            y[i:i + len(tone)] += tone
+    heard = decode_dtmf(y)
+    if "1" in heard:
+        ack = ring_s + (pressed_at or 0.0)
+        return ("person" if ack <= REDIRECT_S else "person_late"), round(ack, 1)
+    return "no_ack", None
+
+
+def honest_eval(trials=15, seed=12):
+    """The numbers to show, not the flattering ones.
+
+    Passive classification is judged on a person answering while the car's own location
+    message is on the line (2-wire tap), for 3 s and 8 s messages. Challenge-response is
+    judged on the same mixed audio, on every answerer type.
+    """
+    kinds = ("person", "voicemail", "ivr", "intercept", "fax", "no_answer", "busy")
+    rng = np.random.default_rng(seed)
+    out = {"passive_clean_person": round(np.mean([classify(synth("person", rng)[0])[0] == "person"
+                                                    for _ in range(trials)]), 3)}
+    for msg in (3.0, 8.0):
+        out[f"passive_two_wire_person_car_msg_{msg:.0f}s"] = round(np.mean(
+            [classify(two_wire(synth("person", rng)[0], rng, msg))[0] == "person" for _ in range(trials)]), 3)
+    for msg in (3.0, 8.0):
+        tp = np.mean([challenge_response("person", rng, car_msg_s=msg)[0] == "person" for _ in range(trials)])
+        tn = np.mean([challenge_response(k, rng, car_msg_s=msg)[0] == "no_ack"
+                      for k in kinds if k != "person" for _ in range(max(3, trials // 3))])
+        out[f"challenge_two_wire_car_msg_{msg:.0f}s"] = {"person_detected": round(float(tp), 3),
+                                                        "machine_rejected": round(float(tn), 3)}
+    return out
 
 
 def confusion(trials=25, seed=8, stress=False):

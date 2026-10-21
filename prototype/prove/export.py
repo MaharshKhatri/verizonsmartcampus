@@ -6,7 +6,7 @@ import json
 import os
 import re
 
-from . import acoustic, alarm, answer, fleet, install, supervisor, triage
+from . import acoustic, alarm, answer, fleet, install, migration, supervisor, triage
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
@@ -55,10 +55,7 @@ def answer_block():
         "Number not in service": (reg.answerer_number, "intercept", 1, None),
     }
     out = {k: answer.check_call(*v, reg) for k, v in calls.items()}
-    clean = answer.confusion(trials=20)
-    stress = answer.confusion(trials=20, stress=True)
-    return {"calls": out, "accuracy": clean["accuracy"], "stress_accuracy": stress["accuracy"],
-            "stress_person_vs_not": stress["person_vs_not"], "label": reg.label}
+    return {"calls": out, "honest": answer.honest_eval(trials=12), "label": reg.label}
 
 
 SCENARIOS = {
@@ -109,6 +106,7 @@ def build():
         },
         "national": national(),
         "install": install.scenarios(),
+        "migration": migration.scenarios(),
         "answer": answer_block(),
         "alarm": {"rates": alarm.success_rates(trials=40), "loss_curve": alarm.loss_curve(trials=30)},
         "acoustic": acoustic.compare_designs(trials=30),

@@ -136,8 +136,16 @@ footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
     </section>
 
     <section class="card full">
+      <h2>SAME ANSWER: every lifeline Verizon moves arrives with proof</h2>
+      <p class="note">Before the cutover, PROVE records what the line does on copper. After it, PROVE runs the same checks on Verizon's replacement path and compares: the number dialed, the caller ID presented (answering centers often look up the building by it), who answers and how fast, the location shown, alarm acknowledgement, and signal judged on its worst season. The receipt is a timestamped test record, not a guarantee.</p>
+      <div class="rig" id="migrig"></div>
+      <div class="tablewrap"><table id="migtab"></table></div>
+      <p class="note" id="migverdict" style="font-weight:700;margin-top:8px"></p>
+    </section>
+
+    <section class="card full">
       <h2>Who answers? HELP reaches a person, fast, who knows where you are</h2>
-      <p class="note">Elevator code checks the wire and never places a call. From the gateway's port in the machine room (no work in the car), PROVE checks each test or real HELP call. It reads the digits dialed against the building's registry, tells a person from voicemail, IVR, intercept or fax using spectral features only (nothing is recorded), checks the answer time against A17.1's 45-second redirect, and confirms the building and car the answerer sees. Classifier on synthetic calls: <b id="ansacc"></b> exact. Under a stress test, person-vs-machine stays at <b id="ansp"></b>.</p>
+      <p class="note">Elevator code checks the wire and never places a call. From the gateway's port in the machine room (no work in the car), PROVE checks each test or real HELP call. It reads the digits dialed against the building's registry, checks who picked up, checks the answer time against A17.1's 45-second redirect, and confirms the building and car the answerer sees. <b>An honest result:</b> passive "who answered?" detection works on clean audio (<b id="ansclean"></b>) but fails on a real 2-wire line once the car's own location message is on it (<b id="ans8"></b> of real people recognised with an 8-second message). So the test call uses <b>challenge-response</b>: "press 1 and read back the car ID". It recognised <b id="anscr"></b> of people and rejected <b id="ansrej"></b> of machines on the same mixed audio. Synthetic signals; the pilot measures real calls.</p>
       <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
         <div class="rig" id="ansrig" style="flex:1;min-width:240px"></div>
         <div class="receipt" id="ansout" style="min-width:280px"></div>
@@ -356,10 +364,34 @@ $("help").onclick = async () => {
   $("usmap").innerHTML = s;
 })();
 
+// SAME ANSWER before/after
+(function mig() {
+  const M = D.migration; if (!M) return;
+  const names = {elevator_same: "Elevator: clean cutover", elevator_new_caller_id: "Elevator: new caller ID", elevator_voicemail: "Elevator: voicemail answers",
+    alarm_same: "Alarm: clean cutover", alarm_unregistered: "Alarm: number not registered", alarm_basement_trees: "Alarm: box under trees"};
+  const labels = {dials: "Number dialed", caller_id: "Caller ID presented", answered_by: "Answered by", ring_s: "Seconds to answer",
+    location_shown: "Location the answerer sees", alarm_ack: "Alarm acknowledged", alarm_first_try: "Alarm through on 1st try", signal_worst_season_sinr_db: "Signal, worst season (SINR dB)"};
+  const keys = Object.keys(M);
+  $("migrig").innerHTML = keys.map(k => `<button class="btn" data-m="${k}">${names[k] || k}</button>`).join("");
+  const show = k => {
+    const r = M[k];
+    document.querySelectorAll("#migrig button").forEach(b => b.classList.toggle("on", b.dataset.m === k && r.verdict !== "SAME ANSWER"));
+    $("migtab").innerHTML = `<tr><th class="l">Check</th><th class="l">On copper (before)</th><th class="l">On Verizon (after)</th><th class="l">Status</th><th class="l">Who fixes</th></tr>` +
+      r.lines.map(l => `<tr><td class="l">${labels[l.check] || l.check}</td><td class="l">${esc(l.before)}</td><td class="l">${esc(l.after)}</td><td class="l" style="font-weight:700;color:${l.status === "SAME" || l.status === "OK" ? "var(--good-text)" : "var(--critical)"}">${l.status}</td><td class="l" style="white-space:normal">${esc(l.owner)}</td></tr>`).join("");
+    $("migverdict").textContent = r.verdict; $("migverdict").style.color = r.verdict === "SAME ANSWER" ? "var(--good-text)" : "var(--critical)";
+  };
+  document.querySelectorAll("#migrig button").forEach(b => b.onclick = () => show(b.dataset.m));
+  show("elevator_new_caller_id");
+})();
+
 // Who answers?
 (function who() {
   const A = D.answer; if (!A) return;
-  $("ansacc").textContent = (A.accuracy * 100).toFixed(0) + "%"; $("ansp").textContent = (A.stress_person_vs_not * 100).toFixed(0) + "%";
+  const H = A.honest || {}, pct = v => (v * 100).toFixed(0) + "%";
+  if (H.passive_clean_person !== undefined) {
+    $("ansclean").textContent = pct(H.passive_clean_person); $("ans8").textContent = pct(H.passive_two_wire_person_car_msg_8s);
+    $("anscr").textContent = pct(H.challenge_two_wire_car_msg_8s.person_detected); $("ansrej").textContent = pct(H.challenge_two_wire_car_msg_8s.machine_rejected);
+  }
   const keys = Object.keys(A.calls);
   $("ansrig").innerHTML = keys.map((k, i) => `<button class="btn" data-a="${i}">${esc(k)}</button>`).join("");
   const show = i => {
