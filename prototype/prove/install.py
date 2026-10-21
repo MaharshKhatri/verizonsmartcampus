@@ -29,10 +29,13 @@ class HomeSetup:
     battery_age_months: float = 0.0
     place: str = "window"                      # window | interior | basement
     corded_phone: bool = True                  # a cordless base dies with mains power
+    month: int = 11                            # install month (leaf-off Nov-Apr in NJ)
+    canopy: bool = False                       # deciduous trees between the box and the site
 
 
 # Placement -> (RSRP dBm, SINR dB, voice-frame loss). ASSUMED illustrative values; measured per home in the pilot.
 PLACES = {"window": (-92.0, 14.0, 0.005), "interior": (-104.0, 6.0, 0.02), "basement": (-116.0, 0.0, 0.06)}
+LEAF_ON_MARGIN_DB = 3.0    # ASSUMED; NTIA/ITS measured 1.8-2.9 dB more summer clutter loss at 3.475 GHz (Kozma et al., 2024)
 
 
 def _alarm_check(setup, loss, rng):
@@ -84,14 +87,19 @@ def install_proof(setup, seed=0):
     rsrp, sinr, loss = PLACES[setup.place]
     lines = []
 
-    if sinr >= 10:
-        lines.append(("SIGNAL", "OK", f"RSRP {rsrp:.0f} dBm, SINR {sinr:.0f} dB at this spot", "", False))
-    elif sinr >= 3:
-        lines.append(("SIGNAL", "WARN", f"RSRP {rsrp:.0f} dBm, SINR {sinr:.0f} dB: voice fine, alarm data marginal",
-                      "Move the box toward a window if the alarm check fails", False))
+    leaf_off = setup.month in (11, 12, 1, 2, 3, 4)
+    seasonal = setup.canopy and leaf_off
+    worst = sinr - LEAF_ON_MARGIN_DB if seasonal else sinr        # judge the spot on its worst season
+    note = f"; about {worst:.0f} dB when the leaves return" if seasonal else ""
+    if worst >= 10:
+        lines.append(("SIGNAL", "OK", f"RSRP {rsrp:.0f} dBm, SINR {sinr:.0f} dB at this spot{note}", "", False))
+    elif worst >= 3:
+        lines.append(("SIGNAL", "WARN", f"RSRP {rsrp:.0f} dBm, SINR {sinr:.0f} dB{note}: voice fine, alarm data marginal",
+                      "Move the box toward a window" + (" before the leaves return" if seasonal else "")
+                      + "; PROVE re-checks nightly", False))
     else:
-        lines.append(("SIGNAL", "FAIL", f"RSRP {rsrp:.0f} dBm, SINR {sinr:.0f} dB: too weak here",
-                      "Move the box to a window; if it still fails, a technician fits an external antenna", sinr < -3))
+        lines.append(("SIGNAL", "FAIL", f"RSRP {rsrp:.0f} dBm, SINR {sinr:.0f} dB{note}: too weak here",
+                      "Move the box to a window; if it still fails, a technician fits an external antenna", worst < -3))
 
     voice_ok = loss < 0.05
     lines.append(("VOICE", "OK" if voice_ok else "WARN",
@@ -141,6 +149,7 @@ SCENARIOS = {
     "basement":        HomeSetup(place="basement"),
     "no_batteries":    HomeSetup(batteries=False),
     "medical_untested": HomeSetup(devices=["phone", "medical"]),
+    "leaf_off_trees":  HomeSetup(place="interior", canopy=True),
 }
 
 

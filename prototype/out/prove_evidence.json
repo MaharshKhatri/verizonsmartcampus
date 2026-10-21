@@ -673,6 +673,40 @@
    ],
    "verdict": "TRUCK NOT NEEDED",
    "place": "window"
+  },
+  "leaf_off_trees": {
+   "lines": [
+    {
+     "check": "SIGNAL",
+     "status": "WARN",
+     "detail": "RSRP -104 dBm, SINR 6 dB; about 3 dB when the leaves return: voice fine, alarm data marginal",
+     "fix": "Move the box toward a window before the leaves return; PROVE re-checks nightly",
+     "needs_truck": false
+    },
+    {
+     "check": "VOICE",
+     "status": "OK",
+     "detail": "Two-way tone test, 2.0% frames lost",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "ALARM",
+     "status": "OK",
+     "detail": "Contact ID handshake and kiss-off received 3/3",
+     "fix": "",
+     "needs_truck": false
+    },
+    {
+     "check": "BATTERY",
+     "status": "OK",
+     "detail": "Runs on battery when AC is pulled",
+     "fix": "",
+     "needs_truck": false
+    }
+   ],
+   "verdict": "TRUCK NOT NEEDED",
+   "place": "interior"
   }
  },
  "answer": {
