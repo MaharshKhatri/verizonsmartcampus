@@ -1,0 +1,3092 @@
+1300 I Street, NW
+Suite 500 East                                             Randy Clarke
+Washington, DC 20005                                       Associate General Counsel
+202-684-5350                                               Federal Regulatory Affairs
+randolph.clarke@verizon.com
+
+August 10, 2026
+
+Marlene H. Dortch, Secretary
+Federal Communications Commission
+45 L Street, N.E.
+Washington, D.C. 20554
+
+Re: Section 63.71 Application of Citizens Telecommunications Company of Utah d/b/a
+Frontier Communications of Utah; Citizens Telecommunications Company of the White
+Mountains, Inc. d/b/a Frontier Communications of the White Mountains; Citizens Utilities
+Rural Company, Inc. d/b/a Frontier Citizens Utilities Rural; Frontier Communications of
+the Carolinas LLC; Frontier Communications of Michigan, Inc.; Frontier
+Communications of the Southwest, Inc.; Frontier Communications of Virginia, Inc.;
+Frontier North Inc.; Navajo Communications Company, Inc.; Verizon Delaware LLC;
+Verizon New England Inc. d/b/a Verizon Rhode Island; Verizon New Jersey Inc.; Verizon
+South Inc.; Verizon Virginia LLC, all Verizon companies
+
+Dear Ms. Dortch:
+
+       The Verizon incumbent local exchange companies captioned above submit the enclosed
+application for authority under Section 214(a) of the Communications Act and Section 63.71 of
+the Commission’s rules to discontinue legacy TDM-based voice service.
+
+       If you have any questions regarding this matter, please contact me at 202-684-5350.
+
+                                                   Respectfully submitted,
+
+                                                   /s/ Randy Clarke
+                                                   Randy Clarke
+                                                   Associate General Counsel
+                                                   Federal Regulatory Affairs
+Attachment
+
+cc:    Department of Defense Chief Information Officer
+       Public Utility Commission for each affected state
+       Governor of each affected state
+       Tribal entities in each affected state
+                                      Before the
+                       FEDERAL COMMUNICATIONS COMMISSION
+                                Washington, D.C. 20554
+
+
+    In the Matter of
+
+    Section 63.71 Application of
+                                                         WC Docket No. 26-____
+    Citizens Telecommunications Company of
+    Utah d/b/a Frontier Communications of Utah;
+    Citizens Telecommunications Company of
+    the White Mountains, Inc. d/b/a Frontier
+    Communications of the White Mountains;
+    Citizens Utilities Rural Company, Inc. d/b/a
+    Frontier Citizens Utilities Rural; Frontier
+    Communications of the Carolinas LLC;
+    Frontier Communications of Michigan, Inc.;
+    Frontier Communications of the Southwest,
+    Inc.; Frontier Communications of Virginia,
+    Inc.; Frontier North Inc.; Navajo
+    Communications Company, Inc.; Verizon
+    Delaware LLC; Verizon New England Inc.
+    d/b/a Verizon Rhode Island; Verizon New
+    Jersey Inc.; Verizon South Inc.; Verizon
+    Virginia LLC, all Verizon companies
+
+    For Authority Pursuant to Section 214 of the
+    Communications Act of 1934, as Amended,
+    To Discontinue the Provision of Service
+
+
+                         SECTION 63.71 APPLICATION OF VERIZON
+
+I.        INTRODUCTION.
+
+          With this Application, 1 Verizon seeks authority to discontinue Plain Old Telephone
+
+Service (“POTS”) served by time-division multiplexing (“TDM”) technology over copper in
+
+portions of Arizona, Delaware, New Jersey, New Mexico, Ohio, Rhode Island, South Carolina,
+
+Utah, and Virginia. Currently, Verizon’s network could serve over 12 million locations in these
+
+
+1
+    The FCC Registration Number for this application is 0003271798.
+states with POTS. However, the overwhelming majority of consumers from these states who
+
+could subscribe to POTS service from Verizon do not—only approximately 277,000 residential
+
+and business legacy voice lines, or less than 2.25%, remain in use. Copper infrastructure is too
+
+slow to meet modern needs, many decades old, costly to maintain, and vulnerable to damage and
+
+theft. As detailed below, granting this Application will advance the Build America Agenda by
+
+allowing Verizon to direct investments toward the high-speed networks that Americans want and
+
+away from maintaining the legacy copper networks that they are abandoning, while ensuring that
+
+consumers continue to have reliable access to voice service and 911. Grant of this Application
+
+also is consistent with Commission and Wireline Competition Bureau (“Bureau”) precedent.
+
+          Specifically, with this Application, Verizon seeks to discontinue copper-based residential
+
+and business legacy voice service in the nine states listed above at locations where existing
+
+POTS customers can obtain from Verizon—or at least one of ten third parties, including AT&T,
+
+T-Mobile, Comcast, and Charter—one or more of the following facilities-based replacement
+
+voice services: (i) interconnected Voice over Internet Protocol (“VoIP”) provisioned over
+
+broadband using fiber or cable (i.e., coaxial cable or hybrid fiber-coaxial cable); (ii) Verizon
+
+fixed wireless voice replacement services that enable legacy POTS telephone equipment to
+
+operate over Verizon’s wireless network; 2 or (iii) mobile wireless service. 3 These replacement
+
+services from Verizon and other well-established providers are the services that Verizon relies on
+
+in this Application to meet the requirements still in effect until the new Network Modernization
+
+
+
+
+2
+  Verizon seeks approval based on its own fixed wireless service; it does not rely on third-party
+fixed wireless services in this Application.
+3
+    “Discontinuance area” refers to locations within the scope of this Application.
+
+
+                                                   2
+Order rules the Commission adopted earlier this year take effect. 4 As detailed below, Verizon’s
+
+fiber-based voice service satisfies the Alternative Options Test, 5 and Verizon’s fixed wireless
+
+voice replacement and mobile wireless service—as well as the other replacements on which
+
+Verizon relies—satisfy the Adequate Replacement Test. 6 By showing that locations in the
+
+discontinuance area have an available replacement that meets the Commission’s requirements for
+
+streamlined treatment, we ensure that the less than 2.25% of potential Verizon subscribers who
+
+still receive copper-based POTS in the nine states at issue will be well-served.
+
+       Therefore, the following Verizon entities: Citizens Telecommunications Company of
+
+Utah d/b/a Frontier Communications of Utah; Citizens Telecommunications Company of the
+
+White Mountains, Inc. d/b/a Frontier Communications of the White Mountains; Citizens Utilities
+
+Rural Company, Inc. d/b/a Frontier Citizens Utilities Rural; Frontier Communications of the
+
+Carolinas LLC; Frontier Communications of Michigan, Inc.; Frontier Communications of the
+
+Southwest, Inc.; Frontier Communications of Virginia, Inc.; Frontier North Inc.; Navajo
+
+Communications Company, Inc.; Verizon Delaware LLC; Verizon New England Inc. d/b/a
+
+Verizon Rhode Island; Verizon New Jersey Inc.; Verizon South Inc.; and Verizon Virginia LLC,
+
+
+
+4
+ See Reducing Barriers to Network Improvements and Service Changes; Accelerating Network
+Modernization, WC Docket Nos. 25-209, 25-208, Report and Order, FCC 26-19, App. A – Final
+Rules (rel. Mar. 27, 2026) (“Network Modernization Order”).
+5
+ See 47 C.F.R. § 63.71(f)(2)(ii). Verizon relies on the Alternative Options Test for expediency
+because of the simpler showing required.
+6
+  See 47 C.F.R. § 63.71(a), (f)(2)(i); see also id. § 63.602(b) (permitting applicants to show that
+“one or more replacement service(s) satisfies all of the following criteria”). In the Network
+Modernization Order, the Commission replaced the Alternative Options Test and Adequate
+Replacement Test with “one simple rule” allowing applications for discontinuance that identify
+the presence of one of five categories of services as available to receive streamlined treatment.
+The services identified in this Application, which meet the requirements of the Adequate
+Replacement or Alternative Options Test, will also meet the newly adopted POTS replacement
+requirement.
+
+
+                                                 3
+(collectively, “Verizon”), apply for authority under 47 U.S.C. § 214(a) and 47 C.F.R. § 63.71 to
+
+discontinue their legacy TDM-based voice service over copper throughout portions of Arizona,
+
+Delaware, New Jersey, New Mexico, Ohio, Rhode Island, South Carolina, Utah, and Virginia as
+
+specified herein.
+
+II.      GRANTING THE APPLICATION ADVANCES THE BUILD AMERICA
+         AGENDA.
+
+         The Commission’s Build America Agenda is making it easier and faster for providers to
+
+retire copper and modernize U.S. communications infrastructure. 7 Approval of this Application
+
+will advance the Build America Agenda and serve the public interest in multiple ways.
+
+         First, approval will drive investment toward networks of the future and reduce the need
+
+to devote resources to infrastructure of the past. Investment is essential to the Build America
+
+Agenda, which aims to “free up billions of dollars for new networks, instead of forcing providers
+
+to keep investing in old ones.” 8 Keeping resources locked up in old copper-based POTS
+
+networks will thwart unleashing that investment.
+
+         In its Network Modernization Order, a unanimous, bipartisan Commission found that
+
+“the expansion of [ ] modern networks, and the benefits they afford, have been hindered by the
+
+need for carriers to divert important resources to the maintenance of aging and deteriorating
+
+legacy networks that deliver outdated services to an ever-decreasing number of subscribers.” 9
+
+This includes copper-based networks, which the Commission recognized are “no longer
+
+
+
+
+7
+  See Remarks of FCC Chairman Brendan Carr, “A Build Agenda for America,” Sioux Falls,
+South Dakota, (July 2, 2025), https://docs.fcc.gov/public/attachments/ DOC-412663A1.pdf
+(“Build America Agenda”); see also Brendan Carr, Now Is the Time to Build, FCC BLOG (July 2,
+2025), https://www.fcc.gov/news-events/blog/2025/07/02/now-time-build.
+8
+    Build America Agenda at 3.
+9
+    Network Modernization Order ¶ 2.
+
+
+                                                4
+sufficient to meet the bandwidth-hungry needs of modern communications and thus ha[ve] been
+
+rendered obsolete by more advanced networks.” 10
+
+          The cost of maintaining POTS networks has skyrocketed in recent years. Verizon spends
+
+billions of dollars each year to maintain its legacy copper network. These costs are enormous
+
+because of, among other things, rising costs of copper and the need for replacement parts that are
+
+increasingly difficult to procure as obsolete equipment is discontinued. 11 Copper is also prone to
+
+theft, 12 and a declining customer base makes copper more expensive to maintain on a per-
+
+customer basis 13—meaning as time goes by each copper customer consumes disproportionately
+
+more resources. Every dollar Verizon spends maintaining aging, little-used copper infrastructure
+
+diverts critical investment away from future-ready networks that customers across the country
+
+demand.
+
+
+10
+     Id. ¶ 9.
+11
+   See, e.g., Eric Fruits & Brian Albrecht, Paying to Stand Still: Legacy Copper Mandates in a
+Fiber World, INTERNATIONAL CENTER FOR LAW & ECONOMICS (Feb. 27, 2026),
+https://laweconcenter.org/resources/paying-to-stand-still-legacy-copper-mandates-in-a-fiber-
+world/ (“ICLE Report”); Jonathan Spalter, Introducing America’s Connected Future,
+USTELECOM (Mar. 9, 2026), https://ustelecom.org/introducing-americas-connected-future/
+(“USTelecom Article”) (“Service restoration can often take weeks if not months because
+replacement parts are harder to find as manufacturers discontinue declining product lines.”).
+12
+   See Protecting Critical Communications Infrastructure from Theft & Vandalism, USTELECOM,
+at 8 (Oct. 9, 2025), https://ustelecom.org/research/protecting-critical-communication-
+infrastructure-report-fall-2025/ (reporting over 15,000 incidents of theft and vandalism between
+June 2024 – June 2025); Remarks of Commissioner Oliva Britt Trusty, “Copper Theft Crisis:
+Incident Management and Prosecutorial Collaboration Summit,” El Segundo, California (Oct. 7,
+2025), https://docs.fcc.gov/public/attachments/DOC-415046A1.pdf; Surveillance video shows
+two suspects after over $4,700 in copper cable, telecommunications equipment stolen, WSLS
+NEWS 10, https://www.wsls.com/news/local/2026/07/27/law-enforcement-searching-for-two-
+suspects-after-over-4700-in-copper-cable-telecommunications-equipment-stolen/ (Aug. 3, 2026)
+(describing copper theft in Campbell County, Virginia); see also Sean Mahoney, New safeguards
+aren’t stopping copper thieves in Arizona, 13 NEWS (July 16, 2026),
+https://www.kold.com/2026/07/16/new-safeguards-arent-stopping-copper-thieves-arizona/
+(describing string of copper thefts from street lights in South Tucson, Arizona).
+13
+     ICLE Report.
+
+
+                                                 5
+          By granting this Application, the Commission will help Verizon “transition [away] from
+
+legacy TDM-based networks,” 14 allowing us to “invest more resources toward modernizing [our]
+
+networks so [] consumers can access more advanced communications services.” 15 And granting
+
+this Application will allow the Commission to fulfill its goal of “accelerat[ing] the transition
+
+from aging copper” voice service “to the modern, high-speed” services “that Americans want
+
+and deserve.” 16 This is a win for states and consumers alike, and it is fully consistent with
+
+Section 214, which Congress enacted to “protect Americans’ continued access to the nation’s
+
+communications networks while also preserving carriers’ ability to upgrade their services
+
+without the interruption of federal micromanaging.” 17
+
+          Second, granting this Application will allow Verizon to move away from the slow,
+
+inefficient copper-based services customers no longer want. Last-mile copper connections to
+
+customer premises were designed for phone calls, not today’s heavy Internet usage. As the
+
+Commission has recognized, copper-based networks’ “limited data bandwidth is no longer
+
+sufficient to meet the bandwidth-hungry needs of modern communications.” 18 Copper is also
+
+energy inefficient, particularly when compared to modern alternatives. 19
+
+
+14
+     Network Modernization Order ¶¶ 1, 3.
+15
+     Id. ¶ 2.
+16
+     Build America Agenda at 3.
+17
+  Accelerating Wireline Broadband Deployment by Removing Barriers to Infrastructure
+Investment, Report and Order, Declaratory Ruling, and Further Notice of Proposed Rulemaking,
+32 FCC Rcd 11128, ¶ 133 (2017).
+18
+     Network Modernization Order ¶ 9.
+19
+  See e.g., Comments of USTelecom – The Broadband Association, WC Docket Nos. 25-208,
+25-209, at 17-18 (filed Sept. 29, 2025); Comments of the International Center for Law &
+Economics, WC Docket Nos. 25-208, 25-209, at 6 (filed Aug. 22, 2025) (“ICLE Comments”);
+see also ICLE Report (finding that transitioning the remaining 12.5 million copper subscribers to
+modern alternatives would produce estimated energy-cost savings of $398 million to $830
+
+
+
+                                                 6
+       Not surprisingly, consumers have made clear that they do not want copper-based voice
+
+services anymore. From 2014 to 2024, subscribers using copper last-mile connections fell
+
+nationwide by 81%. 20 Almost four out of five U.S. adults use wireless-only for voice, with less
+
+than 4% of U.S. adults preferring landlines for phone calls. 21 Today, wireless services account
+
+for roughly 83% of voice phone lines nationwide, with VoIP provided over modern broadband
+
+networks capturing most of the remainder. 22 And the emergence of 5G home broadband and
+
+low-Earth orbit satellite services has led to meaningful new choices, including in areas that are
+
+difficult to reach by wired connections. 23 In 2024, for example, 99% of new home broadband
+
+subscribers chose 5G for the third year in a row, with 3.7 million additional 5G home
+
+
+
+
+million, and noting Verizon data highlighting that fiber-delivered broadband is at least 100 times
+more energy-efficient on a kWh-per-gigabyte basis than copper-delivered service).
+20
+  ICLE Report (reporting that subscribers have decreased from nearly 66 million in 2014 to just
+12.5 million in 2024); see also USTelecom Article.
+21
+   Stephen J. Blumberg & Julian V. Lake, Wireless Substitution: Early Release of Estimates from
+the National Health Interview Survey, July-December 2024, NATIONAL CENTER FOR HEALTH
+STATISTICS, at 4–5 (June 2025),
+https://www.cdc.gov/nchs/data/nhis/earlyrelease/wireless202506.pdf (2.3 percent of adults
+identifying as landline-mostly and 1.4 percent of adults identifying as landline-only).
+22
+   Voice Telephone Services: Status as of June 30, 2025, FCC, INDUSTRY ANALYSIS DIVISION,
+OFFICE OF ECONOMICS & ANALYTICS, at 2 & fig. 1 (May 2026),
+https://docs.fcc.gov/public/attachments/DOC-421558A1.pdf (“Voice Telephone Services
+Report”).
+23
+   Modernizing Spectrum Sharing for Satellite Broadband, Report and Order, FCC 26-26, at
+Statement of Chairman Brendan Carr (rel. May 1, 2026),
+https://docs.fcc.gov/public/attachments/DOC-421308A2.pdf (observing that “Americans today
+benefit from increased competition for their broadband dollars” because “[w]ireless carriers are
+now competing for in-home subscribers” and “satellite is competing with both [existing
+providers] and wireless”); see also, e.g., News Release, Verizon, AT&T, T-Mobile, and Verizon
+Plan to launch new joint venture that helps end dead zones (May 14, 2026),
+https://www.verizon.com/about/news/feed/att-t-mobile-verizon-plan-launch-joint-venture-helps-
+end-dead-zones.
+
+
+                                                 7
+subscriptions. 24 And across the United States, fixed wireless access customers—particularly
+
+Verizon’s millions of wireless home customers—are the happiest with their service, while DSL
+
+copper customers are the unhappiest. 25
+
+       Just as copper voice reliance is small and declining nationwide, the same is true in the
+
+nine states specifically at issue here. 26 In Verizon’s case, use of its copper-based voice services
+
+continues to decrease, consistent with broader trends. The overwhelming majority of consumers
+
+from the nine discontinuance states who could subscribe to POTS service from Verizon do not.
+
+Of the consumers in these nine states who could subscribe to Verizon’s POTS service, less than
+
+2.25% do.
+
+       Third, granting the Application will allow Verizon to advance its commitment to
+
+award-winning service and America’s best networks. By allowing Verizon to decommission its
+
+legacy copper networks in the discontinuance area, the Commission will help make way for the
+
+more powerful, robust, and efficient high-speed networks that Americans actually use—a goal
+
+that has bipartisan support. 27 These investments in our wireless and fiber networks include states
+
+
+
+
+24
+  2025 CTIA Annual Survey Highlights, CTIA, at 6 (2025), https://api.ctia.org/wp-
+content/uploads/2025/09/2025-Annual-Survey-Highlights.pdf.
+25
+  Fixed Wireless Access, VERIZON, https://www.verizon.com/about/fixed-wireless-access (last
+visited Aug. 10, 2026).
+26
+  For instance, ILEC POTS lines represent 15.6% of fixed voice lines nationwide, and similarly
+they represent 15.6% of fixed voice lines in the nine states at issue. See Voice Telephone
+Services Report at 2; FCC, Voice Telephone Services Report, Table S.1, Voice Subscriptions (in
+Thousands), https://www.fcc.gov/sites/default/files/VTS_State_Subscriptions_J24_to_J25.xlsx.
+27
+  See Network Modernization Order at Statement of Commissioner Anna M. Gomez (“Our
+nation’s copper infrastructure is aging, costly to maintain, and increasingly vulnerable to theft
+and natural disaster. The future is IP-based, and our rules should facilitate, not obstruct, carriers’
+ability to build it.”).
+
+
+                                                  8
+in the discontinuance area. 28 Our strategy requires significant capital investments to maintain
+
+and grow these advanced networks as well as to acquire spectrum. These investments included
+
+$17.0 billion for capital expenditures in 2025, and we expect to invest between $16.0 billion and
+
+$16.5 billion in 2026.29
+
+       Competition is driving this investment. Verizon faces competition from a host of
+
+providers that have deployed modern communications technologies, including wireless and
+
+wireline, mobile and fixed, terrestrial and satellite, facilities-based and over-the-top. 30 But we
+
+cannot invest optimally to modernize our networks and compete while continuing to devote huge
+
+sums of money to sustaining copper-based POTS.
+
+
+
+
+28
+   See, e.g., News Release, Verizon, Verizon lights up 5G Ultra Wideband across Arizona (May
+18, 2023), https://finance.yahoo.com/news/verizon-lights-5g-ultra-wideband-
+130000818.html?guccounter=1; News Release, Delaware Department of Technology &
+Information, Delaware Department of Technology and Information, Delaware Approved to
+Begin Fiber Broadband Connections to 5,700 Homes and Businesses (Jan. 14, 2025),
+https://news.delaware.gov/2025/01/14/delaware-approved-to-begin-fiber-broadband-
+connections-to-5700-homes-and-businesses/; News Release, Verizon, Verizon lights up 5G Ultra
+Wideband across Ohio (May 18, 2023), https://finance.yahoo.com/news/verizon-lights-5g-ultra-
+wideband-130000990.html; Kimberly Redmond, Verizon expands 5G in New Jersey, NJBIZ
+(Mar. 17, 2023), https://njbiz.com/verizon-expands-5g-in-new-jersey/; Verizon Expands Fios
+Fiber Service to Underserved Areas in Rhode Island, TELECOMTALK (Oct. 9, 2024),
+https://telecomtalk.info/ verizon-expands-fiber-access-underserved-areas-
+rhodeisland/982885/#google_vignette; Jacquelyn Voghel, Verizon expanding 5G footprint in
+R.I., PROVIDENCE BUSINESS NEWS (Aug. 8, 2023), https://pbn.com/verizon-expanding-5g-
+footprint-in-r-i/; News Release, Verizon, Verizon gives beach goers a boost with expanded 5G
+service in Myrtle Beach and Hilton Head, SC (June 18 2024),
+https://www.verizon.com/about/news/verizon-boost-expanded-5g-service-myrtle-beach-hilton-
+head-sc.
+29
+   Verizon Communications Inc., Annual Report (Form 10-K), at 23, 37 (Feb. 17, 2026),
+https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm
+(“Verizon Form 10-K”).
+30
+  See generally Communications Marketplace Report, 2024 Communications Marketplace
+Report, 39 FCC Rcd 14116 (2024) (“Communications Marketplace Report”).
+
+
+                                                  9
+          Last, Verizon will not leave customers behind. Because it makes no sense to maintain a
+
+ubiquitous, costly legacy network that consumers have largely abandoned, we seek to transition
+
+customers to modern services provided by Verizon or another provider. We will work to ensure
+
+that this is a smooth transition for copper-based POTS customers in the discontinuance area.
+
+Most affected customers who currently have copper POTS lines, sold as “Home Phone Service,”
+
+will have the option to buy voice service from Verizon that meets or exceeds their expectations
+
+in network performance and availability. We are proud to have built the nation’s best wireless
+
+network, setting the highest bar for quality and reliability. 31 Verizon’s award-winning national
+
+wireless network covers 99% of the U.S. population and approximately 147 million wireless
+
+retail connections, 32 supporting mobile and fixed wireless services. 33 Notably, Verizon’s mobile
+
+wireless service provides high-quality voice service as well as mobile broadband service at the
+
+vast majority of locations in the discontinuance area. 34 Verizon also has a fixed wireless POTS
+
+voice replacement service (“Voice Connect”), 35 and, in areas where Verizon fiber is present, we
+
+
+
+
+31
+   News Release, Verizon, Verizon remains America’s Best Wireless Network, Setting the
+Highest Bar for Quality and Reliability (Sept. 18, 2025),
+https://www.verizon.com/about/news/verizon-remains-americas-best-wireless-network.
+32
+     Id.; Verizon Form 10-K at 6.
+33
+     Verizon Form 10-K at 8.
+34
+  The Commission has found that a facilities-based mobile wireless service operating at speeds
+of at least 5 Mbps download and 1 Mbps upload, as reflected in the National Broadband Map,
+qualifies a discontinuance application for streamlined treatment. See Network Modernization
+Order ¶¶ 23, 34.
+35
+   See Voice Connect, VERIZON, https://www.verizon.com/support/residential/homephone/voice-
+connect (last visited Aug. 10, 2026); see also Verizon Voice Gateway, VERIZON,
+https://www.verizon.com/home-office-solutions/verizon-voice-gateway/?skuid=sku6042698
+(last visited Aug. 10, 2026).
+
+
+                                                10
+operate wireline broadband services—including voice service over broadband—over our 100%
+
+fiber-optic network through our Verizon fiber (“Fios”) product portfolio. 36
+
+         In this Application, we seek authority to discontinue copper services only where
+
+customers can obtain facilities-based service from Verizon, one of our two nationwide mobile
+
+carrier competitors, or eight sizeable cable and/or fiber providers that compete significantly with
+
+us in the discontinuance area. All ten of the third-party providers on which we rely offer voice
+
+service and, as detailed below, satisfy the Adequate Replacement Test. Thus, all affected
+
+customers will be able to select, at minimum, facilities-based voice service from Verizon or
+
+another top provider. Most customers will have multiple options for facilities-based voice
+
+service (e.g., mobile wireless from AT&T, T-Mobile, and/or Verizon, interconnected VoIP from
+
+Comcast, etc.). Although Verizon does not rely on over-the-top options in this Application, it
+
+bears noting that customers would have the opportunity to subscribe to broadband and select one
+
+of many over-the-top voice options, including voice service over satellite broadband, which is
+
+widely available in the states subject to this Application. 37
+
+         In sum, this transition will leave voice customers well-served while unlocking resources
+
+for investment to expand and improve Verizon’s modern fiber and wireless networks.
+
+III.     APPLICATION.
+
+         Verizon seeks streamlined treatment and approval to discontinue copper-based POTS in
+
+the discontinuance area based on three showings. First, as the Bureau has already found,
+
+
+36
+     See Verizon Form 10-K at 6.
+37
+  The Commission found that identifying “a widely available alternative voice service that
+supports access to 911” qualifies a discontinuance application for streamlined treatment under its
+new rules. See Network Modernization Order ¶¶ 23, 38. While these new rules are not yet in
+effect, satellite broadband service is widely available and supports voice and 911 services in the
+same manner as any interconnected VoIP call, subject to Section 9.3 of the Commission’s rules.
+47 C.F.R. § 9.3.
+
+
+                                                  11
+Verizon mobile wireless service and fixed wireless legacy voice replacement services satisfy the
+
+Adequate Replacement Test. Second, the Alternative Options Test is satisfied in areas where
+
+Verizon Fios is available (i.e., where Verizon has deployed fiber). Third, consistent with
+
+precedent, the Adequate Replacement Test is satisfied in areas where any of ten leading third-
+
+party providers, such as AT&T, T-Mobile, Comcast, or Charter, offer facilities-based mobile
+
+wireless voice or cable- or fiber-based interconnected VoIP. 38 Collectively, these showings
+
+establish that Verizon is entitled to streamlined treatment and discontinuance authority for the
+
+entire discontinuance area.
+
+       A.      Verizon’s Mobile Wireless Service and Fixed Wireless Legacy Voice
+               Replacement Services Satisfy the Adequate Replacement Test.
+
+       As detailed below, Verizon mobile wireless service 39 and fixed wireless POTS voice
+
+replacement services 40 are adequate replacements for Verizon POTS. Verizon currently has
+
+
+38
+   See Technology Transitions et al., Declaratory Ruling, Second Report and Order, and Order on
+Reconsideration, 31 FCC Rcd 8283, ¶ 123 (2016) (“2016 Technology Transitions Order”)
+(stating that “the applicant must demonstrate that either: (i) a single replacement service reaches
+the entire geographic footprint of the service area subject to discontinuance; or (ii) there are
+multiple providers who collectively cover the entirety of the affected service area”).
+39
+  Verizon’s 5G mobile network is available nationwide and continues to expand. Verizon has
+received numerous awards for our 5G network reliability and quality. See Find Home Internet
+and Cell Phone Coverage in Your Area, VERIZON, https://www.verizon.com/coverage-map/ (last
+visited Aug. 10, 2026).
+40
+   Verizon’s wireless voice replacement services include Verizon Voice Connect, a solution that
+connects an existing landline phone to Verizon’s 4G/5G LTE network using the Verizon Voice
+Gateway for reliable, high-quality voice service. See Voice Connect, VERIZON,
+https://www.verizon.com/support/residential/homephone/voice-connect (last visited Aug. 10,
+2026); Verizon Voice Gateway, VERIZON, https://www.verizon.com/home-office-
+solutions/verizon-voice-gateway/?skuid=sku6042698 (last visited Aug. 10, 2026). These fixed
+services are incidental or ancillary to Verizon’s mobile services. See 47 U.S.C. § 332;
+Implementation of Sections 3(n) and 332 of the Communications Act; Regulatory Treatment of
+Mobile Services, Second Report and Order, 9 FCC Rcd 1411, ¶¶ 35-36 (1994); see also
+Amendments to Harmonize and Streamline Part 20 of the Commission’s Rules Concerning
+Requirements for Licensees to Overcome a CMRS Presumption, Report and Order, 32 FCC Rcd
+10731, ¶¶ 3, 6 (2017) (preserving statutory interpretation of “mobile services”).
+
+
+                                                12
+approximately 46,000 customers using fixed wireless POTS voice replacement services and
+
+approximately 115 million wireless connections (which include wireless POTS replacement
+
+services and also include Verizon’s fixed wireless broadband) nationwide. Verizon’s wireless
+
+network provides mobile wireless coverage throughout the United States—reaching more than
+
+99% of the U.S. population. Verizon’s mobile wireless and fixed wireless POTS voice
+
+replacement services comply with all applicable federal requirements and industry standards for
+
+911 services, communications security, and services for individuals with disabilities. 41 Verizon
+
+legacy voice replacement service customers can continue to use their existing POTS corded or
+
+cordless phones. Customers using these services will receive all the standard features offered
+
+with POTS service, including caller ID, call waiting, call forwarding, and three-way calling,
+
+among others. 42
+
+       It bears emphasis that the Bureau has already concluded that Verizon mobile wireless and
+
+fixed wireless POTS replacement services are adequate replacements for copper-based POTS.
+
+Specifically, the Bureau approved via streamlined treatment Verizon’s technology transition
+
+application to discontinue copper-based POTS in favor of Verizon mobile wireless and Verizon
+
+fixed wireless in portions of Alabama, Georgia, Iowa, Mississippi, and Tennessee. 43
+
+
+41
+  See E911 Compliance FAQs, VERIZON, https://www.verizon.com/support/e911-compliance-
+faqs/ (last visited Aug. 10, 2026).
+42
+   See Voice Connect, VERIZON, https://www.verizon.com/support/residential/homephone/voice-
+connect (last visited Aug. 10, 2026); Verizon Voice Gateway, VERIZON,
+https://www.verizon.com/home-office-solutions/verizon-voice-gateway/ (last visited Aug. 10,
+2026).
+43
+   See Section 63.71 Application of Verizon, WC Docket No. 26-116 (May 15, 2026),
+https://www.fcc.gov/ecfs/document/10515068977832/1 (“Five-State Application”) (setting forth
+such services as adequate replacements); Comments Invited on Verizon’s Section 214
+Application to Discontinue Domestic Legacy Voice Service as Part of a Technology Transition,
+WC Docket No. 26-116, Public Notice, DA 26-508 (WCB rel. May 21, 2026) (accepting
+application for streamlined processing and providing a deemed granted date of June 21, 2026).
+
+
+                                                13
+Accordingly, it is consistent with precedent to find that these services constitute adequate
+
+replacements. 44
+
+                     1. Verizon’s Mobile Wireless and Fixed Wireless POTS Voice
+                        Replacement Services Offer Substantially Similar Levels of Network
+                        Performance and Availability as POTS.
+
+          Based on the totality of the circumstances, Verizon’s mobile wireless and fixed wireless
+
+POTS voice replacement services have substantially similar network performance and
+
+availability as the POTS Verizon would discontinue.
+
+                        a.      Verizon’s Network Performance.
+
+          Under the “network performance” prong of the Adequate Replacement Test, an applicant
+
+ seeking to discontinue service can make “a demonstration, based on the totality of the
+
+ circumstances,” that the network on which a replacement service will run provides substantially
+
+ similar performance and availability. 45 The totality of the circumstances shows that users can
+
+ rely on Verizon’s mobile wireless network for mobile wireless service and fixed wireless POTS
+
+ voice replacement services to replace the legacy voice services Verizon seeks to discontinue.
+
+ Verizon offers a 4G LTE and 5G NR (“New Radio”) mobile broadband and voice service at the
+
+ vast majority of locations in Verizon’s service areas in Arizona, Delaware, New Jersey, New
+
+ Mexico, Ohio, Rhode Island, South Carolina, Utah, and Virginia. This same mobile wireless
+
+ network enables Verizon’s fixed wireless POTS voice replacement services.
+
+
+
+
+44
+  See 2016 Technology Transitions Order ¶ 83 (“We agree that an application should be eligible
+for an automatic grant where a substantially similar showing made by that same applicant has
+satisfied our public interest considerations.”).
+45
+     See id. ¶ 91.
+
+
+                                                 14
+          In its recently approved discontinuance application, Verizon detailed the technical
+
+ analysis, third-party measurements, and nationwide awards demonstrating that its wireless
+
+ network performs exceptionally well. 46 These technical facts and measurements have not
+
+ changed, they apply here, and Verizon incorporates them into this Application. Awards specific
+
+ to the nine states at issue here only reinforce Verizon’s prior showings and Bureau precedent
+
+ confirming that Verizon’s wireless network provides similar performance and availability to
+
+ legacy copper-based POTS. In the states that are included in his application, Verizon’s network
+
+ won JD Power’s 2026 U.S. Wireless Network Quality Performance Study ‒ Volume 2 award in
+
+ Delaware, New Jersey, Ohio, South Carolina, and Virginia and shared honors with T-Mobile for
+
+ the same top award in Arizona, New Mexico, Rhode Island, and Utah. 47 Verizon’s wireless
+
+ network earned first place from RootMetrics for Overall Performance statewide in Arizona, 48
+
+ Delaware, 49 New Jersey, 50 and New Mexico, 51 and shared this top honor in Ohio, 52 Rhode
+
+ Island, 53 Utah, 54 and Virginia. 55
+
+
+46
+     Five-State Application at 7-9.
+47
+   Press Release, JD Power, Wireless Network Quality Returns to Record High, JD Power Finds
+(July 16, 2026), https://www.jdpower.com/business/press-releases/2026-u-s-wireless-network-
+quality-performance-study-volume-2/
+48
+   Metro Area RootScore Report – 2nd Half 2025: Arizona, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/state/arizona/2025/2H (last visited Aug. 10,
+2026).
+49
+   Metro Area RootScore Report – 2nd Half 2025: Delaware, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/state/delaware/2025/2H (last visited Aug. 10,
+2026).
+50
+   Metro Area RootScore Report – 2nd Half 2025: New Jersey, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/state/new-jersey/2025/2H (last visited Aug.
+10, 2026).
+51
+   Metro Area RootScore Report – 2nd Half 2025: New Mexico, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/state/new-mexico/2025/2H (last visited Aug.
+10, 2026).
+
+
+
+                                                  15
+       In addition to earning more top state and local market rankings than any other provider
+
+overall, 56 Verizon collected multiple awards for its network performance in several regional
+
+metropolitan areas surveyed by RootMetrics, including #1 Overall Performance in Cincinnati 57
+
+and Dayton, OH, 58 and Charleston, SC. 59 Verizon shared awards for Overall Performance in
+
+
+
+
+52
+   Metro Area RootScore Report – 2nd Half 2025: Ohio, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/state/ohio/2025/2H (last visited Aug. 10,
+2026).
+53
+   Metro Area RootScore Report – 2nd Half 2025: Rhode Island, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/state/rhode-island/2025/2H (last visited Aug.
+10, 2026). Verizon was ranked second in South Carolina. Metro Area RootScore Report – 2nd
+Half 2025: South Carolina, ROOTMETRICS, https://www.rootmetrics.com/en-
+US/rootscore/map/state/south-carolina/2025/2H (last visited Aug. 10, 2026).
+54
+   Metro Area RootScore Report – 2nd Half 2025: Utah, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/state/utah/2025/2H (last visited Aug. 10,
+2026).
+55
+   Metro Area RootScore Report – 2nd Half 2025: Virginia, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/state/virginia/2025/2H (last visited Aug. 10,
+2026).
+56
+   “Verizon topped both state and metro testing as well, earning 329 state awards and 801 metro
+awards — more than any other carrier.” Mike Dano, State of the Mobile Union Report, OOKLA,
+https://www.ookla.com/research/reports/rootmetrics-us-state-of-mobile-union-2h-2025 (last
+visited Aug. 10, 2026).
+57
+   Metro Area RootScore Report – 2nd Half 2025: Cincinnati, OH, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/cincinnati-oh/2025/2H (last visited
+Aug. 10, 2026).
+58
+   Metro Area RootScore Report – 2nd Half 2025: Dayton, OH, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/dayton-oh/2025/2H (last visited Aug.
+10, 2026).
+59
+   Metro Area RootScore Report – 2nd Half 2025: Charleston, SC, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/charleston-sc/2025/2H (last visited
+Aug. 10, 2026).
+
+
+                                               16
+Phoenix 60 and Tucson, AZ, 61 Trenton, NJ, 62 Akron 63 and Columbus, OH, 64 Providence, RI, 65
+
+Greenville, SC, 66 Ogden, 67 Provo, 68 and Salt Lake City UT, 69 Richmond 70 and Hampton Roads,
+
+
+
+
+60
+   Metro Area RootScore Report – 2nd Half 2025: Phoenix, AZ, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/phoenix-az/2025/2H (last visited Aug.
+10, 2026).
+61
+   Metro Area RootScore Report – 2nd Half 2025: Tucson, AZ, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/tucson-az/2025/2H (last visited Aug.
+10, 2026).
+62
+   Metro Area RootScore Report – 2nd Half 2025: Trenton, NJ, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/trenton-nj/2025/2H (last visited Aug.
+10, 2026).
+63
+   Metro Area RootScore Report – 2nd Half 2025: Akron, OH, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/akron-oh/2025/2H (last visited Aug.
+10, 2026).
+64
+   Metro Area RootScore Report – 2nd Half 2025: Columbus, OH, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/columbus-oh/2025/2H (last visited
+Aug. 10, 2026).
+65
+   Metro Area RootScore Report – 2nd Half 2025: Providence, RI, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/providence-ri/2025/2H (last visited
+Aug. 10, 2026).
+66
+   Metro Area RootScore Report – 2nd Half 2025: Greenville, SC, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/greenville-sc/2025/2H (last visited
+Aug. 10, 2026).
+67
+   Metro Area RootScore Report – 2nd Half 2025: Ogden, UT, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/ogden-ut/2025/2H (last visited Aug.
+10, 2026).
+68
+   Metro Area RootScore Report – 2nd Half 2025: Provo, UT, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/provo-ut/2025/2H (last visited Aug.
+10, 2026).
+69
+   Metro Area RootScore Report – 2nd Half 2025: Salt Lake City, UT, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/salt-lake-city-ut/2025/2H (last visited
+Aug. 10, 2026).
+70
+   Metro Area RootScore Report – 2nd Half 2025: Richmond, VA, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/richmond-va/2025/2H (last visited
+Aug. 10, 2026).
+
+
+                                               17
+VA; 71 and it shared awards for network speed in Albuquerque, NM, 72 Toledo, OH, 73 and
+
+Columbia, SC. 74 In these states, customers who select Verizon’s mobile wireless or fixed
+
+wireless POTS replacement services will benefit from the same wireless network and technology
+
+that powers these outstanding results covering nearby cities and areas.
+
+                        b.     Verizon’s Service Availability.
+
+          The Adequate Replacement Test’s network performance requirements also consider
+
+service availability. 75 Carriers may meet the service availability prong through a totality of
+
+circumstances showing, which, as explained below, Verizon wireless service does. 76 The
+
+Commission’s National Broadband Map demonstrates that Verizon offers sufficient coverage to
+
+support voice service throughout the discontinuance areas in these states where it offers mobile
+
+wireless service and fixed wireless POTS voice replacement service. 77 The awards from
+
+RootMetrics, and the rigorous testing behind them, demonstrate that Verizon’s wireless network
+
+provides availability similar to POTS. Because customer calls made with Verizon’s fixed
+
+
+
+71
+   Metro Area RootScore Report – 2nd Half 2025: Hampton Roads, VA, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/hampton-roads-va/2025/2H (last
+visited Aug. 10, 2026).
+72
+   Metro Area RootScore Report – 2nd Half 2025: Albuquerque, NM, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/albuquerque-nm/2025/2H (last visited
+Aug. 10, 2026).
+73
+   Metro Area RootScore Report – 2nd Half 2025: Toledo, OH, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/toledo-oh/2025/2H (last visited Aug.
+10, 2026).
+74
+   Metro Area RootScore Report – 2nd Half 2025: Columbia, SC, ROOTMETRICS,
+https://www.rootmetrics.com/en-US/rootscore/map/metro/columbia-sc/2025/2H (last visited
+Aug. 10, 2026).
+75
+     See 2016 Technology Transitions Order ¶ 94.
+76
+     Id. ¶ 90.
+77
+  National Broadband Map, FCC, https://broadbandmap.fcc.gov/home (last visited Aug. 10,
+2026).
+
+
+                                                 18
+wireless POTS voice replacement service are carried using the same network and equipment as
+
+Verizon’s wireless customers’ VoLTE calls, they will experience the same service availability.
+
+In addition, Verizon’s legacy voice replacement customer premises devices can remain
+
+positioned in the optimal area of a customer’s residence or premises, which means Verizon’s
+
+legacy voice replacement services provide reliable wireless voice service that, in some cases,
+
+exceeds the performance of mobile wireless services.
+
+                        c.     Verizon’s Replacement Service Coverage.
+
+         Finally, the Commission’s Adequate Replacement Test requires that an application for
+
+streamlined treatment demonstrate that either: “(i) a single replacement service reaches the entire
+
+geographic footprint of the service area subject to discontinuance; or (ii) there are multiple
+
+providers who collectively cover the entirety of the [discontinuance] area.” 78 As reflected in
+
+both the National Broadband Map and Verizon’s coverage map, Verizon’s LTE network is
+
+widely available in the discontinuance area. 79 This network enables Verizon’s mobile wireless
+
+services as well as its fixed wireless legacy voice replacement services. The Broadband Data
+
+Collection (“BDC”) did not exist when the Commission devised the Adequate Replacement Test,
+
+and it provides a level of detail that may have previously required additional sources.
+
+
+
+
+78
+     2016 Technology Transitions Order ¶ 123 (footnote omitted).
+79
+   National Broadband Map, FCC, https://broadbandmap.fcc.gov/home (last visited Aug. 10,
+2026); Verizon, Find Home Internet and Cell Phone Coverage in Your Area (coverage map),
+https://www.verizon.com/coverage-map/ (last visited Aug. 10, 2026). As discussed elsewhere,
+Verizon relies on its fiber facilities and certain third-party services in the remainder of the
+discontinuance area.
+
+
+                                                 19
+                 2.        Verizon Offers Access to Critical Applications and Functionalities. 80
+
+                           a.     911 and Emergency Services.
+
+          Verizon certifies that its mobile wireless and fixed wireless POTS voice replacement
+
+services comply with all applicable regulations regarding the availability and required
+
+functionality of 911 service. 81 Verizon’s mobile wireless service does not require a backup
+
+battery to remain operational during electric power outages of several hours or less, 82 and
+
+modern cell phones can go without a charge for more than 24 hours when kept in standby mode.
+
+For longer outages, modern cell phones can be recharged in a car, with a laptop, or with a power
+
+bank, which is inexpensive and available online and at various retail stores. The customer
+
+premises equipment for Verizon’s fixed wireless POTS voice replacement service includes
+
+battery backup using commercially available rechargeable batteries. 83 Verizon also certifies that
+
+its mobile wireless and fixed wireless POTS voice replacement services comply with all
+
+applicable 911 network reliability requirements. 84
+
+
+
+
+80
+  In 2016, when adopting the Adequate Replacement Test, the Commission identified a list of
+“key applications and functionalities” that were associated with legacy voice service at that time.
+2016 Technology Transitions Order ¶¶ 157-58. The Commission specified that the 2016 list of
+functionalities sunset in 2025, so Verizon does not address them here. Id. ¶ 170.
+81
+     See id. ¶¶ 128-129.
+82
+   U.S. Electricity Customers Averaged Five and One-Half Hours of Power Interruptions in
+2022, U.S. ENERGY INFORMATION ADMINISTRATION (Jan. 25, 2024),
+https://www.eia.gov/todayinenergy/detail.php?id=61303 (“Since 2013, the average duration of
+electricity interruptions each year has remained consistently around two hours after excluding
+major events.”).
+83
+   Both the Voice Connect and Verizon Voice Gateway devices use widely available “AA”
+batteries. When fully charged, Voice Connect batteries will provide up to three talk hours, or up
+to 23 standby hours of backup power, and Verizon Voice Gateway batteries provide up to 4 talk
+hours and 24 standby hours, both enabling voice services, including 911 service, when the power
+goes out.
+84
+     See 2016 Technology Transitions Order ¶ 134; 47 C.F.R. § 9.19.
+
+
+                                                   20
+                        b.      Communications Security.
+
+         Verizon maintains a comprehensive and mature cybersecurity program designed to
+
+protect the confidentiality, integrity, and availability of its systems, networks, and information,
+
+including for its wireless services, through administrative, technical, and physical safeguards.
+
+Grounded in the National Institute of Standards and Technology Cybersecurity Framework, the
+
+enterprise-wide program incorporates robust policies, strategic planning, cutting-edge
+
+technology, comprehensive training, and a culture of continuous improvement to proactively
+
+identify and protect against cybersecurity risks, and to enable rapid detection, response, and
+
+recovery from incidents. Verizon employs more than one thousand cybersecurity professionals
+
+who establish and oversee security strategies and policies and partner with business units to
+
+implement appropriate security measures and protect customer data. Verizon’s cybersecurity
+
+ecosystem—subject to review with key stakeholders at least once every year to ensure alignment
+
+with current regulations and business practices—reflects its commitment to providing effective
+
+protections against cyber threats.
+
+         Verizon therefore certifies that its network security management practices are enterprise-
+
+wide and that it safeguards the availability, integrity, and confidentiality of the network without
+
+differentiation between services, geographic areas, or service-providing affiliates.
+
+                        c.      Service for Individuals with Disabilities.
+
+         Verizon certifies that its mobile wireless services and its fixed wireless legacy voice
+
+replacement services comply with all accessibility, usability, and compatibility requirements
+
+governing services benefiting individuals with disabilities. 85
+
+
+
+
+85
+     2016 Technology Transitions Order ¶ 146.
+
+
+                                                  21
+             B. The Alternative Options Test Is Satisfied in the Areas in Which Verizon Has
+                Overbuilt Fiber.
+
+          Verizon has deployed fiber optics Fios service to portions of its previous copper footprint
+
+in Arizona, Delaware, New Jersey, Ohio, Rhode Island, South Carolina, and Virginia and offers
+
+interconnected VoIP service over that network. 86 In each such area with fiber, this service
+
+satisfies the Alternative Options Test. 87 It meets the first prong of the Alternative Options test as
+
+it offers “interconnected VoIP services . . . throughout the affected service area.” 88 As for the
+
+second prong of the test, in the portions of the discontinuance area where Fios is available, there
+
+are multiple service offerings available from unaffiliated providers—including mobile wireless
+
+service from AT&T and T-Mobile and broadband service sufficient to support VoIP provisioned
+
+over cable or fiber from multiple providers. 89 Accordingly, the portion of the discontinuance
+
+
+86
+   Verizon’s voice service over broadband replacement options include: Fios Home Phone, an
+advanced home phone service that works on Verizon’s 100% fiber-optic network and uses
+traditional corded or cordless landline phones connected to existing phone jacks; Frontier Digital
+Voice, built with digital technology to deliver excellent call quality and reliability; and Business
+Digital Voice, a professional communications solution that operates over a secure, cloud-based
+VoIP connection. See Fios Home Phone, VERIZON, https://www.verizon.com/home/phone/ (last
+visited Aug. 10, 2026); Frontier Digital Voice features and support, FRONTIER, A VERIZON
+COMPANY, https://frontier.com/helpcenter/phone/frontier-digital-voice (last visited Aug. 10,
+2026); Business Digital Voice, VERIZON, https://www.verizon.com/business/products/voice-
+collaboration/voip/business-digital-voice/ (last visited Aug. 10, 2026).
+87
+     47 C.F.R. § 63.71(f)(2)(ii) (setting out the Commission’s Alternative Options Test).
+88
+  Id. § 63.71(f)(2)(ii)(A). Verizon is no longer required to offer its service on a stand-alone
+basis in order to discontinue a legacy service. See Accelerating Wireline Broadband Deployment
+by Removing Barriers to Infrastructure Investment et al., Order, 40 FCC Rcd 1999 (WCB 2025).
+89
+  Comcast provides both VoIP services and cable/fiber broadband service offering bandwidth
+sufficient to support VoIP services in certain areas in every state where Verizon seeks to
+discontinue its legacy POTS service except Arizona. Beyond Comcast, the following is a non-
+exhaustive list of providers that offer both VoIP and cable/fiber broadband service with
+bandwidth sufficient to support VoIP in parts of the discontinuance areas in each of the
+following states: Arizona: Optimum and Sparklight; Delaware: Breezeline; New Jersey:
+Optimum; Ohio: Armstrong, Breezeline, Charter, and Optimum; Rhode Island: Charter and Cox;
+South Carolina: Breezeline and Charter; Virginia: Breezeline, Charter, Cox, Optimum, and
+Shentel.
+
+
+                                                  22
+area served by Verizon Fios qualifies for treatment under the streamlined grant procedures set
+
+forth in Section 63.71(f)(1). 90
+
+          C.     Leading Third-Party Fiber, Cable, and Mobile Wireless Services Satisfy the
+                 Adequate Replacement Test.
+
+          Beyond locations in which Verizon offers its own wireless or fiber-based replacement
+
+service, Verizon also seeks approval to discontinue provision of copper-based POTS at locations
+
+where a specified third party offers interconnected VoIP service over their fiber-based or cable-
+
+based (or hybrid fiber-coaxial-based) networks, 91 or mobile wireless voice service (i.e.,
+
+commercial mobile radio service or CMRS). The 2016 Technology Transitions Order
+
+established that discontinuance applicants may show that a third-party replacement service
+
+constitutes an adequate replacement and that applicants may rely on public information in
+
+making that showing. 92
+
+          To ensure high quality service, Verizon limits the third parties it puts forward as adequate
+
+replacements to ten facilities-based providers with the largest amount of unique overlaps with its
+
+copper network in the areas in question: AT&T Inc. (“AT&T”); T-Mobile US, Inc. (“T-
+
+Mobile”); Comcast Corp. (“Xfinity”); Charter Communications, Inc. (“Spectrum”); Cox
+
+Communications, Inc. (“Cox”); Cogeco Communications (“Breezeline”); Optimum
+
+Communications, Inc. (“Optimum”); Shenandoah Telecommunications Co. (“Shentel”); Cable
+
+One, Inc. (“Sparklight”); and Armstrong Utilities Inc. (“Armstrong”). Verizon specifically seeks
+
+
+90
+     See 47 C.F.R. § 63.71(f)(1).
+91
+   At some locations some Providers may rely on third-party inputs to offer facilities-based
+interconnected VoIP or they may offer resold facilities-based interconnected VoIP service over
+fiber or cable, and any such locations are within the scope of this Application. See Network
+Modernization Order ¶ 23 n.84 (stating that a facilities-based service includes “facilities that the
+provider has obtained the right to use from other entities”).
+92
+     2016 Technology Transitions Order ¶¶ 84, 86.
+
+
+                                                  23
+discontinuance authority where the BDC reveals that one of the aforementioned “top ten”
+
+providers makes available fiber or cable or 4G LTE (5/1 Mbps) or better mobile coverage at the
+
+same location as Verizon POTS, and where public information indicates that the cable or fiber
+
+provider offers interconnected VoIP or the mobile provider offers mobile voice (each such
+
+provider, in its provision of voice at the locations in question, a “Provider”). As detailed below,
+
+this Application demonstrates based on the totality of the circumstances, using publicly available
+
+information, that each of the Providers satisfies the Adequate Replacement Test.
+
+          Commission precedent supports this conclusion. While the discontinuance rules and
+
+associated information collections adopted in the Network Modernization Order are not yet
+
+effective, 93 the order text, including the Commission’s conclusions regarding adequate
+
+replacements, is effective. 94 Accordingly, the Bureau may rely on those Commission
+
+conclusions. The Network Modernization Order found that “facilities-based interconnected
+
+VoIP service is an adequate replacement” and that “facilities-based mobile wireless service
+
+operating at speeds of at least 5/1 Mbps” is “an adequate replacement.” 95 The Commission
+
+reiterated, consistent with the preexisting Adequate Replacement Test, that “[p]ermitting a
+
+discontinuing carrier to rely on the availability of an adequate replacement service offered by a
+
+third party to support a technology transitions discontinuance application and to rely on publicly
+
+available information to make the requisite showing is consistent with previous Commission
+
+action.” 96
+
+
+93
+ See Information Collection Being Submitted for Review and Approval to Office of
+Management and Budget, 91 Fed. Reg. 44843 (July 17, 2026).
+94
+  See Reducing Barriers to Network Improvements and Service Changes, 91 Fed. Reg. 20913
+(Apr. 20, 2026).
+95
+     Network Modernization Order ¶¶ 32, 34 (footnotes omitted).
+96
+     Id. ¶ 38 (footnotes omitted).
+
+
+                                                24
+       The recent Network Modernization Order represents the Commission’s definitive,
+
+unanimous, and bipartisan view on the topic of adequate replacements. Nevertheless, it is far
+
+from the only precedent supporting the conclusion that the Providers’ fiber, cable, and mobile
+
+wireless-based voice services constitute adequate replacements for copper-based POTS. Fiber,
+
+coaxial cable, and hybrid fiber-coaxial cable all provide reliable wireline connections that are
+
+more than fast enough for VoIP, 97 and Commission precedent confirms that facilities-based
+
+VoIP over these connections meet consumer needs. 98 The Commission also has brought
+
+interconnected VoIP services into significant regulatory parity with traditional
+
+telecommunications services, including with respect to, among other things, robocall
+
+
+
+
+97
+   See Broadband Speed Guide, FCC (July 2022),
+https://www.fcc.gov/consumers/guides/broadband-speed-guide (minimum download speed for a
+VoIP call is less than 0.5 Mbps); Internet Access Services: Status as of June 30, 2025, FCC,
+INDUSTRY ANALYSIS DIVISION, OFFICE OF ECONOMICS AND ANALYTICS, at 1, 7, 69 (May 2026),
+https://docs.fcc.gov/public/attachments/DOC-421557A1.pdf (wireline technologies that allow
+information to be sent to or received with a speed of at least 0.2 Mbps include coaxial cable,
+hybrid fiber-coaxial cable, and fiber to the premises); cf. Check Your Internet Speed, VONAGE,
+(Oct. 5, 2020), https://support.vonage.com/articles/answer/Check-Your-Internet-Speed-1060
+(“Vonage recommends minimum upload speed of 90 kilobytes per second or greater per phone
+line to attain the highest audio quality.”); see also Getting Broadband Q&A, FCC, (Jan. 25,
+2024), https://www.fcc.gov/consumers/guides/getting-broadband-qa (broadband supports VoIP
+which can be accessed over different platforms including cable and fiber). For the avoidance of
+doubt, Verizon cites Vonage not because it is relying on over-the-top options in this Application,
+but rather to illustrate that voice calls place minimal demands on modern networks.
+98
+  See Communications Marketplace Report ¶¶ 154-57 (discussing a “multitude of other voice
+service options for consumers,” including VoIP bundled with the underlying broadband
+connection, and stating that “U.S. consumers benefit from the ever evolving choices available to
+meet their voice communication needs”); Network Modernization Order ¶ 32 (finding that
+“interconnected VoIP service benefits consumers by providing access to networks that can
+support advanced protocols and technologies”); see also Numbering Policies for Modern
+Communications et al., Second Report and Order and Second Further Notice of Proposed
+Rulemaking, 38 FCC Rcd 8951, ¶ 1 (2023) (“[T]echnological innovations such as VoIP calling
+capabilities have brought advanced communications services to the marketplace to the benefit of
+consumers . . . .”).
+
+
+                                                25
+requirements, 911, disability access, customer privacy/CPNI, and law enforcement/CALEA. 99
+
+Of course, similar or even added requirements apply to CMRS as well,100 and the Commission
+
+has acknowledged the marketplace reality that consumers overwhelmingly choose mobile
+
+voice. 101 The Bureau has previously approved technology transition applications via streamlined
+
+treatment where the replacement is third-party facilities-based interconnected VoIP or mobile
+
+wireless. 102
+
+
+99
+  See, e.g., Numbering Policies for Modern Communications et al., Second Report and Order
+and Second Further Notice of Proposed Rulemaking, 38 FCC Rcd 8951 (2023) (robocall
+requirements); BellSouth’s Petition for Declaratory Ruling Regarding the Commission’s
+Definition of Interconnected VoIP in 47 C.F.R § 9.3 and the Prohibition on State Imposition of
+911 Charges on VoIP Customers in 47 U.S.C. § 615a-1(f)(1) et al., Declaratory Ruling, 34 FCC
+Rcd 10158 (2019) (911 calling); Contributions to the Telecommunications Relay Services Fund,
+Report and Order, 26 FCC Rcd 14532 (2011) (disability access); Implementation of the
+Telecommunications Act of 1996: Telecommunications Carriers’ Use of Customer Proprietary
+Network Information and Other Customer Information et al., Report and Order and Further
+Notice of Proposed Rulemaking, 22 FCC Rcd 6927 (2007) (customer privacy/CPNI);
+Communications Assistance for Law Enforcement Act and Broadband Access and Services, First
+Report and Order and Further Notice of Proposed Rulemaking, 20 FCC Rcd 14989 (2005) (law
+enforcement/CALEA).
+100
+      See, e.g., 47 C.F.R. §§ 9.9-.10; see also id. § 20.15.
+101
+  See, e.g., Reforming Legacy Rules for an All-IP Future et al., Notice of Proposed
+Rulemaking, FCC 26-11, ¶¶ 11, 13 (rel. Feb. 19, 2026).
+102
+  See, e.g., Comments Invited on CenturyLink’s Section 214 Application to Discontinue
+Domestic Legacy Voice Service as Part of a Technology Transition, Public Notice, DA 26-270
+(WCB rel. Mar. 19, 2026) (granting streamlined treatment to Lumen where Xfinity VoIP and
+Verizon mobile wireless were the proposed replacement services); Section 63.71 Application of
+Qwest Corporation d/b/a CenturyLink QC For Authority Pursuant to Section 214 of the
+Communications Act of 1934, As Amended, to Discontinue a Telecommunications Service, WC
+Docket No. 26-66 (filed Mar. 10, 2026); Comments Invited on CenturyLink’s Section 214
+Application to Discontinue Domestic Legacy Voice Service as Part of a Technology Transition,
+Public Notice, 40 FCC Rcd 3205 (WCB 2025) (granting streamlined treatment to Lumen where
+Verizon mobile wireless was the proposed replacement service); Section 63.71 Application of
+Qwest Corporation d/b/a CenturyLink QC For Authority Pursuant to Section 214 of the
+Communications Act of 1934, As Amended, to Discontinue a Telecommunications Service, WC
+Docket No. 25-177, at 2, 5-8 (filed May 16, 2025); Comments Invited on Section 214
+Application(s) to Discontinue Domestic Non-Dominant Carrier Telecommunications Services as
+Part of a Technology Transition, Public Notice, 35 FCC Rcd 11342 (WCB 2020) (granting
+
+
+
+                                                    26
+                     1. The Providers Offer Substantially Similar Levels of Network
+                        Performance and Availability as Verizon POTS.
+
+          Based on the totality of the circumstances, the Providers offer substantially similar
+
+network infrastructure and service quality as the POTS Verizon would discontinue.
+
+                         a.      Network Performance and Availability.
+
+          The totality of the circumstances demonstrates that users can rely on the Providers for
+
+substantially similar network performance and availability as Verizon POTS. 103 Indeed, the
+
+cable, fiber, and mobile technologies employed by the Providers are far superior to legacy
+
+copper. The Commission found almost two years ago that “[a]lthough the public switched
+
+telephone network was once the only means to connect, there now exists a multitude of other
+
+voice service options for consumers in the United States.” 104 The Network Modernization Order
+
+confirmed specifically at the Commission level that facilities-based interconnected VoIP and
+
+facilities-based 4G LTE (5/1 Mbps) or faster mobile wireless are adequate replacements, 105
+
+reenforcing earlier Bureau discontinuance determinations, as discussed above. These decisions
+
+represent a clear-cut conclusion that facilities-based cable and/or fiber interconnected VoIP and
+
+facilities-based mobile wireless voice meet consumers’ needs.
+
+
+
+
+streamlined treatment to Lumen where Charter Spectrum was the proposed replacement service);
+Section 63.71 Application of Embarq Florida, Inc., d/b/a CenturyLink For Authority Pursuant to
+Section 214 of the Communications Act of 1934, As Amended, to Discontinue a
+Telecommunications Service, WC Docket No. 20-328 (filed Sept. 30, 2020).
+103
+      See 2016 Technology Transitions Order ¶ 91.
+104
+      Communications Marketplace Report ¶ 154.
+105
+      Network Modernization Order ¶¶ 32, 34.
+
+
+                                                   27
+          The marketplace reinforces this sound conclusion. As detailed in Section II above, most
+
+consumers choose mobile wireless for voice service, and most of the remainder pick
+
+interconnected VoIP. From a technological perspective, voice requires minimal network
+
+capacity in comparison to modern applications such as video conferencing and gaming, and
+
+modern cable, fiber, and mobile wireless networks are more than up to the task. 106
+
+          All ten of the Providers emphasize their high-quality network performance and
+
+availability. 107 The Providers have received many awards and recognition for their networks
+
+from third parties, including from testing services. 108 The Providers submit detailed data into the
+
+BDC regarding the availability and quality of their broadband offerings, 109 and the Providers
+
+have every incentive to report accurately because of the risk of significant penalties and
+
+reputational damage. 110 In the highly competitive communications marketplace, the Providers
+
+would not have the large customer bases they possess today if customers thought they offered
+
+poor quality or suffered excessive outages. Accordingly, the Commission’s precedent, the
+
+marketplace, and information from the Providers support the conclusion that users can rely on
+
+the Providers for substantially similar network performance and availability as Verizon POTS.
+
+                              b. Replacement Service Coverage.
+
+          The latest BDC data, on which Verizon relies, demonstrate that the Providers offer
+
+coverage to the locations in question. As Chairman Carr has stated, the BDC “accurately
+
+
+106
+      See generally id.
+107
+   See, e.g., AT&T Customers Win: Company’s Wireless Network Outperforms T-Mobile in
+Speed, Reliability, and Performance. Plus, AT&T Fiber Awarded as Fastest and Top-Rated
+Internet, AT&T (Sept. 8, 2025), https://about.att.com/story/2025/ookla-rootmetrics-awards.html;
+America’s Best Network Keeps Getting Better, T-MOBILE, https://www.t-
+mobile.com/coverage/network (last visited Aug. 10, 2026) (“T-Mobile is the Best Mobile
+Network in the U.S.”); America’s Smartest Broadband Network, COMCAST,
+https://corporate.comcast.com/our-network (last visited Aug. 10, 2026) (describing Comcast’s
+
+
+
+                                                 28
+network as “Resilient by Design” and explaining that “every connection is optimized in real-time
+to deliver fast, reliable and secure Internet to our customers”); Speed and Reliability: Spectrum
+Internet Delivers, CHARTER (Sept. 9, 2024), https://policy.charter.com/spectrum-internet-delivers
+(stating that “Spectrum delivers the most reliable internet” and “the fastest Internet download
+speeds”); A Phone that Fits Your Lifestyle, COX, https://www.cox.com/residential/phone.html
+(last visited Aug. 10, 2026) (“Cox Voice uses an upgraded digital fiber-optic network that makes
+it first in reliability. . . . Plus, we monitor the network 24 hours a day to help keep your phone
+service trouble-free.”); Serving 1.5 Million Homes & Businesses, BREEZELINE,
+https://www.breezeline.com/what-our-customers-say (last visited Aug. 10, 2026) (highlighting
+Breezeline’s “lightning fast Internet, TV and Home Phone services” and “Always Reliable
+Network”); A Fresh Start Deserves Fast, Fiber-Powered Internet, OPTIMUM,
+https://www.optimum.com/cf/ (last visited Aug. 10, 2026) (emphasizing fast speeds and network
+reliability); Our Internet Gets Faster and More Reliable Every Day, SHENTEL,
+https://www.shentel.com/en/internet (last visited Aug. 10, 2026) (“Switching to Shentel High-
+Speed Internet means faster speeds [and] more reliable service . . . .”); Sparklight Phone:
+Reliable phone service that connects you to what matters, SPARKLIGHT,
+https://www.sparklight.com/phone (last visited Aug. 10, 2026) (emphasizing Sparklight Phone’s
+“exceptional clarity and dependable service”); Why Choose Armstrong?, ARMSTRONG,
+https://armstrongonewire.com/WhyArmstrong (last visited Aug. 10, 2026) (highlighting
+Armstrong’s “state-of-the-art fiber-optic network,” that its “field technician teams are locally
+based,” and its efforts to “augment [its] network to increase capacity”); see also Section 63.71
+Application of AT&T, WC Docket No. 24-220, at 22-27 (Nov. 1, 2024).
+108
+    See, e.g., United States: Converged Consumer Experience Report, OOKLA,
+https://www.ookla.com/research/reports/united-states-converged-report-h1-2026 (last visited
+Aug. 10, 2026); United States: State of the Mobile Union Report, OOKLA,
+https://www.ookla.com/research/reports/rootmetrics-us-state-of-mobile-union-1h-2025 (last
+visited Aug. 10, 2026); Xfinity Ranks #1 for Consistent Quality and Download Speed in ‘USA
+Converged Experience Report, April 2026’ from Opensignal, DISCOVERY HUB: XFINITY (July 2,
+2026), https://www.xfinity.com/hub/internet/xfinity-fastest-most-consistent-internet; Rupert
+Bapty, USA Fixed Broadband Reliability Experience — National View — August 2024,
+OPENSIGNAL (Aug. 29, 2024), https://insights.opensignal.com/2024/08/29/usa-fixed-broadband-
+reliability-experience-national-view-august-2024; Optimum Internet: Powering the Tri-State’s
+Connected Homes with Unmatched Speed and Reliability, OPTIMUM (Feb. 13, 2026),
+https://www.optimum.com/articles/internet/optimum-recognized-by-ookla; News Release,
+Sparklight, Sparklight® Recognized by Ookla® for Outstanding Internet Performance Across
+Multiple U.S. Markets (Mar. 27, 2025), https://www.sparklight.com/news/sparklight-recognized-
+by-ookla-for-outstanding-internet-performance-across; News Release, Cox,
+HighSpeedInternet.com rates Cox the fastest U.S. broadband provider (June 24, 2024),
+https://newsroom.cox.com/2024-06-26-HighSpeedInternet-com-rates-Cox-the-fastest-U-S-
+broadband-provider; News Release, Breezeline, Breezeline Voted Best Internet Provider in West
+Virginia (Aug. 8, 2024), https://www.breezeline.com/news/breezeline-voted-best-internet-
+provider-in-west-virginia; News Release, Shentel, Glo Fiber Named Fiber Provider of the Year
+in Cablefax's Prestigious Top Ops Awards (Aug. 22, 2024), https://investor.shentel.com/news-
+releases/news-release-details/glo-fiber-named-fiber-provider-year-cablefaxs-prestigious-top;
+
+
+
+                                               29
+detail[s] the availability of wired and wireless broadband.” 111 The Network Modernization
+
+Order expressly endorsed use of the BDC to determine mobile wireless coverage. 112 Reliance
+
+on the BDC is warranted given that Congress directed this granular source of coverage
+
+information. 113 Further, Verizon’s use of 4G LTE coverage data reported in the BDC reflects a
+
+cautious approach, as the minimum throughput requirements of 5 Mbps downlink and 1 Mbps
+
+uplink far surpass the network requirements to support a mobile voice call using Voice over
+
+LTE.
+
+          The Providers must certify the accuracy of their BDC submissions, which are subject to
+
+extensive and iterative Commission review processes. 114 None of the Providers has been subject
+
+to a public Commission enforcement action for noncompliance with BDC requirements. Further,
+
+Verizon has determined, based on publicly available information, that each of the Providers
+
+offers voice service.
+
+
+
+
+Armstrong Media Packet, ARMSTRONG, at 9,
+https://armstrongonewire.com/Content/Documents/Media_Info_Packet.pdf (last visited Aug. 10,
+2026).
+109
+    See 47 C.F.R. § 1.7004(c) (“Providers shall include in their filings data relating to the
+availability and quality of service of their broadband internet access service in accordance with
+this subpart.”).
+110
+      See id. § 1.7009.
+111
+  Establishing the Digital Opportunity Data Collection et al., Fifth Report and Order, 40 FCC
+Rcd 4681, 4720 (2025).
+112
+   See Network Modernization Order ¶ 34 (“We find facilities-based mobile wireless service
+operating at speeds of at least 5/1 Mbps, as reflected on the National Broadband Map, to be an
+adequate replacement . . . .”) (footnotes omitted).
+113
+   See Broadband Deployment Accuracy and Technological Availability Act, Pub. L. No. 116-
+130, 134 Stat. 228 (2020) (codified at 47 U.S.C. §§ 641-46).
+114
+   See 47 C.F.R. § 1.7004(d) (certification); id. § 1.7006 (data verification); id. § 1.7009
+(enforcement).
+
+
+                                                 30
+                 2.     The Providers Offer Access to Critical Applications and
+                        Functionalities.
+
+                        a.     911 and Emergency Services.
+
+          To Verizon’s knowledge based on its review of the publicly available information
+
+discussed below, all Providers comply with all applicable regulations regarding the availability,
+
+required functionality, and reliability of 911 service. 115 Each Provider publicly asserts that it
+
+provides customers access to 911. 116 None of the Providers has been subject to a public
+
+Commission enforcement action for a 911 outage occurring within the past two years. The
+
+Commission generally assumes good faith compliance by regulatees, 117 and the Network
+
+
+115
+      See 2016 Technology Transitions Order ¶¶ 128-29, 134.
+116
+    AT&T, AT&T Through History – 911, YOUTUBE (Mar. 4, 2026)
+https://www.youtube.com/watch?v=io0b3-6S4t4&t=11s; Safety: 911, T-MOBILE, https://www.t-
+mobile.com/responsibility/consumer-info/safety/9-1-1 (last visited Aug. 10, 2026); What is
+Enhanced 911 (E911) and how does it work?, XFINITY,
+https://www.xfinity.com/support/articles/about-e911 (last visited Aug. 10, 2026); Important
+Information About Spectrum Voice® 911 Services & Battery Backup, SPECTRUM,
+https://www.spectrum.com/policies/battery (last visited Aug. 10, 2026); Support: Enhanced 911
+and 911 Services, COX, https://www.cox.com/residential/support/enhanced-911-and-911-
+services.html; E911, BREEZELINE, https://www.breezeline.com/e911 (last visited Aug. 10, 2026);
+Is a home phone still worth it?, OPTIMUM, https://www.optimum.com/home-phone#accordion-
+39b3955748-item-d2dfd6f907 (last visited Aug. 10, 2026) (listing Enhanced 911 as a calling
+feature); Frequently Asked Questions, SHENTEL,
+https://support.shentel.com/expresshelp/phone/can-i-call-911-with-shentel-phone-service (last
+visited Aug. 10, 2026) (“Shentel Home Phone provides 911 service”); Mandatory 10-Digit
+Dialing, SPARKLIGHT, https://support.sparklight.com/hc/en-us/articles/4411311103639-
+Mandatory-10-Digit-Dialing (last visited Aug. 10, 2026) (explaining that customers can dial
+three digits to reach 911); Telephone Users Guide: Equipment, Features & Voice Mail,
+ARMSTRONG, https://armstrongonewire.com/content/documents/telusersguide.pdf (last visited
+Aug. 10, 2026) (“Armstrong is proud to offer 911 emergency dialing.”).
+117
+   See, e.g., Procedures for Reviewing Requests for Relief from State & Local Regulations
+Pursuant to Section 332(c)(7)(B)(v) of the Communications Act of 1934; Guidelines for
+Evaluating the Environmental Effects of Radiofrequency Radiation et al., Second Memorandum
+Opinion and Order and Notice of Proposed Rulemaking, 12 FCC Rcd 13494, ¶ 151
+(1997) (“Generally, we presume that licensees are in compliance with our rules unless presented
+with evidence to the contrary.”); Telecommunications Relay Services and Speech-to-Speech
+Services for Individuals with Hearing and Speech Disabilities, Order, 24 FCC Rcd 11985, ¶ 5
+
+
+
+                                                  31
+Modernization Order extends that longstanding approach to this specific context because it does
+
+not require a specialized showing regarding compliance with 911 rules for facilities-based
+
+interconnected VoIP or mobile wireless. 118 Rather, the Commission specifically highlighted the
+
+benefits of mobile wireless and facilities-based VoIP in concluding that its approach is
+
+“sufficient to safeguard access to emergency services.” 119 The foregoing demonstrates that the
+
+Providers meet this subprong of the Adequate Replacement Test, especially viewed through the
+
+lens of the Commission’s latest thinking on the topic. 120
+
+
+
+(CGB 2009) (“The Commission’s rules assume good faith compliance with the Communications
+Act and the law generally on the part of providers seeking compensation from the Fund . . . .”);
+see also Contemporary Media, Inc. v. FCC, 214 F.3d 187, 193 (D.C. Cir. 2000) (“The FCC
+relies heavily on the honesty and probity of its licensees in a regulatory system that is largely
+self-policing.”) (citations omitted); In the Matter of Policy to be Followed in the Allowance of
+Litigation Expenses of Common Carriers in Ratemaking Proceedings In the Matter of Revisions
+to the Uniform System of Accounts, 92 FCC 2d 140, 144 (FCC 1982) (“Good faith is presumed
+on the part of a carrier’s management . . . .”).
+118
+   See Network Modernization Order ¶¶ 32, 34; cf. id. ¶ 38 (making adequacy of a “widely
+available [] voice service” contingent on whether it “provides access to 911 and complies fully
+with applicable 911 requirements”). To the extent that the 2016 Technology Transitions Order
+suggested that a replacement service must offer dispatchable address capability to satisfy the
+Adequate Replacement Test, the Network Modernization Order supersedes that claim. Further,
+the 2016 Technology Transitions Order predated the effectiveness of the Commission’s current
+wireless 911 location-accuracy framework and therefore did not account for the materially
+improved coordinate-based location information wireless providers now must supply. See 47
+C.F.R. § 9.10(i); see also Wireless E911 Location Accuracy Requirements, Sixth Further Notice
+of Proposed Rulemaking, 40 FCC Rcd 2764, ¶ 2 (2025).
+119
+      Network Modernization Order ¶¶ 48-49.
+120
+   The backup power aspect of the Adequate Replacement Test is inapplicable because the
+Commission’s residential backup power requirement has sunset. See 2016 Technology
+Transitions Order ¶ 130 (requiring “a showing that at least one replacement service in the area
+complies with our residential backup power requirements” located at 47 C.F.R. § 12.5 or “an
+applicant may show that another provider in the affected area offers line-powering or complies
+with Section 12.5.”). The Commission subsequently renumbered 47 C.F.R. § 12.5 as 47 C.F.R.
+§ 9.20. See Implementing Kari’s Law and Section 506 of RAY BAUM’S Act, Inquiry Concerning
+911 Access, Routing, and Location in Enterprise Communications Systems et al., Report and
+Order, 34 FCC Rcd 6607, 6745 (2019). The residential backup power rule expired in 2025 and
+was subsequently deleted entirely. 47 C.F.R. § 9.20(g) (2024); Delete, Delete, Delete, Direct
+
+
+
+                                                 32
+                        b.      Communications Security.
+
+          There can be no doubt that the Providers’ “replacement service[s] offers comparably
+
+effective protection from network security risks.” 121 The Commission has concluded that the
+
+transition to modern, IP-based networks promotes public safety and cybersecurity. 122 “[N]on-
+
+copper infrastructure increases network security and reliability.” 123 The Network Modernization
+
+Order embodies this viewpoint by choosing not to make network security a part of any of its
+
+“adequate replacement” analyses. All of the Providers publicly describe network security
+
+
+
+
+Final Rule, 40 FCC Rcd 9569, 9576 (2025). Nevertheless, the fixed service Providers state that
+they make available backup power options for voice. See, e.g., Equipment: Everything you need
+to always stay in touch, XFINITY, https://www.xfinity.com/learn/home-phone-
+services/equipment#659baa3d-4c1e-4f4e-b673-bd29891c0a0a (last visited Aug. 10, 2026)
+(offering a backup battery case for up to 24 hours); Important Information About Spectrum
+Voice® 911 Services & Battery Backup, SPECTRUM, https://www.spectrum.com/policies/battery
+(last visited Aug. 10, 2026); Support: Enhanced 911 and 911 Services, COX,
+https://www.cox.com/residential/support/enhanced-911-and-911-services.html (last visited Aug.
+10, 2026) (battery available for purchase); E911, BREEZELINE,
+https://www.breezeline.com/e911(last visited Aug. 10, 2026); Is a home phone still worth it?,
+OPTIMUM, https://www.optimum.com/home-phone#accordion-39b3955748-item-29291a22c9
+(last visited Aug. 10, 2026); Frequently Asked Questions, SHENTEL,
+https://support.shentel.com/expresshelp/phone/does-an-emta-require-a-battery-to-function (last
+visited Aug. 10, 2026) (offering battery backup for purchase by calling); Phone Backup Battery
+Information, SPARKLIGHT, https://support.sparklight.com/hc/en-us/articles/115014902528-
+Phone-Backup-Battery-Information (last visited Aug. 10, 2026); Maintaining Telephone
+Capability During Electrical Outages, ARMSTRONG,
+https://armstrongonewire.com/Content/Documents/MTA-Battery-Backup-Notice.pdf (last visited
+Aug. 10, 2026); see also Home Internet Backup: A safety net for your internet, T-MOBILE,
+https://www.t-mobile.com/home-internet/plans/5g-backup-internet-options (last visited Aug. 10,
+2026) (offering home internet backup for $20.00 per month). Mobile devices contain a
+rechargeable battery and can be charged with widely available and inexpensive portable
+batteries. See also Network Modernization Order ¶ 49 (noting that mobile wireless services are
+designed to work during cellular network outages).
+121
+      2016 Technology Transitions Order ¶ 136.
+122
+   Advancing IP Interconnection et al., Notice of Proposed Rulemaking, 40 FCC Rcd 8566, ¶ 12
+(2026).
+123
+      Comments of the Free State Foundation, WC Docket No. 25-304 et al., at 4 (Jan. 20, 2026).
+
+
+                                                 33
+safeguards. 124 Moreover, none of the Providers has been subject to a public Commission
+
+enforcement action for a network security issue that occurred in at least the past two years. In
+
+addition, the Commission has recognized the proactive, coordinated efforts of major U.S.
+
+providers to mitigate operational risks, protect consumers, and preserve national security
+
+interests. 125 The foregoing is more than sufficient to demonstrate that this sub-prong of the
+
+Adequate Replacement Test is satisfied.
+
+
+124
+    See, e.g., Cybersecurity, AT&T, https://sustainability.att.com/priority-topics/cybersecurity
+(last visited Aug. 10, 2026); Press Release, T-Mobile, T-Mobile Unveils New Cyber Defense
+and Executive Briefing Centers (Oct. 15, 2025), https://www.t-mobile.com/news/network/t-
+mobile-unveils-new-cyber-defense-briefing-centers; Comments of Comcast Corporation, PS
+Docket No. 23-239, at 3-4 (Oct. 6, 2023) (“Comcast employs a ‘security-by-design’ approach
+that prioritizes cybersecurity throughout its product development processes, at all levels of its
+network management operations, and for the duration of the product lifecycle.”); Exhibit 1 –
+Public Interest Statement (July 14, 2025) (exhibit to Joint Application of Cox Enterprises, Inc.
+and Charter Communications, Inc., WC Docket No. 25-233 (July 15, 2025)) (explaining that
+Charter is “firmly committed to advancing U.S. national security priorities, including by
+refraining from using any services and equipment on its own network that appear on the
+Commission’s Covered List” among other measures); Learn About Cybersecurity: Go online
+with peace of mind, COX, https://www.cox.com/residential/internet/learn/cybersecurity-
+options.html (last visited Aug. 10, 2026); Get unbeatable coverage with Breezeline WiFi+,
+BREEZELINE, https://www.breezeline.com/internet/wifi (last visited Aug. 10, 2026) (Breezeline
+Wifi+ “includes 24/7 cloud-based protection against malware, spyware, ransomware, and
+phishing attacks on every device connected to your network”); Built-in Security, OPTIMUM,
+https://www.optimum.net/pages/secure.html (last visited Aug. 10, 2026) (“Our network now has
+built-in security to protect you online.”); Open Internet Disclosure, SHENTEL,
+https://shentel.com/en/legal/open_internet_disclosure (last visited Aug. 10, 2026) (stating that
+Shentel implements dynamic network security measures); Network Management Disclosure,
+SPARKLIGHT, https://www.sparklight.com/legal/open-internet-and-network-
+management#Security (last visited Aug. 10, 2026) (“Sparklight employs security measures to
+protect customers and the network, including prevention of Denial of Service attacks, spam, and
+identity theft.”); Our fiber network is unmatched, ARMSTRONG,
+https://armstrongonewire.com/Network (last visited Aug. 10, 2026) (“We’ve invested in the
+latest security and network technology that automatically detects and blocks thousands of cyber
+security events each day.”).
+  See, e.g., Protecting the Nation’s Communications Systems from Cybersecurity Threats¸ Order
+125
+
+on Reconsideration, 40 FCC Rcd 9582, ¶¶ 2, 10-11 (2025) (describing applicable federal
+cybersecurity requirements along with providers’ proactive commitment to implementing
+cybersecurity controls increased cybersecurity information sharing, both with the federal
+
+
+
+                                                34
+                         c.      Service for Individuals with Disabilities.
+
+           All of the Providers’ voice services are subject to Commission accessibility
+
+requirements. 126 Each of the Providers is listed in the accessibility Recordkeeping Compliance
+
+Certification and Contact Information Registry. 127 Moreover, none of the Providers has been
+
+subject to a public Commission enforcement action for an accessibility violation that occurred in
+
+the past two years. These demonstrations are sufficient to satisfy the accessibility sub-prong of
+
+the Adequate Replacement Test. Should there be any doubt, the Network Modernization Order
+
+underscores the sufficiency of relying on accessibility rules and requirements by “declin[ing] to
+
+adopt an accessibility-specific requirement as part of the service discontinuance review.” 128
+
+          D.      Additional Information Required by 47 C.F.R. §§ 63.71, 63.505, and 63.602.
+
+                  1.     Name and Address of Carrier.
+
+          Citizens Telecommunications Company of Utah d/b/a Frontier Communications of Utah;
+
+Citizens Telecommunications Company of the White Mountains, Inc. d/b/a Frontier
+
+Communications of the White Mountains; Citizens Utilities Rural Company, Inc. d/b/a Frontier
+
+
+
+
+government and within the communications sector). In keeping with these commitments,
+AT&T, Charter, Comcast, Cox, T-Mobile, and Verizon, among others, formed the
+Communications Cybersecurity Information Sharing and Analysis Center. See Hema Kadia,
+Eight Major U.S. Carriers Form C2 ISAC to Strengthen Network Cybersecurity, TECKNEXUS
+(May 19, 2026), https://tecknexus.com/eight-major-us-carriers-form-c2-isac-to-strengthen-
+network-cybersecurity/.
+126
+      47 U.S.C. §§ 255, 617; see also 47 C.F.R. pts. 6, 7, 14.
+127
+   See Recordkeeping Compliance Certification and Contact Information Registry, FCC,
+https://apps.fcc.gov/rccci-search/search.action (last visited Aug. 10, 2026) (with contact
+information for AT&T Services, Inc.; T-Mobile USA, Inc.; Comcast Cable Communications,
+LLC; Charter Communications Inc.; Cox Communications, Inc.; Cogeco US, LLC (several
+entities); OV LLC (Cablevision Optimum Voice); Shenandoah Telephone Company and
+Shenandoah Telephone Company-NR; Cable One Inc. and Cable One VoIP LLC; Armstrong
+Telecommunications, Inc. and Armstrong Telephone Company (several entities)).
+128
+      Network Modernization Order ¶ 50.
+
+
+                                                   35
+Citizens Utilities Rural; Frontier Communications of the Carolinas LLC; Frontier
+
+Communications of Michigan, Inc.; Frontier Communications of the Southwest, Inc.; Frontier
+
+Communications of Virginia, Inc.; Frontier North Inc.; Navajo Communications Company, Inc.;
+
+Verizon Delaware LLC; Verizon New England Inc. d/b/a Verizon Rhode Island; Verizon New
+
+Jersey Inc.; Verizon South Inc.; Verizon Virginia LLC.
+
+            The following address can be used to contact each of the applicants:
+
+            Verizon Communications, Inc.
+            1 Verizon Way, Legal Department
+            Basking Ridge, NJ 07920
+
+                2.      Date of Planned Discontinuance.
+
+        Effective on or after October 23, 2026, pending regulatory approval, 129 Verizon will
+
+discontinue residential and business legacy voice service in the geographic areas detailed below.
+
+                3.      Points of Geographic Areas of Service Affected and Description of the
+                        Affected Service Area.
+
+        Verizon plans to discontinue its residential and business legacy copper-based POTS
+
+service throughout its telephone service areas in Arizona, Delaware, New Jersey, New Mexico,
+
+Ohio, Rhode Island, South Carolina, Utah, and Virginia in locations where (1) Verizon either
+
+offers mobile wireless service, has overbuilt fiber, or offers fixed wireless POTS voice
+
+replacement services that qualify as legacy POTS replacement services and/or (2) at least one of
+
+a select group of third-parties (AT&T, T-Mobile, Xfinity, Spectrum, Cox, Breezeline, Optimum,
+
+Shentel, Sparklight, or Armstrong) offers a fiber, cable, or mobile wireless adequate replacement
+
+service, as described in detail herein. 130
+
+
+129
+    To the extent that additional state requirements apply to discontinuing POTS, Verizon will
+satisfy those requirements prior to effectuating the discontinuance.
+130
+    The telephone service areas in Arizona, Delaware, New Jersey, New Mexico, Ohio, Rhode
+Island, South Carolina, Utah, and Virginia are depicted in maps in Exhibit B, below.
+
+
+                                                36
+               4.      Brief Description of Type of Service Affected.
+
+       Verizon’s residential and business POTS services are TDM-based exchange access line
+
+services that consist of the serving central office line equipment and all outside plant facilities
+
+needed to connect the serving central office with the network interface at the demarcation point
+
+of the customer premises. The service includes optional custom calling features and the End
+
+User Common Line service, which allows the line to facilitate local exchange, intrastate
+
+interexchange, and interstate voice calling.
+
+               5.      Brief Description of the Dates and Method of Notice to All Affected
+                       Customers.
+
+       Customer notices were sent by U.S. Mail on August 10, 2026, to customers of Verizon’s
+
+legacy voice service located in the discontinuance area. Representative examples of the
+
+customer notices are attached as Exhibit A.
+
+       Copies of this application are being sent via FedEx Overnight (or U.S. Priority Mail for
+
+P.O. Box addresses) to the governor, public utility commission, federally recognized tribes in the
+
+discontinuance areas, and to the Chief Information Officer of the Department of Defense, as
+
+required by Section 63.71(a) of the Commission’s rules. 131
+
+               6.      Regulatory Classification of Carrier.
+
+       Verizon offers POTS pursuant to non-dominant carrier regulation.
+
+
+
+
+131
+   Section 63.71(a) directs applicants to submit a copy of the application to the Secretary of
+Defense, Special Assistant for Telecommunications. However, due to restructuring within the
+Department of Defense, that position no longer exists. We understand from a review of prior
+applications that Commission staff has advised that a copy of the application should instead be
+sent to the Department of Defense Chief Information Officer.
+
+
+                                                  37
+                  7.     Statement Identifying the Application as a Technology Transition (47
+                         C.F.R. § 63.602(a)(2)).
+
+          The proposed discontinuance constitutes a technology transition under the Commission’s
+
+rules. Remaining Verizon POTS customers in the discontinuance area will be required to replace
+
+their TDM-based voice service with a different technology or transmission medium when
+
+Verizon discontinues legacy voice service, as there is no other TDM-based voice service
+
+available to them.
+
+                  8.     Information Regarding the Price of the Service for Which
+                         Discontinuance Authority Is Sought and the Price of the Proposed
+                         Replacement Service (47 C.F.R. § 63.602(a)(3)).
+
+          The version of Verizon’s legacy TDM-based voice service that is most comparable to
+
+Verizon mobile wireless service, Verizon’s fixed wireless POTS voice replacement service, and
+
+Verizon’s VoIP over fiber service costs $20.00 to $30.00 per month, plus taxes, surcharges, and
+
+fees.
+
+          Verizon’s fixed wireless POTS voice replacement services are available for as little as
+
+$20.00 per month, plus taxes, surcharges, and fees, and Verizon’s post-paid mobile wireless
+
+subscriptions are available for $30.00 per month, plus taxes, surcharges, and fees. 132 Prepaid
+
+mobile wireless service through Visible by Verizon is available starting at $19.00 per month. 133
+
+Additionally, voice service over Verizon’s fiber, where available, costs $30.00 per month plus
+
+taxes, surcharges, and fees, in addition to the cost of Verizon fiber broadband. Cable and fiber
+
+VoIP services from other providers are available in the discontinuance area at prices ranging
+
+
+
+
+132
+   See Introducing Simplicity Plan, VERIZON, https://www.verizon.com/plans/unlimited/ (last
+visited Aug. 10, 2026) (Simplicity Plan with limited-term $15/month switching discount).
+133
+      See VISIBLE, https://www.visible.com/ (last visited Aug. 10, 2026) (initial promotional rate).
+
+
+                                                   38
+from $10.00 to $40.00 per month plus taxes, surcharges, and fees where applicable. 134 In
+
+addition, post-paid and prepaid mobile wireless service from AT&T is available for $30.00 and
+
+$20.00 per month plus taxes, surcharges, and fees, respectively, 135 while T-Mobile offers post-
+
+paid (voice/text) and prepaid mobile wireless service for $20.00 and $40.00 per month plus
+
+taxes, surcharges, and fees, respectively. 136
+
+               9.      Certification That the Information Submitted in This Application Is
+                       True and Accurate (47 C.F.R. § 63.602(a)(4)).
+
+       See the attached certification of Kevin Smith at Exhibit C.
+
+
+134
+    Xfinity Internet, XFINITY, https://www.xfinity.com/digital/offers/plan-
+builder?autolocalization=9.SC-0000 (last visited Aug. 10, 2026) (Xfinity Voice Premier for
+$40.00 per month); Spectrum Voice, SPECTRUM, https://www.spectrum.com/home-phone (last
+visited Aug. 10, 2026) (Spectrum Voice for $15.00 per month for three years when bundled with
+Internet and TV or Mobile); Cox Voice Preferred Home Phone, COX,
+https://www.cox.com/residential/phone.html (last visited Aug. 10, 2026) (Voice Preferred for
+$20.00 per month); Serving 1.5 Million Homes & Businesses, Breezeline,
+https://www.breezeline.com/what-our-customers-say (last visited Aug. 10, 2026) (“Add
+unlimited home phone to your plan for just $20.00 per month”); Optimum packages: TV, internet
+and phone, OPTIMUM, https://www.allconnect.com/providers/optimum/bundles (last visited Aug.
+10, 2026) (home phone $10.00 per month); Shentel Home Phone Services: Crystal Clear
+Calling, SHENTEL, https://www.shentel.com/en/phone (last visited Aug. 10, 2026) (local phone
+for $26.95 per month, and unlimited for $41.95 per month); New Customer Residential –
+Monthly Price Guide, SPARKLIGHT, https://edge.sitecorecloud.io/cableone177cb-residential803d-
+cableonepro4f42-a78b/media/Project/residential-website/sparklight/RateCards/SPKLT-12-25.pdf
+(last visited Aug. 10, 2026) (economy phone for $20.00 per month with $0.10 per minute in the
+continental U.S.); Explore Armstrong®: Shop internet, TV and phone, ARMSTRONG,
+https://www.allconnect.com/providers/armstrong (last visited Aug. 10, 2026) (bundled home
+phone $29.95 per month). Broadband service may be required and is priced separately.
+135
+   Switch to wireless that’s made for the way you live, AT&T,
+https://www.att.com/plans/wireless/ (last visited Aug. 10, 2026) (post-paid Value 2.0 plans
+starting at $30.00 per month per line for 4 lines); Prepaid phone plans for everyone, AT&T,
+https://www.att.com/prepaid/plans/ (last visited Aug. 10, 2026) (prepaid plans starting at $20.00
+per month when you prepay $240).
+136
+   Unlimited Talk & Text Only Plan, T-MOBILE, https://www.t-mobile.com/cell-phone-
+plans/talk-text-only-plan (last visited Aug. 10, 2026) (unlimited talk and text only plan at $20.00
+per line per month); Compare our best monthly plans, T-MOBILE, https://prepaid.t-
+mobile.com/prepaid-plans?brand=TMOPrepaid (last visited Aug. 10, 2026) (prepaid plans
+starting at $40.00 per month for one line with Autopay).
+
+
+                                                 39
+               10.     Applicable Tariff Listing (47 C.F.R. § 63.505(e)).
+
+       Verizon’s mobile wireless, voice over fiber, and fixed wireless POTS voice replacement
+
+services are not tariffed services. Accordingly, there are no new tariff listings for them. The
+
+differences in prices between Verizon’s POTS service to be discontinued and mobile wireless,
+
+VoIP, and fixed wireless POTS voice replacement services are set out in Section III.E.8. above.
+
+               11.     Name of Any Other Carrier or Carriers Providing Telephone Service
+                       to the Community (47 C.F.R. § 63.505(g)).
+
+       No other providers offer legacy TDM-based voice service in the areas at issue in this
+
+Application. However, as set forth above, a number of competitors offer voice services to the
+
+individuals in the portions of the states where Verizon is discontinuing POTS service.
+
+               12.     Description of Any Previous Discontinuance, Reduction, or
+                       Impairment of Service (47 C.F.R. § 63.505(j)).
+
+       Verizon has not discontinued, reduced, or impaired residential or business POTS services
+
+to any locations in the discontinuance area.
+
+               13.     Number of Toll Messages (47 C.F.R. § 63.505(l)).
+
+       While Verizon does not track the monthly number of toll messages or toll revenues in the
+
+discontinuance areas, the amount of toll traffic on Verizon’s network has steadily decreased as
+
+the vast majority of Verizon’s former legacy voice customers have migrated to other wireline
+
+and wireless voice service providers.
+
+                                               *   *    *
+
+       Questions about this application can be addressed to Randy Clarke, c/o Verizon, 1300 I
+
+Street, N.W., Suite 500E, Washington, D.C. 20005, or randolph.clarke@verizon.com.
+
+IV.    CONCLUSION.
+
+       For the reasons identified above, the public convenience and necessity will not be
+
+adversely affected by the discontinuance of Verizon’s legacy POTS in the areas at issue in this
+
+
+                                                   40
+Application. Verizon respectfully requests the Commission approve this Section 63.71
+
+Application to discontinue service.
+
+                                                  Respectfully submitted,
+
+                                                  /s/ Randy Clarke
+William H. Johnson                                Randy Clarke
+Of Counsel                                        Verizon
+                                                  1300 I Street, N.W., Suite 500E
+                                                  Washington, D.C. 20005
+                                                  (202) 684-5350 (Office)
+
+August 10, 2026
+
+
+
+
+                                             41
+                 Exhibit A:
+
+Example Frontier and Verizon Customer Notices
+ ​ 00 Hidden Ridge​
+ 6
+ ​Irving, TX 75038​                                                      ​
+
+
+​ ustomer Name​
+C
+​Address 1​
+ ​Address 2​
+  ​City, State ZIP​
+
+​Telephone Number: [​​Telephone number​​]​
+
+
+​Important Update About Your Home Phone Service​
+
+​Dear [​​Customer Name​​],​
+
+​ e’re pleased to inform you about updates to our home phone service. As part of our​
+W
+​ongoing network improvements, we are planning to discontinue traditional copper-based​
+ ​home phone service in your area. If your service will be discontinued, you will have the​
+  ​opportunity to switch to service delivered using fiber, cable, or modern wireless technology.​
+
+​We’re here to support you through this transition.​
+
+​What This Means for You​
+
+​ ou don’t need to take action right now. There’s no change or interruption to your service​
+Y
+​today. If you want to explore your options early or have questions, give us a call at​
+ ​888.791.9197​​.​
+
+​What’s Changing and When​
+
+  ​ n or after​​October 23, 2026​​, subject to Federal Communications​​Commission (FCC)​
+  O
+​approval, Verizon will have the authority to discontinue traditional copper-based home​
+ ​phone service.​
+
+​ t that time, we will begin contacting customers whose services will be discontinued, by​
+A
+​letter, with more details and next steps to support you as you transition your services.​
+
+​You will receive advance notice by letter with your specific disconnection date.​
+
+​Service Affected​
+
+​Home Phone Service: copper-based dial tone phone service.​
+
+​Your Options​
+
+​ hen it’s time to make a change, you’ll have several options — including moving to a​
+W
+​modern solution that:​
+
+   ​
+   ●    ​ ets you keep your current phone number
+        L
+   ​●   ​Supports essential services like 911, many legacy alarm systems, faxes, and many
+         ​medical devices
+   ​●     ​Delivers a reliable, modern service
+
+                                                                              ​CMT-FRONTIER​
+    I​f your service will be discontinued, you will have at least one fiber, cable, or mobile wireless​
+​voice option available at home. Many customers will be able to choose modern Verizon​
+ ​voice service over wireless or fiber. You can see options available at your home based on​
+  ​official FCC data by visiting https://broadbandmap.fcc.gov/home and then typing in your​
+   ​home address.​
+
+​Additional Information​
+     ​●​ O   ​ n or after​​September 30, 2026​​we will stop accepting​​new orders for Frontier​
+             ​copper-based home phone service in your area.​
+      ​●​ ​Frontier’s fiber network services, where available, are not affected and will continue​
+              ​without interruption.​
+       ​●​ ​All changes are subject to any applicable contractual obligations and regulatory​
+               ​approvals.​
+        ​●​ ​If you’ve already received a different disconnection notice with an earlier date, that​
+                ​date will still apply.​
+​Thank you for being a Frontier customer. Whether you stay with us or transition to another​
+ ​provider, we’re committed to making this transition as simple and smooth as possible.​
+
+​ incerely,​
+S
+​Frontier, a Verizon Company​
+
+
+​On behalf of:​
+
+ ​State​              ​Company​
+
+ ​Arizona​                ​●​ C   ​ itizens Telecommunications Company of the White​
+                                  ​Mountains, Inc. d/b/a Frontier Communications of the​
+                                   ​White Mountains​
+                           ​●​ ​Citizens Utilities Rural Company, Inc. d/b/a Frontier​
+                                    ​Citizens Utilities Rural​
+                            ​●​ ​Frontier Communications of the Southwest Inc.​
+                             ​●​ ​Navajo Communications Company, Inc.​
+
+ ​Ohio​                   ​​ F
+                          ●    ​ rontier Communications of Michigan, Inc.​
+                          ​●​ ​Frontier North Inc.​
+
+ ​Utah​                   ​​ C
+                          ●    ​ itizens Telecommunications Company of Utah​
+                          ​●​ ​Navajo Communications Company, Inc.​
+
+ ​New Mexico​             ​●​ ​Navajo Communications Company, Inc.​
+
+ ​South Carolina​         ​●​ ​Frontier Communications of the Carolinas LLC​
+
+ ​Virginia​               ​●​ ​Frontier Communications of Virginia, Inc.​
+
+​ he address is Frontier Communications Holdings LLC, 1 Verizon Way, Legal Department,​
+T
+​Basking Ridge NJ 07920​
+
+​FCC Notice​
+
+
+
+                                                                                      ​CMT-Frontier​
+​ he following notice applies to the services in this notification, is required by the Federal​
+T
+​Communications Commission (“FCC” or “Commission”), and is applicable to the​
+ ​communications services listed in this letter:​
+
+​ he FCC will normally authorize this proposed discontinuance of service (or reduction or​
+T
+​impairment) unless it is shown that customers would be unable to receive service or a​
+ ​reasonable substitute from another carrier or that the public convenience and necessity is​
+  ​otherwise adversely affected. If you wish to object, you should file your comments as soon​
+   ​as possible, but no later than 15 days after the Commission releases public notice of the​
+    ​proposed discontinuance. You may file your comments electronically through the FCC’s​
+     ​Electronic Comment Filing System using the docket number established in the​
+      ​Commission’s public notice for this proceeding, or you may address them to the Federal​
+       ​Communications Commission, Wireline Competition Bureau, Competition Policy Division,​
+        ​Washington, DC 20554, and include in your comments a reference to the § 63.71​
+         ​Application of Citizens Telecommunications Company of Utah d/b/a Frontier​
+          ​Communications of the Southwest Inc.; Citizens Telecommunications Company of the​
+           ​White Mountains, Inc. d/b/a Frontier Communications of the White Mountains; Citizens​
+            ​Utilities Rural Company, Inc., d/b/a Frontier Citizens Utilities Rural; Navajo Communications​
+             ​Company, Inc..; Frontier Communications of the Carolinas LLC; Frontier Communications of​
+              ​Virginia Inc.; Frontier Communications of Michigan, Inc.; Frontier Communications of the​
+               ​Southwest, Inc.; Frontier North Inc.; Verizon Delaware LLC; Verizon New Jersey Inc.; Verizon​
+                ​New England Inc. d/b/a Verizon Rhode Island; Verizon South Inc.; Verizon Virginia LLC, all​
+                 ​Verizon companies. Comments should include specific information about the impact of this​
+                  ​proposed discontinuance (or reduction or impairment) upon you or your company, including​
+                   ​any inability to acquire reasonable substitute service.​
+
+ ​Attachment A - Additional Information for Home Phone Services​
+
+
+ ​Home Phone Over the Wireless Network​
+
+ ​These devices include battery backup capability.​
+
+     ​●​ U ​ nder typical conditions for current solutions, the battery provides up to 24​
+           ​hours of backup power during a power outage.​
+      ​●​ ​Actual battery life may vary depending on network conditions, features in use,​
+            ​call frequency and usage patterns.​
+
+ ​Important Notes:​
+
+     ​​ T
+     ●      ​ he device does not provide line power to your home telephones.​
+     ​●​ ​Different models may include either a rechargeable battery or replaceable AA​
+            ​batteries.​
+      ​●​ ​Replacement batteries are widely available.​
+       ​●​ ​If the device has no electrical power or battery power, it will not function,​
+             ​including for 911 emergency calls.​
+
+ ​Steps to take to ensure safe usage and security responsibilities:​
+
+     ​●​ Y ​ ou must enter the US address where you want emergency services to be sent if​
+           ​you call 911, before voice service can be activated. If you move your equipment,​
+            ​you must update your service address with us immediately.​
+      ​●​ ​You are responsible for obtaining and maintaining a backup battery or​
+             ​rechargeable batteries for your equipment, to ensure service continuity.​
+
+
+
+                                                                                           ​CMT-Frontier​
+   ​​ T
+   ●    ​ o ensure service during an outage, a charged battery must be installed.​
+   ​●​ ​The device must be properly connected to power when not in use.​
+
+​Unlimited Digital Voice (a Frontier fiber-based service)​
+
+​These devices include battery backup capability.​
+
+   ​●​ U  ​ nder typical conditions for current solutions, fully charged batteries in the​
+          ​battery backup unit provide 24 hours of backup power during a power outage.​
+    ​●​ ​Actual battery life may vary depending on network conditions, features in use,​
+           ​call frequency, usage patterns.​
+     ​●​ ​Replacement batteries are widely available​​: the backup​​battery unit uses 12 D​
+            ​cell batteries.​
+
+​Important Notes:​
+
+   ​●​ U  ​ nlimited Digital Voice service is delivered over fiber and does not supply power​
+          ​through the phone line.​
+    ​●​ ​Battery backup units are provided to consumers who migrate from a​
+           ​copper-based phone service, providing up to 24 hours of backup power during​
+            ​power outages.​
+     ​●​ ​If the device has no electrical power or battery power, it will not function,​
+             ​including for 911 emergency calls.​
+
+​Steps to take to ensure safe usage and security responsibilities:​
+
+   ​●​ T     ​ o maintain power during a power outage, you will need a battery backup unit.​
+             ​This allows you to continue making and receiving calls, including emergency and​
+              ​911 calls.​
+    ​●​ ​If you move you must update your service address with us immediately.​
+     ​●​ ​You are responsible for obtaining and maintaining a backup battery and​
+               ​rechargeable batteries for your equipment to ensure service continuity.​
+      ​●​ ​To ensure service during an outage charged batteries must be installed.​
+       ​●​ ​You are responsible for obtaining replacement “D” cell batteries for continued​
+                ​use during an extended power outage.​
+        ​●​ ​The device must be properly connected to power when not in use.​
+
+​Landline Phones and Power Requirements​
+
+​Some phones - especially cordless models - require electricity to operate.​
+
+   ​●​ I​f your phone requires external power, it will not work during a power outage,​
+         ​even if your service has battery backup.​
+    ​●​ ​This includes the ability to make or receive 911 calls.​
+
+​ or maximum reliability during power outages, consider using a corded phone that does​
+F
+​not require external power.​
+
+​Mobile Wireless Services​
+
+​ erizon mobile wireless voice service does not provide line power to keep it operational​
+V
+​during an extended electrical power outage, beyond a single charge of the mobile​
+ ​phone battery. However, Verizon’s mobile wireless service does not require a backup​
+  ​battery to remain operational during electric power outages of several hours or less.​
+
+
+
+
+                                                                                 ​CMT-Frontier​
+​Steps to take to ensure safe usage and security responsibilities:​
+
+   ​●​ T    ​ o maintain phone service during these times, you will have to arrange for an​
+            ​alternative source of power for your Verizon mobile phone.​
+    ​●​ ​Modern cell phones can go without a charge for more than 24 hours when kept​
+             ​in standby mode.​
+     ​●​ ​For longer outages, cell phones can be recharged in a car, with a laptop, or with​
+              ​a charged power bank, which is inexpensive, typically starting at approximately​
+               ​$20, and available online and at various retail stores.​
+      ​●​ ​Cell phones will not operate without backup power in the event of an extended​
+                ​power outage. In that situation, you will not be able to make or receive calls,​
+                 ​including emergency 911 calls, unless you recharge the phone with a backup​
+                  ​battery.​
+       ​●​ ​Since wireless phones are mobile, they are not associated with one fixed​
+                   ​location or address. If you make an emergency 911 call with your mobile phone,​
+                    ​you should provide the emergency operator the location of your emergency and​
+                     ​your wireless phone number, so if the call gets disconnected, the operator can​
+                      ​call you back. Additional information is available on the FCC’s website​
+                       ​(https://www.fcc.gov/consumers/guides/wireless-911-service).​
+
+
+
+​ ttachment A2 -​​Additional Information for Facilities-Based​​Phone Service From A​
+A
+​Provider Other Than Verizon​
+
+​Mobile Wireless Phone Service​
+
+​ obile wireless voice service does not provide line power to keep it operational during an​
+M
+​extended electrical power outage, beyond a single charge of the mobile phone battery.​
+ ​However, mobile wireless service does not require a backup battery to remain operational​
+  ​during electric power outages of several hours or less.​
+
+​Steps to take to ensure safe usage and security responsibilities:​
+
+   ​●​ T    ​ o maintain phone service during these times, you will have to arrange for an​
+            ​alternative source of power for your mobile phone.​
+    ​●​ ​Modern cell phones can go without a charge for more than 24 hours when kept in​
+             ​standby mode.​
+     ​●​ ​For longer outages, cell phones can be recharged​​in a car, with a laptop, or with a​
+              ​power bank, which is inexpensive, typically starting at approximately $20,and​
+               ​available online and at various retail stores.​
+      ​●​ ​Cell phones will not operate without backup power in the event of an extended​
+                ​power outage. In that situation, you will not be able to make or receive calls,​
+                 ​including emergency 911 calls, unless you recharge the phone with a backup​
+                  ​battery.​
+       ​●​ ​Since wireless phones are mobile, they are not associated with one fixed location​
+                   ​or address. If you make an emergency 911 call with your mobile phone, you should​
+                    ​provide the emergency operator the location of your emergency and your wireless​
+                     ​phone number, so if the call gets disconnected, the operator can call you back.​
+                      ​Additional information is available on the FCC’s website​
+                       ​(https://www.fcc.gov/consumers/guides/wireless-911-service).​
+
+​ able or Fiber Phone Service​
+C
+​Home phone devices may require batteries, wired power, or both.​
+
+
+                                                                                       ​CMT-Frontier​
+    ​●​ A ​ ctual battery life may vary depending on network conditions, features in use, call​
+          ​frequency, and usage patterns.​
+     ​●​ ​Please review all documentation from your device manufacturer and service​
+           ​provider.​
+​Important Notes:​
+
+    ​●​ V ​ oice service delivered over fiber or cable does not supply power through the​
+          ​phone line.​
+     ​●​ ​If the device has no electrical power or battery power, it will not function, including​
+           ​for 911 emergency calls.​
+​Steps to take to ensure safe usage and security responsibilities:​
+
+    ​●​ T  ​ o maintain power during a power outage, you will need a battery backup, if​
+           ​available for your device, and the backup must be installed. You are responsible for​
+            ​obtaining any such option, if available.​
+     ​●​ ​If you move you must update your service address​​with your service provider​
+             ​immediately.​
+      ​●​ ​Read the FCC’s 911 tips, available here: https://www.fcc.gov/emergency.​
+​Landline Phones and Power Requirements​
+
+​Some phones - especially cordless models - require electricity to operate.​
+
+   ​●​ I​f your phone requires external power, it will not work during a power outage, even​
+         ​if your service has battery backup.​
+    ​●​ ​This includes the ability to make or receive 911 calls.​
+
+​ or maximum reliability during power outages, consider using a corded phone that does​
+F
+​not require external power.​
+
+
+
+
+                                                                                   ​CMT-Frontier​
+ ​ 20 Anderson Avenue​
+ 2
+ ​Moonachie, NJ 07074​                                                  ​
+
+​ ustomer Name​
+C
+​Address 1​
+ ​Address 2​
+  ​City, State ZIP​
+
+​Telephone Number: [​​Telephone number​​]​
+
+​Important Update About Your Home Phone Service​
+
+​Dear [​​Customer Name​​],​
+
+​ e’re pleased to inform you about updates to our home phone service. As part of our​
+W
+​ongoing network improvements, we are planning to discontinue traditional copper-based​
+ ​home phone service in your area. If your service will be discontinued, you will have the​
+  ​opportunity to switch to service delivered using fiber, cable, or modern wireless technology.​
+
+​We’re here to support you through this transition.​
+
+​What This Means for You​
+
+​ ou don’t need to take action right now. There’s no change or interruption to your service​
+Y
+​today. If you want to explore your options early or have questions, give us a call at​
+ ​877.439.7442​​.​
+
+​What’s Changing and When​
+
+ ​On or after​​October 23, 2026​​, subject to Federal Communications​​Commission (FCC)​
+​ pproval, Verizon will have authority to discontinue traditional copper-based home phone​
+a
+​service.​
+
+​ t that time, we will begin contacting customers whose services will be discontinued, by​
+A
+​letter, with more details and next steps to support you as you transition your services.​
+
+​You will receive advance notice by letter with your specific disconnection date.​
+
+​Service Affected​
+
+​ raditional Home Phone Service: copper-based dial tone base home phone service,​
+T
+​services offered as “Residence Dial Tone Service,” “Basic Service Access Line,” and​
+ ​“Individual Line”.​
+
+​Your Options​
+
+​ hen it’s time to make a change, you’ll have several options — including moving to a​
+W
+​modern solution that:​
+
+   ​●   ​Lets you keep your current phone number
+
+
+
+
+                                                                               ​CMT-VZTPOTS​
+    ​●​ S ​ upports essential services like 911, many legacy alarm systems and faxes, and​
+          ​many medical devices​
+     ​●​ ​Delivers a reliable, modern service​
+
+I​f your services will be discontinued you will have at least one fiber, cable, or mobile wireless​
+ ​voice option available at home. Many customers will be able to choose modern Verizon​
+  ​voice service over wireless or fiber. You can see options available at your home based on​
+   ​official FCC data by visiting https://broadbandmap.fcc.gov/home and then typing in your​
+    ​home address.​
+
+
+​Additional Information​
+    ​●​ O   ​ n or after​​September 30, 2026​​, we plan to stop accepting​​new orders for Verizon​
+            ​copper-based home phone service in your area.​
+     ​●​ ​Verizon’s Fios and wireless services, where available, are not affected and will​
+             ​continue without interruption.​
+      ​●​ ​All changes are subject to any applicable contractual obligations and regulatory​
+              ​approvals.​
+       ​●​ ​If you’ve already received a different disconnection notice with an earlier date, that​
+               ​date will still apply.​
+
+
+​ hank you for being a Verizon customer. Whether you stay with us or transition to another​
+T
+​provider, we’re committed to making this transition as simple and smooth as possible.​
+
+​Sincerely,​
+
+​Verizon Support Team​
+
+​On behalf of​
+
+ ​State​         ​Company​                               ​Address​
+
+ ​Delaware​      ​Verizon Delaware LLC​                  ​ 01 Tatnall Street, Wilmington, DE​
+                                                         9
+                                                         ​19801​
+
+ ​New Jersey​ ​Verizon New Jersey Inc.​                  ​540 Broad Street, Newark, NJ 07102​
+
+ ​ hode​
+ R               ​ erizon New England Inc. d/b/a​
+                 V                                       ​ Bowdoin Square, 9th Floor, Boston,​
+                                                         6
+ ​Island​        ​Verizon Rhode Island​                  ​MA 02214.​
+
+ ​Virginia​      ​ erizon Virginia LLC and​
+                 V                                       ​ 201 Loudoun County Parkway,​
+                                                         2
+                 ​Verizon South Inc.​                    ​Ashburn, VA 20147​
+
+
+
+
+                                                                                ​CMT-VZT-POTS​
+​FCC Notice​
+
+​ he following notice applies to the services in this notification, is required by the Federal​
+T
+​Communications Commission (“FCC” or “Commission”), and is applicable to the​
+ ​communications services listed in this letter:​
+
+​ he FCC will normally authorize this proposed discontinuance of service (or reduction or​
+T
+​impairment) unless it is shown that customers would be unable to receive service or a​
+ ​reasonable substitute from another carrier or that the public convenience and necessity is​
+  ​otherwise adversely affected. If you wish to object, you should file your comments as soon​
+   ​as possible, but no later than 15 days after the Commission releases public notice of the​
+    ​proposed discontinuance. You may file your comments electronically through the FCC’s​
+     ​Electronic Comment Filing System using the docket number established in the​
+      ​Commission’s public notice for this proceeding, or you may address them to the Federal​
+       ​Communications Commission, Wireline Competition Bureau, Competition Policy Division,​
+        ​Washington, DC 20554, and include in your comments a reference to the § 63.71​
+         ​Application of Citizens Telecommunications Company of Utah d/b/a Frontier​
+          ​Communications of the Southwest Inc.; Citizens Telecommunications Company of the​
+           ​White Mountains, Inc. d/b/a Frontier Communications of the White Mountains; Citizens​
+            ​Utilities Rural Company, Inc., d/b/a Frontier Citizens Utilities Rural; Navajo Communications​
+             ​Company, Inc..; Frontier Communications of the Carolinas LLC; Frontier Communications of​
+              ​Virginia Inc.; Frontier Communications of Michigan, Inc.; Frontier Communications of the​
+               ​Southwest, Inc.; Frontier North Inc.; Verizon Delaware LLC; Verizon New Jersey Inc.; Verizon​
+                ​New England Inc. d/b/a Verizon Rhode Island; Verizon South Inc.; Verizon Virginia LLC, all​
+                 ​Verizon companies. Comments should include specific information about the impact of this​
+                  ​proposed discontinuance (or reduction or impairment) upon you or your company, including​
+                   ​any inability to acquire reasonable substitute service.​
+
+ ​Attachment A - Additional Information for Home Phone Services​
+
+
+ ​Home Phone Over the Wireless Network​
+
+ ​These devices include battery backup capability.​
+
+     ​●​ U ​ nder typical conditions for current solutions, the battery provides up to 24​
+           ​hours of backup power during a power outage.​
+      ​●​ ​Actual battery life may vary depending on network conditions, features in use,​
+            ​call frequency and usage patterns.​
+
+ ​Important Notes:​
+
+     ​​ T
+     ●      ​ he device does not provide line power to your home telephones.​
+     ​●​ ​Different models may include either a rechargeable battery or replaceable AA​
+            ​batteries.​
+      ​●​ ​Replacement batteries are widely available.​
+       ​●​ ​If the device has no electrical power or battery power, it will not function,​
+             ​including for 911 emergency calls.​
+
+ ​Steps to take to ensure safe usage and security responsibilities:​
+
+
+
+
+                                                                                        ​CMT-VZT-POTS​
+   ​●​ Y   ​ ou must enter the US address where you want emergency services to be sent if​
+           ​you call 911, before voice service can be activated. If you move your equipment,​
+            ​you must update your service address with us immediately.​
+    ​●​ ​You are responsible for obtaining and maintaining a backup battery or​
+             ​rechargeable batteries for your equipment, to ensure service continuity.​
+     ​●​ ​To ensure service during an outage, a charged battery must be installed.​
+      ​●​ ​The device must be properly connected to power when not in use.​
+
+​Fios Digital Voice (a Verizon fiber-based service)​
+
+​These devices include battery backup capability.​
+    ​●​ ​Under typical conditions for current solutions, fully charged batteries in the​
+           ​battery backup unit provide 24 hours of backup power during a power outage.​
+     ​●​ ​Actual battery life may vary depending on network conditions, features in use,​
+            ​call frequency, usage patterns.​
+      ​●​ ​Replacement batteries are widely available​​: the backup​​battery unit uses 12 D​
+             ​cell batteries.​
+
+​Important Notes:​
+
+   ​●​ F  ​ ios Digital Voice service is delivered over fiber and does not supply power​
+          ​through the phone line.​
+    ​●​ ​Battery backup units are provided for home use to consumers who migrate from​
+           ​a copper-based phone service, providing up to 24 hours of backup power during​
+            ​power outages.​
+     ​●​ ​If the device has no electrical power or battery power, it will not function,​
+             ​including for 911 emergency calls.​
+
+​Steps to take to ensure safe usage and security responsibilities:​
+
+   ​●​ T     ​ o maintain power during a power outage, you will need a battery backup unit.​
+             ​This allows you to continue making and receiving calls, including emergency and​
+              ​911 calls. ​
+    ​●​ ​If you move you must update your service address with us immediately.​
+     ​●​ ​You are responsible for obtaining and maintaining a backup battery and​
+               ​rechargeable batteries for your equipment to ensure service continuity.​
+      ​●​ ​To ensure service during an outage charged batteries must be installed.​
+       ​●​ ​You are responsible for obtaining replacement “D” cell batteries for continued​
+                ​use during an extended power outage.​
+        ​●​ ​The device must be properly connected to power when not in use.​
+
+​Landline Phones and Power Requirements​
+
+​Some phones - especially cordless models - require electricity to operate.​
+
+   ​●​ I​f your phone requires external power, it will not work during a power outage,​
+         ​even if your service has battery backup.​
+    ​●​ ​This includes the ability to make or receive 911 calls.​
+
+
+
+
+                                                                              ​CMT-VZT-POTS​
+​ or maximum reliability during power outages, consider using a corded phone that does​
+F
+​not require external power.​
+
+​Mobile Wireless Services​
+
+​ erizon mobile wireless voice service does not provide line power to keep it operational​
+V
+​during an extended electrical power outage, beyond a single charge of the mobile​
+ ​phone battery. However, Verizon’s mobile wireless service does not require a backup​
+  ​battery to remain operational during electric power outages of several hours or less.​
+
+​Steps to take to ensure safe usage and security responsibilities:​
+
+   ​●​ T   ​ o maintain phone service during these times, you will have to arrange for an​
+           ​alternative source of power for your Verizon mobile phone.​
+    ​●​ ​Modern cell phones can go without a charge for more than 24 hours when kept​
+            ​in standby mode.​
+     ​●​ ​For longer outages, cell phones can be recharged in a car, with a laptop, or with​
+             ​a charged power bank, which is inexpensive, typically starting at approximately​
+              ​$20, and available online and at various retail stores.​
+      ​●​ ​Cell phones will not operate without backup power in the event of an extended​
+               ​power outage. In that situation, you will not be able to make or receive calls,​
+                ​including emergency 911 calls, unless you recharge the phone with a backup​
+                 ​battery.​
+
+​ ince wireless phones are mobile, they are not associated with one fixed location or​
+S
+​address. If you make an emergency 911 call with your mobile phone, you should provide​
+ ​the emergency operator the location of your emergency and your wireless phone​
+  ​number, so if the call gets disconnected, the operator can call you back. Additional​
+   ​information is available on the FCC’s website​
+    ​(https://www.fcc.gov/consumers/guides/wireless-911-service).​
+
+
+
+
+​ ttachment A2 - Additional Information for Facilities-Based Phone Service From A​
+A
+​Provider Other Than Verizon​
+
+
+
+​Mobile Wireless Phone Service​
+
+​ obile wireless voice service does not provide line power to keep it operational during​
+M
+​an extended electrical power outage, beyond a single charge of the mobile phone​
+ ​battery. However, mobile wireless service does not require a backup battery to remain​
+  ​operational during electric power outages of several hours or less.​
+
+​Steps to take to ensure safe usage and security responsibilities:​
+
+   ​●​ T ​ o maintain phone service during these times, you will have to arrange for an​
+         ​alternative source of power for your mobile phone.​
+    ​●​ ​Modern cell phones can go without a charge for more than 24 hours when kept​
+          ​in standby mode.​
+
+
+
+
+                                                                                ​CMT-VZT-POTS​
+   ​●​ F            ​ or longer outages, cell phones can be recharged in a car, with a laptop, or with​
+          ​a power bank, which is inexpensive, typically starting at approximately $20, and​
+           ​available online and at various retail stores.​
+    ​●​ ​Cell phones will not operate without backup power in the event of an extended​
+            ​power outage. In that situation, you will not be able to make or receive calls,​
+             ​including emergency 911 calls, unless you recharge the phone with a backup​
+              ​battery.​
+     ​●​ ​Since wireless phones are mobile, they are not associated with one fixed​
+               ​location or address. If you make an emergency 911 call with your mobile phone,​
+                ​you should provide the emergency operator the location of your emergency and​
+                 ​your wireless phone number, so if the call gets disconnected, the operator can​
+                  ​call you back. Additional information is available on the FCC’s website​
+                   ​(https://www.fcc.gov/consumers/guides/wireless-911-service).​
+
+​Cable or Fiber Phone Service​
+
+​Home phone devices may require batteries, wired power, or both.​
+   ​●​ ​Actual battery life may vary depending on network conditions, features in use,​
+         ​call frequency, and usage patterns.​
+    ​●​ ​Please review all documentation from your device manufacturer and service​
+          ​provider.​
+
+​Important Notes:​
+
+   ​●​ V ​ oice service delivered over fiber or cable does not supply power through the​
+         ​phone line.​
+    ​●​ ​If the device has no electrical power or battery power, it will not function,​
+          ​including for 911 emergency calls.​
+
+​Steps to take to ensure safe usage and security responsibilities:​
+
+    ​●​ T  ​ o maintain power during a power outage, you will need a battery backup, if​
+           ​available for your device, and the backup must be installed. You are responsible​
+            ​for obtaining any such option, if available.​
+     ​●​ ​If you move you must update your service address with your service provider​
+             ​immediately.​
+      ​●​ ​Read the FCC’s 911 tips, available here: https://www.fcc.gov/emergency.​
+​Landline Phones and Power Requirements​
+
+​Some phones - especially cordless models - require electricity to operate.​
+
+   ​●​ I​f your phone requires external power, it will not work during a power outage,​
+         ​even if your service has battery backup.​
+    ​●​ ​This includes the ability to make or receive 911 calls.​
+
+​ or maximum reliability during power outages, consider using a corded phone that does​
+F
+​not require external power.​
+
+
+
+
+                                                                                     ​CMT-VZT-POTS​
+                     Exhibit B:
+
+
+Maps Showing the Borders of ILEC Service Areas in the
+
+          States Subject to This Application
+Arizona
+
+
+
+
+  B–1
+                                                Delaware1
+
+
+
+
+1
+    Verizon Delaware LLC provides service throughout the state of Delaware.
+
+
+                                                       B–2
+New Jersey
+
+
+
+
+   B–3
+New Mexico
+
+
+
+
+    B–4
+Ohio
+
+
+
+
+B–5
+                                             Rhode Island2
+
+
+
+
+2
+    Verizon New England Inc. d/b/a Verizon Rhode Island provides service throughout the state of Rhode Island.
+
+
+                                                        B–6
+South Carolina
+
+
+
+
+     B–7
+Utah
+
+
+
+
+B–8
+                                                  Virginia
+                                            Verizon Service Area 3
+
+
+
+
+                                            Frontier Service Area 4
+
+
+
+
+3
+  Verizon Virginia LLC (service area indicated in blue) and Verizon South Inc. (service area indicated in orange)
+provide service in Virginia.
+4
+  Frontier Communications of Virginia Inc. provides service in this area.
+
+
+
+                                                       B–9
+                         Exhibit C: Section 63.602(a)(4) Certification
+
+
+
+                           SECTION 63.602(a)(4) CERTIFICATION
+
+
+       I, Kevin Smith, Vice President of Network Engineering, am employed by Verizon. I
+
+certify under penalty of perjury that, to the best of my knowledge, information, and belief,
+
+including based on information provided to me by others, the information required by 47 C.F.R.
+
+§ 63.602 submitted in the Section 63.71 application of Verizon is true and correct.
+
+
+
+
+Dated August 10th, 2026.
+
+
+
+                                                     /s/ Kevin Smith
+                                                     Kevin Smith
+                                CERTIFICATE OF SERVICE
+
+       I, Theresa Holden, certify that I have, on August 10, 2026, served a copy of the foregoing
+
+Section 63.71 application of Verizon by FedEx Overnight (or U.S. Priority Mail for P.O. Box
+
+addresses), to the addresses below:
+
+                                                    /s/ Theresa Holden
+                                                    Theresa Holden
+
+ Office of the Department of Defense                   Office of the Governor
+ Chief Information Officer                             1700 W. Washington St.
+ 6000 Defense Pentagon                                 Phoenix, AZ 85007
+ Washington, DC 20301-6000
+
+ Office of the Chair                                   Office of the Governor
+ Arizona Corporation Commission                        820 N. French Street, 12th Floor
+ 1200 W. Washington Street,                            Wilmington, DE 19801
+ Phoenix, AZ 85007
+
+ Office of the Chair                                   Office of the Governor
+ Delaware Public Service Commission                    Riffe Center
+ Cannon Building                                       30th Floor, 77 South High Street
+ 861 Silver Lake Boulevard, Suite 100                  Columbus, OH 43215-6117
+ Dover, DE 19904
+
+ Office of the Chair                                   Office of the Governor
+ Public Utilities Commission of Ohio                   490 Old Santa Fe Trail
+ 180 E Broad St.                                       Room 400
+ Columbus, OH 43215                                    Santa Fe, NM 87501
+
+ Office of the Chair                                   Office of the Governor
+ New Mexico Public Regulation Commission               125 W State St.
+ 1596 Pacheco St.                                      Trenton, NJ 08608
+ Santa Fe, NM 87505
+
+ Office of the President                               Office of the Governor
+ New Jersey Board of Public Utilities                  82 Smith Street
+ 44 S. Clinton Avenue                                  Providence, RI 02903
+ Trenton, NJ 08625
+Office of the Chair                           Office of the Governor
+Public Utilities Commission                   State House
+89 Jefferson Boulevard                        1100 Gervais Street
+Warwick, RI 02888                             Columbia, SC 29201
+
+Office of the Chair                           Office of the Governor
+Public Service Commission of South Carolina   350 N. State Street
+101 Executive Center Dr.                      Suite 200
+Suite 100                                     Salt Lake City, UT 84114-2220
+Columbia, SC 29210
+
+Office of the Chair                           Office of the Governor
+State of Utah Public Service Commission       P.O. Box 1475
+160 East 300 South, 4th Floor                 Richmond, VA 23218
+Salt Lake City, UT 84111
+
+Office of the Chair                           Catawba Indian Nation
+Virginia State Corporation Commission         Brian Harris, Chief
+1300 E. Main St.                              996 Avenue of the Nations
+Richmond, VA 23219                            Rock Hill, SC 29730
+
+Chickahominy Indian Tribe                     Chickahominy Indian Tribe—Eastern
+Stephen R. Adkins, Chief                      Division
+8200 Lott Cary Road                           Joanne Howard, Chief
+Providence Forge, VA 23140                    2895 Mount Pleasant Road
+                                              Providence Forge, VA 23140
+
+Monacan Indian Nation                         Nansemond Indian Nation
+Diane Shields, Chief                          Keith F. Anderson, Chief
+111 Highview Drive                            1001 Pembroke Lane
+Madison Heights, VA 24572                     Suffolk, VA 23434
+
+Narragansett Indian Tribe                     Pamunkey Indian Tribe
+Anthony Dean Stanton, Chief Sachem            Kevin Brown, Chief
+P.O. Box 268                                  1054 Pocahontas Trail
+Charlestown, RI 02813                         King William, VA 23086
+
+Rappahannock Tribe, Inc.                      Upper Mattaponi Tribe
+G. Anne Richardson, Chief                     W. Frank Adams, Chief
+The Powhatan Confederation, Tribal Office     13476 King William Road
+5036 Indian Neck Road                         King William, VA 23086
+Indian Neck, VA 23148
+Navajo Nation, Arizona, New Mexico, & Utah   Northwestern Band of the Shoshone
+Buu Nygren, President                        Nation
+P.O. Box 7440                                Jason Walker, Chairman
+Window Rock, AZ 86515                        2575 Commerce Way
+                                             Ogden, UT 84401
+
+Jicarilla Apache Nation, New Mexico          Mescalero Apache Tribe of the
+Adrian Notsinneh, President                  Mescalero Reservation, New Mexico
+P.O. Box 507                                 Thora Padilla, President
+Dulce, NM 87528                              P.O. Box 227
+                                             Mescalero, NM 88340
+
+Ohkay Owingeh, New Mexico                    Pueblo of Acoma, New Mexico
+Benny Lujan, Governor                        Charles P. Riley, Governor
+P.O. Box 1099                                P.O. Box 309
+Ohkay Owingeh, NM 87566                      Acoma, NM 87034
+
+Pueblo of Cochiti, New Mexico                Pueblo of Isleta, New Mexico
+Phillip Quintana, Governor                   Eugene Jiron, Governor
+P.O. Box 70                                  P.O. Box 1270
+Cochiti, NM 87072                            Isleta, NM 87022
+
+Pueblo of Jemez, New Mexico                  Pueblo of Laguna, New Mexico
+John Galvan, Governor                        Harry Antonio, Governor
+P.O. Box 100                                 P.O. Box 194
+Jemez Pueblo, NM 87024                       Laguna, NM 87026
+
+Pueblo of Nambe, New Mexico                  Pueblo of Picuris, New Mexico
+Nathaniel S. Porter, Governor                Craig Quanchello, Governor
+15A NP 102 West                              P.O. Box 127
+Santa Fe, NM 87506                           Penasco, NM 87553
+
+Pueblo of Pojoaque, New Mexico               Pueblo of San Felipe, New Mexico
+Jenelle Roybal, Governor                     Mark Calabaza, Governor
+78 Cities of Gold Road                       P.O. Box 4339
+Santa Fe, NM 87506                           San Felipe Pueblo, NM 87001
+
+Pueblo of San Ildefonso, New Mexico          Pueblo of Sandia, New Mexico
+Christopher Moquino, Governor                Stuart Paisano, Governor
+02 Tunyo Po                                  481 Sandia Loop
+Santa Fe, NM 87506                           Bernalillo, NM 87004
+
+Pueblo of Santa Ana, New Mexico              Pueblo of Santa Clara, New Mexico
+Myron Armijo, Governor                       James A. Naranjo, Governor
+2 Dove Road                                  P.O. Box 580
+Santa Ana Pueblo, NM 87004                   Espanola, NM 87532
+Pueblo of Taos, New Mexico                           Pueblo of Tesuque, New Mexico
+Michael E. Martinez, Governor                        Mark Mitchell, Governor
+P.O. Box 1846                                        RR 42, Box 360-T
+Taos, NM 87571                                       Santa Fe, NM 87506
+
+Pueblo of Zia, New Mexico                            Ramah Navajo Chapter of the Navajo
+Boyd Toribio, Governor                               Nation
+135 Capitol Square Drive                             Martha Garcia, President
+Zia Pueblo, NM 87053                                 HC-61, Box 13
+                                                     Ramah, NM 87321
+
+Santo Domingo Pueblo                                 Zuni Tribe of the Zuni Reservation,
+Raymond Aguilar, Governor                            New Mexico
+P.O. Box 99                                          Arden L. Kucate, Governor
+Santo Domingo Pueblo, NM 87052                       P.O. Box 339
+                                                     Zuni, NM 87327
+
+Ak-Chin Indian Community                             Cocopah Tribe of Arizona
+Gabriel Lopez, Chairman                              Sherry Cordova, Chairman
+42507 W. Peters & Nall Road                          14515 S. Veterans Drive
+Maricopa, AZ 85138                                   Somerton, AZ 85350
+
+Colorado River Indian Tribes of the Colorado River   Confederated Tribes of the Goshute
+Indian Reservation, Arizona and California           Reservation, Nevada and Utah
+Amelia Flores, Chairwoman                            Amos Murphy, Chairman
+26600 Mohave Road                                    P.O. Box 6104
+Parker, AZ 85344                                     Ibapah, UT 84034
+
+Fort McDowell Yavapai Nation, Arizona                Gila River Indian Community of the
+Sandra Pattea, President                             Gila River Indian Reservation, Arizona
+P.O. Box 17779                                       Stephen R. Lewis, Governor
+Fountain Hills, AZ 85269                             P.O. Box 97
+                                                     Sacaton, AZ 85147
+
+Havasupai Tribe of the Havasupai Reservation,        Hopi Tribe of Arizona
+Arizona                                              Lamar Keevama Nuvangyaoma,
+Melinda Yaiva, Chairwoman                            Chairman
+P.O. Box 10                                          P.O. Box 123
+Supai, AZ 86435                                      Kykotsmovi, AZ 86039
+
+Hualapai Indian Tribe of the Hualapai Indian         Kaibab Band of Paiute Indians of the
+Reservation, Arizona                                 Kaibab Indian Reservation, Arizona
+Duane Clarke, Chairperson                            Roland Maldonado, Chairman
+P.O. Box 179                                         HC65, Box 2
+Peach Springs, AZ 86434                              Fredonia, AZ 86022
+Paiute Indian Tribe of Utah (Cedar Band of Paiutes,   Pascua Yaqui Tribe of Arizona
+Kanosh Band of Paiutes, Koosharem Band of             Julian Hernandez, Chairman
+Paiutes, Indian Peaks Band of Paiutes, and Shivwits   7474 S. Camino de Oeste
+Band of Paiutes)                                      Tucson, AZ 85757
+Laurel Yellowhorse, Chairwoman
+440 N. Paiute Drive
+Cedar City, UT 84720
+
+Salt River Pima-Maricopa Indian Community of          San Carlos Apache Tribe of the San
+the Salt River Reservation, Arizona                   Carlos Reservation, Arizona
+Martin Harvier, President                             Terry Rambler, Chairman
+10005 East Osborn Road SRP-MIC                        P.O. Box 0
+Scottsdale, AZ 85256                                  San Carlos, AZ 85550
+
+San Juan Southern Paiute Tribe of Arizona             Skull Valley Band of Goshute Indians
+Carlene Yellowhair, President                         of Utah
+PO Box 2950                                           407 Skull Valley Road
+Tuba City, AZ 86045                                   Skull Valley, UT 84029
+
+Tohono O’odham Nation of Arizona                      Tonto Apache Tribe of Arizona
+Verlon Jose, Chairman                                 Calvin Johnson, Chairman
+P.O. Box 837                                          Tonto Apache Reservation #30
+Sells, AZ 85634                                       Payson, AZ 85541
+
+Ute Indian Tribe of the Uintah & Ouray                White Mountain Apache Tribe of the
+Reservation, Utah                                     Fort Apache Reservation, Arizona
+Shaun Chapoose, Chairman                              Orlando Carroll, Chairman
+P.O. Box 190                                          P.O. Box 700
+Ft. Duchesne, UT 84026                                Whiteriver, AZ 85941
+
+Yavapai-Apache Nation of the Camp Verde Indian        Yavapai-Prescott Indian Tribe
+Reservation, Arizona                                  Robert Ogo, President
+Buddy Jr. Rocha, Chairman                             530 E Merritt St.
+2400 W. Datsi Street                                  Prescott, AZ 86301
+Camp Verde, AZ 86322
+

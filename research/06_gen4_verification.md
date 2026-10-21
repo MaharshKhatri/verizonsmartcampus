@@ -25,6 +25,12 @@ Eighteen research agents (5 parallel workflows) answered the Gen 3 open question
 5. "Past winners were all consumer apps": wrong (AeroBin).
 6. "BPC100 with 24-hour battery for elevators": wrong. It runs on AA cells with 23 h standby and 3 h talk, supports Contact-ID only, and is not marketed for elevators. Verizon's life-safety channel is CSG POTSolve or MarketSpark.
 
+
+**Gen 5 fact-check update (2026-10-21):**
+- The **277,000** lines in WC 26-227 are now VERIFIED from the primary text: the RI PUC copy of Verizon's Aug 10, 2026 application, "only approximately 277,000 residential and business legacy voice lines".
+- The **140,000** lines in WC 26-170 (FL PSC copy, Jul 7, 2026) and the **46,000** fixed-wireless POTS-replacement customers appear in both applications. Texts are saved in `research/sources/`.
+- The Inseego BPC100 user guide for Verizon lists "Calls to Medical or Life Alert systems" among calls that "cannot be made" and supports Contact-ID only. It does list fax support. The "does not support fax machines" claim attributed to an Inseego quick start is unverified and has been withdrawn from our documents.
+
 **Operational note:** one research agent reported that a single SEC EDGAR request carried the user's email in its User-Agent header. It was not repeated. All later agents were instructed never to send personal data in headers, URLs or queries.
 
 

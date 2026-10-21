@@ -6,7 +6,7 @@
 |---|---|---|
 | Medical alerts | "cannot be made" | Voice Connect guide: supports "most" |
 | Personal monitoring | | Voice Connect ToS: "not compatible with ... personal monitoring services" |
-| Fax | "does not support fax machines" | Verizon says fax works at 9600 bps |
+| Fax | User guide lists fax support (an Inseego quick-start sheet reportedly says otherwise; unverified) | Verizon recommends 9600 bps, ECM off |
 
 Only a bench can settle it. Everything below is safe, legal and doable by two students in a week. **Never dial 911. Never send test signals to a real central station or medical-alert company without its written OK.** We run our own receiver.
 
@@ -77,7 +77,7 @@ Columns: `test_id, date, box, firmware, placement, rsrp_dbm, rsrq_db, sinr_db, d
 ### T7. Fax and TTY
 - **Fax:** send 10 one-page faxes at 9600 bps with ECM off (Verizon's settings) to our SpanDSP receiver. Record success and retries.
 - **TTY:** if a TTY is available, send 10 Baudot test strings to a TTY echo and record the character error rate.
-- **Why:** settles the Inseego vs Verizon fax contradiction on this box.
+- **Why:** measures fax at Verizon's recommended settings on this box.
 
 ### T8. Medical alert (only if the device can be pointed at our own receiver)
 - Same as T1, with the PERS base on the black RJ11 port per Verizon's guide.
