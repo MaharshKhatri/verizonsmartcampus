@@ -6,7 +6,7 @@ import json
 import os
 import re
 
-from . import acoustic, alarm, fleet, install, supervisor, triage
+from . import acoustic, alarm, answer, fleet, install, supervisor, triage
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
@@ -42,6 +42,23 @@ def national():
     return {"total": len({r["clli"] for r in rows}), "notices": len({r["notice_id"] for r in rows}),
             "states": {s: {"n": n, "dates": sorted(dates[s])} for s, n in by_state.items()},
             "source": "Verizon network disclosures and Frontier wholesale notices under 47 CFR 51.333, 2026"}
+
+
+def answer_block():
+    reg = answer.Registry()
+    calls = {
+        "A person answers in 12 s": (reg.answerer_number, "person", 12, reg.label),
+        "Voicemail picks up": (reg.answerer_number, "voicemail", 24, None),
+        "Dials the old contractor": ("8005550199", "person", 9, reg.label),
+        "Answered after 52 s": (reg.answerer_number, "person", 52, reg.label),
+        "Screen says Nashville, TN": (reg.answerer_number, "person", 8, "Nashville, TN"),
+        "Number not in service": (reg.answerer_number, "intercept", 1, None),
+    }
+    out = {k: answer.check_call(*v, reg) for k, v in calls.items()}
+    clean = answer.confusion(trials=20)
+    stress = answer.confusion(trials=20, stress=True)
+    return {"calls": out, "accuracy": clean["accuracy"], "stress_accuracy": stress["accuracy"],
+            "stress_person_vs_not": stress["person_vs_not"], "label": reg.label}
 
 
 SCENARIOS = {
@@ -92,6 +109,7 @@ def build():
         },
         "national": national(),
         "install": install.scenarios(),
+        "answer": answer_block(),
         "alarm": {"rates": alarm.success_rates(trials=40), "loss_curve": alarm.loss_curve(trials=30)},
         "acoustic": acoustic.compare_designs(trials=30),
         "pass_db": acoustic.PASS_DB,

@@ -675,6 +675,114 @@
    "place": "window"
   }
  },
+ "answer": {
+  "calls": {
+   "A person answers in 12 s": {
+    "answered_by": "person",
+    "ring_s": 12,
+    "issues": [],
+    "pass": true,
+    "features": {
+     "longest_speech_s": 2.86,
+     "pause_after_greeting_s": 2.54,
+     "sit_s": 0.0,
+     "beep_s": 0.0,
+     "ans_s": 0.0,
+     "ring_s": 0.0,
+     "busy_s": 0.0
+    }
+   },
+   "Voicemail picks up": {
+    "answered_by": "voicemail",
+    "ring_s": 24,
+    "issues": [
+     "answered by: voicemail"
+    ],
+    "pass": false,
+    "features": {
+     "longest_speech_s": 8.18,
+     "pause_after_greeting_s": 0.0,
+     "sit_s": 0.0,
+     "beep_s": 0.4,
+     "ans_s": 0.0,
+     "ring_s": 0.0,
+     "busy_s": 0.0
+    }
+   },
+   "Dials the old contractor": {
+    "answered_by": "person",
+    "ring_s": 9,
+    "issues": [
+     "dials the previous contractor's number"
+    ],
+    "pass": false,
+    "features": {
+     "longest_speech_s": 2.86,
+     "pause_after_greeting_s": 2.54,
+     "sit_s": 0.0,
+     "beep_s": 0.0,
+     "ans_s": 0.0,
+     "ring_s": 0.0,
+     "busy_s": 0.0
+    }
+   },
+   "Answered after 52 s": {
+    "answered_by": "person",
+    "ring_s": 52,
+    "issues": [
+     "answered after 52 s (redirect required after 45 s)"
+    ],
+    "pass": false,
+    "features": {
+     "longest_speech_s": 2.86,
+     "pause_after_greeting_s": 2.54,
+     "sit_s": 0.0,
+     "beep_s": 0.0,
+     "ans_s": 0.0,
+     "ring_s": 0.0,
+     "busy_s": 0.0
+    }
+   },
+   "Screen says Nashville, TN": {
+    "answered_by": "person",
+    "ring_s": 8,
+    "issues": [
+     "answerer's screen shows 'Nashville, TN'"
+    ],
+    "pass": false,
+    "features": {
+     "longest_speech_s": 2.86,
+     "pause_after_greeting_s": 2.54,
+     "sit_s": 0.0,
+     "beep_s": 0.0,
+     "ans_s": 0.0,
+     "ring_s": 0.0,
+     "busy_s": 0.0
+    }
+   },
+   "Number not in service": {
+    "answered_by": "intercept",
+    "ring_s": 1,
+    "issues": [
+     "answered by: intercept"
+    ],
+    "pass": false,
+    "features": {
+     "longest_speech_s": 5.48,
+     "pause_after_greeting_s": 0.0,
+     "sit_s": 0.9,
+     "beep_s": 0.0,
+     "ans_s": 0.0,
+     "ring_s": 0.0,
+     "busy_s": 0.0
+    }
+   }
+  },
+  "accuracy": 1.0,
+  "stress_accuracy": 0.936,
+  "stress_person_vs_not": 1.0,
+  "label": "Hill Center, Car 2"
+ },
  "alarm": {
   "rates": {
    "registered (##21 done)": {

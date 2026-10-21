@@ -136,6 +136,15 @@ footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
     </section>
 
     <section class="card full">
+      <h2>Who answers? HELP reaches a person, fast, who knows where you are</h2>
+      <p class="note">Elevator code checks the wire and never places a call. From the gateway's port in the machine room (no work in the car), PROVE checks each test or real HELP call. It reads the digits dialed against the building's registry, tells a person from voicemail, IVR, intercept or fax using spectral features only (nothing is recorded), checks the answer time against A17.1's 45-second redirect, and confirms the building and car the answerer sees. Classifier on synthetic calls: <b id="ansacc"></b> exact. Under a stress test, person-vs-machine stays at <b id="ansp"></b>.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
+        <div class="rig" id="ansrig" style="flex:1;min-width:240px"></div>
+        <div class="receipt" id="ansout" style="min-width:280px"></div>
+      </div>
+    </section>
+
+    <section class="card full">
       <h2>Plug-and-PROVE: the home box proves itself at install</h2>
       <p class="note">This is Verizon's copper replacement for homes and small businesses (Voice Connect, the Inseego BPC100). Its own guide says: "Compatibility is determined by your testing of your alarm and/or medical device at time of install". The alarm number must be keyed in by hand (##21), and backup is 3 AA batteries. Today a technician drives out. PROVE runs those checks through the real voice path and prints a receipt. (Model with labeled assumptions. The Rutgers bench measures the real rates.)</p>
       <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
@@ -345,6 +354,22 @@ $("help").onclick = async () => {
       (v ? `<text x="${x + S / 2}" y="${y + 42}" text-anchor="middle" style="font-size:12px;fill:${a > 0.5 ? "#fff" : "var(--ink-2)"}">${v.n}</text>` : "") + `</g>`;
   }
   $("usmap").innerHTML = s;
+})();
+
+// Who answers?
+(function who() {
+  const A = D.answer; if (!A) return;
+  $("ansacc").textContent = (A.accuracy * 100).toFixed(0) + "%"; $("ansp").textContent = (A.stress_person_vs_not * 100).toFixed(0) + "%";
+  const keys = Object.keys(A.calls);
+  $("ansrig").innerHTML = keys.map((k, i) => `<button class="btn" data-a="${i}">${esc(k)}</button>`).join("");
+  const show = i => {
+    const k = keys[i], r = A.calls[k];
+    document.querySelectorAll("#ansrig button").forEach(b => b.classList.toggle("on", +b.dataset.a === i && !r.pass));
+    $("ansout").innerHTML = `HELP · ${esc(A.label)}\n` + "-".repeat(30) + `\nAnswered by  ${esc(r.answered_by.replace("_", " "))}\nRing time    ${r.ring_s} s\n` + "-".repeat(30) + "\n" +
+      (r.pass ? `<div class="v"><span class="OK">PASS</span></div>` : r.issues.map(x => `<span class="FAIL">FAIL</span> ${esc(x)}`).join("\n") + `\n<div class="v">TICKET → building owner / answering service</div>`);
+  };
+  document.querySelectorAll("#ansrig button").forEach(b => b.onclick = () => show(+b.dataset.a));
+  show(0);
 })();
 
 // Plug-and-PROVE receipts
