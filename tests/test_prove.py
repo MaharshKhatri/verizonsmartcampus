@@ -81,10 +81,6 @@ class TestFleet(unittest.TestCase):
         self.assertLess(abs(lm["broken_car_days"] - pr["broken_car_days"]), 0.2 * lm["broken_car_days"] + 5)
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class TestSupervisor(unittest.TestCase):
     def test_every_rig_button_routes_to_the_right_owner(self):
         from prototype.prove import export
@@ -104,3 +100,7 @@ class TestSupervisor(unittest.TestCase):
         self.assertGreaterEqual(first_fail - first_warn, 3)
         self.assertTrue(ledger.verify()[0])
         self.assertEqual(supervisor.false_alarm_rate(nights=200, seed=3), 0)
+
+
+if __name__ == "__main__":
+    unittest.main()
