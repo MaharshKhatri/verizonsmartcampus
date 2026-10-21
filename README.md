@@ -1,14 +1,44 @@
-# Circadian: one campus forecast, three paychecks
+# PROVE: sent isn't received
 
-A Rutgers entry for the **2026–27 Verizon Smart Campus Innovation Challenge** (Rutgers School of Engineering + Verizon). One privacy-safe, 30-minute occupancy forecast per building, built from the registrar timetable, the event calendar and aggregate device counts (campus Wi-Fi indoors, Verizon's network at the stadium, arena and outdoors), pays three parties:
+A Rutgers entry for the **2026-27 Verizon Smart Campus Innovation Challenge**.
 
-1. **The campus**: ventilation by headcount with comfort-safe setback, demand response and guaranteed network slices, sold by Verizon Business.
-2. **Verizon**: event-day energy saving without a manual "event mode" (pre-wake venue radios instead of locking them on), plus triage that runs remote fixes before a truck rolls.
-3. **Students**: a crowd and quiet-space navigator and guaranteed service at events.
+When Verizon retires a copper line, the home or business gets a replacement box on Verizon's wireless network. Alarm panels, medical alerts and elevator HELP buttons keep dialing through that box. Verizon's own guide says alarm compatibility "is determined by your testing ... at time of install". A keypad that says "sent" cannot tell whether anyone received the message.
 
-> Student concept and simulation. Not a Verizon product. All campus activity in the prototype is simulated.
+**PROVE makes every lifeline Verizon moves arrive with proof that it still reaches someone.**
+- **What it checks:** the alarm's own test call through Verizon's live network (handshake, valid message, acknowledgement), the signal at the box's exact spot judged on its worst season, voice both ways, and battery backup.
+- **What it prints:** a spoken and printed test record, either GREEN, FIX AND RE-RUN, or VISIT NEEDED.
+- **On campus:** a Rutgers PROVE Lab bench, plus an elevator "Who answers?" pilot for the finals.
 
-## Quick start (Python 3.10+, no installs)
+> Student concept. Not a Verizon product. Prototype results are simulations labelled as such until the bench measures them. We never dial 911.
+
+## Quick start (Python 3.10+ with numpy)
+
+```bash
+python3 -m prototype.prove.export          # build console data (~1 min)
+open prototype/prove/console/index.html    # offline console (any browser)
+python3 -m prototype.prove.server          # live rig mode at http://localhost:8766
+python3 -m unittest discover -s tests      # 60 tests
+python3 scripts/analyze_prove_lab.py field_data/prove_lab.csv   # bench results with Wilson CIs (after the bench runs)
+```
+
+## Start here
+
+| Path | What it is |
+|---|---|
+| [`deliverables/`](deliverables/) | Nov 8 video script, 2-page executive summary, judge Q&A bible, action plan, bench protocol, outreach kit |
+| [`STATE.json`](STATE.json) | Current champion, verified facts, honest negatives, kill gates |
+| [`EVOLUTION_LOG.md`](EVOLUTION_LOG.md) | Four generations: Circadian, Last Copper, then PROVE, and why each changed |
+| [`IDEA_LEADERBOARD.md`](IDEA_LEADERBOARD.md) | Gen 3 and Gen 4 tournaments; five-judge finals |
+| [`research/06_gen4_verification.md`](research/06_gen4_verification.md) | 22 verified research answers with sources |
+| [`research/sources/`](research/sources/) | Primary texts: Verizon notice and device guides, FCC orders, eCFR rule versions, the 2026 wire-center dataset |
+| [`research/07`-`10`](research/) | 60 Gen 4 ideas, founder contender, four-persona screen, finalists, red teams and judges |
+| [`prototype/prove/`](prototype/prove/) | PROVE engine: `alarm.py`, `install.py`, `migration.py`, `answer.py`, `acoustic.py`, `supervisor.py`, `triage.py`, `ledger.py`, `fleet.py`, `capacity.py`, `signal_model.py`, `console/` |
+
+## Earlier generations (kept as an engineering bench)
+
+Circadian (Gen 1-2) was retired after a Gen 3 red-team kill; its code under `prototype/engine`, `prototype/dashboard` and `CFO_10K_MODEL.py` remains, and its deliverables are in `deliverables/archive_circadian/`.
+
+### Circadian quick start (Gen 1-2, archived)
 
 ```bash
 python3 scripts/build_all.py          # train, simulate 8 scenarios + ablations, run the CFO model, write dashboard data (~2 min)
@@ -18,7 +48,7 @@ python3 -m unittest discover -s tests # verification suite
 python3 CFO_10K_MODEL.py --print      # financial model only
 ```
 
-## What's here
+### Circadian files
 
 | Path | What it is |
 |---|---|
@@ -33,7 +63,7 @@ python3 CFO_10K_MODEL.py --print      # financial model only
 | [`tests/`](tests/) | Verification suite |
 | [`PROMPT.md`](PROMPT.md), [`STATE.json`](STATE.json), [`EVOLUTION_LOG.md`](EVOLUTION_LOG.md), [`scripts/evolve_loop.sh`](scripts/evolve_loop.sh) | The multi-generation research protocol and its state |
 
-## How the engine works
+### How the Circadian engine works
 
 ```
 truth (timetable x per-building bias x random attendance + noise + unannounced crowds)   <- never seen
