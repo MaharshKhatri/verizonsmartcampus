@@ -62,6 +62,16 @@ def build():
             "quote": "Verizon may require customers and interconnecting entities to migrate services off of copper "
                      "facilities well before the copper retirement implementation date.",
             "wire_centers": wire_centers(),
+            "fcc": [
+                {"id": "DA 26-890", "date": "2026-08-26", "docket": "WC 26-227",
+                 "text": "Comments invited on Verizon's section 214 application to discontinue residential and business "
+                         "legacy TDM-based voice service in portions of AZ, DE, NJ, NM, OH, RI, SC, UT and VA "
+                         "(authorized date on or after Oct 23, 2026).",
+                 "url": "https://docs.fcc.gov/public/attachments/DA-26-890A1.pdf"},
+                {"id": "DA 26-1038", "date": "2026-09-25", "docket": "WC 26-227",
+                 "text": "Not automatically granted: \"The Commission requires additional time to complete its review.\"",
+                 "url": "https://docs.fcc.gov/public/attachments/DA-26-1038A1.pdf"},
+            ],
         },
         "acoustic": acoustic.compare_designs(trials=30),
         "pass_db": acoustic.PASS_DB,

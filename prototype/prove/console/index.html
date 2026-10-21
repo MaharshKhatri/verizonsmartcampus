@@ -99,9 +99,10 @@ footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
 <main>
   <section class="strip">
     <div><div class="sub">Verizon NJ copper retirement notice <b id="nid"></b></div>
-      <div class="big"><span id="days"></span> days</div></div>
-    <div style="flex:1;min-width:220px">Piscataway (<span class="mono">PSWYNJPI</span>, home of Busch, Livingston and SHI Stadium) is retired <b>on or after Dec 10, 2026</b>, along with <b id="nwc"></b> NJ wire centers.
-      <div class="sub" id="quote"></div></div>
+      <div class="big"><span id="days"></span> days</div><div class="sub">to "on or after Dec 10, 2026"</div></div>
+    <div style="flex:1;min-width:220px">Piscataway (<span class="mono">PSWYNJPI</span>, home of Busch, Livingston and SHI Stadium) is on the list with <b id="nwc"></b> NJ wire centers.
+      <div class="sub" id="quote"></div>
+      <div style="margin-top:6px"><b>FCC review:</b> <span id="fcc"></span></div></div>
     <a id="nlink" target="_blank" rel="noopener">Read the notice ↗</a>
   </section>
 
@@ -197,6 +198,7 @@ $("nid").textContent = N.id + " (" + N.dated + ")";
 $("nwc").textContent = N.wire_centers.length - 1 + " other";
 $("quote").textContent = "“" + N.quote + "”";
 $("nlink").href = N.url;
+$("fcc").innerHTML = (N.fcc || []).map(f => `<a href="${f.url}" target="_blank" rel="noopener">${esc(f.id)}</a> (${f.date}): ${esc(f.text)}`).join(" ");
 const days = Math.max(0, Math.ceil((new Date(N.implementation + "T00:00:00-05:00") - new Date()) / 86400000));
 $("days").textContent = days;
 $("passdb").textContent = D.pass_db; $("noisedb").textContent = D.noise_only_max_db;
