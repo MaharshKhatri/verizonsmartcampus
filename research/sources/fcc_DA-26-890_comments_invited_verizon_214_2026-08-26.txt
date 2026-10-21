@@ -1,0 +1,167 @@
+             PUBLIC NOTICE
+  Federal Communications Commission                                              News Media Information 202 / 418-0500
+  45 L Street, NE                                                                         Internet: http://www.fcc.gov
+  Washington, D.C. 20554
+
+                                                                                                       DA 26-890
+                                                                                         Released: August 26, 2026
+
+  COMMENTS INVITED ON VERIZON’S SECTION 214 APPLICATION TO DISCONTINUE
+   DOMESTIC LEGACY VOICE SERVICE AS PART OF A TECHNOLOGY TRANSITION
+
+                                              WC Docket No. 26-227
+
+                                      Comments Due: September 10, 2026
+
+        Unless otherwise specified, the following procedures and dates apply to the application(s) (the
+Section 214 Discontinuance Application(s)) listed in the Appendix.
+
+         The Wireline Competition Bureau (Bureau), upon initial review, has found the Section 214
+Discontinuance Application(s) listed herein to be acceptable for filing and subject to the procedures set forth
+in Section 63.71 of the Commission's rules.1 The application(s) request authority, under section 214 of the
+Communications Act of 1934, as amended,2 and section 63.71 of the Commission’s rules,3 to discontinue,
+reduce, or impair certain domestic telecommunications service(s) (Affected Service(s)) in specified
+geographic areas (Service Area(s)) as applicable and as fully described in each application.
+
+         In accordance with section 63.71(f) of the Commission’s rules, the Section 214 Discontinuance
+Application(s) listed in the Appendix will be deemed granted automatically on September 26, 2026, the
+31st day after the release date of this public notice, unless the Commission notifies any applicant(s) that
+their grant will not be automatically effective.4 We note that the date on which an application for
+Commission authorization is deemed granted may be different from the date on which applicants are
+authorized to discontinue service (“Authorized Date”). Any applicant whose application has been
+
+1 47 CFR § 63.71.
+
+2 47 U.S.C. § 214.
+
+3 47 CFR § 63.71.
+
+4 See 47 CFR § 63.71(f)(1) (stating, in relevant part, that an application filed by a non-dominant carrier “shall be
+
+automatically granted on the 31st day… unless the Commission has notified the applicant that the grant will not be
+automatically effective”); see also 47 CFR § 63.71(f)(2)(i) (stating that “[a]n application to discontinue, reduce, or
+impair an existing retail service as part of a technology transition, as defined in § 63.60(i), may be automatically
+granted… if: The applicant provides affected customers with the notice required under paragraph (a)(6) of this
+section, and the application contains the showing or certification described in § 63.602(b)”); Accelerating Wireline
+Broadband Deployment by Removing Barriers to Infrastructure Investment, WC Docket No. 17-84, Order, DA 25-
+248, para. 6 (WCB Mar. 20, 2025) (waiving the Adequate Replacement Test’s “single replacement service”
+requirement for a period of two years when a carrier seeks to discontinue a legacy voice service pursuant to section
+214(a), thereby allowing carriers to satisfy all three prongs of the Adequate Replacement Test with a bundled
+service); Technology Transitions, GN Docket No. 13-5, Order on Clarification, DA 25-250, para. 6 (WCB Mar. 20,
+2025) (clarifying the applicability of the testing methodology and parameters required for meeting the streamlining
+criteria when a carrier submits a technology transition discontinuance application relying on the “totality of the
+circumstances” under the Adequate Replacement Test)).
+                                                                                                         DA 26-890
+
+
+deemed granted may discontinue their Affected Service(s) in their Service Area(s) on or after the
+authorized discontinuance date(s) specified in the Appendix, in accordance with their filed
+representations. Accordingly, pursuant to section 63.71(f), and the terms outlined in each application,
+absent further Commission action, each applicant may discontinue the Affected Service(s) in the Service
+Area(s) described in their application on or after the authorized discontinuance date(s) listed in the
+Appendix for that application. For purposes of computation of time when filing a petition for
+reconsideration, application for review, or petition for judicial review of the Commission’s decision(s),
+the date of “public notice” shall be the later of the auto grant date stated above in this Public Notice, or
+the release date(s) of any further public notice(s) or order(s) announcing final Commission action, as
+applicable. Should no petitions for reconsideration, applications for review, or petitions for judicial
+review be timely filed, the proceeding(s) listed in this Public Notice shall be terminated, and the docket(s)
+will be closed.
+
+         Comments objecting to the application listed in the Appendix must be filed with the Commission
+on or before September 10, 2026. Comments should refer to the specific WC Docket No. and Comp.
+Pol. File No. listed in the Appendix for the Section 214 Discontinuance Application. Comments should
+include specific information about the impact of the proposed discontinuance on the commenter,
+including any inability to acquire reasonable substitute service. Comments may be filed using the
+Commission’s Electronic Comment Filing System (ECFS). Electronic Filers: Comments may be filed
+electronically using the Internet by accessing the ECFS: https://www.fcc.gov/ecfs. Filers should follow
+the instructions provided on the Web site for submitting comments. Generally, only one copy of an
+electronic submission must be filed. In completing the transmittal screen, filers should include their full
+name, U.S. Postal Service mailing address, and the applicable docket number.5
+
+         Paper Filers: Parties who choose to file by paper must file an original and one copy of each
+filing. Filings can be sent by hand or messenger delivery, by commercial courier, or by the U.S. Postal
+Service. All filings must be addressed to the Secretary, Federal Communications Commission.
+Hand-delivered or messenger-delivered paper filings for the Commission’s Secretary are accepted
+between 8:00 a.m. and 4:00 p.m. by the FCC’s mailing contractor at 9050 Junction Drive, Annapolis
+Junction, MD 20701. All hand deliveries must be held together with rubber bands or fasteners. Any
+envelopes and boxes must be disposed of before entering the building. Commercial courier deliveries
+(any deliveries not by the U.S. Postal Service) must be sent to 9050 Junction Drive, Annapolis Junction,
+MD 20701. Filings sent by U.S. Postal Service First-Class Mail, Priority Mail, and Priority Mail Express
+must be sent to 45 L Street NE, Washington, DC 20554.
+
+        This proceeding shall be treated as a “permit-but-disclose” proceeding in accordance with the
+Commission’s ex parte rules.6 Persons making ex parte presentations must file a copy of any written
+presentation or a memorandum summarizing any oral presentation within two business days after the
+presentation (unless a different deadline applicable to the Sunshine period applies). Persons making oral
+ex parte presentations are reminded that memoranda summarizing the presentation must (1) list all
+persons attending or otherwise participating in the meeting at which the ex parte presentation was made,
+and (2) summarize all data presented and arguments made during the presentation. If the presentation
+consisted in whole or in part of the presentation of data or arguments already reflected in the presenter’s
+written comments, memoranda or other filings in the proceeding, the presenter may provide citations to
+such data or arguments in his or her prior comments, memoranda, or other filings (specifying the relevant
+
+5 Please note that Commission staff may share filed comments with the applicant(s), along with the commenter’s
+
+contact information, in order to allow applicant(s) to identify affected customers in the proposed discontinuance area
+and fully respond.
+6 47 CFR § 1.1200 et seq.
+
+
+
+                                                          2
+                                                                                                   DA 26-890
+
+
+page and/or paragraph numbers where such data or arguments can be found) in lieu of summarizing them
+in the memorandum. Documents shown or given to Commission staff during ex parte meetings are
+deemed to be written ex parte presentations and must be filed consistent with rule 1.1206(b). In
+proceedings governed by rule 1.49(f) or for which the Commission has made available a method of
+electronic filing, written ex parte presentations and memoranda summarizing oral ex parte presentations,
+and all attachments thereto, must be filed through the electronic comment filing system available for that
+proceeding, and must be filed in their native format (e.g., .doc, .xml, .ppt, searchable .pdf). Participants in
+this proceeding should familiarize themselves with the Commission’s ex parte rules.
+
+          People with Disabilities: To request materials in accessible formats for people with disabilities
+(braille, large print, electronic files, audio format), send an e-mail to fcc504@fcc.gov or call the
+Consumer & Governmental Affairs Bureau at 202-418-0530.
+
+         For further information, please see the contact(s) for the specific discontinuance proceeding you
+are interested in as listed in the Appendix. For further information on procedures regarding section 214
+please visit https://www.fcc.gov/general/domestic-section-214-discontinuance-service.
+
+
+                                                   – FCC –
+
+
+
+
+                                                      3
+                                                                                  DA 26-890
+
+
+                                       Appendix
+
+1) Applicant(s): Citizens Telecommunications Company of Utah d/b/a Frontier
+   Communications of Utah; Citizens Telecommunications Company of the White Mountains,
+   Inc. d/b/a Frontier Communications of the White Mountains; Citizens Utilities Rural
+   Company, Inc. d/b/a Frontier Citizens Utilities Rural; Frontier Communications of the
+   Carolinas LLC; Frontier Communications of Michigan, Inc.; Frontier Communications of
+   the Southwest, Inc.; Frontier Communications of Virginia, Inc.; Frontier North Inc.;
+   Navajo Communications Company, Inc.; Verizon Delaware LLC; Verizon New England
+   Inc. d/b/a Verizon Rhode Island; Verizon New Jersey Inc.; Verizon South Inc.; and Verizon
+   Virginia LLC (Verizon)
+   WC Docket No. 26-227, Comp. Pol. File No. 2178
+   Link – https://www.fcc.gov/ecfs/search/search-filings/results?q=(proceedings.name:(%2226-
+   227%22))
+   Affected Service(s) – residential and business legacy TDM-based voice service
+   Service Area(s) – in portions of Arizona, Delaware, New Jersey, New Mexico, Ohio, Rhode
+   Island, South Carolina, Utah, and Virginia, as specified in the application
+   Authorized Date(s) – on or after October 23, 2026
+   Contact(s) – Kimberly Jackson, (202) 418-7393 (voice), Kimberly.Jackson@fcc.gov, of the
+   Competition Policy Division, Wireline Competition Bureau
+
+
+
+
+                                           4
+
