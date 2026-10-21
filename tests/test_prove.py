@@ -102,5 +102,28 @@ class TestSupervisor(unittest.TestCase):
         self.assertEqual(supervisor.false_alarm_rate(nights=200, seed=3), 0)
 
 
+class TestAlarm(unittest.TestCase):
+    def test_contact_id_checksum_and_clean_decode(self):
+        from prototype.prove import alarm
+        m = alarm.contact_id(event="110", zone="007")
+        self.assertTrue(alarm.checksum_ok(m))
+        self.assertFalse(alarm.checksum_ok(m[:-1] + ("1" if m[-1] != "1" else "2")))
+        self.assertEqual(alarm.decode_dtmf(alarm.dtmf(m)), m)
+
+    def test_kissoff_detector_is_specific(self):
+        from prototype.prove import alarm
+        rng = np.random.default_rng(0)
+        self.assertTrue(alarm.detect_tone(alarm.kissoff(), 1400, 0.4))
+        self.assertFalse(alarm.detect_tone(alarm.dtmf(alarm.contact_id()), 1400, 0.4))
+        self.assertFalse(alarm.detect_tone(rng.normal(0, 0.1, 8000), 1400, 0.4))
+
+    def test_registered_beats_voice_path_and_dead_receiver_never_kisses_off(self):
+        from prototype.prove import alarm
+        r = alarm.success_rates(trials=20, seed=2)
+        self.assertEqual(r["registered (##21 done)"]["first_try_rate"], 1.0)
+        self.assertLess(r["unregistered number (voice path)"]["first_try_rate"], 0.9)
+        self.assertEqual(r["receiver down"]["delivered_rate"], 0.0)
+
+
 if __name__ == "__main__":
     unittest.main()
