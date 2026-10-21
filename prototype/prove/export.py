@@ -11,6 +11,7 @@ from . import acoustic, fleet, supervisor, triage
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 NOTICE_TXT = os.path.join(ROOT, "research", "sources", "verizon_nj_copper_retirement_notice_2026-03-A-NJ.txt")
+NATIONAL_CSV = os.path.join(ROOT, "research", "sources", "verizon_frontier_copper_retirement_wire_centers_2026.csv")
 OUT_JS = os.path.join(HERE, "console", "data.js")
 OUT_JSON = os.path.join(ROOT, "prototype", "out", "prove_evidence.json")
 
@@ -25,6 +26,22 @@ def wire_centers():
         if m:
             rows.append({"name": m.group(1).strip(), "address": m.group(2).strip(), "clli": m.group(3)})
     return rows
+
+
+def national():
+    """2026 Verizon + Frontier copper-retirement wire centers by state (public notices only)."""
+    import csv
+    from collections import Counter, defaultdict
+    if not os.path.exists(NATIONAL_CSV):
+        return {}
+    rows = list(csv.DictReader(open(NATIONAL_CSV, encoding="utf-8")))
+    by_state = Counter(r["clli"][4:6] for r in rows)
+    dates = defaultdict(set)
+    for r in rows:
+        dates[r["clli"][4:6]].add(r["implementation"])
+    return {"total": len({r["clli"] for r in rows}), "notices": len({r["notice_id"] for r in rows}),
+            "states": {s: {"n": n, "dates": sorted(dates[s])} for s, n in by_state.items()},
+            "source": "Verizon network disclosures and Frontier wholesale notices under 47 CFR 51.333, 2026"}
 
 
 SCENARIOS = {
@@ -73,6 +90,7 @@ def build():
                  "url": "https://docs.fcc.gov/public/attachments/DA-26-1038A1.pdf"},
             ],
         },
+        "national": national(),
         "acoustic": acoustic.compare_designs(trials=30),
         "pass_db": acoustic.PASS_DB,
         "noise_only_max_db": round(float(acoustic.noise_only_margins(n=200).max()), 1),

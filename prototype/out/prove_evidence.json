@@ -336,6 +336,139 @@
    }
   ]
  },
+ "national": {
+  "total": 1763,
+  "notices": 22,
+  "states": {
+   "DE": {
+    "n": 16,
+    "dates": [
+     "May 20, 2026"
+    ]
+   },
+   "NM": {
+    "n": 12,
+    "dates": [
+     "December 10, 2026"
+    ]
+   },
+   "AL": {
+    "n": 19,
+    "dates": [
+     "July 23, 2026"
+    ]
+   },
+   "AZ": {
+    "n": 58,
+    "dates": [
+     "December 10, 2026"
+    ]
+   },
+   "OH": {
+    "n": 257,
+    "dates": [
+     "December 10, 2026"
+    ]
+   },
+   "SC": {
+    "n": 39,
+    "dates": [
+     "December 10, 2026"
+    ]
+   },
+   "FL": {
+    "n": 92,
+    "dates": [
+     "November 6, 2026"
+    ]
+   },
+   "GA": {
+    "n": 5,
+    "dates": [
+     "July 23, 2026"
+    ]
+   },
+   "IN": {
+    "n": 222,
+    "dates": [
+     "November 6, 2026"
+    ]
+   },
+   "IA": {
+    "n": 36,
+    "dates": [
+     "July 23, 2026"
+    ]
+   },
+   "NC": {
+    "n": 42,
+    "dates": [
+     "November 6, 2026"
+    ]
+   },
+   "MS": {
+    "n": 4,
+    "dates": [
+     "July 23, 2026"
+    ]
+   },
+   "MN": {
+    "n": 161,
+    "dates": [
+     "November 6, 2026"
+    ]
+   },
+   "NE": {
+    "n": 37,
+    "dates": [
+     "November 6, 2026"
+    ]
+   },
+   "NJ": {
+    "n": 62,
+    "dates": [
+     "December 10, 2026"
+    ]
+   },
+   "UT": {
+    "n": 27,
+    "dates": [
+     "December 10, 2026"
+    ]
+   },
+   "RI": {
+    "n": 7,
+    "dates": [
+     "December 10, 2026"
+    ]
+   },
+   "TN": {
+    "n": 19,
+    "dates": [
+     "July 23, 2026"
+    ]
+   },
+   "TX": {
+    "n": 274,
+    "dates": [
+     "November 6, 2026"
+    ]
+   },
+   "VA": {
+    "n": 234,
+    "dates": [
+     "December 10, 2026"
+    ]
+   },
+   "WI": {
+    "n": 140,
+    "dates": [
+     "November 6, 2026"
+    ]
+   }
+  },
+  "source": "Verizon network disclosures and Frontier wholesale notices under 47 CFR 51.333, 2026"
+ },
  "acoustic": {
   "healthy": {
    "path_ok": true,

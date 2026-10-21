@@ -168,6 +168,12 @@ footer { color: var(--muted); font-size: 12px; margin-top: 18px; }
     </section>
 
     <section class="card full">
+      <h2>2026: <span id="natn"></span> wire centers in <span id="nats"></span> states</h2>
+      <p class="note">Every copper-retirement wire center Verizon and Frontier noticed in 2026, by state, from <span id="natk"></span> public notices under 47 CFR 51.333. FCC 26-19 took effect Oct 15, 2026. Since then no federal rule requires a carrier to show that a replacement works with alarms or elevator phones.</p>
+      <svg id="usmap" viewBox="0 0 680 500" style="width:100%;max-width:760px;height:auto;display:block;margin:0 auto"></svg>
+    </section>
+
+    <section class="card full">
       <h2>The 62 wire centers in notice 2026-03-A-NJ</h2>
       <p class="note">From Verizon's public notice. New Brunswick is not on the list. Lifeline locations are never shown here.</p>
       <div class="wc" id="wc"></div>
@@ -302,6 +308,26 @@ $("help").onclick = async () => {
 (function design() {
   const A = D.acoustic, names = {healthy: "Healthy (voice-switched)", healthy_full_duplex: "Healthy (full duplex)", healthy_no_echo_control: "Healthy (no echo control)", speaker_dead: "Speaker dead", speaker_weak: "Speaker weak", mic_dead: "Mic dead", mic_taped: "Mic taped", noisy_machine_room: "Noisy", marginal_rf: "Marginal RF (25% loss)", no_call: "No call"};
   $("design").innerHTML = `<tr><th>Condition</th><th>Path works?</th><th>Two tones right</th><th>One loopback right</th></tr>` + Object.entries(A).map(([k, r]) => `<tr><td>${names[k] || k}</td><td>${r.path_ok ? "yes" : "no"}</td><td>${(r.two_direction_correct * 100).toFixed(0)}%</td><td style="color:${r.loopback_correct < 0.9 ? "var(--critical)" : "inherit"}">${(r.loopback_correct * 100).toFixed(0)}%</td></tr>`).join("");
+})();
+
+// national tile map (public notices only)
+(function usmap() {
+  const NA = D.national || {}; if (!NA.states) return;
+  $("natn").textContent = NA.total.toLocaleString(); $("nats").textContent = Object.keys(NA.states).length; $("natk").textContent = NA.notices;
+  const G = {AK:[0,0],ME:[0,10],VT:[1,9],NH:[1,10],WA:[2,0],ID:[2,1],MT:[2,2],ND:[2,3],MN:[2,4],IL:[2,5],WI:[2,6],MI:[2,7],NY:[2,8],RI:[2,9],MA:[2,10],
+    OR:[3,0],NV:[3,1],WY:[3,2],SD:[3,3],IA:[3,4],IN:[3,5],OH:[3,6],PA:[3,7],NJ:[3,8],CT:[3,9],CA:[4,0],UT:[4,1],CO:[4,2],NE:[4,3],MO:[4,4],KY:[4,5],WV:[4,6],VA:[4,7],MD:[4,8],DE:[4,9],
+    AZ:[5,1],NM:[5,2],KS:[5,3],AR:[5,4],TN:[5,5],NC:[5,6],SC:[5,7],DC:[5,8],OK:[6,3],LA:[6,4],MS:[6,5],AL:[6,6],GA:[6,7],HI:[7,0],TX:[7,3],FL:[7,8]};
+  const max = Math.max(...Object.values(NA.states).map(s => s.n)), S = 58, P = 3;
+  let s = "";
+  for (const [st, [r, c]] of Object.entries(G)) {
+    const v = NA.states[st], x = 4 + c * (S + P), y = 4 + r * (S + P) - (r > 1 ? 0 : 0);
+    const a = v ? 0.18 + 0.82 * Math.sqrt(v.n / max) : 0;
+    s += `<g><title>${st}${v ? ": " + v.n + " wire centers, on or after " + v.dates.join(", ") : ": none noticed in 2026"}</title>` +
+      `<rect x="${x}" y="${y}" width="${S}" height="${S}" rx="6" fill="${v ? "var(--brand)" : "var(--surface-2)"}" fill-opacity="${v ? a.toFixed(2) : 1}" stroke="${st === "NJ" ? "var(--ink)" : "none"}" stroke-width="2"/>` +
+      `<text x="${x + S / 2}" y="${y + 24}" text-anchor="middle" style="font-size:13px;font-weight:700;fill:${v && a > 0.5 ? "#fff" : "var(--ink-2)"}">${st}</text>` +
+      (v ? `<text x="${x + S / 2}" y="${y + 42}" text-anchor="middle" style="font-size:12px;fill:${a > 0.5 ? "#fff" : "var(--ink-2)"}">${v.n}</text>` : "") + `</g>`;
+  }
+  $("usmap").innerHTML = s;
 })();
 
 // owners
