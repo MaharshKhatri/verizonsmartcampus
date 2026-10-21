@@ -138,5 +138,23 @@ class TestInstallProof(unittest.TestCase):
         self.assertEqual(next(x for x in r["basement"]["lines"] if x["check"] == "SIGNAL")["status"], "FAIL")
 
 
+class TestWhoAnswers(unittest.TestCase):
+    def test_classifier_person_vs_machine_under_stress(self):
+        from prototype.prove import answer
+        d = answer.confusion(trials=8, stress=True, seed=4)
+        self.assertGreaterEqual(d["person_vs_not"], 0.97)
+        self.assertGreaterEqual(d["accuracy"], 0.85)
+
+    def test_route_answer_time_and_label(self):
+        from prototype.prove import answer
+        reg = answer.Registry()
+        ok = answer.check_call(reg.answerer_number, "person", 12, reg.label, reg)
+        self.assertTrue(ok["pass"], ok)
+        self.assertIn("previous contractor", " ".join(answer.check_call("8005550199", "person", 10, reg.label, reg)["issues"]))
+        self.assertIn("voicemail", " ".join(answer.check_call(reg.answerer_number, "voicemail", 20, None, reg)["issues"]))
+        self.assertIn("45 s", " ".join(answer.check_call(reg.answerer_number, "person", 52, reg.label, reg)["issues"]))
+        self.assertIn("Nashville", " ".join(answer.check_call(reg.answerer_number, "person", 9, "Nashville, TN", reg)["issues"]))
+
+
 if __name__ == "__main__":
     unittest.main()
