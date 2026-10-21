@@ -489,14 +489,14 @@
     {
      "check": "ALARM",
      "status": "OK",
-     "detail": "Contact ID handshake and kiss-off received 3/3",
+     "detail": "Receiver picked up \u00b7 full code sent \u00b7 confirmed 3/3",
      "fix": "",
      "needs_truck": false
     },
     {
      "check": "BATTERY",
      "status": "OK",
-     "detail": "Runs on battery when AC is pulled",
+     "detail": "Installed \u00b7 keeps working when unplugged",
      "fix": "",
      "needs_truck": false
     }
@@ -530,7 +530,7 @@
     {
      "check": "BATTERY",
      "status": "OK",
-     "detail": "Runs on battery when AC is pulled",
+     "detail": "Installed \u00b7 keeps working when unplugged",
      "fix": "",
      "needs_truck": false
     }
@@ -564,7 +564,7 @@
     {
      "check": "BATTERY",
      "status": "OK",
-     "detail": "Runs on battery when AC is pulled",
+     "detail": "Installed \u00b7 keeps working when unplugged",
      "fix": "",
      "needs_truck": false
     }
@@ -591,14 +591,14 @@
     {
      "check": "ALARM",
      "status": "FAIL",
-     "detail": "Kiss-off received 2/3 at this spot: signal too weak for alarm data",
-     "fix": "Move the box 1 m toward a window and re-run",
+     "detail": "Panel sent its code; confirmation came back only 2/3 at this spot: signal too weak for alarm data",
+     "fix": "Try the box nearer a window, as Verizon's guide suggests, then run the alarm test again",
      "needs_truck": false
     },
     {
      "check": "BATTERY",
      "status": "OK",
-     "detail": "Runs on battery when AC is pulled",
+     "detail": "Installed \u00b7 keeps working when unplugged",
      "fix": "",
      "needs_truck": false
     }
@@ -625,7 +625,7 @@
     {
      "check": "ALARM",
      "status": "OK",
-     "detail": "Contact ID handshake and kiss-off received 3/3",
+     "detail": "Receiver picked up \u00b7 full code sent \u00b7 confirmed 3/3",
      "fix": "",
      "needs_truck": false
     },
@@ -666,7 +666,7 @@
     {
      "check": "BATTERY",
      "status": "OK",
-     "detail": "Runs on battery when AC is pulled",
+     "detail": "Installed \u00b7 keeps working when unplugged",
      "fix": "",
      "needs_truck": false
     }
@@ -693,14 +693,14 @@
     {
      "check": "ALARM",
      "status": "OK",
-     "detail": "Contact ID handshake and kiss-off received 3/3",
+     "detail": "Receiver picked up \u00b7 full code sent \u00b7 confirmed 3/3",
      "fix": "",
      "needs_truck": false
     },
     {
      "check": "BATTERY",
      "status": "OK",
-     "detail": "Runs on battery when AC is pulled",
+     "detail": "Installed \u00b7 keeps working when unplugged",
      "fix": "",
      "needs_truck": false
     }

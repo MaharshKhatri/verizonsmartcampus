@@ -53,9 +53,9 @@ def _alarm_check(setup, loss, rng):
                         f"(through on the first try {first}/3, delivered {ok}/3)",
                 "Re-enter the alarm company number (##21*number#), restart the box, press PROVE again", False)
     if ok < 3:
-        return ("FAIL", f"Kiss-off received {ok}/3 at this spot: signal too weak for alarm data",
-                "Move the box 1 m toward a window and re-run", False)
-    return ("OK", "Contact ID handshake and kiss-off received 3/3", "", False)
+        return ("FAIL", f"Panel sent its code; confirmation came back only {ok}/3 at this spot: signal too weak for alarm data",
+                "Try the box nearer a window, as Verizon's guide suggests, then run the alarm test again", False)
+    return ("OK", "Receiver picked up · full code sent · confirmed 3/3", "", False)
 
 
 def _alarm_call_with_loss(rng, loss, registered=True):
@@ -130,7 +130,7 @@ def install_proof(setup, seed=0):
         lines.append(("BATTERY", "WARN", f"Batteries {setup.battery_age_months:.0f} months old (guide: replace every 6)",
                       "Replacement AAs mailed", False))
     else:
-        lines.append(("BATTERY", "OK", "Runs on battery when AC is pulled", "", False))
+        lines.append(("BATTERY", "OK", "Installed · keeps working when unplugged", "", False))
     if not setup.corded_phone:
         lines.append(("PHONE", "WARN", "Cordless base: it goes dead in a power cut even if the box is on battery",
                       "Keep one corded phone on the box", False))
