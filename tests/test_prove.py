@@ -156,5 +156,16 @@ class TestWhoAnswers(unittest.TestCase):
         self.assertIn("Nashville", " ".join(answer.check_call(reg.answerer_number, "person", 9, "Nashville, TN", reg)["issues"]))
 
 
+class TestCapacity(unittest.TestCase):
+    def test_prove_never_adds_hours_and_scales_with_pass_rate(self):
+        from prototype.prove import capacity
+        rows = capacity.sensitivity()
+        for r in rows:
+            self.assertLessEqual(r["months_with_prove"], r["months_today"])
+        by = {(r["fw_share"], r["prove_pass"]): r for r in rows}
+        self.assertLess(by[(0.3, 0.8)]["months_with_prove"], by[(0.3, 0.3)]["months_with_prove"])
+        self.assertEqual(capacity.plan()["vs_installed_base_x"], 6.5)
+
+
 if __name__ == "__main__":
     unittest.main()
