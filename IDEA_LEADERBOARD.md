@@ -7,6 +7,36 @@ Two rubrics, because the team must win both rooms:
 
 Scores are the red team's judgment, written down so the next generation can argue with them.
 
+## Generation 3: founder tournament (current standings)
+
+Gen 3 dropped the CEO rubric and scored only on the **official rubric (95)** plus uniqueness against a simulated crowd of LLM-assisted teams. The full record is in [research/05_gen3_tournament.md](research/05_gen3_tournament.md): 40 crowd ideas, 120 raw ideas, 27 screened concepts, 9 dossiers with two red teams each, and a judge panel.
+
+**Champion: Last Copper (PROVE-first), average 94.** Verizon is retiring the copper in Piscataway (notice 2026-03-A-NJ, on or after Dec 10, 2026). Last Copper finds life-safety lines (elevator phones, refuge call boxes, fire-alarm communicators) before the cut, moves each to a Verizon LTE line, and then proves every path end to end every night: tone out through the car speaker, tone back through the car mic, the location label checked, and a text mode for Deaf riders. **Circadian is retired as the pitch** (red-team kill), and its code becomes the engineering bench.
+
+| Avg /95 | Judges | Entry (rows repeat when a concept was judged before and after revision) |
+|---:|---:|---|
+| 94.0 | 3 | Last Copper: find, move and prove every lifeline before the copper goes dark |
+| 89.0 | 3 | HangUp: the network speaks up during the scam call |
+| 87.8 | 5 | Floor Truth |
+| 86.0 | 5 | Heard: 911 Path Assurance |
+| 83.5 | 2 | Last Copper |
+| 83.5 | 2 | HangUp |
+| 81.8 | 4 | First Minute: every AED on campus, live to 911 |
+| 79.0 | 1 | Second Witness (revised): floor-level 911 for every phone on campus |
+| 79.0 | 1 | First Minute |
+| 77.0 | 1 | FirstRing (revised from RightRoom): right 911 center, right floor |
+| 74.7 | 3 | FirstRing (revised from RightRoom) |
+| 74.0 | 1 | FirstRing |
+| 74.0 | 1 | Circadian Headcount (pivot) |
+| 72.8 | 4 | Second Witness (revised) |
+| 71.5 | 2 | Alert Clock |
+| 71.0 | 3 | Circadian Headcount |
+| 71.0 | 1 | Circadian (original incumbent, reference only) |
+| 69.7 | 3 | Alert Clock (formerly Clery Clock) |
+| 69.0 | 1 | Circadian Headcount (pivot of Circadian) |
+
+Gate A, decided Oct 31: how many Rutgers life-safety lines ride Verizon copper in a retiring wire center? With 25 or more, the pitch leads with Rutgers. With fewer, it leads with the national program and uses Rutgers as the PROVE pilot. If OIT confirms zero copper exposure and Facilities refuses any pilot, the fallback is HangUp (89).
+
 ## Generation 1: final standings (after research and simulation evidence)
 
 | Rank | Thesis | OpEx 25 | B2B 20 | Pillars 20 | Tech 15 | Demo 20 | **CEO /100** | Official ceiling /95 | Change from Gen 1a |
@@ -84,7 +114,7 @@ The red team's own Round-1 estimate for Circadian: **66–71/95** as originally 
 
 What changed because of the red teams: RAN energy was demoted from headline to event-day proof; the B2B product became the money; Wi-Fi became the stated primary indoor sensor; the HVAC claim became "comfort-safe" rather than "the forecast saves kWh"; privacy became an architecture slide, not a footnote.
 
-## Generation 3 mutations queued (see STATE.json)
+## Circadian follow-ups (queued in Gen 2, superseded by the Gen 3 pivot)
 1. Replace the synthetic history with real data: Oct 31 Michigan game walk test + Juniper Mist association counts for 5 buildings (ask OIT).
 2. Add a calibrated "event-mode lockout" lever once the Verizon mentor confirms whether AI energy saving is suspended on event days.
 3. Try an ST-GNN / gradient-boosted forecaster once there is real data; keep the ridge model as the explainable baseline.

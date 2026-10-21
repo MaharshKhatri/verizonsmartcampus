@@ -37,3 +37,20 @@ An independent red-team agent audited the code, the experiment design and the CF
 | W10 | Several tests could not fail | low | Tests now assert the event-mode trade-off, ordinary-day tie, comfort vs a no-forecast controller, sensing behaviour, and a ledger built from components |
 
 Also added in Gen 2: Circadian blends traffic history into its forecast when the calendar says a zone's day is ordinary (removed a small ordinary-day penalty); suppressed privacy counts are used as upper bounds; venue Wi-Fi is treated as non-representative; tailgaters don't trigger stadium HVAC.
+
+## Generation 3: founder tournament, pivot to Last Copper (2026-10-21)
+Question: is Circadian the idea that wins, or only the idea we built first? A multi-agent tournament (full record in `research/05_gen3_tournament.md`):
+- **Crowd simulation:** 40 ideas that LLM-assisted teams will pitch by default (digital twins, energy/RAN sleep, smart parking, bus trackers, safety apps, concierges, AR stadiums). Circadian sits in the most crowded part of that map.
+- **Fresh research → 120 ideas through 14 lenses → 27 concepts → 9 deep dossiers → two red teams each → judge panel on the official rubric.**
+- **Red team killed Circadian:** about $3 of venue radio energy per game; a tie with Verizon's AI on ordinary days; Wi-Fi does the sensing; NPV is negative without network pull-through. The "Circadian Headcount" pivot needed carrier APIs Verizon does not offer.
+- **Champion: Last Copper (PROVE-first), 94/95 average.** Runner-ups: HangUp (scam-call payment pause) 89, Floor Truth (floor-level 911 location) 87.8, Heard (911 path assurance) 86, First Minute (AEDs to 911) 81.8.
+- **Why it beat everything:** it is anchored on a dated Verizon program a default LLM cannot know (copper retirement notice 2026-03-A-NJ, Sept 8 2026), it has a hard date between Round 1 and Round 2, it carries maximal criticality (a trapped person), and it has the most tactile demo in the field.
+- **Kept from Circadian as the bench:** triage (naive Bayes → PROVE fault routing), ledger (→ hash-chained evidence record), server/dashboard (→ console), synthetic generators (→ FIND call records), the CFO model (→ per-wire-center formula), the walk-test analyzer (→ machine-room LTE-M survey), and the test harness.
+- **Dropped from the pitch:** every energy, HVAC, slicing and radio-sleep claim, plus the NPV/ESCO figures.
+- **Founder verification (Gen 4 start):** the notice is real. It is dated Sept 8 2026, implementation is on or after Dec 10 2026, and it covers 62 NJ wire centers including Piscataway, 4 Skiles Ave, CLLI PSWYNJPI. New Brunswick is not listed. The text is saved in `research/sources/`.
+- **Kill gates carried forward:**
+  - (A) whether Rutgers life-safety lines actually ride Verizon copper served from PSWYNJPI;
+  - who answers Rutgers elevator calls;
+  - prior art for automated acoustic self-test (Kings III, AVIRE, Talkaphone, etc.);
+  - whether NJ IBC 3001.2 applies to existing cars;
+  - echo cancellation in hands-free phones (bench Gate B).
