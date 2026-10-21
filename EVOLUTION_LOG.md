@@ -104,3 +104,22 @@ Question: is Circadian the idea that wins, or only the idea we built first? A mu
   - "~1M lines" leaned on a vendor blog.
 - An agent once put the user's email into an SEC User-Agent header. All later agents carried an explicit rule against sending personal data.
 - The machine allows only 2 concurrent agents per workflow, so research ran as parallel shards.
+
+## Generation 5: attack the actual deliverables (2026-10-21)
+**Who reviewed v1.** Four reviewers read the v1 script, executive summary and Q&A (`research/11_gen5_deliverable_review.md`):
+- a fact-checker, which checked 127 claims: 82 supported, 27 overstated, 13 unsupported, 5 wrong;
+- a Verizon executive watching video #37 of 40: 66;
+- a non-specialist Vice Provost: 67;
+- a rival team's captain: 68, adding "the most disciplined and sponsor-safe script in the record; it will not lose on a gaffe".
+
+**What v2 fixed.**
+- The opening no longer contradicts the alarm protocol. It now reads "The copper's gone. This alarm hasn't called anyone since."
+- "One button" became "one guided check": the customer still starts the panel's own test.
+- No delivery claims remain. Plain words replace jargon: picked up / full code sent / confirmed.
+- The video now says what PROVE physically is: firmware shipped through Verizon's device management.
+- Not every copper line moves to a box. Fiber, cable and mobile replacements are acknowledged.
+- Simulated results are labelled as simulated, and planned work (bench, Facilities pilot, mentor emails) is marked as planned.
+- The hero measurement became the rival's suggestion: at a weak spot the test call sounds clear while the alarm fails, so a clear call isn't proof.
+- The bench beat now has a decision table, and a complete K1-fallback script exists.
+
+**Sources.** The 277,000 lines in WC 26-227 and the 140,000 in WC 26-170 are now verified from saved primary texts. The Inseego "no fax" claim was withdrawn as unverified.
