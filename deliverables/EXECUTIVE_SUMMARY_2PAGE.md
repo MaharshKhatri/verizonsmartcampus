@@ -2,7 +2,12 @@
 
 **2026 Verizon Smart Campus Innovation Challenge · Rutgers University · Pillar 1: AI-Driven Automation & Efficiency (secondary: Pillar 2, Cost & Sustainability Transformation)**
 
-> **In three sentences.** When Verizon swaps a copper line for a wireless box, customers with an alarm are asked to test it themselves. A clear phone call can't tell them whether the alarm works. PROVE turns that test into one guided check with a receipt, and a model learned from bench alarm tests decides whether the signal at that spot is good enough. On our bench at Rutgers, at a weak spot the call was clear [k/k] times while the alarm got through [m/20], and another carrier's box did the same.
+> **In brief.**
+> - **The gap.** When Verizon swaps a copper line for a wireless box, customers with an alarm are asked to test it themselves, and a clear phone call can't tell them whether the alarm works.
+> - **PROVE.** It turns that test into one guided check with a receipt. A model learned from bench alarm tests decides whether the signal at that spot is strong enough.
+> - **The bench result** *(this line follows the video's decision-table row)*.
+>   - *Row 1:* on our bench at Rutgers, at one weak signal, phone calls on two carriers' boxes were clear [k/20] times while alarms got through about [m/20]. The alarm needed [X] dB more signal than a clear call.
+>   - *Row 1b:* with the alarm number not registered, the call was clear [k/20] times and the alarm got through [m/20].
 
 ## The problem: "sent" isn't "received"
 - **How many lines move.** Verizon replaces retired copper with fiber or cable VoIP, mobile service, or a fixed-wireless box (Voice Connect, Voice Gateway, Business Phone Connect), which connects the old phones and alarm panel to Verizon's LTE network. PROVE is for that box.
@@ -32,27 +37,31 @@
 4. **After install.** The same checks can repeat on a schedule. Cutover Watch rolls results up per migration batch for Network Transformation.
 5. **Campus extension (for the final).** WHO ANSWERS for elevator HELP phones:
    - a challenge-response test call ("press 1 and read back the car ID");
-   - time to a person, against A17.1's 45 s redirect rule;
+   - time to acknowledgement, against A17.1's rule that an unacknowledged call be redirected within 45 s;
    - caller-ID continuity at cutover.
 
 ## The ask: two phases, the first with no firmware
 | Phase | What | When | Cost |
 |---|---|---|---|
-| **1. Pocket PROVE tap** | Technicians on one migration batch's alarm installs carry a pocket tap for 30 days, against a control group. The tap is a Raspberry Pi with a passive, isolated line tap on the box's alarm port, a USB sound card and a battery. It runs our decoder (`prototype/prove/tap.py`), and the receipt goes to the technician's phone. | Ready to start after the bench readout | About $100-200 in parts per tap. No change to the box or the network. |
-| **2. Box firmware** | The same checks shipped to the box through Verizon device management, for self-installs and mail-in swaps. The box already decodes DTMF to dial. PROVE adds a Contact ID parser and two tone detectors. The analytic budget is about 0.17 million multiply-accumulates per second and 2 KB of detector state; it is not yet ported or measured on the box. | Firmware scoping with Inseego after the trial readout | Engineering time only |
+| **1. Pocket PROVE tap** | For 30 days, technicians on one batch of alarm installs carry a pocket tap, against a matched batch without it. The tap is a Raspberry Pi with a passive, isolated line tap on the box's alarm port, a USB sound card, a small thermal printer and a battery. It runs our decoder (`prototype/prove/tap.py`). It reads signal from the box's own diagnostics, or a labelled proxy phone. The receipt prints or goes to the technician's phone. Spoken prompts through the handset and automatic battery checks arrive with Phase 2. | Ready to start after the bench readout | About $100-200 in parts per tap, less than one truck roll. No change to the box or the network. |
+| **2. Box firmware** | The same checks shipped to the box through Verizon device management, for self-installs and mail-in swaps. The box already decodes DTMF to dial. PROVE is a small add-on to the box's existing tone decoder: a Contact ID parser and two tone detectors. We estimate it at well under 1% of a modest DSP and about 2 KB of memory (`tap.compute_budget()`); this is an estimate, not yet ported or measured on the box. | Firmware scoping with the box's maker after the trial readout | Engineering time only |
 
 **Pre-registered success rule for Phase 1** (written before the trial, so nobody can move the goalposts):
-- **Primary:** the 30-day repeat-dispatch rate in alarm households, PROVE arm vs control. We report the difference with its 95% CI.
+- **Primary: the catch rate.** This is the share of alarm installs where PROVE flags an alarm failure that a plain phone call passed, reported with its 95% CI. It is measurable within one batch: about ±3 points at 300 installs if the rate is near 5-10%.
 - **Secondary:**
-  - care contacts per install;
-  - the share of PROVE installs that end GREEN after at most one fix (target ≥ 95%).
-- **Power, stated up front.** Detecting a 2-point drop from a 10% base rate (80% power, two-sided 5%) takes about 3,200 installs per arm. A smaller batch reports the estimate and its CI, not a significance claim.
+  - the share of PROVE installs that end GREEN after at most one fix (target ≥ 95%);
+  - 30-day repeat dispatch and care contacts vs the matched batch, reported as estimates.
+- **Power, stated up front.** A significance claim on repeat dispatch needs about 3,200 installs per arm (a 2-point drop from a 10% base, 80% power, two-sided 5%). That is more than one batch, so we don't promise it.
 - **Break-even:** the PROVE cost per install ÷ Verizon's loaded repeat-dispatch cost.
 
 ## Why Verizon
 - **Truck rolls, sized without invented dollars.**
   - **Per 1,000 alarm installs:** each 1-point drop in 30-day repeat dispatch avoids 10 truck rolls, and each 1-point drop in care contacts avoids 10 calls. Value = those counts × Verizon's own loaded costs (asked of the mentor).
   - **For scale only:** vendor blogs put a loaded truck roll at $250-1,000. At the low end, 1 point per 1,000 installs is $2,500.
+- **One RAN-native number Verizon can reuse.** The bench reports delta: how many more dB of signal Contact ID needs than a clear call, on each box against its own dropout point.
+  - Applied to the address-level indoor coverage predictions Verizon already uses to qualify homes for fixed wireless, that margin flags alarm homes near the edge **before install**, without PROVE touching customer data.
+  - It describes the alarm format's fragility, not the quality of Verizon's network.
+  - Verizon can join our trial timestamps to its own eNB/IMS traces.
 - **Addressable base, as a range until Verizon counts it.** The alarm committee's 5 million dial-out panels⁴ divided by the FCC's 78 million wireline voice connections (June 2025)⁷ is about 6%. Divided by the 26 million residential connections, it is about 19%. Applied to 46,000 boxes, that crude range is about 3,000-9,000 alarm households. Verizon can replace it with an exact count: every box with an alarm number registered via ##21 (mentor question 6).
 - **Safer no-truck migrations.** Verizon already ships mail-in swaps and self-installed gateways. PROVE makes that path safe for the households that need it most.
 - **Retention at a forced migration.** A forced move is a moment a household can leave, and Verizon's CEO calls churn the company's biggest lever (Jan 30, 2026). A green receipt gives an alarm household a reason to stay.

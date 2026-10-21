@@ -34,9 +34,11 @@ The arithmetic needs no invented costs:
 
 Vendor blogs put a loaded truck roll at $250-1,000, so the low end is $2,500 per point per 1,000 installs. That figure is for scale only.
 
-Verizon told the FCC it has about 46,000 fixed-wireless replacement customers, and two 2026 filings cover about 417,000 more lines. The 30-day trial against a control group gives the real number. Its success rule is pre-registered:
-- the primary endpoint is the difference in repeat dispatch, with its 95% CI;
-- detecting a 2-point drop from a 10% base takes about 3,200 installs per arm, and we say so up front.
+Verizon told the FCC it has about 46,000 fixed-wireless replacement customers, and two 2026 filings cover about 417,000 more lines. The 30-day trial gives the real number, and its success rule is pre-registered:
+- **The primary endpoint is the catch rate:** the share of alarm installs where PROVE flags an alarm failure that a plain phone call passed. It is measurable within one batch (about ±3 points at 300 installs).
+- **Repeat dispatch against a matched batch is secondary, an estimate only.** A significance claim on it would take about 3,200 installs per arm, and we say so up front.
+
+A pocket tap costs less in parts ($100-200) than one truck roll at the low end of vendor estimates.
 
 **6. "Isn't this a gotcha about our box?"**
 No. Verizon's own guide already asks customers with an alarm to test it, and we turned that into one guided check with a receipt. The customer or the alarm company still starts the panel's test, as they do today. Every result goes to the Verizon mentor before any poster.
@@ -56,14 +58,32 @@ Verizon's documents differ on medical-alert support, so we claim nothing. The re
 **11. "What about the FCC?"**
 On the record: in FCC 26-19 the Commission declined alarm-compatibility conditions and "encourage[s] carriers ... to prevent alarm signaling failures". PROVE is how a carrier shows it did, home by home. It is voluntary and Verizon-led, not a compliance claim.
 
-**12a. "How many of the 46,000 even have an alarm?"**
+**11a. "How many of the 46,000 even have an alarm?"**
 No filing says. As a crude range, the alarm committee's 5 million dial-out panels over the FCC's 78 million wireline voice connections is about 6%. Over the 26 million residential connections, it is about 19%. On 46,000 boxes that is roughly 3,000-9,000 households. Verizon can replace the range with an exact count: every box with an alarm number registered via ##21. That is our sixth mentor question.
 
-**12b. "Is the demo running on our box's firmware?"**
+**11b. "Is the demo running on our box's firmware?"**
 No, and the video says so: on our bench PROVE runs on a tap at the box's alarm port. That tap is Phase 1 of the ask, a pocket device for technicians with no change to the box. Phase 2 is firmware. The box already decodes DTMF to dial, and PROVE adds a Contact ID parser and two tone detectors. `tap.compute_budget()` estimates it at about 0.17 million multiply-accumulates per second and 2 KB of detector state. That is an analytic estimate, not yet ported or measured on the box.
 
-**12c. "You dialled in the one attenuation where voice survives and DTMF fails."**
-We stepped the attenuator in 2 dB steps across the whole range, on Verizon's box and another carrier's box at matched SINR. "Clear" was fixed before the run: PESQ (ITU-T P.862) of at least 3.0, or a blinded listener getting at least 9 of 10 keywords. `scripts/analyze_prove_lab.py` prints every step and flags the gap steps, where calls are clear but alarms are under 90%. The full sweep is on the poster. If the other carrier's box had not shown the same gap, the number would not be in the video.
+**11c. "You dialled in the one attenuation where voice survives and DTMF fails."**
+No. We measured the whole curve and report one number, delta: how many more dB of signal Contact ID needs than a clear call.
+- **The fit.** Each box is measured from its own dropout point, with logistic fits and a cluster-bootstrap CI.
+- **The rig.** The box sits inside a shield box. An RSRP-vs-dial slope check proves the attenuator controls what it hears, and cell ID and band are logged at 1 Hz.
+- **The trials.** Steps are 1 dB near the edge, with 20 phone calls and 20 alarm tests per step, interleaved in random order on two days. Setup failures are a separate curve.
+- **"Clear" was fixed before the run:** P.862.1 MOS-LQO ≥ 3.0 in both directions, plus ≥ 9 of 10 keywords from a blinded listener, with a 3.5 sensitivity check.
+- **When we call it a gap.** A box shows a gap only if delta's CI is above 0. "Same pattern on another carrier" means a gap on both boxes, never just overlapping CIs.
+
+**11d. "Does the box send DTMF in-band through AMR, or as RFC 4733 events?"**
+We measured it first (bench test T0): for each digit, we compare timing, level and frequency at the panel and at the receiver, with ##21 on and off. We also asked the mentor. The answer tells us where failures should appear:
+- **In-band:** digits garbled at the receiver.
+- **RFC 4733:** call setup, or the handshake and kiss-off not being heard.
+
+`fail_stage` is logged for every trial, so the data shows which.
+
+**11e. "Is the other carrier's box even on VoLTE?"**
+We check that it is IMS-registered with a dedicated voice bearer. If it runs SIP over best-effort data instead, it isn't a VoLTE control. The poster says so, and the cross-carrier line leaves the video.
+
+**11f. "How does a passive tap speak, or know the signal?"**
+It doesn't speak through the handset. In Phase 1 the tap listens to the line. It reads signal from the box's own diagnostics (or a proxy phone on the same attenuated path, labelled as such). Prompts and the receipt go to the technician's phone and a pocket printer. Spoken prompts through the handset and automatic battery checks arrive with Phase 2 firmware, and the video labels that phase as not built.
 
 ## Rutgers (CIO, Dean, Vice Provost)
 **12. "Why is this Smart Campus? What does Rutgers get?"**
@@ -79,7 +99,7 @@ We are not claiming that. Rutgers has already done the right thing for two lifel
 Elevator HELP phones are the lifeline that still has no routine proof that someone answers, and PROVE adds it. Which elevator lines ride which carrier is OIT's to confirm, and we have asked. Rutgers is the proving ground, not a countdown.
 
 **14. "Where's the AI?"**
-Three places, each with its error rate:
+The go/no-go signal line is learned from our own lab alarm tests, not set by hand: it is how strong the signal must be for an alarm to get through first time nine times in ten, with a margin of error. In detail, AI shows up in three places, each with its error rate:
 - **A learned SIGNAL threshold.** A logistic model maps the box modem's SINR to the probability that an alarm is delivered on the first try, with bootstrap CIs (`prototype/prove/signal_model.py`). On modelled data it gives about 10 dB SINR for 90% first-try delivery (CI 8.6-11.5). That figure comes from an assumed worst-case loss model (lost frames zeroed, no concealment), so it is a placeholder, not a prediction. The bench refit is the only number we would quote, and it is labelled "fitted to [N] bench alarm tests on one cell". The video shows it as "Signal bar learned from [N] bench alarm tests".
 - **Fault triage** that routes each failure to its owner. Routing accuracy is 92% in simulation and 87% when our symptom assumptions are wrong by ±15 points.
 - **Plain-language fix instructions** for each failed line. These are rule-based today; an LLM rephrasing step is planned, not built.
@@ -107,3 +127,13 @@ None:
 - No CPNI.
 - Usability volunteers give consent and age band only.
 - Nothing is recorded on elevator calls.
+
+## Added after the Gen 6 review
+**19. "Panels send periodic tests. The alarm company would notice a missed one."**
+Many do, daily to monthly. The miss then surfaces days later, as a trouble beep or a late-test flag, after the installer has gone. PROVE moves that discovery to install time, when someone is there to move the box or re-enter the number. That is why the video says the panel "may not" learn.
+
+**20. "Did the IRB review the usability session?"**
+Yes. On [date], Rutgers' IRB determined it [not human-subjects research / exempt], ref [#]. Volunteers sign consent and a photo release, and we keep counts and age band only. If the determination isn't on file, the session doesn't run and the video carries no volunteer footage.
+
+**21. "Why should Verizon's network planners care?"**
+Because delta is a margin they can apply to the address-level indoor coverage predictions already used to qualify homes for fixed wireless. It flags alarm homes near the edge before install, and PROVE never touches customer data. The mentor gets the test line's number and the UTC start of every trial, so Verizon can pull its own traces for the same calls.

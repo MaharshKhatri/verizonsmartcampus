@@ -31,7 +31,7 @@ def main(path):
     for when, secs, quotes in beats(path):
         words = {"spoken": 0, "handset": 0}
         for who, text in quotes:
-            words["handset" if who.strip().lower() == "handset" else "spoken"] += count(text)
+            words["handset" if who.strip().lower() in ("handset", "prove voice") else "spoken"] += count(text)
         n = words["spoken"] + words["handset"]
         for k in total:
             total[k] += words[k]
