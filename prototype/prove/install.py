@@ -10,11 +10,12 @@ the real voice path, and says whether a truck is still needed.
 Thresholds are engineering assumptions, labeled; the Rutgers bench replaces
 them with measured pass rates per device and per Verizon path.
 """
+import textwrap
 from dataclasses import dataclass, field
 
 import numpy as np
 
-from . import alarm
+from . import alarm, tap
 
 SUPPORTED_ALARM_FORMATS = {"contact_id"}         # BPC100 shop footnote: Contact ID only
 
@@ -31,6 +32,7 @@ class HomeSetup:
     corded_phone: bool = True                  # a cordless base dies with mains power
     month: int = 11                            # install month (leaf-off Nov-Apr in NJ)
     canopy: bool = False                       # deciduous trees between the box and the site
+    signal_source: str = "box"                 # box (its own reading) | phone (a phone near the box, a proxy)
 
 
 # Placement -> (RSRP dBm, SINR dB, voice-frame loss). ASSUMED illustrative values; measured per home in the pilot.
@@ -38,24 +40,39 @@ PLACES = {"window": (-92.0, 14.0, 0.005), "interior": (-104.0, 6.0, 0.02), "base
 LEAF_ON_MARGIN_DB = 3.0    # ASSUMED; NTIA/ITS measured 1.8-2.9 dB more summer clutter loss at 3.475 GHz (Kozma et al., 2024)
 
 
-def _alarm_check(setup, loss, rng):
+SOURCES = {"SIGNAL": {"box": "SIGNAL (box reading)", "phone": "SIGNAL (phone near box, proxy)"},
+           "VOICE": "VOICE (call to PROVE test responder)", "ALARM": "ALARM (line tap)"}
+GAP_S = 0.25               # panel's pause after the handshake and before the kiss-off, as in tap.synth_call
+
+
+def _confirm_s(attempts, msg=None):
+    """Handshake start to kiss-off start for a call confirmed on `attempts` (tap.synth_call's timing)."""
+    hs, block = len(alarm.handshake()) / alarm.FS, len(alarm.dtmf(msg or alarm.contact_id())) / alarm.FS
+    return hs + GAP_S + attempts * block + (attempts - 1) * tap.RETRY_WAIT_S + GAP_S
+
+
+def _alarm_check(setup, loss, rng, events=3):
     if setup.alarm_format not in SUPPORTED_ALARM_FORMATS:
         return ("FAIL", f"Alarm format {setup.alarm_format.upper()} is not supported on this box (Contact ID only)",
                 "Ask the alarm company for a cellular communicator or switch the panel to Contact ID", True)
     path_kw = {"registered": setup.alarm_number_registered}
     ok = first = 0
-    for _ in range(3):                                         # three test events, like a careful technician
+    tries = []
+    for _ in range(events):                                    # three test events, like a careful technician
         r = _alarm_call_with_loss(rng, loss, **path_kw)
         ok += r["delivered"]
         first += r["delivered"] and r["attempts"] == 1
+        tries.append(r["attempts"])
     if not setup.alarm_number_registered:
         return ("FAIL", f"Alarm number not registered (##21): alarm calls ride the ordinary voice path "
-                        f"(through on the first try {first}/3, delivered {ok}/3)",
+                        f"(through on the first try {first}/{events}, confirmed {ok}/{events})",
                 "Re-enter the alarm company number (##21*number#), restart the box, press PROVE again", False)
-    if ok < 3:
-        return ("FAIL", f"Panel sent its code; confirmation came back only {ok}/3 at this spot: signal too weak for alarm data",
+    if ok < events:
+        got = f"confirmation came back only {ok}/{events}" if events > 1 else "no confirmation came back"
+        return ("FAIL", f"Panel sent its code; {got} at this spot: signal too weak for alarm data",
                 "Try the box nearer a window, as Verizon's guide suggests, then run the alarm test again", False)
-    return ("OK", "Receiver picked up · full code sent · confirmed 3/3", "", False)
+    done = f"confirmed {ok}/{events}" if events > 1 else f"confirmed in {_confirm_s(tries[0]):.1f} s"
+    return ("OK", f"Receiver picked up · full code sent · {done}", "", False)
 
 
 def _alarm_call_with_loss(rng, loss, registered=True):
@@ -81,8 +98,12 @@ def _alarm_call_with_loss(rng, loss, registered=True):
     return {"delivered": False, "attempts": 4}
 
 
-def install_proof(setup, seed=0):
-    """Run every check; return the receipt lines and whether a truck is still needed."""
+def install_proof(setup, seed=0, alarm_events=3, sources=False):
+    """Run every check; return the receipt lines and whether a truck is still needed.
+
+    alarm_events: test alarm events to run (1 gives "confirmed in X.X s", 3 "confirmed 3/3").
+    sources=True: each line also names where its reading came from (SOURCES).
+    """
     rng = np.random.default_rng(seed)
     rsrp, sinr, loss = PLACES[setup.place]
     lines = []
@@ -107,7 +128,7 @@ def install_proof(setup, seed=0):
                   "" if voice_ok else "Move the box toward a window", False))
 
     if "alarm" in setup.devices:
-        st, msg, fix, truck = _alarm_check(setup, loss, rng)
+        st, msg, fix, truck = _alarm_check(setup, loss, rng, alarm_events)
         lines.append(("ALARM", st, msg, fix, truck))
     if "medical" in setup.devices:
         if setup.medical_test_window:
@@ -138,9 +159,13 @@ def install_proof(setup, seed=0):
     truck = any(t for *_, t in lines)
     # a life-safety line is green only if signal, alarm and battery are all clean
     fixes = sum(s == "FAIL" or (s == "WARN" and c in ("SIGNAL", "ALARM", "BATTERY")) for c, s, *_ in lines)
-    verdict = "VISIT NEEDED" if truck else ("FIX AND RE-RUN" if fixes else "GREEN: NO VISIT NEEDED")
-    return {"lines": [{"check": c, "status": s, "detail": d, "fix": f, "needs_truck": t} for c, s, d, f, t in lines],
-            "verdict": verdict, "place": setup.place}
+    verdict = "VISIT NEEDED" if truck else ("FIX AND RE-RUN" if fixes else "GREEN: all checks passed · no visit requested")
+    out = [{"check": c, "status": s, "detail": d, "fix": f, "needs_truck": t} for c, s, d, f, t in lines]
+    if sources:
+        for ln in out:
+            src = SOURCES.get(ln["check"], ln["check"])
+            ln["source"] = src[setup.signal_source] if isinstance(src, dict) else src
+    return {"lines": out, "verdict": verdict, "place": setup.place}
 
 
 SCENARIOS = {
@@ -158,14 +183,45 @@ def scenarios():
     return {k: install_proof(v, seed=i) for i, (k, v) in enumerate(SCENARIOS.items())}
 
 
-def receipt_text(res):
-    out = ["PROVE · test record", "-" * 34]
+def _wrap(text, width, first="", rest=""):
+    """Lines of at most `width` columns: break after ' · ' where a part fits, else between words."""
+    parts = text.split(" · ")
+    atoms = []
+    for i, part in enumerate(parts):
+        part += " ·" if i < len(parts) - 1 else ""
+        room = width - len(first if i == 0 else rest)
+        atoms += [part] if len(part) <= room else [w for word in part.split()
+                                                    for w in textwrap.wrap(word, width - max(len(first), len(rest)))]
+    lines = [""]
+    for a in atoms:
+        lead = first if len(lines) == 1 else rest
+        if lines[-1] and len(lead) + len(lines[-1]) + 1 + len(a) > width:
+            lines.append(a)
+        else:
+            lines[-1] = f"{lines[-1]} {a}" if lines[-1] else a
+    return [(first if i == 0 else rest) + ln for i, ln in enumerate(lines)]
+
+
+def receipt_text(res, width=None):
+    """Printed test record. width=None: the original layout; width=32: a thermal-printer roll."""
+    if width is None:
+        out = ["PROVE · test record", "-" * 34]
+        for ln in res["lines"]:
+            out.append(f"{ln.get('source', ln['check']):<8} {ln['status']:<4} {ln['detail']}")
+            if ln["fix"]:
+                out.append(f"{'':<14}-> {ln['fix']}")
+        out += ["-" * 34, res["verdict"], "Test record, not a guarantee."]
+        return "\n".join(out)
+    pad = " " * 5
+    out = _wrap("PROVE · test record", width) + ["-" * width]
     for ln in res["lines"]:
-        out.append(f"{ln['check']:<8} {ln['status']:<4} {ln['detail']}")
+        out += _wrap(ln.get("source", ln["check"]), width, f"{ln['status']:<4} ", pad)
+        out += _wrap(ln["detail"], width, pad, pad)
         if ln["fix"]:
-            out.append(f"{'':<14}-> {ln['fix']}")
-    out += ["-" * 34, res["verdict"], "Test record, not a guarantee."]
-    return "\n".join(out)
+            out += _wrap(ln["fix"], width, pad + "-> ", pad + "   ")
+    v = res["verdict"]
+    out += ["-" * width] + _wrap(v, width, "", " " * (v.index(": ") + 2 if ": " in v else 0))
+    return "\n".join(out + _wrap("Test record, not a guarantee.", width))
 
 
 if __name__ == "__main__":

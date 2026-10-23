@@ -129,7 +129,7 @@ class TestInstallProof(unittest.TestCase):
     def test_receipts(self):
         from prototype.prove import install
         r = install.scenarios()
-        self.assertEqual(r["all_good"]["verdict"], "GREEN: NO VISIT NEEDED")
+        self.assertEqual(r["all_good"]["verdict"], "GREEN: all checks passed · no visit requested")
         self.assertEqual(r["sia_panel"]["verdict"], "VISIT NEEDED")
         self.assertEqual(r["unregistered"]["verdict"], "FIX AND RE-RUN")
         alarm_line = next(x for x in r["unregistered"]["lines"] if x["check"] == "ALARM")

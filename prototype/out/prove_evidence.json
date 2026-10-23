@@ -501,7 +501,7 @@
      "needs_truck": false
     }
    ],
-   "verdict": "GREEN: NO VISIT NEEDED",
+   "verdict": "GREEN: all checks passed \u00b7 no visit requested",
    "place": "window"
   },
   "unregistered": {
@@ -523,7 +523,7 @@
     {
      "check": "ALARM",
      "status": "FAIL",
-     "detail": "Alarm number not registered (##21): alarm calls ride the ordinary voice path (through on the first try 2/3, delivered 2/3)",
+     "detail": "Alarm number not registered (##21): alarm calls ride the ordinary voice path (through on the first try 2/3, confirmed 2/3)",
      "fix": "Re-enter the alarm company number (##21*number#), restart the box, press PROVE again",
      "needs_truck": false
     },
@@ -671,7 +671,7 @@
      "needs_truck": false
     }
    ],
-   "verdict": "GREEN: NO VISIT NEEDED",
+   "verdict": "GREEN: all checks passed \u00b7 no visit requested",
    "place": "window"
   },
   "leaf_off_trees": {
@@ -1140,7 +1140,156 @@
     "first_try": 0.033,
     "within_4_tries": 0.2
    }
-  ]
+  ],
+  "voice_vs_alarm": {
+   "label": "model, assumptions in alarm.voice_vs_alarm_curve's docstring; not a bench result and no claim the bench will match",
+   "plc_burst": {
+    "label": "model, assumptions in docstring",
+    "plc": true,
+    "loss": "Gilbert-Elliott, bad-state loss 0.5, p_bg 0.2",
+    "trials": 80,
+    "rows": [
+     {
+      "mean_loss": 0,
+      "voice_clear": 0.975,
+      "median_proxy": 4.28,
+      "alarm_first_try": 0.988,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.005,
+      "voice_clear": 0.975,
+      "median_proxy": 4.32,
+      "alarm_first_try": 0.975,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.01,
+      "voice_clear": 0.975,
+      "median_proxy": 4.32,
+      "alarm_first_try": 0.863,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.02,
+      "voice_clear": 0.95,
+      "median_proxy": 4.32,
+      "alarm_first_try": 0.963,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.03,
+      "voice_clear": 0.95,
+      "median_proxy": 4.28,
+      "alarm_first_try": 0.787,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.05,
+      "voice_clear": 0.9,
+      "median_proxy": 4.25,
+      "alarm_first_try": 0.637,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.08,
+      "voice_clear": 0.863,
+      "median_proxy": 4.21,
+      "alarm_first_try": 0.463,
+      "alarm_within_4": 0.95
+     },
+     {
+      "mean_loss": 0.12,
+      "voice_clear": 0.825,
+      "median_proxy": 3.92,
+      "alarm_first_try": 0.425,
+      "alarm_within_4": 0.863
+     }
+    ],
+    "l90": {
+     "voice_clear": 0.05,
+     "alarm_first_try": 0.021,
+     "alarm_within_4": 0.103
+    },
+    "fails_first": {
+     "first_try_vs_voice": "alarm",
+     "within_4_vs_voice": "voice"
+    }
+   },
+   "worst_case": {
+    "label": "model, assumptions in docstring",
+    "plc": false,
+    "loss": "independent",
+    "trials": 80,
+    "rows": [
+     {
+      "mean_loss": 0,
+      "voice_clear": 0.988,
+      "median_proxy": 4.27,
+      "alarm_first_try": 0.975,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.005,
+      "voice_clear": 0.95,
+      "median_proxy": 4.18,
+      "alarm_first_try": 0.9,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.01,
+      "voice_clear": 0.95,
+      "median_proxy": 4.3,
+      "alarm_first_try": 0.738,
+      "alarm_within_4": 1.0
+     },
+     {
+      "mean_loss": 0.02,
+      "voice_clear": 0.95,
+      "median_proxy": 4.25,
+      "alarm_first_try": 0.575,
+      "alarm_within_4": 0.975
+     },
+     {
+      "mean_loss": 0.03,
+      "voice_clear": 0.9,
+      "median_proxy": 4.27,
+      "alarm_first_try": 0.362,
+      "alarm_within_4": 0.812
+     },
+     {
+      "mean_loss": 0.05,
+      "voice_clear": 0.863,
+      "median_proxy": 4.06,
+      "alarm_first_try": 0.15,
+      "alarm_within_4": 0.588
+     },
+     {
+      "mean_loss": 0.08,
+      "voice_clear": 0.688,
+      "median_proxy": 3.73,
+      "alarm_first_try": 0.05,
+      "alarm_within_4": 0.2
+     },
+     {
+      "mean_loss": 0.12,
+      "voice_clear": 0.55,
+      "median_proxy": 3.16,
+      "alarm_first_try": 0.0,
+      "alarm_within_4": 0.025
+     }
+    ],
+    "l90": {
+     "voice_clear": 0.03,
+     "alarm_first_try": 0.005,
+     "alarm_within_4": 0.0246
+    },
+    "fails_first": {
+     "first_try_vs_voice": "alarm",
+     "within_4_vs_voice": "together"
+    }
+   }
+  }
  },
  "acoustic": {
   "healthy": {

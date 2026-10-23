@@ -108,7 +108,11 @@ def build():
         "install": install.scenarios(),
         "migration": migration.scenarios(),
         "answer": answer_block(),
-        "alarm": {"rates": alarm.success_rates(trials=40), "loss_curve": alarm.loss_curve(trials=30)},
+        "alarm": {"rates": alarm.success_rates(trials=40), "loss_curve": alarm.loss_curve(trials=30),
+                  "voice_vs_alarm": {"label": "model, assumptions in alarm.voice_vs_alarm_curve's docstring; "
+                                              "not a bench result and no claim the bench will match",
+                                     "plc_burst": alarm.voice_vs_alarm_curve(plc=True, burst=0.2),
+                                     "worst_case": alarm.voice_vs_alarm_curve(plc=False, burst=None)}},
         "acoustic": acoustic.compare_designs(trials=30),
         "pass_db": acoustic.PASS_DB,
         "noise_only_max_db": round(float(acoustic.noise_only_margins(n=200).max()), 1),

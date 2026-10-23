@@ -409,6 +409,17 @@ def speech_quality_proxy(clean, degraded):
     return float(1 + 3.5 / (1 + np.exp((lsd - PROXY_LSD_MID) / PROXY_LSD_SCALE)))
 
 
+def _nonincreasing(ys):
+    """Closest non-increasing sequence (pool adjacent violators, equal weights): smooths sampling noise."""
+    blocks = []
+    for y in ys:
+        blocks.append([float(y), 1])
+        while len(blocks) > 1 and blocks[-2][0] < blocks[-1][0]:
+            (a, n), (b, m) = blocks[-2], blocks.pop()
+            blocks[-1] = [(a * n + b * m) / (n + m), n + m]
+    return [v for v, n in blocks for _ in range(n)]
+
+
 def _l90(xs, ys, level=0.9):
     """Loss rate where ys first drops below `level`, linearly interpolated; 0.0 if already below, None if never."""
     if ys[0] < level:
@@ -419,7 +430,7 @@ def _l90(xs, ys, level=0.9):
     return None
 
 
-def _first(l_alarm, l_voice, tol=0.005):
+def _first(l_alarm, l_voice, tol=0.01):
     """Which crosses 90% at the lower loss rate ('together' within `tol`; None = never in range)."""
     a, v = (float("inf") if x is None else x for x in (l_alarm, l_voice))
     if a == v == float("inf"):
@@ -427,7 +438,7 @@ def _first(l_alarm, l_voice, tol=0.005):
     return "together" if abs(a - v) <= tol else ("alarm" if a < v else "voice")
 
 
-def voice_vs_alarm_curve(losses=(0, 0.005, 0.01, 0.02, 0.03, 0.05, 0.08, 0.12), trials=60, plc=True, burst=0.2,
+def voice_vs_alarm_curve(losses=(0, 0.005, 0.01, 0.02, 0.03, 0.05, 0.08, 0.12), trials=80, plc=True, burst=0.2,
                          bad_loss=0.5, seed=8, message=None):
     """MODEL, not a bench result: voice-clear rate vs alarm success on the SAME voice path, per mean frame loss.
 
@@ -440,8 +451,9 @@ def voice_vs_alarm_curve(losses=(0, 0.005, 0.01, 0.02, 0.03, 0.05, 0.08, 0.12), 
     burst=None: independent loss at the stated rate. burst=p_bg: Gilbert-Elliott loss with
     no loss in the good state, `bad_loss` in the bad state, mean bad stay 1/p_bg frames, and
     p_gb solved so the long-run loss equals the stated rate; each path call starts afresh.
-    L90 = loss rate where a rate first drops below 90%, interpolated; with `trials` per point
-    a 90% rate has a standard error of about 4 points, so L90s within a point or two are a tie.
+    L90 = loss rate where a rate drops below 90%, interpolated on a non-increasing fit of the
+    rates. With 80 trials a 90% rate has a standard error of about 3 points, which moves a
+    shallow curve's L90 by about a point of loss; "together" means within one point.
     """
     rng = np.random.default_rng(seed)
     rows = []
@@ -462,7 +474,7 @@ def voice_vs_alarm_curve(losses=(0, 0.005, 0.01, 0.02, 0.03, 0.05, 0.08, 0.12), 
                      "alarm_first_try": round(sum(c["delivered"] and c["attempts"] == 1 for c in calls) / trials, 3),
                      "alarm_within_4": round(sum(c["delivered"] for c in calls) / trials, 3)})
     xs = [r["mean_loss"] for r in rows]
-    l90 = {k: _l90(xs, [r[k] for r in rows]) for k in ("voice_clear", "alarm_first_try", "alarm_within_4")}
+    l90 = {k: _l90(xs, _nonincreasing([r[k] for r in rows])) for k in ("voice_clear", "alarm_first_try", "alarm_within_4")}
     return {"label": "model, assumptions in docstring", "plc": plc,
             "loss": "independent" if burst is None else f"Gilbert-Elliott, bad-state loss {bad_loss}, p_bg {burst}",
             "trials": trials, "rows": rows, "l90": l90,
