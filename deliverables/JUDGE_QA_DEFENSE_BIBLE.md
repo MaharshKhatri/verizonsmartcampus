@@ -135,5 +135,12 @@ Many do, daily to monthly. The miss then surfaces days later, as a trouble beep 
 **20. "Did the IRB review the usability session?"**
 Yes. On [date], Rutgers' IRB determined it [not human-subjects research / exempt], ref [#]. Volunteers sign consent and a photo release, and we keep counts and age band only. If the determination isn't on file, the session doesn't run and the video carries no volunteer footage.
 
+**22. "Does your own model even say alarms fail before voice?"**
+Partly, and we say exactly how. With codec concealment and bursty loss in the simulation:
+- The alarm's first try drops below 90% at about 2% frame loss; voice holds to about 5%.
+- The panel's retries rescue most alarms, to about 10%.
+
+So the model predicts that weak signal shows up first as slow, retried confirmations, and PROVE treats "confirmed only after retries" as a warning, not a pass. The bench measures both margins: final and first try. The video uses whichever one the data supports.
+
 **21. "Why should Verizon's network planners care?"**
 Because delta is a margin they can apply to the address-level indoor coverage predictions already used to qualify homes for fixed wireless. It flags alarm homes near the edge before install, and PROVE never touches customer data. The mentor gets the test line's number and the UTC start of every trial, so Verizon can pull its own traces for the same calls.

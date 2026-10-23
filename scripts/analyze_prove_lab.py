@@ -190,7 +190,7 @@ def margin(rs, boot=BOOT, seed=0):
     keys = sorted({(r.get("date") or "", num(r["atten_db"])) for r in rs})
     pos = {k: i for i, k in enumerate(keys)}
     x = np.array([a - edge for _, a in keys])
-    M = np.zeros((len(keys), 8))          # clear k, n | clear at 3.5 k, n | alarm k, n | answered k, trials n
+    M = np.zeros((len(keys), 10))         # clear k, n | clear at 3.5 k, n | alarm k, n | answered k, trials n | first try k, n
     for r in rs:
         i = pos[(r.get("date") or "", num(r["atten_db"]))]
         M[i, 7] += 1
@@ -204,11 +204,12 @@ def margin(rs, boot=BOOT, seed=0):
                     M[i, j:j + 2] += (c, 1)
         else:
             M[i, 4:6] += (alarm_confirmed(r), 1)
+            M[i, 8:10] += (alarm_confirmed(r) and str(r.get("attempts_used", "")).strip() == "1", 1)
 
     def est(wt):
         S = M * wt[:, None]
-        v, s, a, u = (a90(x, S[:, j], S[:, j + 1]) for j in (0, 2, 4, 6))
-        return [v, a, v - a, s - a, u]
+        v, s, a, u, f = (a90(x, S[:, j], S[:, j + 1]) for j in (0, 2, 4, 6, 8))
+        return [v, a, v - a, s - a, u, v - f]
 
     full = est(np.ones(len(keys)))
     rng = np.random.default_rng(seed)
@@ -216,8 +217,8 @@ def margin(rs, boot=BOOT, seed=0):
                      for _ in range(boot)])
     with np.errstate(all="ignore"):
         ci = [[float(v) for v in np.nanpercentile(reps[:, j], [2.5, 97.5])] if np.isfinite(reps[:, j]).any()
-              else [float("nan")] * 2 for j in range(5)]
-    names = ("a90_voice", "a90_alarm", "delta", "delta_pesq35", "a90_setup")
+              else [float("nan")] * 2 for j in range(6)]
+    names = ("a90_voice", "a90_alarm", "delta", "delta_pesq35", "a90_setup", "delta_first_try")
     out = {"a_edge": edge, "edge_found": found, "clusters": len(keys), "boot": boot,
            "n_voice": int(M[:, 1].sum()), "n_alarm": int(M[:, 5].sum()), "n_trials": int(M[:, 7].sum()),
            "failed_draws": int(np.isnan(reps[:, 2]).sum())}
@@ -225,7 +226,7 @@ def margin(rs, boot=BOOT, seed=0):
     out["tested"] = [float(seen.min()), float(seen.max())] if len(seen) else None
     for j, name in enumerate(names):
         out[name], out[name + "_ci"] = full[j], ci[j]
-    for d in ("delta", "delta_pesq35"):
+    for d in ("delta", "delta_pesq35", "delta_first_try"):
         lo = out[d + "_ci"][0]
         out[d.replace("delta", "gap")] = (None if not (math.isfinite(out[d]) and math.isfinite(lo)) else bool(lo > 0))
     return out
@@ -336,6 +337,11 @@ def margin_markdown(s):
         g = m["gap_pesq35"]
         md.append(f"  - Sensitivity, PESQ threshold {PESQ_SENS:.1f}: delta {_db(m['delta_pesq35'])} dB "
                   f"({_ci(m['delta_pesq35_ci'])}). Gap: {'not estimable' if g is None else 'yes' if g else 'no'}.")
+        g = m["gap_first_try"]
+        md.append(f"  - Secondary (pre-registered), first-try confirmation: the alarm's first attempt needed "
+                  f"{_db(m['delta_first_try'])} dB more signal than a clear call ({_ci(m['delta_first_try_ci'])}). "
+                  f"Gap on first try: {'not estimable' if g is None else 'yes' if g else 'no'}. The panel's retries can "
+                  "hide a first-try gap; PROVE's receipt flags 'confirmed only after retries'.")
         if s["has_setup"]:
             md.append(f"  - Call setup (connected and not dropped) holds at 90% down to A_rel {_db(m['a90_setup'])} dB "
                       f"({_ci(m['a90_setup_ci'])}). Setup failures and drops are not counted as voice or alarm failures.")

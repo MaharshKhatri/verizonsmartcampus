@@ -198,5 +198,23 @@ class TestReceipts(unittest.TestCase):
         self.assertEqual(install.receipt_text(res).splitlines()[:2], ["PROVE · test record", "-" * 34])
 
 
+class TestRetryWarning(unittest.TestCase):
+    """An alarm that gets through only after the panel retried leaves little margin: WARN, not GREEN."""
+
+    def test_confirmed_after_retries_is_warn_with_fix(self):
+        from unittest import mock
+        import numpy as np
+        from prototype.prove import install
+        calls = iter([{"delivered": True, "attempts": 2}, {"delivered": True, "attempts": 1},
+                      {"delivered": True, "attempts": 3}])
+        with mock.patch.object(install, "_alarm_call_with_loss", lambda rng, loss, **kw: next(calls)):
+            st, msg, fix, truck = install._alarm_check(install.HomeSetup(), 0.0, np.random.default_rng(0))
+        self.assertEqual(st, "WARN")
+        self.assertIn("only after retries (first try 1/3)", msg)
+        self.assertIn("window", fix)
+        self.assertNotIn("delivered", msg.lower())
+        self.assertFalse(truck)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -71,6 +71,10 @@ def _alarm_check(setup, loss, rng, events=3):
         got = f"confirmation came back only {ok}/{events}" if events > 1 else "no confirmation came back"
         return ("FAIL", f"Panel sent its code; {got} at this spot: signal too weak for alarm data",
                 "Try the box nearer a window, as Verizon's guide suggests, then run the alarm test again", False)
+    if first < ok:                                             # got through, but only after the panel retried
+        return ("WARN", f"Receiver picked up · full code sent · confirmed only after retries "
+                        f"(first try {first}/{events}): little signal margin for alarm data here",
+                "Try the box nearer a window, then run the alarm test again", False)
     done = f"confirmed {ok}/{events}" if events > 1 else f"confirmed in {_confirm_s(tries[0]):.1f} s"
     return ("OK", f"Receiver picked up · full code sent · {done}", "", False)
 

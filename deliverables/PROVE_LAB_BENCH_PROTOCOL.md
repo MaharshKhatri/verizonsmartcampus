@@ -100,6 +100,7 @@ This section was revised after a RAN/VoLTE engineering review. The earlier desig
   - Both curves are logistic fits against attenuation measured from that box's own dropout point (A_edge). The 95% CI comes from a cluster bootstrap over (date, step).
   - **A gap exists on a box only if the CI's lower bound is above 0 dB.** The video's sentence is "the alarm needed [delta] dB more signal than a clear call".
 - **What "clear" means.** ITU-T P.862.1 MOS-LQO (narrowband, 8 kHz, implementation and version named) ≥ 3.0 in **both** directions, **and** a blinded listener gets ≥ 9 of 10 keywords. Also report the result at a 3.5 threshold. The mentor is asked to rescore the same WAVs with P.863 (POLQA).
+- **Secondary estimand, also pre-registered: delta_first_try,** the same margin for **first-try** confirmation. Report the median attempts and time to confirmation per step. Our concealment-and-burst model predicts that the panel's retries hide much of the gap in final confirmation, so a first-try gap is the likelier finding. The video's row-1 wording then says "got through on the first try".
 - **Comparison set.** Only answered calls enter the voice-vs-alarm comparison. Setup failures and drops form a third curve, reported on its own.
 
 **Rig check, before every session.** The box sits inside the shield box with the antenna outside. SMA runs through bulkheads to a 2-channel programmable attenuator, and RJ11 and power enter through filtered feedthroughs.

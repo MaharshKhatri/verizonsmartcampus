@@ -6,6 +6,7 @@ import os
 import re
 import sys
 import tempfile
+import math
 import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
@@ -56,6 +57,14 @@ class TestDeltaRecovery(unittest.TestCase):
         for s in ("Same pattern", "NOT evidence", "Sensitivity, PESQ threshold 3.5", "call setup and drops",
                   "Matched-SINR comparison (secondary", apl.SINR_NOTE, "Fail stages"):
             self.assertIn(s, self.md)
+
+    def test_first_try_margin_reported_and_at_least_as_large(self):
+        for box in mk.BOXES:
+            m = self.s["boxes"][box]["margin"]
+            self.assertIn("delta_first_try", m)
+            if all(map(math.isfinite, (m["delta_first_try"], m["delta"]))):
+                self.assertGreaterEqual(m["delta_first_try"], m["delta"] - 0.5, box)   # first try fails no later
+        self.assertIn("Secondary (pre-registered), first-try confirmation", self.md)
 
     def test_no_injected_delta_gives_no_gap(self):
         s = apl.sweep_summary(mk.demo_rows(deltas={b: 0.0 for b in mk.BOXES}))
