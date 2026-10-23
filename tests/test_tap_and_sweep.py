@@ -121,8 +121,8 @@ class TestBudget(unittest.TestCase):
 class TestSweep(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.rows = mk.demo_rows(seed=4, attens=range(40, 62, 2), trials=10)
-        cls.s = apl.sweep_summary(cls.rows)
+        cls.rows = mk.demo_rows(seed=4)
+        cls.s = apl.sweep_summary(cls.rows, boot=50)
 
     def test_clear_rule(self):
         self.assertTrue(apl.call_clear({"pesq": "3.0", "listener_keywords": "2"}))
@@ -161,7 +161,8 @@ class TestSweep(unittest.TestCase):
             with contextlib.redirect_stdout(io.StringIO()):
                 md = "\n".join(apl.main(p))
             for s in ("SYNTHETIC DATA", "Attenuation sweep (voice clear vs alarm confirmed)", "Gap steps",
-                      "Matched-SINR comparison", "Learned SIGNAL threshold"):
+                      "Matched-SINR comparison", "Learned SIGNAL threshold", "Headline: delta",
+                      "bench alarm tests (box verizon_box, one cell)"):
                 self.assertIn(s, md)
             old = os.path.join(d, "old.csv")                  # an old CSV without the sweep columns
             with open(old, "w", newline="") as fh:
