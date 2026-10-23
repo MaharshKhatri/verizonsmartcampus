@@ -136,7 +136,7 @@ The sound of the alarm's "got it" tone, and its absence, is the film's signature
 | Category | Points | Why PROVE scores |
 |---|---:|---|
 | **Impact** | 30 | Millions of alarms and a real, current switch-off (Piscataway, Dec 10). The trial counts the alarm failures caught that a phone-call check would have passed, measurable in one batch of installs. |
-| **Feasibility** | 15 | Phase 1 is a $100-200 tester with no network or box changes. Code already runs: a 67-test prototype that decodes real alarm audio. |
+| **Feasibility** | 15 | Phase 1 is a $100-200 tester with no network or box changes. Code already runs: a 92-test prototype that decodes a whole alarm call from a line recording (tested on synthetic recordings until the bench produces real ones). |
 | **Content** | 15 | It is built on Verizon's own LTE network, device management and guides. It produces measured data with confidence intervals. |
 | **Creativity** | 5 | Nobody else will pitch "your phone call works but your alarm doesn't". |
 | **Presentation** | 30 | One simple idea and one memorable line. The silent missing tone is something judges have never heard. |
@@ -163,6 +163,7 @@ Their estimated ceiling with real bench numbers is **about 80-84**. Three lay vi
 - **We don't know how many of Verizon's box customers have alarms.** A crude estimate is 3,000-9,000 of the 46,000. Verizon can count exactly: every box with an alarm number registered.
 - **Alarm companies are moving many panels to their own cellular radios.** PROVE is for the homes still plugged into the box, and the same checks cover voice, battery and elevator phones.
 - **A "got it" tone means the receiver accepted the message, not that a person acted on it.** That's why the receipt is a test record, not a guarantee.
+- **Our own simulation is only partly on our side.** With realistic codec concealment, the alarm's *first try* fails before voice does, but the panel's automatic retries rescue most alarms. So the likeliest real finding is "alarms needed retries" rather than "alarms failed". PROVE flags "confirmed only after retries" as a warning, and the script has a version of the line for that result.
 - **One idea we tested failed:** detecting "who answered" by listening. We say so, and switched to a "press 1 to confirm" test.
 
 ---

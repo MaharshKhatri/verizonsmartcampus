@@ -75,7 +75,7 @@
 | Item | Status |
 |---|---|
 | Copper notices, FCC filings, Verizon device guides, FCC order text | Primary sources read and saved in `research/sources/` |
-| Working prototype (`prototype/prove`) | Contact ID encoder/decoder with handshake and kiss-off detectors; whole-call tap analyser; learned signal bar with bootstrap CIs; fault triage; install, cutover and elevator receipts; hash-chained evidence ledger verified in the browser; live console; 67 automated tests |
+| Working prototype (`prototype/prove`) | Contact ID encoder/decoder with handshake and kiss-off detectors; whole-call tap analyser; learned signal bar with bootstrap CIs; fault triage; install, cutover and elevator receipts; hash-chained evidence ledger verified in the browser; live console; 92 automated tests (decoders tested on synthetic recordings until bench data exists) |
 | Bench at Rutgers | [Filled before submission: arms, n, CIs.] Three arms: lab baseline, another carrier's box, Verizon's box. Attenuation sweep in 2 dB steps at matched SINR. "Clear" means PESQ ≥ 3.0, a pre-registered rule. Results go to Verizon first. |
 | Modelled, labelled as such | Speech and Contact ID run through the same simulated path, with codec concealment and bursty radio loss. The alarm's **first try** drops below 90% at about 2% frame loss, while voice holds to about 5%. The panel's **retries** then rescue most alarms (90% within 4 tries up to about 10%). Our own model therefore predicts that weak signal shows up first as **slow, retried confirmations**, not outright failure, and the receipt flags exactly that: "confirmed only after retries" is a WARN, not GREEN. In the worst case (no concealment), retried alarms and voice fail together. Speech quality is a crude proxy, not PESQ. |
 
