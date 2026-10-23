@@ -12,9 +12,9 @@ Gates decide the cut. Owners: A (engineering lead), B (business lead), C (bench)
 | Oct 29 | All | **K1 decision:** a live Verizon box by today, or use the fallback cut. | Go / fallback |
 | Oct 29-31 | C | T5 sweep on both boxes at matched SINR (pre-registered "clear" = PESQ ≥ 3.0), T6 battery (runs overnight). | CSV complete; gap steps found or not |
 | Oct 30-Nov 1 | B | Usability session: 3-5 volunteers, counts only. Elevator sticker census (public cars, no permission needed). | "x of N finished alone" |
-| Nov 1-2 | D | Build every decision-table variant (rows 1, 1b, 2, 3) of the graphics for beats 0:26, 1:03 and 1:21 from the synthetic CSV. | Templates ready |
+| Nov 1-2 | D | Build every decision-table variant (rows 1, 1b, 2, 3) of the graphics for beats 0:27 and 1:00 from the synthetic CSV. | Templates ready |
 | Nov 1-3 | A+B | Analysis with CIs (`analyze_prove_lab.py`): delta per box, the gap verdict, the setup curve, the signal bar per box. Pick the decision-table row. Send the sweep to the Verizon mentor; get the on-screen OK in writing, cleared with whoever owns the WC 26-227 docket. | Locked numbers |
-| Nov 3 | All | **Row checklist.** Change all of these together: the 0:26 fault and model line, the PROVE voice line, B's 1:03 line and table, the +[X] dB card, the exec summary's lay box, Q&A 11c and poster panel 2's headline. | One consistent story |
+| Nov 3 | All | **Row checklist.** Change all of these together: the 0:27 fault and model line, the PROVE voice line, B's 1:00 line and card, the exec summary's lay box, Q&A 11c and poster panel 2's headline. | One consistent story |
 | Nov 4-6 | D | Film per the shot list, with both speakers on camera for the ask. Check the cut with `scripts/count_script_words.py` (≤ 255 words, every beat ≤ 150 wpm). | Rough cut |
 | Nov 7 | All | Final cut and fact check (every spoken number traced to a CSV row or a source). Submit one day early. | **Submitted** |
 
